@@ -1,0 +1,5 @@
+{
+  "Name": "Lexicon snapshot",
+  "Description": "An authenticated encrypted wallet document containing typed subjects, ontology answers, visibility metadata, attestations and local disclosure history. Registry key S:I:D:LEX points to an immutable encrypted snapshot. Storage chunk keys use an @revision:index suffix; these are physical addresses, not additional ontology definitions.",
+  "Children": {}
+}

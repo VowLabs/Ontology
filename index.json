@@ -1,0 +1,30 @@
+{
+  "Name": "NokNok ontology",
+  "Version": "2.0.0",
+  "Children": {
+    "I": {
+      "$ref": "./Identity/index.json"
+    },
+    "F": {
+      "$ref": "./Finance/index.json"
+    },
+    "G": {
+      "$ref": "./Geography/index.json"
+    },
+    "H": {
+      "$ref": "./Health/index.json"
+    },
+    "B": {
+      "$ref": "./Business/index.json"
+    },
+    "S": {
+      "$ref": "./Science/index.json"
+    },
+    "U": {
+      "$ref": "./Humanities/index.json"
+    },
+    "R": {
+      "$ref": "./Society/index.json"
+    }
+  }
+}

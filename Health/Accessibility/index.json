@@ -1,0 +1,13 @@
+{
+  "Name": "Accessibility need",
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Children": {
+    "N": {
+      "$ref": "./Need.json"
+    }
+  }
+}

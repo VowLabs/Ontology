@@ -1,0 +1,12 @@
+{
+  "Name": "Chrome window mode",
+  "Question": "How should the Chrome wallet open?",
+  "Type": "S:I:D:T:S",
+  "Preference": "chromeWindowMode",
+  "StorageKey": "noknok_chrome_window_mode",
+  "Default": "docked",
+  "Choices": [
+    "docked",
+    "floating"
+  ]
+}

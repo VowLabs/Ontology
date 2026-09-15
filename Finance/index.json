@@ -1,0 +1,30 @@
+{
+  "Name": "Finance",
+  "Description": "Open for community-maintained extensions.",
+  "Children": {
+    "BA": {
+      "$ref": "./BankAccount/index.json"
+    },
+    "WA": {
+      "$ref": "./Wallet/index.json"
+    },
+    "PI": {
+      "$ref": "./PaymentInstrument/index.json"
+    },
+    "A": {
+      "$ref": "./Assets/index.json"
+    },
+    "AC": {
+      "$ref": "./Accounts/index.json"
+    },
+    "INV": {
+      "$ref": "./Invoice/index.json"
+    },
+    "SP": {
+      "$ref": "./SettlementProof/index.json"
+    },
+    "RF": {
+      "$ref": "./Refund/index.json"
+    }
+  }
+}

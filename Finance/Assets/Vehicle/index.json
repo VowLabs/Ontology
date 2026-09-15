@@ -1,0 +1,28 @@
+{
+  "Name": "Vehicle",
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Children": {
+    "MK": {
+      "$ref": "./Make.json"
+    },
+    "MD": {
+      "$ref": "./Model.json"
+    },
+    "Y": {
+      "$ref": "./Year.json"
+    },
+    "VIN": {
+      "$ref": "./VIN.json"
+    },
+    "REG": {
+      "$ref": "./Registration.json"
+    },
+    "USE": {
+      "$ref": "./Use.json"
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Name": "Documents",
+  "Description": "Documents issued to identify a person or certify an entitlement. Values describe documents; validity and authenticity require separate verification.",
+  "Children": {
+    "DL": {
+      "$ref": "./DriverLicence/index.json"
+    },
+    "PP": {
+      "$ref": "./Passport/index.json"
+    }
+  }
+}

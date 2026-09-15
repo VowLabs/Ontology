@@ -1,0 +1,6 @@
+{
+  "Name": "List identifier",
+  "Question": "What is the list identifier?",
+  "Type": "S:I:D:T:ID",
+  "SourceKey": "id"
+}

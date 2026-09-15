@@ -1,0 +1,12 @@
+{
+  "Name": "Assets",
+  "Description": "Open for community-maintained extensions.",
+  "Children": {
+    "V": {
+      "$ref": "./Vehicle/index.json"
+    },
+    "P": {
+      "$ref": "./Property/index.json"
+    }
+  }
+}

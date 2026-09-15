@@ -1,0 +1,72 @@
+{
+  "checkout": {
+    "Name": "Checkout and delivery",
+    "Fields": [
+      "I:P:PN",
+      "I:C:P:EM",
+      "I:C:P:PH",
+      "G:AD:L1",
+      "G:AD:L2",
+      "G:AD:C",
+      "G:AD:RE",
+      "G:AD:PC",
+      "G:AD:CO",
+      "G:AD:DI"
+    ]
+  },
+  "food": {
+    "Name": "Food service",
+    "Fields": [
+      "H:AL:S",
+      "H:AL:ST",
+      "H:AL:R",
+      "H:D:P:I",
+      "H:D:P:P",
+      "H:D:D:N",
+      "H:D:D:I"
+    ]
+  },
+  "medical": {
+    "Name": "Medical intake",
+    "Fields": [
+      "I:P:LN",
+      "I:P:DOB",
+      "I:C:EC:N",
+      "I:C:EC:R",
+      "I:C:EC:PH",
+      "H:AL:S",
+      "H:AL:ST",
+      "H:AL:R",
+      "H:MED:N",
+      "H:MED:D",
+      "H:MED:F",
+      "H:HX:C",
+      "H:HX:D",
+      "H:HX:N"
+    ]
+  },
+  "motor": {
+    "Name": "Motor insurance enquiry",
+    "Fields": [
+      "I:P:LN",
+      "F:A:V:MK",
+      "F:A:V:MD",
+      "F:A:V:Y",
+      "F:A:V:VIN",
+      "F:A:V:USE",
+      "B:IN:T",
+      "B:IN:P"
+    ]
+  },
+  "business": {
+    "Name": "Business onboarding",
+    "Fields": [
+      "I:O:LN",
+      "I:O:TN",
+      "I:O:J",
+      "I:O:RN",
+      "I:C:P:EM",
+      "I:C:P:PH"
+    ]
+  }
+}

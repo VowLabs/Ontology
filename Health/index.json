@@ -1,0 +1,21 @@
+{
+  "Name": "Health",
+  "Description": "Open for community-maintained extensions.",
+  "Children": {
+    "AL": {
+      "$ref": "./Allergy/index.json"
+    },
+    "MED": {
+      "$ref": "./Medication/index.json"
+    },
+    "HX": {
+      "$ref": "./History/index.json"
+    },
+    "AC": {
+      "$ref": "./Accessibility/index.json"
+    },
+    "D": {
+      "$ref": "./Food/index.json"
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "Name": "Bank account",
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Children": {
+    "H": {
+      "$ref": "./Holder.json"
+    },
+    "B": {
+      "$ref": "./Bank.json"
+    },
+    "S": {
+      "$ref": "./Scheme.json"
+    },
+    "ID": {
+      "$ref": "./Identifier.json"
+    }
+  }
+}

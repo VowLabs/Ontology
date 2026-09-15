@@ -1,0 +1,5 @@
+{
+  "Name": "Issuing authority",
+  "Question": "Which authority issued this document?",
+  "Type": "S:I:D:T:S"
+}

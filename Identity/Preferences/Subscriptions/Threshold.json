@@ -1,0 +1,8 @@
+{
+  "Name": "Notification threshold",
+  "Question": "What is the balance notification threshold?",
+  "Type": "S:I:D:T:S",
+  "Pattern": "^[0-9]+(?:\\.[0-9]+)?$",
+  "MaxLength": 100,
+  "SourceKey": "threshold"
+}

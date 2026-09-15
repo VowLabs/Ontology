@@ -1,0 +1,5 @@
+{
+  "Name": "Issue date",
+  "Question": "When was this document issued?",
+  "Type": "S:I:D:T:DT"
+}

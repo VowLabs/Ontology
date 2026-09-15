@@ -1,0 +1,22 @@
+{
+  "Name": "Insurance policy",
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Children": {
+    "T": {
+      "$ref": "./Type.json"
+    },
+    "P": {
+      "$ref": "./Provider.json"
+    },
+    "N": {
+      "$ref": "./Number.json"
+    },
+    "END": {
+      "$ref": "./Expiry.json"
+    }
+  }
+}

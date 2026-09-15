@@ -1,0 +1,5 @@
+{
+  "Name": "Calendar date",
+  "ValueType": "string",
+  "Format": "date"
+}

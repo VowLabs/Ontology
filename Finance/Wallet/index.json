@@ -1,0 +1,16 @@
+{
+  "Name": "Wallet address",
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Children": {
+    "N": {
+      "$ref": "./Network.json"
+    },
+    "A": {
+      "$ref": "./Address.json"
+    }
+  }
+}

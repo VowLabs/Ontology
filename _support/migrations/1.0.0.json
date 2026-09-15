@@ -1,0 +1,15 @@
+{
+  "To": "2.0.0",
+  "Prefixes": {
+    "C": "I:C",
+    "A": "F:A",
+    "D": "H:D",
+    "T": "S:T",
+    "O": "S:I:D:T"
+  },
+  "SubjectTypes": {
+    "person": "I:P",
+    "organization": "I:O"
+  },
+  "Description": "Path-only migration. Signed statements remain byte-for-byte unchanged."
+}

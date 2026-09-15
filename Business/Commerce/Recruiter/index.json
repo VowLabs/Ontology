@@ -1,0 +1,17 @@
+{
+  "Name": "Recruiter",
+  "Children": {
+    "ID": {
+      "$ref": "./Id.json"
+    },
+    "ST": {
+      "$ref": "./Status.json"
+    }
+  },
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Description": "A recruiter participating in merchant acquisition."
+}

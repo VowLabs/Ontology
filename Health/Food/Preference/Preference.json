@@ -1,0 +1,10 @@
+{
+  "Name": "Preference",
+  "Question": "What is your preference?",
+  "Type": "S:I:D:T:S",
+  "Choices": [
+    "prefer",
+    "avoid",
+    "no-preference"
+  ]
+}

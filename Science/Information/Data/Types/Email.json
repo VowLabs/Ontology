@@ -1,0 +1,6 @@
+{
+  "Name": "Email address",
+  "ValueType": "string",
+  "Format": "email",
+  "MaxLength": 254
+}

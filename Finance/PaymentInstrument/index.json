@@ -1,0 +1,19 @@
+{
+  "Name": "Payment instrument reference",
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Children": {
+    "P": {
+      "$ref": "./Provider.json"
+    },
+    "R": {
+      "$ref": "./Reference.json"
+    },
+    "L4": {
+      "$ref": "./LastFour.json"
+    }
+  }
+}

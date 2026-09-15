@@ -1,0 +1,13 @@
+{
+  "Name": "Policy type",
+  "Question": "What type of insurance is this?",
+  "Type": "S:I:D:T:S",
+  "Choices": [
+    "motor",
+    "home",
+    "health",
+    "life",
+    "business",
+    "other"
+  ]
+}

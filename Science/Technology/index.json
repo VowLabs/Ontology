@@ -1,0 +1,9 @@
+{
+  "Name": "Technology",
+  "Description": "Open for community-maintained extensions.",
+  "Children": {
+    "SV": {
+      "$ref": "./Service/index.json"
+    }
+  }
+}

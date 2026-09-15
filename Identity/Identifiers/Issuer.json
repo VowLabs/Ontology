@@ -1,0 +1,5 @@
+{
+  "Name": "Issuer",
+  "Question": "Who issued this identifier?",
+  "Type": "S:I:D:T:S"
+}

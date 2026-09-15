@@ -1,0 +1,5 @@
+{
+  "Name": "City",
+  "Question": "What is the city or locality?",
+  "Type": "S:I:D:T:S"
+}

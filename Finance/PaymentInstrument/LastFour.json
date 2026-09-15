@@ -1,0 +1,6 @@
+{
+  "Name": "Last four digits",
+  "Question": "What are its last four digits?",
+  "Type": "S:I:D:T:ID",
+  "Pattern": "^[0-9]{4}$"
+}

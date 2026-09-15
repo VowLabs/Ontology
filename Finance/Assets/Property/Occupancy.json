@@ -1,0 +1,11 @@
+{
+  "Name": "Occupancy",
+  "Question": "How is this property occupied?",
+  "Type": "S:I:D:T:S",
+  "Choices": [
+    "owner-occupied",
+    "rented",
+    "vacant",
+    "other"
+  ]
+}

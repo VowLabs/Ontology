@@ -1,0 +1,8 @@
+{
+  "Name": "Allow embedded wallet",
+  "Question": "May the Chrome wallet open inside supported pages?",
+  "Type": "S:I:D:T:B",
+  "Preference": "allowEmbedded",
+  "StorageKey": "noknok_allow_embedded",
+  "Default": true
+}

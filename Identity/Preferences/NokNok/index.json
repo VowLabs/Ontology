@@ -1,0 +1,34 @@
+{
+  "Name": "NokNok settings",
+  "Scalar": true,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Children": {
+    "AT": {
+      "$ref": "./AuthTimeout.json"
+    },
+    "SC": {
+      "$ref": "./Currency.json"
+    },
+    "DR": {
+      "$ref": "./DuressReminder.json"
+    },
+    "TN": {
+      "$ref": "./Testnets.json"
+    },
+    "AM": {
+      "$ref": "./AdvancedMode.json"
+    },
+    "DM": {
+      "$ref": "./DebugMode.json"
+    },
+    "WM": {
+      "$ref": "./WindowMode.json"
+    },
+    "EM": {
+      "$ref": "./Embedded.json"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "Name": "Bank",
+  "Question": "What is the bank\u2019s name?",
+  "Type": "S:I:D:T:S"
+}

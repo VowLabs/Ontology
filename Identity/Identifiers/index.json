@@ -1,0 +1,19 @@
+{
+  "Name": "External identifier",
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Children": {
+    "S": {
+      "$ref": "./Scheme.json"
+    },
+    "V": {
+      "$ref": "./Value.json"
+    },
+    "IS": {
+      "$ref": "./Issuer.json"
+    }
+  }
+}

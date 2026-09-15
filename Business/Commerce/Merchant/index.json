@@ -1,0 +1,26 @@
+{
+  "Name": "Merchant",
+  "Children": {
+    "ID": {
+      "$ref": "./Id.json"
+    },
+    "ST": {
+      "$ref": "./Status.json"
+    },
+    "N": {
+      "$ref": "./BusinessName.json"
+    },
+    "W": {
+      "$ref": "./WalletAddress.json"
+    },
+    "U": {
+      "$ref": "./Website.json"
+    }
+  },
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Description": "A person or organization acting as a seller. Membership in a directory does not attest legal identity."
+}

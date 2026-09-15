@@ -1,0 +1,6 @@
+{
+  "Name": "Witness status",
+  "Question": "What is this witness status?",
+  "Type": "S:I:D:T:B",
+  "SourceKey": "isWitness"
+}

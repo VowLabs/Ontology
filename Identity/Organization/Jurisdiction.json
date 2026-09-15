@@ -1,0 +1,5 @@
+{
+  "Name": "Registration jurisdiction",
+  "Question": "Where is the organization registered?",
+  "Type": "S:I:D:T:S"
+}

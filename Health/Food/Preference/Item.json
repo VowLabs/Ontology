@@ -1,0 +1,5 @@
+{
+  "Name": "Food or ingredient",
+  "Question": "Which food, ingredient, or cuisine does this concern?",
+  "Type": "S:I:D:T:S"
+}

@@ -1,0 +1,5 @@
+{
+  "Name": "Role",
+  "Question": "What is your role?",
+  "Type": "S:I:D:T:S"
+}

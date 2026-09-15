@@ -1,0 +1,32 @@
+{
+  "Name": "Passport",
+  "Scalar": false,
+  "Subjects": [
+    "I:P"
+  ],
+  "Public": false,
+  "Description": "One record per issued document, including renewals. Document numbers are text and scoped to their issuer. No universal number pattern is assumed.",
+  "Children": {
+    "N": {
+      "$ref": "./Number.json"
+    },
+    "CO": {
+      "$ref": "./Country.json"
+    },
+    "IS": {
+      "$ref": "./Issuer.json"
+    },
+    "ISS": {
+      "$ref": "./Issued.json"
+    },
+    "EXP": {
+      "$ref": "./Expiry.json"
+    },
+    "TY": {
+      "$ref": "./PassportType.json"
+    },
+    "NA": {
+      "$ref": "./Nationality.json"
+    }
+  }
+}

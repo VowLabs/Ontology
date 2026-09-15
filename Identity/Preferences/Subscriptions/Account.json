@@ -1,0 +1,6 @@
+{
+  "Name": "Wallet account number",
+  "Question": "Which wallet account are these notifications for?",
+  "Type": "S:I:D:T:ID",
+  "SourceKey": "accountNumber"
+}

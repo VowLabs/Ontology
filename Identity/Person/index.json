@@ -1,0 +1,28 @@
+{
+  "Name": "Personal identity",
+  "Scalar": true,
+  "Subjects": [
+    "I:P"
+  ],
+  "Children": {
+    "LN": {
+      "$ref": "./LegalName.json"
+    },
+    "PN": {
+      "$ref": "./PreferredName.json"
+    },
+    "DOB": {
+      "$ref": "./BirthDate.json"
+    },
+    "COB": {
+      "$ref": "./BirthCountry.json"
+    },
+    "SSN": {
+      "$ref": "./SocialSecurityNumber.json"
+    },
+    "IMG": {
+      "$ref": "./ProfileImage.json"
+    }
+  },
+  "SubjectType": true
+}

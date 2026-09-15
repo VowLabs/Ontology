@@ -1,0 +1,20 @@
+{
+  "Name": "Product",
+  "Children": {
+    "ID": {
+      "$ref": "./Id.json"
+    },
+    "ST": {
+      "$ref": "./Status.json"
+    },
+    "N": {
+      "$ref": "./Name.json"
+    }
+  },
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Description": "A catalogued good or service."
+}

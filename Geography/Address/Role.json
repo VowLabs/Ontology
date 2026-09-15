@@ -1,0 +1,21 @@
+{
+  "Name": "Role",
+  "Question": "What is the role of this address?",
+  "Type": "S:I:D:T:S",
+  "Choices": [
+    "Residence",
+    "Office",
+    "Billing",
+    "Shipping",
+    "Other"
+  ],
+  "AllowCustom": true,
+  "CustomChoice": "Other",
+  "ChoiceAliases": {
+    "residential": "Residence",
+    "registered-office": "Office",
+    "billing": "Billing",
+    "shipping": "Shipping",
+    "other": "Other"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "Name": "Employment",
+  "Scalar": false,
+  "Subjects": [
+    "I:P"
+  ],
+  "Children": {
+    "O": {
+      "$ref": "./Organization.json"
+    },
+    "R": {
+      "$ref": "./Role.json"
+    },
+    "S": {
+      "$ref": "./StartDate.json"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "Name": "Offer",
+  "Children": {
+    "ID": {
+      "$ref": "./Id.json"
+    },
+    "ST": {
+      "$ref": "./Status.json"
+    },
+    "M": {
+      "$ref": "./MerchantId.json"
+    },
+    "T": {
+      "$ref": "./Title.json"
+    },
+    "D": {
+      "$ref": "./Text.json"
+    },
+    "U": {
+      "$ref": "./AcceptUrl.json"
+    },
+    "I": {
+      "$ref": "./ImageUrl.json"
+    }
+  },
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Description": "A merchant proposal to supply goods or services; separate from the underlying product."
+}

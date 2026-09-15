@@ -1,0 +1,16 @@
+{
+  "Name": "Sovereign currency",
+  "Question": "Which currency should NokNok use?",
+  "Type": "S:I:D:T:S",
+  "Preference": "sovereignCurrency",
+  "StorageKey": "noknok_sovereign_currency",
+  "Default": "USD",
+  "Choices": [
+    "USD",
+    "GBP",
+    "EUR",
+    "CAD",
+    "SEK",
+    "CHF"
+  ]
+}

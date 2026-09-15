@@ -1,0 +1,27 @@
+{
+  "Name": "Identity",
+  "Description": "Open for community-maintained extensions.",
+  "Children": {
+    "P": {
+      "$ref": "./Person/index.json"
+    },
+    "O": {
+      "$ref": "./Organization/index.json"
+    },
+    "ID": {
+      "$ref": "./Identifiers/index.json"
+    },
+    "C": {
+      "$ref": "./Contact/index.json"
+    },
+    "PR": {
+      "$ref": "./Preferences/index.json"
+    },
+    "CN": {
+      "$ref": "./Connections/index.json"
+    },
+    "DOC": {
+      "$ref": "./Documents/index.json"
+    }
+  }
+}

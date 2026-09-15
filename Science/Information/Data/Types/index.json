@@ -1,0 +1,32 @@
+{
+  "Name": "Value types",
+  "Children": {
+    "S": {
+      "$ref": "./String.json"
+    },
+    "I": {
+      "$ref": "./Integer.json"
+    },
+    "N": {
+      "$ref": "./Number.json"
+    },
+    "B": {
+      "$ref": "./Boolean.json"
+    },
+    "DT": {
+      "$ref": "./Date.json"
+    },
+    "EM": {
+      "$ref": "./Email.json"
+    },
+    "PH": {
+      "$ref": "./Phone.json"
+    },
+    "ID": {
+      "$ref": "./Identifier.json"
+    },
+    "URL": {
+      "$ref": "./URL.json"
+    }
+  }
+}

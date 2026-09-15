@@ -1,0 +1,5 @@
+{
+  "Name": "Dose",
+  "Question": "What dose do you take, including units?",
+  "Type": "S:I:D:T:S"
+}

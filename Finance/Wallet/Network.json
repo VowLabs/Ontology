@@ -1,0 +1,5 @@
+{
+  "Name": "Network",
+  "Question": "Which network does this address belong to?",
+  "Type": "S:I:D:T:S"
+}

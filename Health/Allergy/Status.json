@@ -1,0 +1,11 @@
+{
+  "Name": "Status",
+  "Question": "What is your reported allergy status for this substance?",
+  "Type": "S:I:D:T:S",
+  "Choices": [
+    "reported-allergy",
+    "suspected",
+    "no-known-allergy",
+    "unknown"
+  ]
+}

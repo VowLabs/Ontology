@@ -1,0 +1,16 @@
+{
+  "Name": "Authentication timeout",
+  "Question": "How long should NokNok remain unlocked?",
+  "Type": "S:I:D:T:I",
+  "Preference": "authTimeoutMs",
+  "StorageKey": "noknok_auth_timeout_ms",
+  "Default": 180000,
+  "Choices": [
+    60000,
+    180000,
+    300000,
+    900000,
+    1800000,
+    3600000
+  ]
+}

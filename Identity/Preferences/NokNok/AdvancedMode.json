@@ -1,0 +1,8 @@
+{
+  "Name": "Advanced mode",
+  "Question": "Should NokNok enable advanced mode?",
+  "Type": "S:I:D:T:B",
+  "Preference": "advancedMode",
+  "StorageKey": "noknok.advancedMode",
+  "Default": false
+}

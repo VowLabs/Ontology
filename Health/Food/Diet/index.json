@@ -1,0 +1,16 @@
+{
+  "Name": "Dietary restriction",
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Children": {
+    "N": {
+      "$ref": "./Name.json"
+    },
+    "I": {
+      "$ref": "./Instructions.json"
+    }
+  }
+}

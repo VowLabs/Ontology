@@ -1,0 +1,85 @@
+{
+  "Version": "2.0.0",
+  "Description": "Record-level classifications for existing stores. Columns and application payloads retain their schemas; leaf mappings can evolve independently. These codes do not authorize disclosure.",
+  "Stores": {
+    "PriceEdge": {
+      "Tables": {
+        "addresses": "F:AC",
+        "consumer_onboarding_profiles": "B:C:ON",
+        "contact_requests": "B:C:SU",
+        "customer_profiles": "B:C:CP",
+        "funding_accounts": "F:BA",
+        "invoices": "F:INV",
+        "memberships": "B:C:MB",
+        "merchants": "B:C:M",
+        "meta": "S:I:D:OP:CFG",
+        "recruiter_assignments": "B:C:RA",
+        "recruiters": "B:C:RC",
+        "signup_challenges": "S:I:D:OP:AU",
+        "unit_webhook_events": "S:I:D:OP:EV"
+      }
+    },
+    "PriceEdgeShop": {
+      "Tables": {
+        "vendors": "B:C:M",
+        "vendor_order_fulfillments": "B:C:FU",
+        "vendor_order_emails": "S:I:D:OP:MSG",
+        "products": "B:C:P",
+        "newsletter_subscribers": "B:C:NS",
+        "support_requests": "B:C:SU",
+        "orders": "B:C:OR",
+        "checkout_sessions": "B:C:CK",
+        "terminal_orders": "B:C:CK",
+        "customer_profiles": "B:C:CP",
+        "wishlists": "B:C:WL",
+        "shop_settings": "S:I:D:OP:CFG"
+      }
+    },
+    "VowCorp": {
+      "Tables": {
+        "merchant_enrollments": "B:C:ME",
+        "sale_intents": "B:C:SI",
+        "purchase_mandates": "B:C:PM",
+        "mandate_uses": "B:C:MU",
+        "offers": "B:C:O",
+        "checkout_sessions": "B:C:CK",
+        "checkout_lines": "B:C:OL",
+        "mandate_reservations": "B:C:MR",
+        "orders": "B:C:OR",
+        "order_events": "B:C:OE",
+        "settlement_proofs": "F:SP",
+        "fulfillments": "B:C:FU",
+        "refunds": "F:RF",
+        "idempotency_keys": "S:I:D:OP:ID",
+        "outbox_jobs": "S:I:D:OP:JOB",
+        "webhook_endpoints": "S:I:D:OP:WH",
+        "webhook_deliveries": "S:I:D:OP:WD",
+        "chain_cursors": "S:I:D:OP:CUR",
+        "schema_migrations": "S:I:D:OP:CFG"
+      }
+    },
+    "NokNok/www": {
+      "Files": {
+        "offers.json": "B:C:O",
+        "offers-state.json": "B:C:OA",
+        "merchant-registrations.json": "B:C:ML",
+        "support-requests.json": "B:C:SU",
+        "project-merchant-enrollments.json": "B:C:ME",
+        "sale-satisfaction-intents.json": "B:C:SI",
+        "fedach-routing-names.json": "S:I:D:OP:CFG",
+        "../menu/*.json": "B:C:MN",
+        "../vendors.json": "B:C:M",
+        "menu-state.json#vendors": "B:C:M",
+        "menu-state.json#terminalOrders": "B:C:CK",
+        "menu-types.json": "B:C:MT"
+      }
+    }
+  },
+  "PublicCodes": [
+    "F:AC",
+    "B:C:O",
+    "B:C:P",
+    "B:C:MN",
+    "B:C:MT"
+  ]
+}

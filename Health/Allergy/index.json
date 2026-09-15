@@ -1,0 +1,21 @@
+{
+  "Name": "Allergy record",
+  "Scalar": false,
+  "Subjects": [
+    "I:P"
+  ],
+  "Children": {
+    "S": {
+      "$ref": "./Substance.json"
+    },
+    "ST": {
+      "$ref": "./Status.json"
+    },
+    "R": {
+      "$ref": "./Reaction.json"
+    },
+    "N": {
+      "$ref": "./Notes.json"
+    }
+  }
+}

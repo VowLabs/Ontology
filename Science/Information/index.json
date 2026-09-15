@@ -1,0 +1,8 @@
+{
+  "Name": "Information",
+  "Children": {
+    "D": {
+      "$ref": "./Data/index.json"
+    }
+  }
+}

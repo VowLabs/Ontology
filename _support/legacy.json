@@ -1,0 +1,17 @@
+{
+  "Description": "Pre-1.0 codes are retired. Mappings are guidance, not automatic conversions; vectors need instance assignment.",
+  "Mappings": {
+    "I:LN": "I:P:LN",
+    "I:DOB": "I:P:DOB",
+    "I:COB": "I:P:COB",
+    "I:NIN": "I:ID:V",
+    "C:PN": "C:P:PH",
+    "C:EMA": "C:P:EM",
+    "F:P:C:A": "F:WA:A",
+    "G:SA": "G:AD"
+  },
+  "Removed": {
+    "F:P:B:CC": "Use F:PI for non-secret references; do not migrate CVV or full card numbers.",
+    "I:SID": "Use subject IDs; do not assume global identity from an unspecified numeric ID."
+  }
+}

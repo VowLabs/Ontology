@@ -1,0 +1,15 @@
+{
+  "Name": "Business",
+  "Description": "Open for community-maintained extensions.",
+  "Children": {
+    "IN": {
+      "$ref": "./Insurance/index.json"
+    },
+    "EMP": {
+      "$ref": "./Employment/index.json"
+    },
+    "C": {
+      "$ref": "./Commerce/index.json"
+    }
+  }
+}

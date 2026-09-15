@@ -1,0 +1,12 @@
+{
+  "Name": "Food",
+  "Description": "Open for community-maintained extensions.",
+  "Children": {
+    "P": {
+      "$ref": "./Preference/index.json"
+    },
+    "D": {
+      "$ref": "./Diet/index.json"
+    }
+  }
+}

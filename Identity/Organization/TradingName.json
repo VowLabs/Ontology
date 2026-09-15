@@ -1,0 +1,5 @@
+{
+  "Name": "Trading name",
+  "Question": "What trading name does the organization use?",
+  "Type": "S:I:D:T:S"
+}

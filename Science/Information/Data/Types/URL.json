@@ -1,0 +1,6 @@
+{
+  "Name": "Web address",
+  "ValueType": "string",
+  "Format": "url",
+  "MaxLength": 2000
+}

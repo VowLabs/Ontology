@@ -1,0 +1,7 @@
+{
+  "Name": "Profile image",
+  "Question": "What profile image do you use?",
+  "Type": "S:I:D:T:S",
+  "MaxLength": 100000,
+  "Pattern": "^data:image/jpeg;base64,[a-zA-Z0-9+/=]+$"
+}

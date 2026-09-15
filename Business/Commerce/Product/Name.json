@@ -1,0 +1,6 @@
+{
+  "Name": "Name",
+  "Question": "What is the name?",
+  "Type": "S:I:D:T:S",
+  "SourceKey": "name"
+}

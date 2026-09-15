@@ -1,0 +1,5 @@
+{
+  "Name": "Identifier",
+  "Question": "What username, phone number or other identifier does this service use?",
+  "Type": "S:I:D:T:ID"
+}

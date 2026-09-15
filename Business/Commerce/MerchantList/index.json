@@ -1,0 +1,17 @@
+{
+  "Name": "Merchant list",
+  "Children": {
+    "ID": {
+      "$ref": "./Id.json"
+    },
+    "N": {
+      "$ref": "./Name.json"
+    }
+  },
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Description": "A directory or owner-maintained collection of merchant references."
+}

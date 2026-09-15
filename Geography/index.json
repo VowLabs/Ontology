@@ -1,0 +1,9 @@
+{
+  "Name": "Geography",
+  "Description": "Open for community-maintained extensions.",
+  "Children": {
+    "AD": {
+      "$ref": "./Address/index.json"
+    }
+  }
+}

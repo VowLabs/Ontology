@@ -1,0 +1,5 @@
+{
+  "Name": "Condition",
+  "Question": "What condition would you like to record?",
+  "Type": "S:I:D:T:S"
+}

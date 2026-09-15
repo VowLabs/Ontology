@@ -1,0 +1,5 @@
+{
+  "Name": "International phone number",
+  "ValueType": "string",
+  "Pattern": "^\\+[1-9][0-9]{1,14}$"
+}

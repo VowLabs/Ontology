@@ -1,0 +1,8 @@
+{
+  "Name": "Skip duress reminder",
+  "Question": "Should NokNok skip the duress-code reminder?",
+  "Type": "S:I:D:T:B",
+  "Preference": "duressReminderDisabled",
+  "StorageKey": "noknok_duress_reminder_disabled",
+  "Default": false
+}

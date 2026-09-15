@@ -1,0 +1,12 @@
+{
+  "Name": "Usage",
+  "Question": "How is this vehicle used?",
+  "Type": "S:I:D:T:S",
+  "Choices": [
+    "personal",
+    "commuting",
+    "business",
+    "mixed",
+    "other"
+  ]
+}

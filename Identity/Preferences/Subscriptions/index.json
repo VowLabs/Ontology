@@ -1,0 +1,21 @@
+{
+  "Name": "Account notifications",
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Children": {
+    "AC": {
+      "$ref": "./Account.json"
+    },
+    "EN": {
+      "$ref": "./Enabled.json"
+    },
+    "TH": {
+      "$ref": "./Threshold.json"
+    }
+  },
+  "ManagedBy": "Settings account notifications",
+  "InstanceKey": "accountNumber"
+}

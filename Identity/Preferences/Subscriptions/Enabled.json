@@ -1,0 +1,6 @@
+{
+  "Name": "Notifications enabled",
+  "Question": "Should NokNok notify you about this account?",
+  "Type": "S:I:D:T:B",
+  "SourceKey": "enabled"
+}

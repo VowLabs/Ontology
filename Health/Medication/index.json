@@ -1,0 +1,18 @@
+{
+  "Name": "Medication",
+  "Scalar": false,
+  "Subjects": [
+    "I:P"
+  ],
+  "Children": {
+    "N": {
+      "$ref": "./Name.json"
+    },
+    "D": {
+      "$ref": "./Dose.json"
+    },
+    "F": {
+      "$ref": "./Frequency.json"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "Name": "Data",
+  "Children": {
+    "T": {
+      "$ref": "./Types/index.json"
+    },
+    "OP": {
+      "$ref": "./Operations/index.json"
+    },
+    "LEX": {
+      "$ref": "./Lexicon/index.json"
+    }
+  }
+}

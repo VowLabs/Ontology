@@ -1,0 +1,8 @@
+{
+  "Name": "Debug mode",
+  "Question": "Should NokNok enable debug logging?",
+  "Type": "S:I:D:T:B",
+  "Preference": "debugMode",
+  "StorageKey": "noknok.debugMode",
+  "Default": false
+}

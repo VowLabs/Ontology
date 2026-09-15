@@ -1,0 +1,12 @@
+{
+  "Name": "Science",
+  "Description": "Open for community-maintained extensions.",
+  "Children": {
+    "T": {
+      "$ref": "./Technology/index.json"
+    },
+    "I": {
+      "$ref": "./Information/index.json"
+    }
+  }
+}

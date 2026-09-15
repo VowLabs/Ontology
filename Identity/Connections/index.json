@@ -1,0 +1,24 @@
+{
+  "Name": "Connect contacts",
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "ManagedBy": "Connect contacts",
+  "InstanceKey": "walletAddress",
+  "Children": {
+    "U": {
+      "$ref": "./Username.json"
+    },
+    "PN": {
+      "$ref": "./PreferredName.json"
+    },
+    "A": {
+      "$ref": "./Address.json"
+    },
+    "W": {
+      "$ref": "./Witness.json"
+    }
+  }
+}

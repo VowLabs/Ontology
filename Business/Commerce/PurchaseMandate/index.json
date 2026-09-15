@@ -1,0 +1,17 @@
+{
+  "Name": "Purchase mandate",
+  "Children": {
+    "ID": {
+      "$ref": "./Id.json"
+    },
+    "ST": {
+      "$ref": "./Status.json"
+    }
+  },
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Description": "Delegated purchase authority. Classification does not grant authority."
+}

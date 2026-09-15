@@ -1,0 +1,15 @@
+{
+  "Name": "Contact",
+  "Description": "Open for community-maintained extensions.",
+  "Children": {
+    "P": {
+      "$ref": "./Points/index.json"
+    },
+    "SM": {
+      "$ref": "./Social/index.json"
+    },
+    "EC": {
+      "$ref": "./Emergency/index.json"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "Name": "Start date",
+  "Question": "When did this employment begin?",
+  "Type": "S:I:D:T:DT"
+}

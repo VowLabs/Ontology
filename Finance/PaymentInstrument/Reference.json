@@ -1,0 +1,5 @@
+{
+  "Name": "Reference",
+  "Question": "What non-secret reference identifies it?",
+  "Type": "S:I:D:T:ID"
+}

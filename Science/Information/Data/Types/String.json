@@ -1,0 +1,5 @@
+{
+  "Name": "String",
+  "ValueType": "string",
+  "MaxLength": 2000
+}

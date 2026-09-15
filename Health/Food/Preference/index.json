@@ -1,0 +1,16 @@
+{
+  "Name": "Food preference",
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Children": {
+    "I": {
+      "$ref": "./Item.json"
+    },
+    "P": {
+      "$ref": "./Preference.json"
+    }
+  }
+}

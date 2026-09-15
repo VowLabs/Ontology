@@ -1,0 +1,80 @@
+{
+  "Name": "Commerce",
+  "Children": {
+    "M": {
+      "$ref": "./Merchant/index.json"
+    },
+    "ML": {
+      "$ref": "./MerchantList/index.json"
+    },
+    "O": {
+      "$ref": "./Offer/index.json"
+    },
+    "OR": {
+      "$ref": "./Order/index.json"
+    },
+    "OL": {
+      "$ref": "./OrderLine/index.json"
+    },
+    "P": {
+      "$ref": "./Product/index.json"
+    },
+    "CK": {
+      "$ref": "./Checkout/index.json"
+    },
+    "FU": {
+      "$ref": "./Fulfillment/index.json"
+    },
+    "WL": {
+      "$ref": "./Wishlist/index.json"
+    },
+    "SI": {
+      "$ref": "./SaleIntent/index.json"
+    },
+    "OA": {
+      "$ref": "./OfferResponse/index.json"
+    },
+    "ME": {
+      "$ref": "./MerchantEnrollment/index.json"
+    },
+    "CP": {
+      "$ref": "./CustomerProfile/index.json"
+    },
+    "ON": {
+      "$ref": "./Onboarding/index.json"
+    },
+    "MB": {
+      "$ref": "./Membership/index.json"
+    },
+    "SU": {
+      "$ref": "./SupportRequest/index.json"
+    },
+    "NS": {
+      "$ref": "./NewsletterSubscription/index.json"
+    },
+    "RC": {
+      "$ref": "./Recruiter/index.json"
+    },
+    "RA": {
+      "$ref": "./RecruiterAssignment/index.json"
+    },
+    "MN": {
+      "$ref": "./Menu/index.json"
+    },
+    "MT": {
+      "$ref": "./MerchantCategory/index.json"
+    },
+    "PM": {
+      "$ref": "./PurchaseMandate/index.json"
+    },
+    "MU": {
+      "$ref": "./MandateUse/index.json"
+    },
+    "MR": {
+      "$ref": "./MandateReservation/index.json"
+    },
+    "OE": {
+      "$ref": "./OrderEvent/index.json"
+    }
+  }
+}

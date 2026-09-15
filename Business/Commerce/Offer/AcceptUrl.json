@@ -1,0 +1,6 @@
+{
+  "Name": "Acceptance URL",
+  "Question": "What is the acceptance url?",
+  "Type": "S:I:D:T:URL",
+  "SourceKey": "acceptUrl"
+}

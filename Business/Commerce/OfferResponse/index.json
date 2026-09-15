@@ -1,0 +1,17 @@
+{
+  "Name": "Offer response",
+  "Children": {
+    "ID": {
+      "$ref": "./Id.json"
+    },
+    "ST": {
+      "$ref": "./Status.json"
+    }
+  },
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Description": "Acceptance or decline of an offer by a user."
+}

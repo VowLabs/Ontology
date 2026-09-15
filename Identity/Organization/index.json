@@ -1,0 +1,22 @@
+{
+  "Name": "Organization identity",
+  "Scalar": true,
+  "Subjects": [
+    "I:O"
+  ],
+  "Children": {
+    "LN": {
+      "$ref": "./LegalName.json"
+    },
+    "TN": {
+      "$ref": "./TradingName.json"
+    },
+    "J": {
+      "$ref": "./Jurisdiction.json"
+    },
+    "RN": {
+      "$ref": "./RegistrationNumber.json"
+    }
+  },
+  "SubjectType": true
+}

@@ -1,0 +1,16 @@
+{
+  "Name": "Online account",
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Children": {
+    "S": {
+      "$ref": "./Service.json"
+    },
+    "ID": {
+      "$ref": "./Handle.json"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "Name": "Medical history",
+  "Scalar": false,
+  "Subjects": [
+    "I:P"
+  ],
+  "Children": {
+    "C": {
+      "$ref": "./Condition.json"
+    },
+    "D": {
+      "$ref": "./Date.json"
+    },
+    "N": {
+      "$ref": "./Notes.json"
+    }
+  }
+}

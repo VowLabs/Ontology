@@ -1,0 +1,6 @@
+{
+  "Name": "Image URL",
+  "Question": "What is the image url?",
+  "Type": "S:I:D:T:S",
+  "SourceKey": "imageUrl"
+}

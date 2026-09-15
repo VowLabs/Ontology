@@ -1,0 +1,32 @@
+{
+  "Name": "Information system operations",
+  "Children": {
+    "CFG": {
+      "$ref": "./Configuration/index.json"
+    },
+    "EV": {
+      "$ref": "./Event/index.json"
+    },
+    "AU": {
+      "$ref": "./Authentication/index.json"
+    },
+    "ID": {
+      "$ref": "./Idempotency/index.json"
+    },
+    "JOB": {
+      "$ref": "./Job/index.json"
+    },
+    "WH": {
+      "$ref": "./Webhook/index.json"
+    },
+    "WD": {
+      "$ref": "./WebhookDelivery/index.json"
+    },
+    "CUR": {
+      "$ref": "./Cursor/index.json"
+    },
+    "MSG": {
+      "$ref": "./Message/index.json"
+    }
+  }
+}

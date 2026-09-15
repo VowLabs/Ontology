@@ -1,0 +1,29 @@
+{
+  "Name": "Wallet accounts",
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "ManagedBy": "Wallet accounts",
+  "InstanceKey": "accountNumber",
+  "Children": {
+    "N": {
+      "$ref": "./Name.json"
+    },
+    "NO": {
+      "$ref": "./Number.json"
+    },
+    "A": {
+      "$ref": "./Address.json"
+    },
+    "CH": {
+      "$ref": "./Chain.json"
+    },
+    "DP": {
+      "$ref": "./DerivationPath.json"
+    }
+  },
+  "Public": false,
+  "PrivateRequired": true
+}
