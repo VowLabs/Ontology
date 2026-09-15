@@ -1,5 +1,9 @@
 # VowLabs information ontology
 
+The standalone read-only HTTP API is documented in [API.md](API.md). Start it
+with `npm --prefix VowLabs/Ontology start` from the Vow workspace; it requires
+Node.js 22 or later and has no external dependencies.
+
 The source lives in the `VowLabs/Ontology` repository. In the Vow workspace,
 `NokNok/Ontology` is a compatibility symlink to this directory. Check out both
 repositories in that layout to use the NokNok asset build and cross-project
