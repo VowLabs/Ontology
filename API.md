@@ -1,9 +1,9 @@
 # VL Ontology API
 
 VL Ontology owns canonical definitions, codes, collections, service records, and
-service icons. NokNok owns user values, online-account identifiers, encrypted
-Lexicon snapshots, public profiles, and attestations. This API has no database,
-wallet authentication, user lookup, or write endpoints.
+service icons. Consuming applications own user values, account identifiers,
+encrypted records, public profiles, and attestations. This API has no user
+database, user authentication, user lookup, or write endpoints.
 
 ## Run
 
@@ -28,7 +28,7 @@ relative to the ontology origin, not the consuming application's origin.
 The server validates and loads one consistent snapshot on startup. After changing
 ontology sources or icons, stop the process and rerun the same start command.
 `GET /health` reports availability and the loaded version/revision. The service
-handles SIGTERM/SIGINT. No NokNok checkout is required to run it.
+handles SIGTERM/SIGINT. It runs independently of any consuming application.
 
 ## Endpoints
 
@@ -83,9 +83,9 @@ Definitions carry a canonical reference such as
 `urn:vl:ontology:2.0.0:S:T:SV:record:telegram`. These are stable identifiers, not
 HTTP URLs. Use the configured API origin to resolve them via the endpoint table.
 Keep `{ ontologyVersion, code, recordId? }` alongside references in application
-storage. User-specific values remain in NokNok. Existing NokNok colon-delimited
-codes and service IDs continue to refer to these same canonical definitions;
-no user-data migration is needed.
+storage. User-specific values remain in the consuming application.
+Colon-delimited codes and service IDs resolve to the same canonical definitions
+across applications. Applications own any migrations of their stored data.
 
 `v1` versions the HTTP contract. `ontologyVersion` versions the schema;
 `RegistryVersion` versions a registry. `revision` detects source content changes
@@ -113,44 +113,26 @@ if (!response.ok) throw new Error(`Ontology unavailable: ${response.status}`);
 const { data: services, meta } = await response.json();
 const telegram = services.find(service => service.id === 'telegram');
 const iconUrl = new URL(telegram.iconUrl, origin).href;
-// Store only this canonical reference alongside the user's data in NokNok:
+// Store this canonical reference alongside application-owned user data:
 const serviceReference = telegram.reference;
 // Continue at meta.nextOffset if it is not null.
 ```
 
-## NokNok Relay compatibility
+## Application integration
 
-The Relay no longer owns service definitions or icons. Its existing
-`/api/services` and `/api/services/{id}/icon.svg` routes are compatibility adapters
-that fetch VL Ontology. New applications should call this API directly.
-The Relay caches the service definition for 60 seconds, times out requests after
-5 seconds, and reports 503 if the registry is unavailable. Public-profile reads
-still return user fields during an outage, with `services: []` and
-`ontologyUnavailable: true`. Lexicon storage and attestations stay in NokNok.
+Configure each application with the ontology server's reachable origin. Browser
+clients should use the deployed HTTPS origin; server-side clients may use an
+internal origin. Use the canonical API endpoints directly, or provide an
+application-owned adapter when an existing client contract requires one.
 
-Start VL Ontology before starting/restarting the Relay. For local development,
-stop the existing Relay process and run:
-
-```sh
-ONTOLOGY_URL=http://127.0.0.1:24106 npm --prefix NokNok/Relay start
-```
-
-For deployments, set `ONTOLOGY_URL` to the ontology server's reachable HTTP(S)
-origin, without an API path, credentials, or query. The Relay fetches icons
-server-side, so this origin may be internal. Existing wallet apps need no rebuild
-for these compatibility routes.
+Applications control their caching, retry, and outage behavior. Retaining a
+validated catalogue snapshot can support offline operation. Keep user-data reads
+and writes independent of ontology availability wherever possible; this server
+has no role in storing or synchronizing those records.
 
 ## Verification
 
 ```sh
 npm --prefix VowLabs/Ontology test
 npm --prefix VowLabs/Ontology run validate
-node NokNok/Relay/test/ontology-client.test.mjs
-```
-
-The existing NokNok asset-generation command remains available through the
-compatibility symlink. It uses the same validator as the API:
-
-```sh
-node NokNok/Ontology/_support/tools/build.mjs
 ```

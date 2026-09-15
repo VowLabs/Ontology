@@ -1,121 +1,69 @@
-# Data slices protocol v1
+# Using ontology references in application protocols
 
-Transport-independent JSON messages. The initial wallet UI uses explicit paste,
-review and copy; it neither fetches a supplied URL nor sends an HTTP callback.
-Requester names and origins are self-declared in this transport. Display them
-without implying authenticated origin. The user must establish the intended
-recipient independently. No background or ongoing access is granted.
+VL Ontology supplies canonical definitions and reference data. Applications own
+the protocols that request, disclose, transport, and attest to user data. The
+read-only [ontology API](../../API.md) does not receive disclosure payloads,
+authenticate users, collect consent, or verify application signatures.
 
-## Request
+## Referencing a definition
 
-```json
-{
-  "type": "noknok.data.request",
-  "protocol": 1,
-  "ontology": "2.0.0",
-  "id": "request123",
-  "nonce": "b4d590a393c148d0a1634283d7d0f6ac",
-  "requester": { "name": "Example Insurance", "origin": "https://insurance.example" },
-  "purpose": "Prepare a motor insurance quotation",
-  "subjectType": "I:P",
-  "expiresAt": "2026-12-31T00:00:00.000Z",
-  "fields": [
-    { "code": "F:A:V:MK", "required": true },
-    { "code": "F:A:V:Y", "required": true },
-    { "code": "F:A:V:VIN", "required": false }
-  ]
-}
-```
-
-Create a fresh cryptographically random ID and nonce per exchange (the built-in
-builder generates 128-bit values). Keep the original request on the recipient
-side. The builder gives requests a 24-hour lifetime. Imported requests must have
-a future expiry, an exact supported ontology version, an HTTPS origin, and
-1–100 unique explicit leaf fields applicable to the subject type. Unknown request
-features are rejected, not interpreted as permission. v1 does not support
-freshness requirements, callback URLs, or mandatory trusted issuers.
-
-## Review and grant
-
-1. Display the self-declared requester, purpose, expiry and requested questions.
-2. Select a locally maintained subject of the requested type.
-3. Match saved answers by canonical code and stable instance ID.
-4. Start with nothing selected. Select individual values and instances.
-5. Required fields constrain approval, never the right to decline. For every
-   selected instance, include all requested required fields belonging to its
-   object type. Do not combine one car's make with another car's year.
-6. Preview the exact disclosure and individually opt into matching attestations.
-7. Check expiry again, record approval locally, and copy only that snapshot.
-
-Returning to editing and making changes does not mutate an existing disclosure.
-An approval record is not proof of delivery. If clipboard copying fails, no
-success is shown, although the preceding local approval record remains.
-
-## Disclosure
-
-A `noknok.data.disclosure` includes `protocol`, `ontology`, `requestId`, `nonce`,
-`audience` (the requester origin), `subject`, `issuedAt`, `answers`, and
-`attestations`. Each answer is exactly:
+An application message can identify a field using its ontology version and
+canonical code. For example, this fragment identifies a vehicle year:
 
 ```json
 {
-  "subject": "person1",
-  "instance": "vehicle1",
+  "ontologyVersion": "2.0.0",
   "code": "F:A:V:Y",
-  "value": 2022,
-  "updatedAt": "2026-09-13T12:00:00.000Z"
+  "reference": "urn:vl:ontology:2.0.0:F:A:V:Y"
 }
 ```
 
-`shared/data-slices.js` exports a factory accepting the compiled catalogue.
-`validateRequest` and `validateDisclosure` check messages. The latter checks the
-original request's audience, ID, nonce, version, expiry, required fields, field
-allowlist, instance consistency and accompanying attestation scope. Requesters
-must separately authenticate the sending party where needed and persist consumed
-request IDs/nonces to reject replay. This clipboard implementation deliberately
-does not pretend to provide authenticated transport or server-side replay state.
+This is a reference example, not a prescribed request or signature envelope.
+Resolve the code through `GET /v1/definitions/F:A:V:Y`. For reproducible
+interpretation, retain the catalogue revision and the corresponding snapshot.
+The API serves the currently loaded ontology; it does not provide historical
+snapshot lookup.
 
-A copied disclosure cannot be revoked retroactively. There are no bearer tokens,
-refresh grants or subscriptions in v1.
+## Requests and disclosures
 
-## Fact attestations
+Applications implementing selective disclosure should define:
 
-The subject can copy a fact from the Attestations tab and send it to an attester.
-The attester pastes that fact into their wallet, reviews it, and explicitly signs
-it. The subject imports the returned signature, which must match a currently
-saved fact before it is stored. The wallet can include selected matching
-attestations in a disclosure.
+- The request's identifier, audience, purpose, expiry, and replay protection.
+- The applicable subject type and explicit field codes.
+- Stable subject and record identifiers for repeated objects.
+- How users review and approve individual values and records.
+- How recipients validate a disclosure against the original request.
 
-An envelope contains `scheme: "eip191"`, `statement`, and a hexadecimal
-65-byte `signature`. A statement contains:
+Collections provide convenient groups of field definitions. Expanding a
+collection into explicit codes does not authorize access to those fields.
+Required fields can constrain a submitted disclosure, but cannot remove a user's
+ability to decline. Keep fields from each repeated record together: one
+vehicle's make must not be combined with another vehicle's year.
 
-- `type: "noknok.data.attestation"`, `protocol: 1`, `ontology: "1.0.0"`;
-- `issuer`: the signing Ethereum address;
-- `issuedAt`: UTC ISO timestamp with milliseconds;
-- `claim`: exactly `The issuer attests that this fact is accurate.`;
-- `fact`: the exact subject, instance, code, value and update timestamp above.
+Requester labels alone do not authenticate an origin. Authentication, transport
+security, access control, and replay protection belong to the application.
+Previously disclosed data cannot be made inaccessible merely by changing an
+ontology definition or a local consent setting.
 
-Signing bytes are UTF-8 of `NokNok data attestation v1\n` followed by canonical
-JSON of the statement: recursively lexicographically sorted object keys, array
-order preserved, and JSON.stringify primitive encoding. No whitespace or Unicode
-normalization is added. Numbers follow JavaScript JSON serialization; integer
-values must be safe integers and non-finite numbers are rejected. Other language
-implementations must reproduce these bytes exactly. Use Ethereum personal-message
-(EIP-191) signing and recovery, as implemented by the installed ethers library.
+## Attestations
 
-`data-wallet.js.verify` recovers the signer and compares it to `issuer`. A matching
-signature proves control of the signing key and integrity of the statement. It
-does not establish identity, clinical credentials, legal authority, or truth.
-Changes to an answer or its timestamp make an old attestation inapplicable.
-Historical attestations remain stored but are not offered for a changed fact.
-Only single-fact attestations are supported. Expiry, revocation and issuer trust
-registries require a later protocol version; v1 claims must not be presented as
-current official certification. The disclosure itself is unsigned.
+An application may attach an attestation to a fact identified by canonical code.
+Its protocol must specify the exact statement schema, signing domain, byte
+serialization, signature algorithm, issuer identification, and verification
+rules. VL Ontology does not prescribe a signing envelope or signing prefix.
 
-## Limits
+Keep signed statements byte-for-byte intact. Mapping an old code to a current
+code for display must not rewrite the signed statement. A change to the value,
+subject, instance, or timestamp may invalidate the applicability of a previous
+attestation under the application's rules.
 
-Imported JSON and editor bridge messages are limited to one megabyte (string
-length limit); stores permit up to 2,000 subjects, records, attestations and
-approval entries in each list. Prototype-modifying property names are rejected.
-Requests never execute code or define new validation rules. Medical, financial,
-and identity data are not logged or uploaded by this protocol.
+A valid signature establishes key control and statement integrity; it does not
+by itself establish factual accuracy, identity, qualifications, or authority.
+Applications define issuer trust, expiry, revocation, and disclosure policies.
+
+## Compatibility
+
+Applications must distinguish their protocol version from the ontology version.
+Reject unsupported semantics rather than guessing. Historical migration maps
+are available through `GET /v1/migrations`; applying them to application records
+requires the consuming application's compatibility and migration policy.

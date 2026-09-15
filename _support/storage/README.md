@@ -1,96 +1,62 @@
-# Classification in existing stores
+# Classifying application records
 
-[index.json](index.json) is the canonical record-family inventory. Each table or
-JSON record family maps to a path in the same ontology tree as wallet answers.
-Applications retain their databases, primary keys, tables, JSON layouts and
-access controls. The SQL migrations add `ontology_code` and `ontology_version`
-with defaults that classify existing rows and future inserts. Each row also has
-`ontology_public`; sensitive composite records such as merchant enrollments and
-merchant records default to private. Public presentation of selected fields still
-uses the application's existing projections. JSON objects use
-`ontologyCode`, `ontologyVersion` and `ontologyPublic` assigned by server code. Dictionaries of
-scalar values (routing names and merchant category lists) use the deployed
-`NokNok/www/ontology-storage.json` file-level mapping, preserving their layout.
+[index.json](index.json) inventories record-family mappings for participating
+applications. Each table or JSON record family maps to a canonical ontology
+code. Applications retain their databases, primary keys, tables, JSON layouts,
+user records, and access controls. The ontology server stores none of that data.
+
+## Classification metadata
+
+SQL adapters can use `ontology_code`, `ontology_version`, and `ontology_public`
+to classify existing rows and future inserts. JSON adapters can use
+`ontologyCode`, `ontologyVersion`, and `ontologyPublic`. Dictionaries of scalar
+values may use an application-owned file-level mapping instead of changing each
+value's shape.
 
 Merchants are `B:C:M`, merchant lists `B:C:ML`, and merchant offers `B:C:O`.
-Products, checkouts, orders, fulfillment, mandates and support each have separate
-record types. Internal challenges, jobs, cursors and other operational data also
-have classifications; classification never adds disclosure permission.
+Products, checkouts, orders, fulfillment, mandates, and support each have separate
+record types. Internal challenges, jobs, cursors, and other operational records
+also have classifications. Classification never grants disclosure permission.
 
-This is record-level classification. Existing application columns, embedded
-payloads and signed protocol messages keep their current field schemas. The new
-commerce definitions provide initial question fields, not a complete replacement
-schema for each application's internal payload. Adding a new table requires a
-classification here and a corresponding package-local migration. New field-level
-sharing adapters should map fields explicitly and retain the existing access
-checks; the wallet does not automatically import server databases.
+Sensitive composite records can default to private. Public presentation of
+selected fields remains an application-owned projection governed by that
+application's access controls.
 
-## Checks
+## Application adapters
 
-From the workspace root:
+Record-level classification does not replace an application's internal field
+schema. Existing columns, embedded payloads, and signed protocol messages retain
+their meaning. Field-level sharing adapters should map fields explicitly to
+canonical definitions and preserve their existing access checks.
 
-```sh
-node VowLabs/Ontology/_support/tools/build.mjs
-node VowLabs/Ontology/_support/tools/check-storage.mjs
-node --test NokNok/shared/data-slices.test.cjs
-node VowLabs/Ontology/_support/tools/test-storage.mjs
-```
+Adding a classified table requires an inventory entry and a corresponding
+application-owned migration. Migrations should preserve record identities,
+history, and existing fields, and should be safe to repeat. Publication and
+visibility policies remain separate from schema classification.
 
-The last command creates and removes disposable PostgreSQL databases. It uses
-`ONTOLOGY_TEST_POSTGRES_URL` or `postgresql://localhost/postgres`; no application
-database is opened. It checks legacy backfill, new-insert defaults and repeat
-migration for every classified table.
+## Validation
 
-## Rollout
-
-No live databases or production files were migrated during implementation.
-Stop the relevant running process before starting its replacement. PriceEdge
-and PriceEdgeShop apply their additive SQL on startup:
+Validate the canonical definitions and API from the workspace root:
 
 ```sh
-pnpm -C PriceEdge start
-pnpm -C PriceEdgeShop start
+npm --prefix VowLabs/Ontology run validate
+npm --prefix VowLabs/Ontology test
 ```
 
-VowCorp uses its existing migration workflow. With
-`VOWCORP_MIGRATION_DATABASE_URL` or `VOWCORP_DATABASE_URL` configured:
+Workspace integration tools in `../tools/` can additionally check the inventory
+against participating applications' schemas and exercise additive SQL migrations
+in disposable PostgreSQL databases. These checks depend on the relevant
+application checkouts, generated catalogues, and database tooling; they are not
+requirements for running the standalone ontology API.
 
-```sh
-pnpm -C VowCorp db:migrate
-pnpm -C VowCorp build
-pnpm -C VowCorp start
-```
+The storage migration test uses `ONTOLOGY_TEST_POSTGRES_URL` or
+`postgresql://localhost/postgres`. It creates and removes disposable databases,
+checking existing-row backfill, new-insert defaults, and repeat migration without
+opening an application database.
 
-For existing NokNok merchant JSON files, preview and then apply the classification
-while the merchant server is stopped. The apply command preserves originals as
-`.pre-ontology` backups and preserves IDs, history, and existing fields:
+## Deployment ownership
 
-```sh
-node NokNok/www/scripts/classify-storage.mjs
-node NokNok/www/scripts/classify-storage.mjs --write
-pnpm -C NokNok/www start
-```
-
-Set any existing `NOKNOK_MENU_STATE_PATH` / `NOKNOK_MENU_VENDORS_PATH` overrides in
-the shell when running the migration. New records are classified at write time.
-
-For the wallet, rebuild/relaunch Mobile for the target platform:
-
-```sh
-pnpm -C NokNok/Mobile wallet:ios:sim
-# or
-pnpm -C NokNok/Mobile wallet:android:sim
-```
-
-For an unpacked Chrome extension, compile with
-`node VowLabs/Ontology/_support/tools/build.mjs`, then click Reload for NokNok at
-`chrome://extensions`. For Telegram:
-
-```sh
-pnpm -C NokNok/Telegram build
-pnpm -C NokNok/Telegram start
-```
-
-Generated account lists synchronize their public registry attribute automatically
-when the unlocked wallet loads them and when accounts change. No publish button
-or separate publication action is required. No contract redeployment is needed.
+Each application owns its migration, backup, restart, and deployment procedure.
+Keep executable rollout instructions with that application. Publishing a new
+ontology version does not migrate application databases, publish private values,
+or rebuild consuming clients automatically.

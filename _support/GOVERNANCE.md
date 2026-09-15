@@ -21,7 +21,7 @@ parent keys. A path move requires a documented migration; v1 consumers reject
 unsupported versions instead of guessing compatibility. Record old codes in
 legacy.json, and review migration impact on stored answers and attestations.
 
-Run the compiler and protocol tests described in [the ontology README](../README.md). Include valid and
+Run the validation and API tests described in [the ontology README](../README.md). Include valid and
 invalid answer examples in tests when changing constraints. Do not commit the
 compiled catalogue. Review changes to shared types for effects on every referring
 field. Request collections must list leaves explicitly and must not grant access
