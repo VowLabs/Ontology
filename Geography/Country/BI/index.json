@@ -1,0 +1,18 @@
+{
+  "Name": "Burundi",
+  "Description": "Country or territory identified as BI in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "BI",
+  "ISO3": "BDI",
+  "OfficialName": "Republic of Burundi",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/BI.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

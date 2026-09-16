@@ -1,0 +1,18 @@
+{
+  "Name": "Jersey",
+  "Description": "Country or territory identified as JE in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "JE",
+  "ISO3": "JEY",
+  "OfficialName": "Bailiwick of Jersey",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/JE.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

@@ -1,0 +1,18 @@
+{
+  "Name": "Micronesia",
+  "Description": "Country or territory identified as FM in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "FM",
+  "ISO3": "FSM",
+  "OfficialName": "Federated States of Micronesia",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/FM.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

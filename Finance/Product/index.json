@@ -1,0 +1,27 @@
+{
+  "Name": "Product",
+  "Description": "Financial product types, organized by economic function rather than provider. These are classification concepts, not customer records or statements of ownership. Categories are extensible and do not imply regulatory status or eligibility.",
+  "Children": {
+    "AC": {
+      "$ref": "./Account/index.json"
+    },
+    "CR": {
+      "$ref": "./Credit/index.json"
+    },
+    "IN": {
+      "$ref": "./Investment/index.json"
+    },
+    "PA": {
+      "$ref": "./Payment/index.json"
+    },
+    "IS": {
+      "$ref": "./Insurance/index.json"
+    },
+    "RE": {
+      "$ref": "./Retirement/index.json"
+    },
+    "DA": {
+      "$ref": "./DigitalAsset/index.json"
+    }
+  }
+}

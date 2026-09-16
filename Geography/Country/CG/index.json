@@ -1,0 +1,18 @@
+{
+  "Name": "Republic of the Congo",
+  "Description": "Country or territory identified as CG in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "CG",
+  "ISO3": "COG",
+  "OfficialName": "Republic of the Congo",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/CG.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

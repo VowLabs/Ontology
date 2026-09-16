@@ -45,7 +45,7 @@ for particular workflows.
 | --- | --- | --- |
 | `I` | Identity | Describes people and organizations, how they identify themselves, how they can be contacted, and their preferences and connections. Its current branches cover personal and organizational information, identifiers, contact details, preferences, and relationships such as contacts and witnesses. Identity provides the subjects to which records in other domains belong; possessing an identifier or declaring a relationship does not establish its authenticity. |
 | `F` | Finance | Covers money, assets, accounts, payment instruments, and financial transactions for individuals, organizations, and public bodies. Current definitions include bank accounts, wallets, payment instruments, assets, generated wallet accounts, invoices, settlement proofs, and refunds. Finance remains a peer of Business because financial information also describes personal holdings and noncommercial activity, while business operations extend beyond financial matters. |
-| `G` | Geography | Covers places, locations, and the spatial relationships used to situate people, organizations, assets, and activities. The current branch defines addresses; its broader scope accommodates geographic areas, coordinates, and physical locations as additional vocabulary is defined. Geographic facts identify where something is situated, while the identity of its occupant or owner belongs to the relevant subject. |
+| `G` | Geography | Covers places, locations, and the spatial relationships used to situate people, organizations, assets, and activities. The current branches define address formats, address roles and sourced country/territory concepts; its broader scope accommodates geographic areas, coordinates, and physical locations as additional vocabulary is defined. Geographic facts identify where something is situated, while the identity of its occupant or owner belongs to the relevant subject. |
 | `H` | Health | Covers physical and mental health, care needs, accessibility, and food-related information relevant to wellbeing. Current definitions include allergies, medications, medical history, accessibility needs, and food requirements. These records support selective disclosure for contexts such as care intake and food service; a recorded answer is a person's or organization's statement, and the catalogue itself supplies neither a diagnosis nor clinical validation. |
 | `B` | Business | Covers commercial activity and the organization of work, including products, services, trading relationships, employment, insurance, and operational processes. Its current branches are Commerce, Employment, and Insurance. Business uses financial facts through their Finance codes, allowing a commercial workflow to combine operational and financial information without duplicating the same concept in both domains. |
 | `S` | Science | Covers scientific knowledge, technical systems, and the information structures used to describe and process data. Its current branches are Technology and Information, including the shared primitive types used throughout the ontology. This domain provides a home for scientific and technical subject matter; the fact that another domain can be studied systematically does not make that entire domain a subdivision of Science. |
@@ -53,6 +53,17 @@ for particular workflows.
 | `R` | Society | Covers collective life, social institutions, civic participation, governance, law, communities, and relationships between groups. Identity describes particular people and organizations, while Society provides a home for the collective structures and practices in which they participate. Society is currently an organizing branch with no defined children. |
 
 ## Definitions
+
+### Financial products
+
+[`Finance:Product`](Finance/Product/index.json) (`F:P`) classifies account,
+credit, investment, payment, insurance, retirement and native digital-asset
+products. Mortgages sit under Credit:Loan and stocks under Investment:Equity.
+These are product-type concepts, separate from existing customer records such
+as `F:BA` (bank account). See the [financial product taxonomy](_support/finance-products.md)
+for codes, classification examples and compatibility notes for ontology `2.1.0`.
+
+### Definition structure
 
 An organizing node has `Name`, optional `Description`, and `Children` references.
 An answer-bearing object additionally has:
@@ -83,7 +94,7 @@ change to the definition format.
 An application can maintain multiple subjects, each with a stable local ID and
 a canonical type. Subject definitions declare `SubjectType: true`. Records can
 refer to a subject, an object code, and property-keyed values with timestamps.
-Labels and tags describe individual records rather than canonical concepts.
+Labels describe individual records; tags qualify them using references to canonical concepts.
 For example, an application might store the following record in its own database:
 
 ```json
@@ -92,7 +103,7 @@ For example, an application might store the following record in its own database
   "subject": "person1",
   "code": "F:A:V",
   "label": "Family car",
-  "tags": ["personal", "insured"],
+  "tags": ["F:P:IS:MO"],
   "values": {
     "MK": { "value": "Toyota", "public": false, "updatedAt": "2026-09-13T12:00:00.000Z" },
     "Y": { "value": 2022, "public": false, "updatedAt": "2026-09-13T12:00:00.000Z" }
@@ -139,10 +150,11 @@ omit empty lines and dangling punctuation, and keep each record separate.
 does not change stored answers. Address omits `US` from the domestic display and
 retains other country values and any public delivery instructions.
 
-`G:AD:R` is Role: Residence, Office, Billing, Shipping, or Other. `AllowCustom`
-and `CustomChoice` allow an application to accept a custom value when Other
-is selected. Store the entered value rather than the placeholder Other. `ChoiceAliases` maps previous labels
-for display and editing without rewriting historical signed facts.
+`G:AD:US:R` is Role. Its `Choices` value is the branch reference `G:AD:RO`.
+Clients resolve that branch recursively, display leaf names and store leaf codes.
+The Country field similarly references `G:CO`. Literal choice arrays remain
+supported for fields that enumerate primitive values. Branch references do not
+permit custom strings, display-label aliases or intermediate branch values.
 
 ## Application stores
 
@@ -182,3 +194,54 @@ licence also records issuing region, classes, and restrictions or endorsements;
 a passport records its type and nationality. Document numbers remain text,
 scoped to their issuer. These records do not themselves attest authenticity or
 current validity. The person's identity remains a separate subject.
+
+### Record display labels
+
+Object definitions may declare `LabelField` as a child key. Clients display an
+explicit nonblank record `label` first, otherwise that field's value (including
+choice alias normalization). The US address record declares `"LabelField": "R"`, so Role is
+the default label; a label such as Home overrides Residence. Tags remain separate
+canonical classification references, not free text. Public profiles only derive
+labels from public answers. `DisplayFormat` describes the body, excluding the label.
+
+## Canonical tags and contribution requirements
+
+Record `tags` contain at most 32 distinct, nonempty ontology codes such as
+`F:P:IS:MO`. Each code must resolve in the record's declared ontology version;
+labels, wildcard expressions and guessed codes are rejected. Tags qualify the
+item without asserting a field value, granting access or attesting truth.
+See the [tag contract](_support/protocol/README.md#canonical-record-tags) for
+the version `3.0.0` compatibility rules and preservation of old free-text tags.
+
+Every new datapoint requires a full human-readable description in a README in
+its containing folder, plus an updated parent guide. See
+[AGENTS.md](AGENTS.md) and the [contribution requirements](_support/GOVERNANCE.md).
+
+## Domain classification guides
+
+Each folder containing an `index.json` has a README explaining its immediate
+children. Record guides describe fields rather than pretending those fields are
+subtypes. Terminal classification guides state when no finer subclasses exist.
+
+- [Identity (`I`)](Identity/README.md): Identity separates who a subject is from how to contact them, their identifiers, issued documents, preferences and wallet connections. Personal and organizational identity define the subject types used by records elsewhere in the tree.
+- [Finance (`F`)](Finance/README.md): Finance separates customer account and payment references, physical asset records, transaction records and financial product classifications. F:P describes product types; it does not replace the existing answer-bearing account records.
+- [Geography (`G`)](Geography/README.md): Geography supplies spatial context. The present vocabulary covers addresses; it does not yet define separate coordinate, boundary or geographic-area subclasses.
+- [Health (`H`)](Health/README.md): Health separates reported allergies, medication use, medical history, accessibility accommodations and food requirements. Preferences, restrictions and reported conditions have different meanings and are kept in separate records.
+- [Business (`B`)](Business/README.md): Business groups commercial workflows, employment records and insurance policy records. Finance remains separate so the same financial facts can be used in personal and commercial contexts.
+- [Science (`S`)](Science/README.md): Science currently organizes Technology and Information. Technology supplies shared service metadata; Information supplies data types and information-system record classifications. These branches describe technical concepts rather than granting applications access to user data.
+- [Humanities (`U`)](Humanities/README.md): Humanities is reserved for human culture, language, history, philosophy and interpretation. No child definitions are published yet; these scope examples do not create canonical subclasses.
+- [Society (`R`)](Society/README.md): Society is reserved for collective institutions, governance, law, civic participation and communities. It differs from Identity, which describes particular people and organizations. No child definitions are published yet.
+
+Supporting indexes are documented separately: [workflow collections](_support/collections/README.md) and [application storage classifications](_support/storage/README.md). These indexes are not ontology domains.
+
+## Tree-backed choices and sourced definitions
+
+`Choices` can be a literal array or a canonical branch code. For example,
+`"Choices": "G:AD:RO"` accepts only terminal descendants of Address:Roles.
+This is a constrained relationship; `tags` remains the general relationship
+mechanism and does not replace Role. See [Address](Geography/Address/README.md).
+
+Ontology `4.0.0` moves the former Address record to `G:AD:US`. The country list
+at `G:CO` is sourced from a pinned `ekkis/geo` revision. See the
+[address migration](_support/protocol/README.md#address-migration) and
+[external source workflow](_support/sources/README.md).

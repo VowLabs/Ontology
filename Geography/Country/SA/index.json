@@ -1,0 +1,18 @@
+{
+  "Name": "Saudi Arabia",
+  "Description": "Country or territory identified as SA in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "SA",
+  "ISO3": "SAU",
+  "OfficialName": "Kingdom of Saudi Arabia",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/SA.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

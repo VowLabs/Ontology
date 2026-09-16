@@ -1,0 +1,18 @@
+{
+  "Name": "Réunion",
+  "Description": "Country or territory identified as RE in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "RE",
+  "ISO3": "REU",
+  "OfficialName": "Réunion Island",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/RE.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

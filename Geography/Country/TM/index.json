@@ -1,0 +1,18 @@
+{
+  "Name": "Turkmenistan",
+  "Description": "Country or territory identified as TM in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "TM",
+  "ISO3": "TKM",
+  "OfficialName": "Turkmenistan",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/TM.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

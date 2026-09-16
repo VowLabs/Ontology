@@ -1,0 +1,18 @@
+{
+  "Name": "Brunei",
+  "Description": "Country or territory identified as BN in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "BN",
+  "ISO3": "BRN",
+  "OfficialName": "Nation of Brunei, Abode of Peace",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/BN.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

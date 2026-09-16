@@ -1,0 +1,18 @@
+{
+  "Name": "United States Virgin Islands",
+  "Description": "Country or territory identified as VI in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "VI",
+  "ISO3": "VIR",
+  "OfficialName": "Virgin Islands of the United States",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/VI.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

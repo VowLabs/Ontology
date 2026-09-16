@@ -1,0 +1,18 @@
+{
+  "Name": "Ethiopia",
+  "Description": "Country or territory identified as ET in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "ET",
+  "ISO3": "ETH",
+  "OfficialName": "Federal Democratic Republic of Ethiopia",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/ET.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

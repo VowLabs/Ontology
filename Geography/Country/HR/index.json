@@ -1,0 +1,18 @@
+{
+  "Name": "Croatia",
+  "Description": "Country or territory identified as HR in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "HR",
+  "ISO3": "HRV",
+  "OfficialName": "Republic of Croatia",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/HR.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

@@ -1,0 +1,24 @@
+{
+  "Name": "Credit",
+  "Description": "Borrowing and financing products, regardless of whether the provider is a bank.",
+  "Children": {
+    "CA": {
+      "$ref": "./Card/index.json"
+    },
+    "CH": {
+      "$ref": "./ChargeCard/index.json"
+    },
+    "LN": {
+      "$ref": "./Loan/index.json"
+    },
+    "LC": {
+      "$ref": "./LineOfCredit/index.json"
+    },
+    "LE": {
+      "$ref": "./FinanceLease/index.json"
+    },
+    "TF": {
+      "$ref": "./TradeFinance/index.json"
+    }
+  }
+}

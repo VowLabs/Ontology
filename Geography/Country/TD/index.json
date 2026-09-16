@@ -1,0 +1,18 @@
+{
+  "Name": "Chad",
+  "Description": "Country or territory identified as TD in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "TD",
+  "ISO3": "TCD",
+  "OfficialName": "Republic of Chad",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/TD.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

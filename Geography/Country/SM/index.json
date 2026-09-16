@@ -1,0 +1,18 @@
+{
+  "Name": "San Marino",
+  "Description": "Country or territory identified as SM in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "SM",
+  "ISO3": "SMR",
+  "OfficialName": "Republic of San Marino",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/SM.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

@@ -1,0 +1,18 @@
+{
+  "Name": "Malawi",
+  "Description": "Country or territory identified as MW in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "MW",
+  "ISO3": "MWI",
+  "OfficialName": "Republic of Malawi",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/MW.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

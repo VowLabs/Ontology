@@ -1,0 +1,18 @@
+{
+  "Name": "Guatemala",
+  "Description": "Country or territory identified as GT in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "GT",
+  "ISO3": "GTM",
+  "OfficialName": "Republic of Guatemala",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/GT.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

@@ -1,0 +1,18 @@
+{
+  "Name": "Pakistan",
+  "Description": "Country or territory identified as PK in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "PK",
+  "ISO3": "PAK",
+  "OfficialName": "Islamic Republic of Pakistan",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/PK.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

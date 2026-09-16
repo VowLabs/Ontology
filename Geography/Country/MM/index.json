@@ -1,0 +1,18 @@
+{
+  "Name": "Myanmar",
+  "Description": "Country or territory identified as MM in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "MM",
+  "ISO3": "MMR",
+  "OfficialName": "Republic of the Union of Myanmar",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/MM.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

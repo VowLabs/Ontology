@@ -1,0 +1,18 @@
+{
+  "Name": "Bank account",
+  "Description": "Deposit account products. Customer bank details remain at F:BA.",
+  "Children": {
+    "CU": {
+      "$ref": "./Current/index.json"
+    },
+    "SA": {
+      "$ref": "./Savings/index.json"
+    },
+    "TD": {
+      "$ref": "./TermDeposit/index.json"
+    },
+    "MM": {
+      "$ref": "./MoneyMarket/index.json"
+    }
+  }
+}

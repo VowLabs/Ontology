@@ -2,6 +2,7 @@ import { createServer } from 'node:http';
 import { createHash } from 'node:crypto';
 import { readFileSync } from 'node:fs';
 import { loadCatalogue } from '../catalogue.mjs';
+import { resolveChoices } from '../choices.mjs';
 
 const SERVICE_CODE = 'S:T:SV';
 const own = (object, key) => Object.hasOwn(object, key);
@@ -73,8 +74,9 @@ export function createOntologyServer({ catalogue = loadCatalogue() } = {}) {
       if (parts.length === 2) return { data: node, meta };
       if (subresource === 'children' && parts.length === 3) return list(Object.values(node.Children || {}).map(definition), params);
       if (subresource === 'choices' && parts.length === 3) {
-        if (!Array.isArray(node.Choices)) return missing();
-        return list(node.Choices, params);
+        const choices = resolveChoices(catalogue.nodes, code);
+        if (!choices) return missing();
+        return list(choices, params);
       }
       if (subresource === 'records') {
         const rows = records(code);

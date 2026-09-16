@@ -1,0 +1,18 @@
+{
+  "Name": "Austria",
+  "Description": "Country or territory identified as AT in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "AT",
+  "ISO3": "AUT",
+  "OfficialName": "Republic of Austria",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/AT.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

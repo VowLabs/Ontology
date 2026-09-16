@@ -1,0 +1,24 @@
+{
+  "Name": "Loan",
+  "Description": "Lending products with contractual repayment obligations. Purpose, collateral, interest basis and lender type are additional characteristics.",
+  "Children": {
+    "MO": {
+      "$ref": "./Mortgage/index.json"
+    },
+    "PE": {
+      "$ref": "./Personal/index.json"
+    },
+    "VE": {
+      "$ref": "./Vehicle/index.json"
+    },
+    "ED": {
+      "$ref": "./Education/index.json"
+    },
+    "BU": {
+      "$ref": "./Business/index.json"
+    },
+    "BN": {
+      "$ref": "./BuyNowPayLater/index.json"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "Name": "Greece",
+  "Description": "Country or territory identified as GR in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "GR",
+  "ISO3": "GRC",
+  "OfficialName": "Hellenic Republic",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/GR.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

@@ -1,0 +1,18 @@
+{
+  "Name": "Solomon Islands",
+  "Description": "Country or territory identified as SB in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "SB",
+  "ISO3": "SLB",
+  "OfficialName": "Solomon Islands",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/SB.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

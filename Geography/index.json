@@ -4,6 +4,9 @@
   "Children": {
     "AD": {
       "$ref": "./Address/index.json"
+    },
+    "CO": {
+      "$ref": "./Country/index.json"
     }
   }
 }

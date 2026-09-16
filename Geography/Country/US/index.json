@@ -1,0 +1,18 @@
+{
+  "Name": "United States",
+  "Description": "Country or territory identified as US in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "US",
+  "ISO3": "USA",
+  "OfficialName": "United States of America",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/US.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

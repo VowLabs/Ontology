@@ -1,0 +1,30 @@
+{
+  "Name": "Insurance",
+  "Description": "Risk coverage contracts. Product types are distinct from customer insurance enquiry records at B:IN.",
+  "Children": {
+    "LI": {
+      "$ref": "./Life/index.json"
+    },
+    "HE": {
+      "$ref": "./Health/index.json"
+    },
+    "DI": {
+      "$ref": "./Disability/index.json"
+    },
+    "PR": {
+      "$ref": "./Property/index.json"
+    },
+    "LA": {
+      "$ref": "./Liability/index.json"
+    },
+    "MO": {
+      "$ref": "./Motor/index.json"
+    },
+    "TR": {
+      "$ref": "./Travel/index.json"
+    },
+    "AN": {
+      "$ref": "./Annuity/index.json"
+    }
+  }
+}

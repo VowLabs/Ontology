@@ -1,0 +1,18 @@
+{
+  "Name": "Papua New Guinea",
+  "Description": "Country or territory identified as PG in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "PG",
+  "ISO3": "PNG",
+  "OfficialName": "Independent State of Papua New Guinea",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/PG.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

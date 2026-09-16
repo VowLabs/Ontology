@@ -1,0 +1,18 @@
+{
+  "Name": "Comoros",
+  "Description": "Country or territory identified as KM in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "KM",
+  "ISO3": "COM",
+  "OfficialName": "Union of the Comoros",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/KM.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

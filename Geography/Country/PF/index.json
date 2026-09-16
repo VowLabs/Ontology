@@ -1,0 +1,18 @@
+{
+  "Name": "French Polynesia",
+  "Description": "Country or territory identified as PF in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "PF",
+  "ISO3": "PYF",
+  "OfficialName": "French Polynesia",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/PF.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

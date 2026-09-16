@@ -1,0 +1,756 @@
+{
+  "Name": "Country",
+  "Description": "Country and territory concepts sourced from a pinned ekkis/geo revision. Terminal entries are canonical values for country relationships; listing does not imply sovereign-state status.",
+  "Children": {
+    "AD": {
+      "$ref": "./AD/index.json"
+    },
+    "AE": {
+      "$ref": "./AE/index.json"
+    },
+    "AF": {
+      "$ref": "./AF/index.json"
+    },
+    "AG": {
+      "$ref": "./AG/index.json"
+    },
+    "AI": {
+      "$ref": "./AI/index.json"
+    },
+    "AL": {
+      "$ref": "./AL/index.json"
+    },
+    "AM": {
+      "$ref": "./AM/index.json"
+    },
+    "AO": {
+      "$ref": "./AO/index.json"
+    },
+    "AQ": {
+      "$ref": "./AQ/index.json"
+    },
+    "AR": {
+      "$ref": "./AR/index.json"
+    },
+    "AS": {
+      "$ref": "./AS/index.json"
+    },
+    "AT": {
+      "$ref": "./AT/index.json"
+    },
+    "AU": {
+      "$ref": "./AU/index.json"
+    },
+    "AW": {
+      "$ref": "./AW/index.json"
+    },
+    "AX": {
+      "$ref": "./AX/index.json"
+    },
+    "AZ": {
+      "$ref": "./AZ/index.json"
+    },
+    "BA": {
+      "$ref": "./BA/index.json"
+    },
+    "BB": {
+      "$ref": "./BB/index.json"
+    },
+    "BD": {
+      "$ref": "./BD/index.json"
+    },
+    "BE": {
+      "$ref": "./BE/index.json"
+    },
+    "BF": {
+      "$ref": "./BF/index.json"
+    },
+    "BG": {
+      "$ref": "./BG/index.json"
+    },
+    "BH": {
+      "$ref": "./BH/index.json"
+    },
+    "BI": {
+      "$ref": "./BI/index.json"
+    },
+    "BJ": {
+      "$ref": "./BJ/index.json"
+    },
+    "BL": {
+      "$ref": "./BL/index.json"
+    },
+    "BM": {
+      "$ref": "./BM/index.json"
+    },
+    "BN": {
+      "$ref": "./BN/index.json"
+    },
+    "BO": {
+      "$ref": "./BO/index.json"
+    },
+    "BQ": {
+      "$ref": "./BQ/index.json"
+    },
+    "BR": {
+      "$ref": "./BR/index.json"
+    },
+    "BS": {
+      "$ref": "./BS/index.json"
+    },
+    "BT": {
+      "$ref": "./BT/index.json"
+    },
+    "BV": {
+      "$ref": "./BV/index.json"
+    },
+    "BW": {
+      "$ref": "./BW/index.json"
+    },
+    "BY": {
+      "$ref": "./BY/index.json"
+    },
+    "BZ": {
+      "$ref": "./BZ/index.json"
+    },
+    "CA": {
+      "$ref": "./CA/index.json"
+    },
+    "CC": {
+      "$ref": "./CC/index.json"
+    },
+    "CD": {
+      "$ref": "./CD/index.json"
+    },
+    "CF": {
+      "$ref": "./CF/index.json"
+    },
+    "CG": {
+      "$ref": "./CG/index.json"
+    },
+    "CH": {
+      "$ref": "./CH/index.json"
+    },
+    "CI": {
+      "$ref": "./CI/index.json"
+    },
+    "CK": {
+      "$ref": "./CK/index.json"
+    },
+    "CL": {
+      "$ref": "./CL/index.json"
+    },
+    "CM": {
+      "$ref": "./CM/index.json"
+    },
+    "CN": {
+      "$ref": "./CN/index.json"
+    },
+    "CO": {
+      "$ref": "./CO/index.json"
+    },
+    "CR": {
+      "$ref": "./CR/index.json"
+    },
+    "CU": {
+      "$ref": "./CU/index.json"
+    },
+    "CV": {
+      "$ref": "./CV/index.json"
+    },
+    "CW": {
+      "$ref": "./CW/index.json"
+    },
+    "CX": {
+      "$ref": "./CX/index.json"
+    },
+    "CY": {
+      "$ref": "./CY/index.json"
+    },
+    "CZ": {
+      "$ref": "./CZ/index.json"
+    },
+    "DE": {
+      "$ref": "./DE/index.json"
+    },
+    "DJ": {
+      "$ref": "./DJ/index.json"
+    },
+    "DK": {
+      "$ref": "./DK/index.json"
+    },
+    "DM": {
+      "$ref": "./DM/index.json"
+    },
+    "DO": {
+      "$ref": "./DO/index.json"
+    },
+    "DZ": {
+      "$ref": "./DZ/index.json"
+    },
+    "EC": {
+      "$ref": "./EC/index.json"
+    },
+    "EE": {
+      "$ref": "./EE/index.json"
+    },
+    "EG": {
+      "$ref": "./EG/index.json"
+    },
+    "EH": {
+      "$ref": "./EH/index.json"
+    },
+    "ER": {
+      "$ref": "./ER/index.json"
+    },
+    "ES": {
+      "$ref": "./ES/index.json"
+    },
+    "ET": {
+      "$ref": "./ET/index.json"
+    },
+    "FI": {
+      "$ref": "./FI/index.json"
+    },
+    "FJ": {
+      "$ref": "./FJ/index.json"
+    },
+    "FK": {
+      "$ref": "./FK/index.json"
+    },
+    "FM": {
+      "$ref": "./FM/index.json"
+    },
+    "FO": {
+      "$ref": "./FO/index.json"
+    },
+    "FR": {
+      "$ref": "./FR/index.json"
+    },
+    "GA": {
+      "$ref": "./GA/index.json"
+    },
+    "GB": {
+      "$ref": "./GB/index.json"
+    },
+    "GD": {
+      "$ref": "./GD/index.json"
+    },
+    "GE": {
+      "$ref": "./GE/index.json"
+    },
+    "GF": {
+      "$ref": "./GF/index.json"
+    },
+    "GG": {
+      "$ref": "./GG/index.json"
+    },
+    "GH": {
+      "$ref": "./GH/index.json"
+    },
+    "GI": {
+      "$ref": "./GI/index.json"
+    },
+    "GL": {
+      "$ref": "./GL/index.json"
+    },
+    "GM": {
+      "$ref": "./GM/index.json"
+    },
+    "GN": {
+      "$ref": "./GN/index.json"
+    },
+    "GP": {
+      "$ref": "./GP/index.json"
+    },
+    "GQ": {
+      "$ref": "./GQ/index.json"
+    },
+    "GR": {
+      "$ref": "./GR/index.json"
+    },
+    "GS": {
+      "$ref": "./GS/index.json"
+    },
+    "GT": {
+      "$ref": "./GT/index.json"
+    },
+    "GU": {
+      "$ref": "./GU/index.json"
+    },
+    "GW": {
+      "$ref": "./GW/index.json"
+    },
+    "GY": {
+      "$ref": "./GY/index.json"
+    },
+    "HK": {
+      "$ref": "./HK/index.json"
+    },
+    "HM": {
+      "$ref": "./HM/index.json"
+    },
+    "HN": {
+      "$ref": "./HN/index.json"
+    },
+    "HR": {
+      "$ref": "./HR/index.json"
+    },
+    "HT": {
+      "$ref": "./HT/index.json"
+    },
+    "HU": {
+      "$ref": "./HU/index.json"
+    },
+    "ID": {
+      "$ref": "./ID/index.json"
+    },
+    "IE": {
+      "$ref": "./IE/index.json"
+    },
+    "IL": {
+      "$ref": "./IL/index.json"
+    },
+    "IM": {
+      "$ref": "./IM/index.json"
+    },
+    "IN": {
+      "$ref": "./IN/index.json"
+    },
+    "IO": {
+      "$ref": "./IO/index.json"
+    },
+    "IQ": {
+      "$ref": "./IQ/index.json"
+    },
+    "IR": {
+      "$ref": "./IR/index.json"
+    },
+    "IS": {
+      "$ref": "./IS/index.json"
+    },
+    "IT": {
+      "$ref": "./IT/index.json"
+    },
+    "JE": {
+      "$ref": "./JE/index.json"
+    },
+    "JM": {
+      "$ref": "./JM/index.json"
+    },
+    "JO": {
+      "$ref": "./JO/index.json"
+    },
+    "JP": {
+      "$ref": "./JP/index.json"
+    },
+    "KE": {
+      "$ref": "./KE/index.json"
+    },
+    "KG": {
+      "$ref": "./KG/index.json"
+    },
+    "KH": {
+      "$ref": "./KH/index.json"
+    },
+    "KI": {
+      "$ref": "./KI/index.json"
+    },
+    "KM": {
+      "$ref": "./KM/index.json"
+    },
+    "KN": {
+      "$ref": "./KN/index.json"
+    },
+    "KP": {
+      "$ref": "./KP/index.json"
+    },
+    "KR": {
+      "$ref": "./KR/index.json"
+    },
+    "KW": {
+      "$ref": "./KW/index.json"
+    },
+    "KY": {
+      "$ref": "./KY/index.json"
+    },
+    "KZ": {
+      "$ref": "./KZ/index.json"
+    },
+    "LA": {
+      "$ref": "./LA/index.json"
+    },
+    "LB": {
+      "$ref": "./LB/index.json"
+    },
+    "LC": {
+      "$ref": "./LC/index.json"
+    },
+    "LI": {
+      "$ref": "./LI/index.json"
+    },
+    "LK": {
+      "$ref": "./LK/index.json"
+    },
+    "LR": {
+      "$ref": "./LR/index.json"
+    },
+    "LS": {
+      "$ref": "./LS/index.json"
+    },
+    "LT": {
+      "$ref": "./LT/index.json"
+    },
+    "LU": {
+      "$ref": "./LU/index.json"
+    },
+    "LV": {
+      "$ref": "./LV/index.json"
+    },
+    "LY": {
+      "$ref": "./LY/index.json"
+    },
+    "MA": {
+      "$ref": "./MA/index.json"
+    },
+    "MC": {
+      "$ref": "./MC/index.json"
+    },
+    "MD": {
+      "$ref": "./MD/index.json"
+    },
+    "ME": {
+      "$ref": "./ME/index.json"
+    },
+    "MF": {
+      "$ref": "./MF/index.json"
+    },
+    "MG": {
+      "$ref": "./MG/index.json"
+    },
+    "MH": {
+      "$ref": "./MH/index.json"
+    },
+    "MK": {
+      "$ref": "./MK/index.json"
+    },
+    "ML": {
+      "$ref": "./ML/index.json"
+    },
+    "MM": {
+      "$ref": "./MM/index.json"
+    },
+    "MN": {
+      "$ref": "./MN/index.json"
+    },
+    "MO": {
+      "$ref": "./MO/index.json"
+    },
+    "MP": {
+      "$ref": "./MP/index.json"
+    },
+    "MQ": {
+      "$ref": "./MQ/index.json"
+    },
+    "MR": {
+      "$ref": "./MR/index.json"
+    },
+    "MS": {
+      "$ref": "./MS/index.json"
+    },
+    "MT": {
+      "$ref": "./MT/index.json"
+    },
+    "MU": {
+      "$ref": "./MU/index.json"
+    },
+    "MV": {
+      "$ref": "./MV/index.json"
+    },
+    "MW": {
+      "$ref": "./MW/index.json"
+    },
+    "MX": {
+      "$ref": "./MX/index.json"
+    },
+    "MY": {
+      "$ref": "./MY/index.json"
+    },
+    "MZ": {
+      "$ref": "./MZ/index.json"
+    },
+    "NA": {
+      "$ref": "./NA/index.json"
+    },
+    "NC": {
+      "$ref": "./NC/index.json"
+    },
+    "NE": {
+      "$ref": "./NE/index.json"
+    },
+    "NF": {
+      "$ref": "./NF/index.json"
+    },
+    "NG": {
+      "$ref": "./NG/index.json"
+    },
+    "NI": {
+      "$ref": "./NI/index.json"
+    },
+    "NL": {
+      "$ref": "./NL/index.json"
+    },
+    "NO": {
+      "$ref": "./NO/index.json"
+    },
+    "NP": {
+      "$ref": "./NP/index.json"
+    },
+    "NR": {
+      "$ref": "./NR/index.json"
+    },
+    "NU": {
+      "$ref": "./NU/index.json"
+    },
+    "NZ": {
+      "$ref": "./NZ/index.json"
+    },
+    "OM": {
+      "$ref": "./OM/index.json"
+    },
+    "PA": {
+      "$ref": "./PA/index.json"
+    },
+    "PE": {
+      "$ref": "./PE/index.json"
+    },
+    "PF": {
+      "$ref": "./PF/index.json"
+    },
+    "PG": {
+      "$ref": "./PG/index.json"
+    },
+    "PH": {
+      "$ref": "./PH/index.json"
+    },
+    "PK": {
+      "$ref": "./PK/index.json"
+    },
+    "PL": {
+      "$ref": "./PL/index.json"
+    },
+    "PM": {
+      "$ref": "./PM/index.json"
+    },
+    "PN": {
+      "$ref": "./PN/index.json"
+    },
+    "PR": {
+      "$ref": "./PR/index.json"
+    },
+    "PS": {
+      "$ref": "./PS/index.json"
+    },
+    "PT": {
+      "$ref": "./PT/index.json"
+    },
+    "PW": {
+      "$ref": "./PW/index.json"
+    },
+    "PY": {
+      "$ref": "./PY/index.json"
+    },
+    "QA": {
+      "$ref": "./QA/index.json"
+    },
+    "RE": {
+      "$ref": "./RE/index.json"
+    },
+    "RO": {
+      "$ref": "./RO/index.json"
+    },
+    "RS": {
+      "$ref": "./RS/index.json"
+    },
+    "RU": {
+      "$ref": "./RU/index.json"
+    },
+    "RW": {
+      "$ref": "./RW/index.json"
+    },
+    "SA": {
+      "$ref": "./SA/index.json"
+    },
+    "SB": {
+      "$ref": "./SB/index.json"
+    },
+    "SC": {
+      "$ref": "./SC/index.json"
+    },
+    "SD": {
+      "$ref": "./SD/index.json"
+    },
+    "SE": {
+      "$ref": "./SE/index.json"
+    },
+    "SG": {
+      "$ref": "./SG/index.json"
+    },
+    "SH": {
+      "$ref": "./SH/index.json"
+    },
+    "SI": {
+      "$ref": "./SI/index.json"
+    },
+    "SJ": {
+      "$ref": "./SJ/index.json"
+    },
+    "SK": {
+      "$ref": "./SK/index.json"
+    },
+    "SL": {
+      "$ref": "./SL/index.json"
+    },
+    "SM": {
+      "$ref": "./SM/index.json"
+    },
+    "SN": {
+      "$ref": "./SN/index.json"
+    },
+    "SO": {
+      "$ref": "./SO/index.json"
+    },
+    "SR": {
+      "$ref": "./SR/index.json"
+    },
+    "SS": {
+      "$ref": "./SS/index.json"
+    },
+    "ST": {
+      "$ref": "./ST/index.json"
+    },
+    "SV": {
+      "$ref": "./SV/index.json"
+    },
+    "SX": {
+      "$ref": "./SX/index.json"
+    },
+    "SY": {
+      "$ref": "./SY/index.json"
+    },
+    "SZ": {
+      "$ref": "./SZ/index.json"
+    },
+    "TC": {
+      "$ref": "./TC/index.json"
+    },
+    "TD": {
+      "$ref": "./TD/index.json"
+    },
+    "TF": {
+      "$ref": "./TF/index.json"
+    },
+    "TG": {
+      "$ref": "./TG/index.json"
+    },
+    "TH": {
+      "$ref": "./TH/index.json"
+    },
+    "TJ": {
+      "$ref": "./TJ/index.json"
+    },
+    "TK": {
+      "$ref": "./TK/index.json"
+    },
+    "TL": {
+      "$ref": "./TL/index.json"
+    },
+    "TM": {
+      "$ref": "./TM/index.json"
+    },
+    "TN": {
+      "$ref": "./TN/index.json"
+    },
+    "TO": {
+      "$ref": "./TO/index.json"
+    },
+    "TR": {
+      "$ref": "./TR/index.json"
+    },
+    "TT": {
+      "$ref": "./TT/index.json"
+    },
+    "TV": {
+      "$ref": "./TV/index.json"
+    },
+    "TW": {
+      "$ref": "./TW/index.json"
+    },
+    "TZ": {
+      "$ref": "./TZ/index.json"
+    },
+    "UA": {
+      "$ref": "./UA/index.json"
+    },
+    "UG": {
+      "$ref": "./UG/index.json"
+    },
+    "UM": {
+      "$ref": "./UM/index.json"
+    },
+    "US": {
+      "$ref": "./US/index.json"
+    },
+    "UY": {
+      "$ref": "./UY/index.json"
+    },
+    "UZ": {
+      "$ref": "./UZ/index.json"
+    },
+    "VA": {
+      "$ref": "./VA/index.json"
+    },
+    "VC": {
+      "$ref": "./VC/index.json"
+    },
+    "VE": {
+      "$ref": "./VE/index.json"
+    },
+    "VG": {
+      "$ref": "./VG/index.json"
+    },
+    "VI": {
+      "$ref": "./VI/index.json"
+    },
+    "VN": {
+      "$ref": "./VN/index.json"
+    },
+    "VU": {
+      "$ref": "./VU/index.json"
+    },
+    "WF": {
+      "$ref": "./WF/index.json"
+    },
+    "WS": {
+      "$ref": "./WS/index.json"
+    },
+    "XK": {
+      "$ref": "./XK/index.json"
+    },
+    "YE": {
+      "$ref": "./YE/index.json"
+    },
+    "YT": {
+      "$ref": "./YT/index.json"
+    },
+    "ZA": {
+      "$ref": "./ZA/index.json"
+    },
+    "ZM": {
+      "$ref": "./ZM/index.json"
+    },
+    "ZW": {
+      "$ref": "./ZW/index.json"
+    }
+  }
+}

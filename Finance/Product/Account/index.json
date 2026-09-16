@@ -1,0 +1,15 @@
+{
+  "Name": "Account",
+  "Description": "Account products for holding deposits, investments or assets. Credit facilities are classified under Credit; tax and retirement wrappers under Retirement.",
+  "Children": {
+    "BA": {
+      "$ref": "./Bank/index.json"
+    },
+    "BR": {
+      "$ref": "./Brokerage/index.json"
+    },
+    "CU": {
+      "$ref": "./Custody/index.json"
+    }
+  }
+}

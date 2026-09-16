@@ -13,5 +13,100 @@
   "Removed": {
     "F:P:B:CC": "Use F:PI for non-secret references; do not migrate CVV or full card numbers.",
     "I:SID": "Use subject IDs; do not assume global identity from an unspecified numeric ID."
+  },
+  "address-v3": {
+    "Description": "Address definitions before the 4.0.0 path and choice-reference migration. Retained for historical signed-value validation only.",
+    "Nodes": {
+      "G:AD": {
+        "Name": "Address",
+        "Scalar": false,
+        "Subjects": [
+          "I:P",
+          "I:O"
+        ],
+        "Children": {
+          "R": "G:AD:R",
+          "L1": "G:AD:L1",
+          "L2": "G:AD:L2",
+          "C": "G:AD:C",
+          "RE": "G:AD:RE",
+          "PC": "G:AD:PC",
+          "CO": "G:AD:CO",
+          "DI": "G:AD:DI"
+        },
+        "DisplayFormat": "{L1}\n{L2}\n{C}, {RE} {PC}\n{CO}\n{DI}",
+        "DisplayOmitValues": {
+          "CO": [
+            "US"
+          ]
+        },
+        "LabelField": "R",
+        "Code": "G:AD"
+      },
+      "G:AD:R": {
+        "Name": "Role",
+        "Question": "What is the role of this address?",
+        "Type": "S:I:D:T:S",
+        "Choices": [
+          "Residence",
+          "Office",
+          "Billing",
+          "Shipping",
+          "Other"
+        ],
+        "AllowCustom": true,
+        "CustomChoice": "Other",
+        "ChoiceAliases": {
+          "residential": "Residence",
+          "registered-office": "Office",
+          "billing": "Billing",
+          "shipping": "Shipping",
+          "other": "Other"
+        },
+        "Code": "G:AD:R"
+      },
+      "G:AD:L1": {
+        "Name": "Address line 1",
+        "Question": "What is the first address line?",
+        "Type": "S:I:D:T:S",
+        "Code": "G:AD:L1"
+      },
+      "G:AD:L2": {
+        "Name": "Address line 2",
+        "Question": "What is the second address line?",
+        "Type": "S:I:D:T:S",
+        "Code": "G:AD:L2"
+      },
+      "G:AD:C": {
+        "Name": "City",
+        "Question": "What is the city or locality?",
+        "Type": "S:I:D:T:S",
+        "Code": "G:AD:C"
+      },
+      "G:AD:RE": {
+        "Name": "Region",
+        "Question": "What is the state, province, or region?",
+        "Type": "S:I:D:T:S",
+        "Code": "G:AD:RE"
+      },
+      "G:AD:PC": {
+        "Name": "Postal code",
+        "Question": "What is the postal code?",
+        "Type": "S:I:D:T:S",
+        "Code": "G:AD:PC"
+      },
+      "G:AD:CO": {
+        "Name": "Country",
+        "Question": "What is the country?",
+        "Type": "S:I:D:T:S",
+        "Code": "G:AD:CO"
+      },
+      "G:AD:DI": {
+        "Name": "Delivery instructions",
+        "Question": "What instructions should a delivery service follow?",
+        "Type": "S:I:D:T:S",
+        "Code": "G:AD:DI"
+      }
+    }
   }
 }

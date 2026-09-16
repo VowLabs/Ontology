@@ -1,0 +1,18 @@
+{
+  "Name": "South Georgia",
+  "Description": "Country or territory identified as GS in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "GS",
+  "ISO3": "SGS",
+  "OfficialName": "South Georgia and the South Sandwich Islands",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/GS.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

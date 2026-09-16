@@ -1,0 +1,5 @@
+{
+  "Name": "Debit card",
+  "Description": "Payment card drawing on available account funds; an associated overdraft is a separate credit facility.",
+  "Children": {}
+}

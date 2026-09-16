@@ -1,0 +1,18 @@
+{
+  "Name": "Indonesia",
+  "Description": "Country or territory identified as ID in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "ID",
+  "ISO3": "IDN",
+  "OfficialName": "Republic of Indonesia",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/ID.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

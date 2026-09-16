@@ -1,0 +1,5 @@
+{
+  "Name": "Pickup",
+  "Description": "A location where goods or an order can be collected.",
+  "Children": {}
+}

@@ -1,0 +1,18 @@
+{
+  "Name": "Costa Rica",
+  "Description": "Country or territory identified as CR in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "CR",
+  "ISO3": "CRI",
+  "OfficialName": "Republic of Costa Rica",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/CR.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

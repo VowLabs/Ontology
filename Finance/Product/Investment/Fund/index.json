@@ -1,0 +1,18 @@
+{
+  "Name": "Fund",
+  "Description": "Interests in pooled investment vehicles. Strategy, underlying assets and legal form are additional characteristics.",
+  "Children": {
+    "MF": {
+      "$ref": "./Mutual/index.json"
+    },
+    "ET": {
+      "$ref": "./ExchangeTraded/index.json"
+    },
+    "CE": {
+      "$ref": "./ClosedEnd/index.json"
+    },
+    "PF": {
+      "$ref": "./Private/index.json"
+    }
+  }
+}

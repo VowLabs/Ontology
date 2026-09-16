@@ -1,0 +1,18 @@
+{
+  "Name": "Djibouti",
+  "Description": "Country or territory identified as DJ in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "DJ",
+  "ISO3": "DJI",
+  "OfficialName": "Republic of Djibouti",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/DJ.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

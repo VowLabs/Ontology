@@ -1,0 +1,18 @@
+{
+  "Name": "Georgia",
+  "Description": "Country or territory identified as GE in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "GE",
+  "ISO3": "GEO",
+  "OfficialName": "Georgia",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/GE.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

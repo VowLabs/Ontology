@@ -1,0 +1,18 @@
+{
+  "Name": "Iran",
+  "Description": "Country or territory identified as IR in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "IR",
+  "ISO3": "IRN",
+  "OfficialName": "Islamic Republic of Iran",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/IR.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

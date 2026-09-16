@@ -1,0 +1,18 @@
+{
+  "Name": "Bolivia",
+  "Description": "Country or territory identified as BO in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "BO",
+  "ISO3": "BOL",
+  "OfficialName": "Plurinational State of Bolivia",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/BO.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

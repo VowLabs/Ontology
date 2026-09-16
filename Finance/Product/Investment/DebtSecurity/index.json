@@ -1,0 +1,24 @@
+{
+  "Name": "Debt security",
+  "Description": "Transferable debt instruments. Direct borrowing facilities belong under Credit.",
+  "Children": {
+    "BO": {
+      "$ref": "./Bond/index.json"
+    },
+    "BI": {
+      "$ref": "./Bill/index.json"
+    },
+    "NO": {
+      "$ref": "./Note/index.json"
+    },
+    "CP": {
+      "$ref": "./CommercialPaper/index.json"
+    },
+    "CD": {
+      "$ref": "./NegotiableCertificateOfDeposit/index.json"
+    },
+    "AB": {
+      "$ref": "./AssetBacked/index.json"
+    }
+  }
+}

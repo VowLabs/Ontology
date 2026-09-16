@@ -1,0 +1,18 @@
+{
+  "Name": "Ghana",
+  "Description": "Country or territory identified as GH in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "GH",
+  "ISO3": "GHA",
+  "OfficialName": "Republic of Ghana",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/GH.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

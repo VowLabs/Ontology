@@ -1,0 +1,5 @@
+{
+  "Name": "Stablecoin",
+  "Description": "Digital token designed to track a reference value. Reserve structure, redemption rights and legal classification depend on the instrument.",
+  "Children": {}
+}

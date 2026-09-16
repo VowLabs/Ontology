@@ -1,0 +1,18 @@
+{
+  "Name": "Singapore",
+  "Description": "Country or territory identified as SG in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "SG",
+  "ISO3": "SGP",
+  "OfficialName": "Republic of Singapore",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/SG.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

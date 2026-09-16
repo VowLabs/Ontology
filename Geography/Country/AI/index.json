@@ -1,0 +1,18 @@
+{
+  "Name": "Anguilla",
+  "Description": "Country or territory identified as AI in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "AI",
+  "ISO3": "AIA",
+  "OfficialName": "Anguilla",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/AI.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

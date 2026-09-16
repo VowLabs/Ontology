@@ -1,0 +1,18 @@
+{
+  "Name": "Equatorial Guinea",
+  "Description": "Country or territory identified as GQ in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "GQ",
+  "ISO3": "GNQ",
+  "OfficialName": "Republic of Equatorial Guinea",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/GQ.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

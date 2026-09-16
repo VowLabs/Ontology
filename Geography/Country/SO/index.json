@@ -1,0 +1,18 @@
+{
+  "Name": "Somalia",
+  "Description": "Country or territory identified as SO in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "SO",
+  "ISO3": "SOM",
+  "OfficialName": "Federal Republic of Somalia",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/SO.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

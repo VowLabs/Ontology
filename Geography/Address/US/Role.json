@@ -1,0 +1,7 @@
+{
+  "Name": "Role",
+  "Question": "What is the role of this address?",
+  "Type": "S:I:D:T:S",
+  "Choices": "G:AD:RO",
+  "Description": "Reference one terminal address-use concept under Geography:Address:Roles. Store its canonical code, not its display label."
+}

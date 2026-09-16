@@ -1,0 +1,18 @@
+{
+  "Name": "Togo",
+  "Description": "Country or territory identified as TG in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "TG",
+  "ISO3": "TGO",
+  "OfficialName": "Togolese Republic",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/TG.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

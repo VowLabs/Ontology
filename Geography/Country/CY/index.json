@@ -1,0 +1,18 @@
+{
+  "Name": "Cyprus",
+  "Description": "Country or territory identified as CY in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "CY",
+  "ISO3": "CYP",
+  "OfficialName": "Republic of Cyprus",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/CY.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

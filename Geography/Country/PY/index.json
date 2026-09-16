@@ -1,0 +1,18 @@
+{
+  "Name": "Paraguay",
+  "Description": "Country or territory identified as PY in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "PY",
+  "ISO3": "PRY",
+  "OfficialName": "Republic of Paraguay",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/PY.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

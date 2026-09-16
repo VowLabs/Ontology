@@ -1,0 +1,18 @@
+{
+  "Name": "North Korea",
+  "Description": "Country or territory identified as KP in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "KP",
+  "ISO3": "PRK",
+  "OfficialName": "Democratic People's Republic of Korea",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/KP.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

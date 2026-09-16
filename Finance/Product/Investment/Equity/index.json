@@ -1,0 +1,12 @@
+{
+  "Name": "Equity",
+  "Description": "Ownership interests in an enterprise, including public and private equity.",
+  "Children": {
+    "ST": {
+      "$ref": "./Stock/index.json"
+    },
+    "DR": {
+      "$ref": "./DepositaryReceipt/index.json"
+    }
+  }
+}

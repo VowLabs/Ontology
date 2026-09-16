@@ -1,0 +1,18 @@
+{
+  "Name": "Morocco",
+  "Description": "Country or territory identified as MA in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "MA",
+  "ISO3": "MAR",
+  "OfficialName": "Kingdom of Morocco",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/MA.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

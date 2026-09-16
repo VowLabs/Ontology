@@ -1,0 +1,18 @@
+{
+  "Name": "Bangladesh",
+  "Description": "Country or territory identified as BD in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "BD",
+  "ISO3": "BGD",
+  "OfficialName": "People's Republic of Bangladesh",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/BD.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

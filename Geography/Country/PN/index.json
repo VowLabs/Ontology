@@ -1,0 +1,18 @@
+{
+  "Name": "Pitcairn Islands",
+  "Description": "Country or territory identified as PN in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "PN",
+  "ISO3": "PCN",
+  "OfficialName": "Pitcairn Group of Islands",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/PN.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

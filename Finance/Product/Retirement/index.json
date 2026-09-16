@@ -1,0 +1,12 @@
+{
+  "Name": "Retirement",
+  "Description": "Retirement arrangements and wrappers. Classify underlying funds, stocks, deposits and annuities separately; legal and tax treatment is jurisdiction-specific.",
+  "Children": {
+    "PE": {
+      "$ref": "./Pension/index.json"
+    },
+    "AC": {
+      "$ref": "./Account/index.json"
+    }
+  }
+}

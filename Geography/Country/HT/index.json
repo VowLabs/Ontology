@@ -1,0 +1,18 @@
+{
+  "Name": "Haiti",
+  "Description": "Country or territory identified as HT in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "HT",
+  "ISO3": "HTI",
+  "OfficialName": "Republic of Haiti",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/HT.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

@@ -1,0 +1,18 @@
+{
+  "Name": "Yemen",
+  "Description": "Country or territory identified as YE in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "YE",
+  "ISO3": "YEM",
+  "OfficialName": "Republic of Yemen",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/YE.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

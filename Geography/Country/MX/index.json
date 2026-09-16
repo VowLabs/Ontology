@@ -1,0 +1,18 @@
+{
+  "Name": "Mexico",
+  "Description": "Country or territory identified as MX in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "MX",
+  "ISO3": "MEX",
+  "OfficialName": "United Mexican States",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/MX.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

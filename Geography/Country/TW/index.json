@@ -1,0 +1,18 @@
+{
+  "Name": "Taiwan",
+  "Description": "Country or territory identified as TW in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "TW",
+  "ISO3": "TWN",
+  "OfficialName": "Republic of China (Taiwan)",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/TW.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

@@ -1,0 +1,18 @@
+{
+  "Name": "Saint Martin",
+  "Description": "Country or territory identified as MF in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "MF",
+  "ISO3": "MAF",
+  "OfficialName": "Saint Martin",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/MF.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

@@ -5,13 +5,13 @@
       "I:P:PN",
       "I:C:P:EM",
       "I:C:P:PH",
-      "G:AD:L1",
-      "G:AD:L2",
-      "G:AD:C",
-      "G:AD:RE",
-      "G:AD:PC",
-      "G:AD:CO",
-      "G:AD:DI"
+      "G:AD:US:L1",
+      "G:AD:US:L2",
+      "G:AD:US:C",
+      "G:AD:US:RE",
+      "G:AD:US:PC",
+      "G:AD:US:CO",
+      "G:AD:US:DI"
     ]
   },
   "food": {

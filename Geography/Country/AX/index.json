@@ -1,0 +1,18 @@
+{
+  "Name": "Åland Islands",
+  "Description": "Country or territory identified as AX in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "AX",
+  "ISO3": "ALA",
+  "OfficialName": "Åland Islands",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/AX.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

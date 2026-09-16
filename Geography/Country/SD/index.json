@@ -1,0 +1,18 @@
+{
+  "Name": "Sudan",
+  "Description": "Country or territory identified as SD in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "SD",
+  "ISO3": "SDN",
+  "OfficialName": "Republic of the Sudan",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/SD.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

@@ -1,0 +1,18 @@
+{
+  "Name": "Turkey",
+  "Description": "Country or territory identified as TR in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "TR",
+  "ISO3": "TUR",
+  "OfficialName": "Republic of Turkey",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/TR.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

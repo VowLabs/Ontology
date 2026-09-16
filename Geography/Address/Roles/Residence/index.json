@@ -1,0 +1,5 @@
+{
+  "Name": "Residence",
+  "Description": "Where a person lives. A residence may also be used for billing or shipping; this role describes residential use.",
+  "Children": {}
+}

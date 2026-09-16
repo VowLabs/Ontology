@@ -25,6 +25,9 @@
     },
     "RF": {
       "$ref": "./Refund/index.json"
+    },
+    "P": {
+      "$ref": "./Product/index.json"
     }
   }
 }

@@ -1,0 +1,18 @@
+{
+  "Name": "Saint Lucia",
+  "Description": "Country or territory identified as LC in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "LC",
+  "ISO3": "LCA",
+  "OfficialName": "Saint Lucia",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/LC.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

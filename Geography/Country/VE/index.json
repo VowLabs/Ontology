@@ -1,0 +1,18 @@
+{
+  "Name": "Venezuela",
+  "Description": "Country or territory identified as VE in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "VE",
+  "ISO3": "VEN",
+  "OfficialName": "Bolivarian Republic of Venezuela",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/VE.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

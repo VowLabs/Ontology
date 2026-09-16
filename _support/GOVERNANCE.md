@@ -10,6 +10,14 @@ and applicability. Distinguish preferences from conditions, absence from unknown
 and formatting validation from factual verification. Do not add executable code,
 secrets such as CVVs, or private user examples to the catalogue.
 
+Every new datapoint must also be fully described in a human-readable README.md
+in its containing folder. Every folder containing index.json requires a README.
+Explain every child classification or field, its canonical code, meaning,
+applicability, examples, boundaries, and any types, units, choices or constraints.
+State explicitly when no finer subclasses exist. Update the parent README for
+new children and keep documentation synchronized with definition changes; JSON
+definitions alone do not satisfy this requirement.
+
 Before publishing a domain as authoritative, assign named maintainers and obtain
 review by appropriate domain experts. Health, insurance and identifiers need
 particular care about wording and jurisdiction. This initial repository does

@@ -51,7 +51,23 @@ test('choices, collection resolution and offline catalogue', async () => {
   const collection = (await get('/v1/collections/checkout')).data;
   assert.deepEqual(collection.definitions.map(n=>n.Code), collection.Fields);
   assert.deepEqual((await get('/v1/migrations')).data, catalogue.migrations);
-  assert.equal(Object.keys(catalogue.nodes).length, 283);
+  assert.deepEqual(Object.keys(catalogue.nodes).sort(), Object.keys(loadCatalogue().nodes).sort());
+  assert.equal(catalogue.version, loadCatalogue().version);
+});
+test('branch choices expose canonical role and country leaves with pagination', async () => {
+  const definition = await get('/v1/definitions/G:AD:US:R');
+  assert.equal(definition.data.Choices, 'G:AD:RO');
+  const roles = await get('/v1/definitions/G:AD:US:R/choices');
+  assert.equal(roles.data.length, 8);
+  assert(roles.data.includes('G:AD:RO:SH'));
+  assert(!roles.data.includes('Shipping'));
+  assert(!roles.data.includes('G:AD:RO'));
+  const first = await get('/v1/definitions/G:AD:US:CO/choices?limit=200');
+  const second = await get('/v1/definitions/G:AD:US:CO/choices?limit=200&offset=200');
+  assert.equal(first.meta.total, 250);
+  assert.equal(first.data.length + second.data.length, 250);
+  assert([...first.data, ...second.data].includes('G:CO:US'));
+  assert.equal((await get('/v1/definitions/G:CO:US')).data.Source.Provider, 'geo');
 });
 test('errors, prototype keys, malformed codes and user-data routes', async () => {
   for (const path of ['/v1/services/nobody','/v1/definitions/__proto__','/v1/collections/constructor','/v1/definitions/I:P/records','/v1/users','/api/lexicon']) {
@@ -79,7 +95,7 @@ test('loader and server module work in an isolated checkout without NokNok', () 
   const directory = mkdtempSync(join(tmpdir(),'vl-ontology-'));
   try {
     cpSync(new URL('../../',import.meta.url),directory,{recursive:true,filter:source=>!source.split('/').some(p=>['.git','node_modules'].includes(p))});
-    assert.equal(Object.keys(loadCatalogue(directory).nodes).length,283);
+    assert.deepEqual(loadCatalogue(directory), loadCatalogue());
     execFileSync(process.execPath,['--input-type=module','-e',"import { createOntologyServer } from './_support/server/api.mjs'; createOntologyServer();"],{cwd:directory});
   } finally { rmSync(directory,{recursive:true,force:true}); }
 });

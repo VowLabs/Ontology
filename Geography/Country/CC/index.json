@@ -1,0 +1,18 @@
+{
+  "Name": "Cocos (Keeling) Islands",
+  "Description": "Country or territory identified as CC in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "CC",
+  "ISO3": "CCK",
+  "OfficialName": "Territory of the Cocos (Keeling) Islands",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/CC.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

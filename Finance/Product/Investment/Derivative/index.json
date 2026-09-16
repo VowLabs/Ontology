@@ -1,0 +1,24 @@
+{
+  "Name": "Derivative",
+  "Description": "Contracts whose value depends on an underlying asset, rate, index or event. Underlier and trading venue are separate characteristics.",
+  "Children": {
+    "OP": {
+      "$ref": "./Option/index.json"
+    },
+    "FU": {
+      "$ref": "./Future/index.json"
+    },
+    "FW": {
+      "$ref": "./Forward/index.json"
+    },
+    "SW": {
+      "$ref": "./Swap/index.json"
+    },
+    "CF": {
+      "$ref": "./ContractForDifference/index.json"
+    },
+    "WA": {
+      "$ref": "./Warrant/index.json"
+    }
+  }
+}

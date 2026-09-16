@@ -136,3 +136,21 @@ has no role in storing or synchronizing those records.
 npm --prefix VowLabs/Ontology test
 npm --prefix VowLabs/Ontology run validate
 ```
+
+## Tree-backed choices
+
+A definition’s `Choices` can be a literal array of primitive values or a string
+referencing an ontology branch. For example, `G:AD:US:R` declares
+`"Choices": "G:AD:RO"`. Clients traverse that node’s `Children` recursively;
+only terminal descendants are valid answers. Store the canonical leaf code,
+not its label, the referenced branch or an intermediate grouping node.
+`G:AD:US:CO` references `G:CO` in the same way.
+
+`GET /v1/definitions/G:AD:US:R/choices` returns those leaf codes using the
+existing paginated response shape. Retrieve their definitions for display names.
+Literal arrays retain their existing behavior. Reference trees are resolved
+against the API’s loaded version, not against a moving remote source.
+
+Sourced country definitions include `Source` provenance. `/v1/catalogue` also
+includes provider manifests in `sources` and archived historical definitions in
+`legacy`; these do not become current ontology nodes or permitted choices.

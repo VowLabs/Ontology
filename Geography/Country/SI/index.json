@@ -1,0 +1,18 @@
+{
+  "Name": "Slovenia",
+  "Description": "Country or territory identified as SI in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "SI",
+  "ISO3": "SVN",
+  "OfficialName": "Republic of Slovenia",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/SI.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

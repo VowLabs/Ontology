@@ -1,0 +1,18 @@
+{
+  "Name": "Nicaragua",
+  "Description": "Country or territory identified as NI in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "NI",
+  "ISO3": "NIC",
+  "OfficialName": "Republic of Nicaragua",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/NI.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

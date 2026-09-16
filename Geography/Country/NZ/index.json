@@ -1,0 +1,18 @@
+{
+  "Name": "New Zealand",
+  "Description": "Country or territory identified as NZ in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "NZ",
+  "ISO3": "NZL",
+  "OfficialName": "New Zealand",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/NZ.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

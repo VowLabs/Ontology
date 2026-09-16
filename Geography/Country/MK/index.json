@@ -1,0 +1,18 @@
+{
+  "Name": "North Macedonia",
+  "Description": "Country or territory identified as MK in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "MK",
+  "ISO3": "MKD",
+  "OfficialName": "Republic of North Macedonia",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/MK.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

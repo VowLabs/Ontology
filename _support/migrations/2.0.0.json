@@ -1,0 +1,7 @@
+{
+  "To": "3.0.0",
+  "Prefixes": {},
+  "SubjectTypes": {},
+  "CanonicalTags": true,
+  "Description": "Require canonical record tags. Preserve prior free-text tags as legacyTags outside classification. Convert legacy Shipping/Billing address tags to Role only when Role is absent; preserve existing answers and signed statements."
+}

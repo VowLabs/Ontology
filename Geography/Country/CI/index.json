@@ -1,0 +1,18 @@
+{
+  "Name": "Ivory Coast",
+  "Description": "Country or territory identified as CI in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "CI",
+  "ISO3": "CIV",
+  "OfficialName": "Republic of Côte d'Ivoire",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/CI.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

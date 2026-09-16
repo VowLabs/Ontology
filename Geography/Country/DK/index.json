@@ -1,0 +1,18 @@
+{
+  "Name": "Denmark",
+  "Description": "Country or territory identified as DK in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "DK",
+  "ISO3": "DNK",
+  "OfficialName": "Kingdom of Denmark",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/DK.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

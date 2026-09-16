@@ -1,0 +1,5 @@
+{
+  "Name": "Swap",
+  "Description": "Contract exchanging cash flows or exposures, including interest-rate, currency and credit-default swaps.",
+  "Children": {}
+}

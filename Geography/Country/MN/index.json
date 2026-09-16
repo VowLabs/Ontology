@@ -1,0 +1,18 @@
+{
+  "Name": "Mongolia",
+  "Description": "Country or territory identified as MN in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "MN",
+  "ISO3": "MNG",
+  "OfficialName": "Mongolia",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/MN.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

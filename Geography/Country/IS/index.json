@@ -1,0 +1,18 @@
+{
+  "Name": "Iceland",
+  "Description": "Country or territory identified as IS in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "IS",
+  "ISO3": "ISL",
+  "OfficialName": "Iceland",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/IS.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

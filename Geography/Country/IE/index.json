@@ -1,0 +1,18 @@
+{
+  "Name": "Ireland",
+  "Description": "Country or territory identified as IE in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "IE",
+  "ISO3": "IRL",
+  "OfficialName": "Republic of Ireland",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/IE.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

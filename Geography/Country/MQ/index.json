@@ -1,0 +1,18 @@
+{
+  "Name": "Martinique",
+  "Description": "Country or territory identified as MQ in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.",
+  "ISO2": "MQ",
+  "ISO3": "MTQ",
+  "OfficialName": "Martinique",
+  "Source": {
+    "Provider": "geo",
+    "Path": "data/country/MQ.json",
+    "Pointer": "/data",
+    "Fields": {
+      "Name": "/data/name/common",
+      "OfficialName": "/data/name/official",
+      "ISO3": "/data/iso3"
+    }
+  },
+  "Children": {}
+}

@@ -1,0 +1,21 @@
+{
+  "Name": "Investment",
+  "Description": "Instruments and pooled investment interests. Classify the instrument separately from the account or wrapper holding it.",
+  "Children": {
+    "EQ": {
+      "$ref": "./Equity/index.json"
+    },
+    "DE": {
+      "$ref": "./DebtSecurity/index.json"
+    },
+    "FU": {
+      "$ref": "./Fund/index.json"
+    },
+    "DR": {
+      "$ref": "./Derivative/index.json"
+    },
+    "ST": {
+      "$ref": "./Structured/index.json"
+    }
+  }
+}
