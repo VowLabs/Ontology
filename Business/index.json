@@ -10,6 +10,9 @@
     },
     "C": {
       "$ref": "./Commerce/index.json"
+    },
+    "PRO": {
+      "$ref": "./Professions/index.json"
     }
   }
 }

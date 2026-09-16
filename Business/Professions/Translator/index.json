@@ -1,0 +1,5 @@
+{
+  "Name": "Translator",
+  "Description": "Converts written content between languages, for example a document translator. Spoken or signed interpretation has a separate code.",
+  "Children": {}
+}

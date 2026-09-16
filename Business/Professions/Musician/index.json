@@ -1,0 +1,5 @@
+{
+  "Name": "Musician",
+  "Description": "Performs or creates music, for example a pianist or composer. Music teaching can additionally use Teacher.",
+  "Children": {}
+}

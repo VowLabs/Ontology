@@ -47,7 +47,7 @@ for particular workflows.
 | `F` | Finance | Covers money, assets, accounts, payment instruments, and financial transactions for individuals, organizations, and public bodies. Current definitions include bank accounts, wallets, payment instruments, assets, generated wallet accounts, invoices, settlement proofs, and refunds. Finance remains a peer of Business because financial information also describes personal holdings and noncommercial activity, while business operations extend beyond financial matters. |
 | `G` | Geography | Covers places, locations, and the spatial relationships used to situate people, organizations, assets, and activities. The current branches define address formats, address roles and sourced country/territory concepts; its broader scope accommodates geographic areas, coordinates, and physical locations as additional vocabulary is defined. Geographic facts identify where something is situated, while the identity of its occupant or owner belongs to the relevant subject. |
 | `H` | Health | Covers physical and mental health, care needs, accessibility, and food-related information relevant to wellbeing. Current definitions include allergies, medications, medical history, accessibility needs, and food requirements. These records support selective disclosure for contexts such as care intake and food service; a recorded answer is a person's or organization's statement, and the catalogue itself supplies neither a diagnosis nor clinical validation. |
-| `B` | Business | Covers commercial activity and the organization of work, including products, services, trading relationships, employment, insurance, and operational processes. Its current branches are Commerce, Employment, and Insurance. Business uses financial facts through their Finance codes, allowing a commercial workflow to combine operational and financial information without duplicating the same concept in both domains. |
+| `B` | Business | Covers commercial activity and the organization of work, including products, services, trading relationships, employment, insurance, and operational processes. Its current branches are Commerce, Employment, Insurance, and Professions. Business uses financial facts through their Finance codes, allowing a commercial workflow to combine operational and financial information without duplicating the same concept in both domains. |
 | `S` | Science | Covers scientific knowledge, technical systems, and the information structures used to describe and process data. Its current branches are Technology and Information, including the shared primitive types used throughout the ontology. This domain provides a home for scientific and technical subject matter; the fact that another domain can be studied systematically does not make that entire domain a subdivision of Science. |
 | `U` | Humanities | Covers human culture, expression, language, history, philosophy, and interpretation. Its focus is the meanings, ideas, works, and traditions through which people understand and express human experience. Humanities is currently an organizing branch with no defined children; its scope is distinct from scientific and technical knowledge while allowing workflows to draw on both. |
 | `R` | Society | Covers collective life, social institutions, civic participation, governance, law, communities, and relationships between groups. Identity describes particular people and organizations, while Society provides a home for the collective structures and practices in which they participate. Society is currently an organizing branch with no defined children. |
@@ -62,6 +62,15 @@ products. Mortgages sit under Credit:Loan and stocks under Investment:Equity.
 These are product-type concepts, separate from existing customer records such
 as `F:BA` (bank account). See the [financial product taxonomy](_support/finance-products.md)
 for codes, classification examples and compatibility notes for ontology `2.1.0`.
+
+### Professions
+
+[Business:Professions](Business/Professions/README.md) (`B:PRO`) supplies a starter
+list of occupations and trades for classifying people and contacts, including
+Lawyer (`B:PRO:LAW`) and Doctor (`B:PRO:DOC`). Contacts reference these through
+canonical record tags. Professions is separate from employer-specific Employment
+records (`B:EMP`). Ontology `4.2.0` adds this vocabulary without changing existing
+codes or answers; no stored-record migration is required.
 
 ### Definition structure
 

@@ -31,3 +31,13 @@ Commerce separates catalogue objects, proposals, transaction lifecycle records, 
 Further classifications: Merchant (`B:C:M`), Merchant list (`B:C:ML`), Offer (`B:C:O`), Order (`B:C:OR`), Order line (`B:C:OL`), Product (`B:C:P`), Checkout (`B:C:CK`), Fulfillment (`B:C:FU`), Wishlist (`B:C:WL`), Sale intent (`B:C:SI`), Offer response (`B:C:OA`), Merchant enrollment (`B:C:ME`), Customer profile (`B:C:CP`), Onboarding (`B:C:ON`), Membership (`B:C:MB`), Support request (`B:C:SU`), Newsletter subscription (`B:C:NS`), Recruiter (`B:C:RC`), Recruiter assignment (`B:C:RA`), Menu (`B:C:MN`), Merchant category (`B:C:MT`), Purchase mandate (`B:C:PM`), Mandate use (`B:C:MU`), Mandate reservation (`B:C:MR`), Order event (`B:C:OE`).
 
 [Detailed classification guide](Commerce/README.md) · [Definition](Commerce/index.json).
+
+### Professions — `B:PRO`
+
+Professions provides reusable classifications of a person's work, such as Lawyer
+(`B:PRO:LAW`) and Doctor (`B:PRO:DOC`), including skilled trades. Contacts can
+reference these concepts through canonical tags. Unlike Employment, this branch
+does not record an employer, job title or employment period, and it does not
+attest professional qualifications.
+
+[Full profession list and usage guide](Professions/README.md) · [Definition](Professions/index.json).

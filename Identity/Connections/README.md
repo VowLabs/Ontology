@@ -63,3 +63,13 @@ Value type: [Boolean (`S:I:D:T:B`)](../../Science/Information/Data/Types/Boolean
 SourceKey: `isWitness`.
 
 [Field definition](Witness.json).
+
+## Profession classifications
+
+A contact representing a person can use canonical profession tags from
+[Business:Professions](../../Business/Professions/README.md) (`B:PRO`), such as
+`B:PRO:LAW` for Lawyer or `B:PRO:DOC` for Doctor. These tags describe the contact,
+not the owner of the contact record. Multiple professions may apply. They do not
+attest qualifications or replace the existing contact fields. Organization
+contacts are not assigned a person's profession merely because they employ
+people in that profession.

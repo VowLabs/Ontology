@@ -1,9 +1,13 @@
 import { createRequire } from 'node:module';
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { loadCatalogue, ontologyRoot as root } from '../catalogue.mjs';
 const noknokRoot = resolve(root, '../../NokNok');
 const catalogue = loadCatalogue();
+// Bundle canonical service artwork for offline profile rendering on every client.
+for (const service of catalogue.nodes['S:T:SV'].Records) {
+  service.iconSvg = readFileSync(resolve(root, '_support/service-icons', `${service.id}.svg`), 'utf8');
+}
 const out = resolve(noknokRoot, 'shared/ontology-catalogue.js');
 mkdirSync(dirname(out), { recursive: true });
 writeFileSync(

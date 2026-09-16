@@ -15,10 +15,10 @@ npm --prefix VowLabs/Ontology start
 ```
 
 Or from a standalone clone: `npm start`. The default address is
-`http://127.0.0.1:24106`. To listen on a container or server interface:
+`http://127.0.0.1:24108`. To listen on a container or server interface:
 
 ```sh
-HOST=0.0.0.0 PORT=24106 npm --prefix VowLabs/Ontology start
+HOST=0.0.0.0 PORT=24108 npm --prefix VowLabs/Ontology start
 ```
 
 Use your deployment's HTTPS reverse proxy for public access. Configure apps with
@@ -65,10 +65,10 @@ children and `codes=I:P:LN,I:C:P:EM` for up to 100 explicit lookups. An empty
 When combining filters, explicit codes are filtered by parent and then query.
 
 ```sh
-curl 'http://127.0.0.1:24106/v1/services?q=telegram'
-curl 'http://127.0.0.1:24106/v1/definitions/I:P:LN'
-curl 'http://127.0.0.1:24106/v1/definitions?parent=I:C&limit=20'
-curl 'http://127.0.0.1:24106/v1/collections/checkout'
+curl 'http://127.0.0.1:24108/v1/services?q=telegram'
+curl 'http://127.0.0.1:24108/v1/definitions/I:P:LN'
+curl 'http://127.0.0.1:24108/v1/definitions?parent=I:C&limit=20'
+curl 'http://127.0.0.1:24108/v1/collections/checkout'
 ```
 
 ## Responses and canonical references
@@ -107,7 +107,7 @@ Requests never execute filesystem paths supplied by clients.
 ## Application example
 
 ```js
-const origin = 'http://127.0.0.1:24106'; // Use the deployed HTTPS origin in production.
+const origin = 'http://127.0.0.1:24108'; // Use the deployed HTTPS origin in production.
 const response = await fetch(`${origin}/v1/services?limit=100`);
 if (!response.ok) throw new Error(`Ontology unavailable: ${response.status}`);
 const { data: services, meta } = await response.json();

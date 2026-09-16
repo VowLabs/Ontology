@@ -1,0 +1,5 @@
+{
+  "Name": "Artist",
+  "Description": "Creates works of art, for example a painter or sculptor. Photography, music and design have separate codes where those better describe the work.",
+  "Children": {}
+}
