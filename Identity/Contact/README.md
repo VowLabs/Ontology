@@ -10,9 +10,9 @@ Parent: [Identity](../README.md).
 
 ### Contact point — `I:C:P`
 
-A contact point groups a purpose label with email, international phone and website details. Separate records can represent personal and work contact points without combining their channels.
+A contact point groups a purpose label with email, international phone, website and appointment booking page details. Separate records can represent personal and work contact points without combining their channels.
 
-Record fields: Label (`I:C:P:N`), Email (`I:C:P:EM`), Phone (`I:C:P:PH`), Website (`I:C:P:URL`).
+Record fields: Label (`I:C:P:N`), Email (`I:C:P:EM`), Phone (`I:C:P:PH`), Website (`I:C:P:URL`), Booking page (`I:C:P:BOOK`).
 
 [Detailed classification guide](Points/README.md) · [Definition](Points/index.json).
 

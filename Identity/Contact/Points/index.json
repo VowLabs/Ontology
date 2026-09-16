@@ -17,6 +17,9 @@
     },
     "URL": {
       "$ref": "./Website.json"
+    },
+    "BOOK": {
+      "$ref": "./Booking.json"
     }
   }
 }
