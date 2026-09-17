@@ -250,3 +250,10 @@ mechanism and does not replace Role. See [Address](Science/Geography/Address/REA
 Ontology `4.0.0` moves the former Address record to `S:G:AD:US`. The country dataset is sourced from a pinned `ekkis/geo` revision. See the
 [address migration](_support/protocol/README.md#address-migration) and
 [external source workflow](_support/sources/README.md).
+
+## Delegated contributions and services
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for definitions, typed datasets and service
+delegation. The Geography contract assigns `S:G` to `ekkis/Geo` and publishes a
+service URL callers can follow for that node, its children and associated data.
+The format is documented; live service routing is not yet implemented.

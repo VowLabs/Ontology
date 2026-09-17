@@ -47,3 +47,15 @@ User list membership, UI settings, application-specific account schemas and
 persistence keys belong to the owning application. A generic concept such as an
 order can be defined here; a particular application's orders or settings cannot.
 Review the [boundary audit](BOUNDARIES.md) before adding new branches.
+
+## Delegated branches and services
+
+Parent-assigned prefixes can be maintained and served independently under the
+[contribution contract](contributions/README.md). The designated Geography
+maintainer is `ekkis/Geo`; see [the handoff status](../CONTRIBUTING.md). VowLabs owns
+the parent assignment and routing registry. A contributor manifest cannot grant
+scope. Typed datasets may be served locally or delegated independently of where
+definitions are maintained. Service delegation publishes a URL and redirects
+callers; it does not require importing all remote descendants. Snapshot imports,
+when used, must be pinned and validated. Both delivery modes must preserve stable
+identifiers, resolve declared types and coordinate version/migration changes.

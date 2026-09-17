@@ -1,0 +1,189 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Ontology branch contribution manifest v1",
+  "description": "Manifest validation only; see README.md for required semantic and scope validation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "formatVersion",
+    "repository",
+    "prefix",
+    "version",
+    "license",
+    "readme",
+    "requires",
+    "datasets",
+    "delivery"
+  ],
+  "properties": {
+    "formatVersion": {
+      "const": 1
+    },
+    "repository": {
+      "type": "string",
+      "pattern": "^https://[^\\s]+$"
+    },
+    "prefix": {
+      "type": "string",
+      "pattern": "^[A-Z][A-Z0-9]*(?::[A-Z][A-Z0-9]*)*$"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+    },
+    "license": {
+      "type": "string",
+      "minLength": 1
+    },
+    "readme": {
+      "allOf": [
+        {
+          "type": "string",
+          "pattern": "^(?!/)(?!.*(?:^|/)[.]{1,2}(?:/|$))[A-Za-z0-9_-]+(?:[.][A-Za-z0-9_-]+)*(?:/[A-Za-z0-9_-]+(?:[.][A-Za-z0-9_-]+)*)*$"
+        },
+        {
+          "pattern": "(^|/)README\\.md$"
+        }
+      ]
+    },
+    "requires": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ontologyVersion",
+        "codes"
+      ],
+      "properties": {
+        "ontologyVersion": {
+          "type": "string",
+          "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+        },
+        "codes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9]*(?::[A-Z][A-Z0-9]*)*$"
+          }
+        }
+      }
+    },
+    "datasets": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "id",
+          "definitionCode"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9-]*$"
+          },
+          "path": {
+            "allOf": [
+              {
+                "type": "string",
+                "pattern": "^(?!/)(?!.*(?:^|/)[.]{1,2}(?:/|$))[A-Za-z0-9_-]+(?:[.][A-Za-z0-9_-]+)*(?:/[A-Za-z0-9_-]+(?:[.][A-Za-z0-9_-]+)*)*$"
+              },
+              {
+                "pattern": "(^|/)index\\.json$"
+              }
+            ]
+          },
+          "definitionCode": {
+            "type": "string",
+            "pattern": "^[A-Z][A-Z0-9]*(?::[A-Z][A-Z0-9]*)*$"
+          }
+        }
+      }
+    },
+    "delivery": {
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "mode",
+            "entry"
+          ],
+          "properties": {
+            "mode": {
+              "const": "snapshot"
+            },
+            "entry": {
+              "allOf": [
+                {
+                  "type": "string",
+                  "pattern": "^(?!/)(?!.*(?:^|/)[.]{1,2}(?:/|$))[A-Za-z0-9_-]+(?:[.][A-Za-z0-9_-]+)*(?:/[A-Za-z0-9_-]+(?:[.][A-Za-z0-9_-]+)*)*$"
+                },
+                {
+                  "pattern": "(^|/)index\\.json$"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "mode",
+            "url"
+          ],
+          "properties": {
+            "mode": {
+              "const": "service"
+            },
+            "url": {
+              "type": "string",
+              "pattern": "^https://[^/@?#\\s]+(?:/[^?#\\s]*)?/$"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "delivery": {
+            "properties": {
+              "mode": {
+                "const": "snapshot"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "datasets": {
+            "items": {
+              "required": [
+                "path"
+              ]
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "datasets": {
+            "items": {
+              "not": {
+                "required": [
+                  "path"
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
