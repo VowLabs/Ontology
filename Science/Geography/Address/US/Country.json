@@ -1,0 +1,9 @@
+{
+  "Name": "Country",
+  "Question": "What is the country?",
+  "Type": "S:I:D:T:S",
+  "Choices": {
+    "Dataset": "countries"
+  },
+  "Description": "Country or territory dataset identifier. Historic G:CO:XX values remain stable data IDs."
+}

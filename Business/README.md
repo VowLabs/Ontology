@@ -4,7 +4,7 @@ Canonical code: `B`. Definition: [index.json](index.json).
 
 Business groups commercial workflows, employment records and insurance policy records. Finance remains separate so the same financial facts can be used in personal and commercial contexts.
 
-Parent: [NokNok ontology](../README.md).
+Parent: [VowLabs ontology](../README.md).
 
 ## Subclassifications
 
@@ -32,12 +32,8 @@ Further classifications: Merchant (`B:C:M`), Merchant list (`B:C:ML`), Offer (`B
 
 [Detailed classification guide](Commerce/README.md) · [Definition](Commerce/index.json).
 
-### Professions — `B:PRO`
+### Profession — `B:PRO`
 
-Professions provides reusable classifications of a person's work, such as Lawyer
-(`B:PRO:LAW`) and Doctor (`B:PRO:DOC`), including skilled trades. Contacts can
-reference these concepts through canonical tags. Unlike Employment, this branch
-does not record an employer, job title or employment period, and it does not
-attest professional qualifications.
+A profession is an occupation or skilled trade, separate from employer-specific employment and proof of qualifications. Named professions live in a service-hosted dataset.
 
-[Full profession list and usage guide](Professions/README.md) · [Definition](Professions/index.json).
+[Definition guide](Professions/README.md) · [Dataset](../data/professions/README.md).

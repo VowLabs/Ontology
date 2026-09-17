@@ -8,7 +8,7 @@ const manifest = JSON.parse(readFileSync(resolve(root, 'VowLabs/Ontology/_suppor
 const catalogue = createRequire(resolve(root, 'NokNok/package.json'))('./shared/ontology-catalogue.js');
 for (const [project, store] of Object.entries(manifest.Stores)) {
   for (const code of Object.values(store.Tables || store.Files)) {
-    if (!catalogue.nodes[code]) throw Error(`Unknown classification ${project}: ${code}`);
+    if (!catalogue.nodes[code] && !catalogue.legacy?.['4.2.0']?.Nodes[code]) throw Error(`Unknown classification ${project}: ${code}`);
   }
   if (!store.Tables) {
     const local = JSON.parse(readFileSync(resolve(root, project, 'ontology-storage.json')));

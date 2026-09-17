@@ -36,7 +36,7 @@ For example, `"tags": ["F:P:IS:MO"]` qualifies an item in terms of motor
 insurance. The stored value is the code, while the UI can display its full
 human-readable path. `"Insured"`, `"Finance:Product"`, `"F:P:*"`, URLs and
 unknown codes are not valid tags. A reference to a field does not assert that
-field's value: `G:AD:R` means Role, not the Role value Shipping.
+field's value: `S:G:AD:R` means Role, not the Role value Shipping.
 
 Applications must validate tags at persistence and import boundaries, not only
 in the picker. A tag is classification metadata; it does not prove ownership,
@@ -51,7 +51,7 @@ labels to concepts is performed. Current-version snapshots with invalid tags
 are rejected rather than silently repaired.
 
 For existing address records, the known Shipping or Billing tag becomes a
-`G:AD:R` Role answer only if no Role answer already exists. Shipping takes
+`S:G:AD:R` Role answer only if no Role answer already exists. Shipping takes
 precedence when both old tags occur, preserving the previous shipping selection.
 The added Role retains private handling unless all existing answers are public;
 its timestamp uses the latest existing valid answer timestamp, or the Unix epoch
@@ -111,13 +111,13 @@ requires the consuming application's compatibility and migration policy.
 
 ## Address migration
 
-Ontology `4.0.0` turns `G:AD` into an organizing branch and moves the prior
-answer-bearing address record and its fields to `G:AD:US`. The migration uses
+Ontology `4.0.0` turns `S:G:AD` into an organizing branch and moves the prior
+answer-bearing address record and its fields to `S:G:AD:US`. The migration uses
 longest-prefix matching, including field codes and canonical tags. Earlier
 root-prefix migrations still run first. The original record IDs remain stable.
 
-Role’s `Choices` is now the branch reference `G:AD:RO`, while Country references
-`G:CO`. Valid values are the canonical codes of descendant leaves; display
+Role’s `Choices` is now the branch reference `S:G:AD:RO`, while Country references
+`S:G:CO`. Valid values are the canonical codes of descendant leaves; display
 names, parent branches and free-form answers are not current choices. Role is a
 constrained relationship and is not replaced by generic tags. A Shipping tag
 alone does not supply the Role answer required by shipping-address workflows.
@@ -139,8 +139,8 @@ An unknown former custom role cannot become an attested canonical role merely
 because an archived signature exists. Historical disclosure records keep their
 original code/version context.
 
-The shipping wire query remains compatible. Current clients use `G:AD:US` and
-Role `G:AD:RO:SH` internally; the checkout response continues to expose two-letter
+The shipping wire query remains compatible. Current clients use `S:G:AD:US` and
+Role `S:G:AD:RO:SH` internally; the checkout response continues to expose two-letter
 country codes for consuming shops. Country names and role names are presentation,
 not the stored relationship values.
 
@@ -155,3 +155,12 @@ canonical codes and known values when listed and checked for acceptance. New
 requests record the ontology version. Stored requests and existing signed proofs
 retain their original contents; custom answers outside the new choices must be
 reviewed and requested again with a permitted value.
+
+## Reference-data tags
+
+Applications may separately attach `dataTags`, an array of `{dataset,id}` references
+to records in the loaded datasets, for example `{"dataset":"states","id":"US-CA"}`.
+NokNok accepts at most 32 distinct references, rejects unknown datasets/IDs and
+extra properties, and preserves them in the encrypted record. They do not become
+canonical ontology codes, prove a fact, or grant disclosure permissions. Existing
+`tags` retain their canonical-code-only contract.

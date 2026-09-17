@@ -1,5 +1,5 @@
 {
-  "Name": "Personal identity",
+  "Name": "Personal",
   "Scalar": true,
   "Subjects": [
     "I:P"
@@ -8,8 +8,8 @@
     "LN": {
       "$ref": "./LegalName.json"
     },
-    "PN": {
-      "$ref": "./PreferredName.json"
+    "DN": {
+      "$ref": "./DisplayName.json"
     },
     "DOB": {
       "$ref": "./BirthDate.json"

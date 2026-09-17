@@ -4,7 +4,7 @@ Canonical code: `H`. Definition: [index.json](index.json).
 
 Health separates reported allergies, medication use, medical history, accessibility accommodations and food requirements. Preferences, restrictions and reported conditions have different meanings and are kept in separate records.
 
-Parent: [NokNok ontology](../README.md).
+Parent: [VowLabs ontology](../README.md).
 
 ## Subclassifications
 

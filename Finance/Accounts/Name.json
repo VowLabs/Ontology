@@ -1,6 +1,0 @@
-{
-  "Name": "Account name",
-  "Question": "What is this account name?",
-  "Type": "S:I:D:T:S",
-  "SourceKey": "name"
-}

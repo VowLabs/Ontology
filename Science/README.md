@@ -2,9 +2,9 @@
 
 Canonical code: `S`. Definition: [index.json](index.json).
 
-Science currently organizes Technology and Information. Technology supplies shared service metadata; Information supplies data types and information-system record classifications. These branches describe technical concepts rather than granting applications access to user data.
+Science currently organizes Technology, Information and Geography. Technology supplies shared service metadata; Information supplies data types and information-system record classifications. These branches describe technical concepts rather than granting applications access to user data.
 
-Parent: [NokNok ontology](../README.md).
+Parent: [VowLabs ontology](../README.md).
 
 ## Subclassifications
 
@@ -23,3 +23,9 @@ Information currently specializes into Data, which separates primitive value def
 Further classifications: Data (`S:I:D`).
 
 [Detailed classification guide](Information/README.md) · [Definition](Information/index.json).
+
+### Geography — `S:G`
+
+Geography defines places and spatial context, including Address (`S:G:AD`), Country (`S:G:CO`) and Subdivision (`S:G:SD`). Named countries and states remain separate reference datasets.
+
+[Detailed classification guide](Geography/README.md) · [Definition](Geography/index.json).

@@ -1,6 +1,5 @@
 {
   "Name": "Record identifier",
   "Question": "What is the record identifier?",
-  "Type": "S:I:D:T:ID",
-  "SourceKey": "id"
+  "Type": "S:I:D:T:ID"
 }

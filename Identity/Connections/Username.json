@@ -1,6 +1,0 @@
-{
-  "Name": "Username",
-  "Question": "What is this username?",
-  "Type": "S:I:D:T:S",
-  "SourceKey": "username"
-}

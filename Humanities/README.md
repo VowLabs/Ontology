@@ -4,7 +4,7 @@ Canonical code: `U`. Definition: [index.json](index.json).
 
 Humanities is reserved for human culture, language, history, philosophy and interpretation. No child definitions are published yet; these scope examples do not create canonical subclasses.
 
-Parent: [NokNok ontology](../README.md).
+Parent: [VowLabs ontology](../README.md).
 
 ## Subclassifications
 

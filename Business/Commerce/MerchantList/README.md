@@ -10,7 +10,7 @@ Parent: [Commerce](../README.md).
 
 Multiple records are permitted per subject (`Scalar: false`); each instance has its own stable record ID.
 
-Applicable subjects: [Personal identity (`I:P`)](../../../Identity/Person/index.json), [Organization identity (`I:O`)](../../../Identity/Organization/index.json).
+Applicable subjects: [Personal (`I:P`)](../../../Identity/Person/index.json), [Organization (`I:O`)](../../../Identity/Organization/index.json).
 
 The children below are optional scalar fields of one record, not subtypes. An unanswered field does not mean false, zero or not applicable.
 
@@ -24,8 +24,6 @@ Value type: [Identifier (`S:I:D:T:ID`)](../../../Science/Information/Data/Types/
 
 Maximum length: `256`.
 
-SourceKey: `id`.
-
 The identifier belongs to the application record. It does not by itself assert global uniqueness or authenticate that record.
 
 [Field definition](Id.json).
@@ -37,8 +35,6 @@ The field answers: “What is the list name?”
 Value type: [String (`S:I:D:T:S`)](../../../Science/Information/Data/Types/String.json); stored as `string`.
 
 Maximum length: `2000`.
-
-SourceKey: `name`.
 
 [Field definition](Name.json).
 

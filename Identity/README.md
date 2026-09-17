@@ -2,23 +2,23 @@
 
 Canonical code: `I`. Definition: [index.json](index.json).
 
-Identity separates who a subject is from how to contact them, their identifiers, issued documents, preferences and wallet connections. Personal and organizational identity define the subject types used by records elsewhere in the tree.
+Identity separates who a subject is from how to contact them, their identifiers, issued documents and contact information. Personal and organizational identity define the subject types used by records elsewhere in the tree.
 
-Parent: [NokNok ontology](../README.md).
+Parent: [VowLabs ontology](../README.md).
 
 ## Subclassifications
 
-### Personal identity — `I:P`
+### Personal — `I:P`
 
-Personal identity groups one person’s legal and preferred names, birth details, US Social Security number and profile image. A preferred name is a presentation choice, while a legal name describes formal identity; neither field verifies the person.
+Personal groups one person’s legal and display names, birth details, US Social Security number and profile image. A display name is a presentation choice, while a legal name describes formal identity; neither field verifies the person.
 
-Record fields: Legal name (`I:P:LN`), Preferred name (`I:P:PN`), Date of birth (`I:P:DOB`), Country of birth (`I:P:COB`), US Social Security number (`I:P:SSN`), Profile image (`I:P:IMG`).
+Record fields: Legal name (`I:P:LN`), Display Name (`I:P:DN`), Date of birth (`I:P:DOB`), Country of birth (`I:P:COB`), US Social Security number (`I:P:SSN`), Profile image (`I:P:IMG`).
 
 [Detailed classification guide](Person/README.md) · [Definition](Person/index.json).
 
-### Organization identity — `I:O`
+### Organization — `I:O`
 
-Organization identity separates legal name from trading name and pairs registration number with its jurisdiction. The record describes an organization; it does not establish the submitting person’s authority to act for it.
+Organization separates legal name from trading name and pairs registration number with its jurisdiction. The record describes an organization; it does not establish the submitting person’s authority to act for it.
 
 Record fields: Legal name (`I:O:LN`), Trading name (`I:O:TN`), Registration jurisdiction (`I:O:J`), Registration number (`I:O:RN`).
 
@@ -40,21 +40,7 @@ Further classifications: Contact point (`I:C:P`), Online account (`I:C:SM`), Eme
 
 [Detailed classification guide](Contact/README.md) · [Definition](Contact/index.json).
 
-### Preferences — `I:PR`
 
-Preferences separate subject-wide application settings from repeated notification settings for individual wallet accounts. These describe selected behavior, not identity evidence.
-
-Further classifications: NokNok settings (`I:PR:NN`), Account notifications (`I:PR:SUB`).
-
-[Detailed classification guide](Preferences/README.md) · [Definition](Preferences/index.json).
-
-### Connect contacts — `I:CN`
-
-Connect contacts pair a username and preferred display name with a wallet address and witness flag. Witness status is stored application metadata; the classification itself does not validate an attestation.
-
-Record fields: Username (`I:CN:U`), Preferred name (`I:CN:PN`), Wallet address (`I:CN:A`), Witness status (`I:CN:W`).
-
-[Detailed classification guide](Connections/README.md) · [Definition](Connections/index.json).
 
 ### Documents — `I:DOC`
 

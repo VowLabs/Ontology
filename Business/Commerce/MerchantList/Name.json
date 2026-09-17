@@ -1,6 +1,5 @@
 {
   "Name": "List name",
   "Question": "What is the list name?",
-  "Type": "S:I:D:T:S",
-  "SourceKey": "name"
+  "Type": "S:I:D:T:S"
 }

@@ -15,7 +15,7 @@ const missing = () => { throw new ApiError(404, '.ontology.not-found', 'The requ
 export function createOntologyServer({ catalogue = loadCatalogue() } = {}) {
   // A consistent snapshot for the lifetime of the process; no client databases.
   catalogue = structuredClone(catalogue);
-  catalogue.nodes[SERVICE_CODE].Records = catalogue.nodes[SERVICE_CODE].Records.map(record => ({ ...record, iconUrl: `/v1/services/${encodeURIComponent(record.id)}/icon.svg` }));
+  catalogue.datasets.services.records = catalogue.datasets.services.records.map(record => ({ ...record, iconUrl: `/v1/services/${encodeURIComponent(record.id)}/icon.svg` }));
   const revision = createHash('sha256').update(JSON.stringify(catalogue)).digest('hex');
   const meta = { authority: 'VL Ontology', ontologyVersion: catalogue.version, revision };
   const reference = (code, id) => `urn:vl:ontology:${catalogue.version}:${code || 'root'}${id === undefined ? '' : ':record:' + encodeURIComponent(id)}`;
@@ -23,16 +23,18 @@ export function createOntologyServer({ catalogue = loadCatalogue() } = {}) {
     if (!own(catalogue.nodes, code)) return missing();
     return { ...catalogue.nodes[code], reference: reference(code), href: code ? `/v1/definitions/${encodeURIComponent(code)}` : '/v1/ontology' };
   };
-  const records = code => {
-    const node = definition(code);
-    if (!Array.isArray(node.Records)) return missing();
-    return node.Records.map(record => ({ ...record,
-      ...(code === SERVICE_CODE ? { iconUrl: `/v1/services/${encodeURIComponent(record.id)}/icon.svg` } : {}),
-      reference: reference(code, record.id),
-      definitionCode: code,
+  const dataset = id => {
+    if (!own(catalogue.datasets, id)) return missing();
+    return catalogue.datasets[id];
+  };
+  const records = id => {
+    const data = dataset(id);
+    return data.records.map(record => ({ ...record,
+      reference: `urn:vl:data:${id}:${data.version}:${encodeURIComponent(record.id)}`,
+      definitionCode: data.definitionCode,
     }));
   };
-  const icons = new Map(records(SERVICE_CODE).map(record => [record.id,
+  const icons = new Map(records('services').map(record => [record.id,
     readFileSync(new URL(`../service-icons/${record.id}.svg`, import.meta.url))]));
   const collection = id => {
     if (!own(catalogue.collections, id)) return missing();
@@ -52,7 +54,7 @@ export function createOntologyServer({ catalogue = loadCatalogue() } = {}) {
     return { data: items.slice(offset, offset + limit), meta: { ...meta, total, offset, limit, nextOffset: offset + limit < total ? offset + limit : null } };
   };
   function route(parts, params) {
-    if (!parts.length) return { data: { name: 'VL Ontology API', endpoints: ['/v1/ontology', '/v1/definitions', '/v1/services', '/v1/collections', '/v1/catalogue', '/v1/migrations', '/openapi.json'] }, meta };
+    if (!parts.length) return { data: { name: 'VL Ontology API', endpoints: ['/v1/ontology', '/v1/definitions', '/v1/datasets', '/v1/services', '/v1/professions', '/v1/countries', '/v1/states', '/v1/collections', '/v1/catalogue', '/v1/migrations', '/openapi.json'] }, meta };
     const [resource, code, subresource, id] = parts;
     if (resource === 'ontology' && parts.length === 1) return { data: definition(''), meta };
     if (resource === 'catalogue' && parts.length === 1) return { data: catalogue, meta };
@@ -74,22 +76,35 @@ export function createOntologyServer({ catalogue = loadCatalogue() } = {}) {
       if (parts.length === 2) return { data: node, meta };
       if (subresource === 'children' && parts.length === 3) return list(Object.values(node.Children || {}).map(definition), params);
       if (subresource === 'choices' && parts.length === 3) {
-        const choices = resolveChoices(catalogue.nodes, code);
+        const choices = resolveChoices(catalogue.nodes, code, catalogue.datasets);
         if (!choices) return missing();
         return list(choices, params);
       }
       if (subresource === 'records') {
-        const rows = records(code);
+        // Compatibility alias; rows still have data references, never ontology references.
+        if (code !== SERVICE_CODE) return missing();
+        const rows = records('services');
         if (parts.length === 3) return list(rows, params);
         if (parts.length === 4) return { data: rows.find(row => row.id === id) || missing(), meta };
       }
     }
-    if (resource === 'services') {
-      const rows = records(SERVICE_CODE);
+    if (resource === 'datasets') {
+      const describe = id => { const {records: rows, ...info} = dataset(id); return {...info, count: rows.length, href: `/v1/datasets/${id}/records`}; };
+      if (parts.length === 1) return list(Object.keys(catalogue.datasets).sort().map(describe), params);
+      if (parts.length === 2) return {data: describe(code), meta};
+      if (subresource === 'records') {
+        const rows = records(code);
+        if (parts.length === 3) return list(rows, params);
+        if (parts.length === 4) return {data: rows.find(row => row.id === id) || missing(), meta};
+      }
+      return missing();
+    }
+    if (['services', 'professions', 'countries', 'states'].includes(resource)) {
+      const rows = records(resource);
       if (parts.length === 1) return list(rows, params);
       const row = rows.find(row => row.id === code) || missing();
       if (parts.length === 2) return { data: row, meta };
-      if (parts.length === 3 && subresource === 'icon.svg') return { body: icons.get(code), type: 'image/svg+xml' };
+      if (resource === 'services' && parts.length === 3 && subresource === 'icon.svg') return { body: icons.get(code), type: 'image/svg+xml' };
     }
     if (resource === 'collections') {
       if (parts.length === 1) return list(Object.keys(catalogue.collections).sort().map(collection), params);

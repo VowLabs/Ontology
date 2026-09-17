@@ -14,12 +14,6 @@
     "C": {
       "$ref": "./Contact/index.json"
     },
-    "PR": {
-      "$ref": "./Preferences/index.json"
-    },
-    "CN": {
-      "$ref": "./Connections/index.json"
-    },
     "DOC": {
       "$ref": "./Documents/index.json"
     }

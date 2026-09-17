@@ -43,9 +43,9 @@ CORS permits any origin without credentials. `/openapi.json` serves the OpenAPI
 | `/v1/definitions/{code}` | Complete definition, including types, validation rules, references and children |
 | `/v1/definitions/{code}/children` | Immediate child definitions |
 | `/v1/definitions/{code}/choices` | Allowed choices for a field |
-| `/v1/definitions/{code}/records` | Canonical records for any registry node |
-| `/v1/definitions/{code}/records/{id}` | One canonical registry record |
-| `/v1/services` | Service records; alias for `/v1/definitions/S:T:SV/records` |
+| `/v1/definitions/{code}/records` | Compatibility alias for service data (`S:T:SV` only) |
+| `/v1/definitions/{code}/records/{id}` | One service data record (`S:T:SV` only) |
+| `/v1/services` | Service records; alias for `/v1/datasets/services/records` |
 | `/v1/services/{id}` | One service, e.g. `telegram` |
 | `/v1/services/{id}/icon.svg` | Service SVG icon |
 | `/v1/collections` | Named collections of fields |
@@ -80,15 +80,15 @@ loaded API catalogue. Lists also contain `total`, `limit`, `offset`, and
 
 Definitions carry a canonical reference such as
 `urn:vl:ontology:2.0.0:I:P:LN`; registry records carry a reference such as
-`urn:vl:ontology:2.0.0:S:T:SV:record:telegram`. These are stable identifiers, not
+`urn:vl:data:services:2:telegram`. These are stable identifiers, not
 HTTP URLs. Use the configured API origin to resolve them via the endpoint table.
 Keep `{ ontologyVersion, code, recordId? }` alongside references in application
 storage. User-specific values remain in the consuming application.
-Colon-delimited codes and service IDs resolve to the same canonical definitions
+Colon-delimited codes resolve to definitions; dataset IDs resolve to reference data
 across applications. Applications own any migrations of their stored data.
 
 `v1` versions the HTTP contract. `ontologyVersion` versions the schema;
-`RegistryVersion` versions a registry. `revision` detects source content changes
+a dataset metadata `version` versions its records. `revision` detects source content changes
 within a version. This server serves only its current snapshot, not historical
 snapshots. For exact reproducibility, retain the downloaded catalogue with its
 revision; migration maps do not provide historic definition lookup.
@@ -140,17 +140,56 @@ npm --prefix VowLabs/Ontology run validate
 ## Tree-backed choices
 
 A definition’s `Choices` can be a literal array of primitive values or a string
-referencing an ontology branch. For example, `G:AD:US:R` declares
-`"Choices": "G:AD:RO"`. Clients traverse that node’s `Children` recursively;
+referencing an ontology branch. For example, `S:G:AD:US:R` declares
+`"Choices": "S:G:AD:RO"`. Clients traverse that node’s `Children` recursively;
 only terminal descendants are valid answers. Store the canonical leaf code,
 not its label, the referenced branch or an intermediate grouping node.
-`G:AD:US:CO` references `G:CO` in the same way.
+`S:G:AD:US:CO` instead selects IDs from the countries dataset.
 
-`GET /v1/definitions/G:AD:US:R/choices` returns those leaf codes using the
+`GET /v1/definitions/S:G:AD:US:R/choices` returns those leaf codes using the
 existing paginated response shape. Retrieve their definitions for display names.
 Literal arrays retain their existing behavior. Reference trees are resolved
 against the API’s loaded version, not against a moving remote source.
 
-Sourced country definitions include `Source` provenance. `/v1/catalogue` also
+Sourced country data records include `Source` provenance. `/v1/catalogue` also
 includes provider manifests in `sources` and archived historical definitions in
 `legacy`; these do not become current ontology nodes or permitted choices.
+
+## Definitions and datasets (ontology 5)
+
+`/v1/definitions` contains concepts only. Definitions never embed `Records`.
+`GET /v1/datasets` discovers independently versioned reference data:
+
+| Dataset | Concept | Short list endpoint |
+| --- | --- | --- |
+| `services` | `S:T:SV` | `/v1/services` |
+| `professions` | `B:PRO` | `/v1/professions` |
+| `countries` | `S:G:CO` | `/v1/countries` |
+
+`/v1/datasets/{dataset}` returns `id`, `version`, `definitionCode`, `count` and
+`href`. `/v1/datasets/{dataset}/records` supports the existing `q`, `limit` and
+`offset` parameters. Append a URL-encoded record ID for a single record. The
+short endpoints support the same list parameters and ID lookup. All retain
+GET/HEAD, ETag, CORS and the usual response envelope.
+
+Data references use `urn:vl:data:{dataset}:{version}:{encoded-id}`; definitions
+use `urn:vl:ontology:{ontology-version}:{code}`. `/v1/catalogue` is an offline
+snapshot with separate `nodes` and `datasets` members. Dataset versions govern
+records; `meta.ontologyVersion` governs definitions. `/v1/services/{id}/icon.svg`
+continues to work. `/v1/definitions/S:T:SV/records` is a compatibility alias for
+service data and returns data references; it does not embed records in a definition.
+
+`Choices: {"Dataset":"countries"}` constrains a field to country dataset IDs.
+Country IDs retain `G:CO:XX` for existing answers, but those IDs no longer resolve
+through `/v1/definitions` and are not canonical tags. Professions have IDs such
+as `LAW`, with `legacyCode` identifying their retired ontology code.
+NokNok settings and contact-list schemas are absent from the API; their consumer
+owns them. Migration metadata and archived historical schemas preserve older data.
+
+## US state reference data
+
+`GET /v1/states?q=California` returns the `US-CA` record;
+`GET /v1/states/US-CA` retrieves it directly. The standard dataset routes also
+work: `/v1/datasets/states` and `/v1/datasets/states/records`. This dataset contains
+the 50 US states and instantiates `S:G:SD` (Subdivision). State names are reference
+data, absent from `/v1/definitions`.

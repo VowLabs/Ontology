@@ -1,6 +1,5 @@
 {
   "Name": "Title",
   "Question": "What is the title?",
-  "Type": "S:I:D:T:S",
-  "SourceKey": "title"
+  "Type": "S:I:D:T:S"
 }

@@ -36,6 +36,19 @@ export function loadCatalogue(directory = ontologyRoot) {
       if (JSON.stringify(node[field]) !== JSON.stringify(value)) throw Error(`Definition differs from source: ${source.Path} ${field}`);
     }
   }
+  const datasets = {};
+  for (const id of ['services', 'professions', 'countries', 'states']) {
+    const data = JSON.parse(readFileSync(resolve(root, 'data', id, 'index.json'), 'utf8'));
+    if (data.id !== id || !Number.isInteger(data.version) || data.version < 1 || !Array.isArray(data.records)) throw Error(`Invalid dataset: ${id}`);
+    const ids = new Set();
+    for (const record of data.records) {
+      if (typeof record.id !== 'string' || !record.id || ids.has(record.id) || typeof record.name !== 'string' || !record.name) throw Error(`Invalid dataset record: ${id}`);
+      ids.add(record.id);
+      validateSource(record);
+      if (record.Name !== undefined && record.Name !== record.name) throw Error(`Inconsistent dataset name: ${id}`);
+    }
+    datasets[id] = data;
+  }
   const nodes = {},
     visited = new Set();
   function visit(file, code = '') {
@@ -44,6 +57,8 @@ export function loadCatalogue(directory = ontologyRoot) {
       throw Error(`Repeated or escaping reference: ${file}`);
     visited.add(file);
     const node = JSON.parse(readFileSync(file, 'utf8'));
+    for (const key of ['Records', 'ManagedBy', 'InstanceKey', 'Preference', 'RegistryVersion', 'Storage', 'Application', 'SourceKey'])
+      if (key in node) throw Error(`Data or application state in ontology definition: ${file} (${key})`);
     validateSource(node);
     if (!node.Name || typeof node.Name !== 'string')
       throw Error(`Missing Name: ${file}`);
@@ -99,7 +114,9 @@ export function loadCatalogue(directory = ontologyRoot) {
       for (const match of node.DisplayFormat.matchAll(/\{([^}]+)\}/g)) if (!node.Children?.[match[1]]) throw Error(`Unknown DisplayFormat field: ${node.Code}:${match[1]}`);
       if (node.DisplayOmitValues && Object.entries(node.DisplayOmitValues).some(([key, values]) => !node.Children?.[key] || !Array.isArray(values) || values.some(value => typeof value !== 'string'))) throw Error(`Invalid DisplayOmitValues: ${node.Code}`);
     }
-    const choices = resolveChoices(nodes, node.Code);
+    const choices = resolveChoices(nodes, node.Code, datasets);
+    if (node.Dataset && (!Object.hasOwn(datasets, node.Dataset) || datasets[node.Dataset].definitionCode !== node.Reference)) throw Error(`Invalid dataset reference: ${node.Code}`);
+    if (node.Choices && !Array.isArray(node.Choices) && typeof node.Choices === 'object' && (nodes[node.Type]?.ValueType !== 'string' || node.AllowCustom || node.ChoiceAliases)) throw Error(`Invalid dataset choices: ${node.Code}`);
     if (typeof node.Choices === 'string' && (nodes[node.Type]?.ValueType !== 'string' || node.AllowCustom || node.ChoiceAliases)) throw Error(`Invalid branch-backed choices: ${node.Code}`);
     if (node.AllowCustom !== undefined && (node.AllowCustom !== true || nodes[node.Type]?.ValueType !== 'string' || !choices?.includes(node.CustomChoice))) throw Error(`Invalid custom choice: ${node.Code}`);
     if (node.ChoiceAliases && Object.values(node.ChoiceAliases).some(value => !choices?.includes(value))) throw Error(`Invalid choice alias: ${node.Code}`);
@@ -115,7 +132,7 @@ export function loadCatalogue(directory = ontologyRoot) {
     for (const entry of readdirSync(dir, { withFileTypes: true })) {
       const p = resolve(dir, entry.name);
       if (entry.isDirectory()) {
-        if (p !== resolve(root, '_support') && entry.name !== 'node_modules' && !entry.name.startsWith('.'))
+        if (p !== resolve(root, '_support') && p !== resolve(root, 'data') && entry.name !== 'node_modules' && !entry.name.startsWith('.'))
           checkOrphans(p);
       } else if (
         entry.name.endsWith('.json') &&
@@ -129,5 +146,6 @@ export function loadCatalogue(directory = ontologyRoot) {
   const migrations = Object.fromEntries(readdirSync(resolve(root, '_support/migrations')).filter(f => f.endsWith('.json')).map(f => [f.slice(0, -5), JSON.parse(readFileSync(resolve(root, '_support/migrations', f), 'utf8'))]));
   const legacyPath = resolve(root, '_support/legacy.json');
   const legacy = existsSync(legacyPath) ? JSON.parse(readFileSync(legacyPath, 'utf8')) : {};
-  return { version: nodes[''].Version, nodes, collections, migrations, legacy, sources };
+  for (const dataset of Object.values(datasets)) if (!nodes[dataset.definitionCode]) throw Error(`Unknown dataset definition: ${dataset.id}`);
+  return { version: nodes[''].Version, nodes, datasets, collections, migrations, legacy, sources };
 }

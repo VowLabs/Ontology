@@ -7,6 +7,9 @@
     },
     "I": {
       "$ref": "./Information/index.json"
+    },
+    "G": {
+      "$ref": "./Geography/index.json"
     }
   }
 }

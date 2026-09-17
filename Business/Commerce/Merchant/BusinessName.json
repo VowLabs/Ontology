@@ -1,6 +1,5 @@
 {
   "Name": "Business name",
   "Question": "What is the business name?",
-  "Type": "S:I:D:T:S",
-  "SourceKey": "businessName"
+  "Type": "S:I:D:T:S"
 }

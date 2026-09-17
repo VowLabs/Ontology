@@ -1,9 +1,9 @@
-# External definition sources
+# External dataset sources
 
 [index.json](index.json) is the provider manifest. It is supporting metadata,
-not an ontology node. Definitions remain local and usable offline. Each provider
+not an ontology node. Datasets remain local and usable offline. Each provider
 has a repository, an immutable revision, a license, a local snapshot directory
-and SHA-256 checksums for the files used by definitions.
+and SHA-256 checksums for the files used by datasets.
 
 ## geo
 
@@ -12,12 +12,12 @@ The `geo` provider is [ekkis/geo](https://github.com/ekkis/geo), pinned to
 supply the country/territory identities. The imported license is retained at
 [geo/LICENSE](geo/LICENSE).
 
-A country definition declares `Source.Provider`, `Source.Path` and `Source.Fields`.
+A country dataset record declares `Source.Provider`, `Source.Path` and `Source.Fields`.
 Fields maps local metadata names to JSON pointers in the source document:
 Name → `/data/name/common`, OfficialName → `/data/name/official`, and ISO3 →
 `/data/iso3`. ISO2 comes from the source filename. `Source.Pointer` records the
 parent data object for provenance. The loader verifies each source file’s hash
-and every declared field projection against the materialized local definition.
+and every declared field projection against the materialized local data record.
 A mismatch is an error, not permission to silently substitute remote content.
 
 This structure supports further providers and JSON-pointer projections without
@@ -37,7 +37,7 @@ git -C /tmp/vow-geo-import checkout --detach f7e2f4aa4f8333c7d09682f0b323673225e
 node VowLabs/Ontology/_support/tools/import-geo.mjs --checkout /tmp/vow-geo-import --check
 ```
 
-To rematerialize the pinned definitions and READMEs from that clean checkout:
+To rematerialize the pinned dataset and README from that clean checkout:
 
 ```sh
 node VowLabs/Ontology/_support/tools/import-geo.mjs --checkout /tmp/vow-geo-import
@@ -48,7 +48,15 @@ npm --prefix VowLabs/Ontology test
 For a reviewed upstream update, check out its full commit SHA and supply that
 same SHA through `--revision`. The importer rejects dirty source files, validates
 all identities before writing, and refuses removal of previously published
-country codes. Review the diff, update the ontology version and migration policy
+country codes. Review the diff, review the dataset version bump and migration policy
 as required, and keep the source and country README counts current. It does not
 publish, commit, deploy or restart applications. Historical migration maps and
 signed statements must not be regenerated to adopt new meanings.
+
+## US states
+
+The same pinned geo revision supplies `data/country/US.state.json`. The importer
+projects its 50 state names into `data/states`, retains the source snapshot and
+SHA-256 checksum, and validates each name against its JSON pointer. Counties are
+retained only in the provenance snapshot and are not imported as selectable data.
+`import-geo.mjs` imports and verifies both countries and US states.

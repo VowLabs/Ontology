@@ -1,8 +1,8 @@
-# Organization identity
+# Organization
 
 Canonical code: `I:O`. Definition: [index.json](index.json).
 
-Organization identity separates legal name from trading name and pairs registration number with its jurisdiction. The record describes an organization; it does not establish the submitting person’s authority to act for it.
+Organization separates legal name from trading name and pairs registration number with its jurisdiction. The record describes an organization; it does not establish the submitting person’s authority to act for it.
 
 Parent: [Identity](../README.md).
 
@@ -10,7 +10,7 @@ Parent: [Identity](../README.md).
 
 At most one record per subject (`Scalar: true`).
 
-Applicable subjects: [Organization identity (`I:O`)](index.json).
+Applicable subjects: [Organization (`I:O`)](index.json).
 
 The children below are optional scalar fields of one record, not subtypes. An unanswered field does not mean false, zero or not applicable.
 

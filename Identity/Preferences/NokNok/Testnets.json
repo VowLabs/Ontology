@@ -1,8 +1,0 @@
-{
-  "Name": "Show testnets",
-  "Question": "Should NokNok display test networks?",
-  "Type": "S:I:D:T:B",
-  "Preference": "showTestnets",
-  "StorageKey": "noknok.showTestnets",
-  "Default": false
-}

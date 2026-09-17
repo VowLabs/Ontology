@@ -1,6 +1,5 @@
 {
   "Name": "Merchant identifier",
   "Question": "What is the merchant identifier?",
-  "Type": "S:I:D:T:ID",
-  "SourceKey": "merchantId"
+  "Type": "S:I:D:T:ID"
 }

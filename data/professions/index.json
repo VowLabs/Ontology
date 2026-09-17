@@ -1,0 +1,223 @@
+{
+  "id": "professions",
+  "definitionCode": "B:PRO",
+  "version": 1,
+  "records": [
+    {
+      "id": "LAW",
+      "name": "Lawyer",
+      "description": "Provides legal advice or representation, for example a solicitor or attorney. Covers legal practitioners rather than every employee of a law firm.",
+      "legacyCode": "B:PRO:LAW"
+    },
+    {
+      "id": "DOC",
+      "name": "Doctor",
+      "description": "Practises human medicine, for example a general practitioner or surgeon. Doctor here means medical practitioner, not an academic doctorate holder; dentists and veterinarians have separate codes.",
+      "legacyCode": "B:PRO:DOC"
+    },
+    {
+      "id": "NUR",
+      "name": "Nurse",
+      "description": "Provides nursing care, for example a community or hospital nurse. Distinct from a doctor or a non-nursing care worker.",
+      "legacyCode": "B:PRO:NUR"
+    },
+    {
+      "id": "DEN",
+      "name": "Dentist",
+      "description": "Provides dental assessment and treatment, for example a general dentist. Distinct from a dental assistant or medical doctor.",
+      "legacyCode": "B:PRO:DEN"
+    },
+    {
+      "id": "PHA",
+      "name": "Pharmacist",
+      "description": "Works in medicines dispensing or pharmacy practice, for example a community pharmacist. Distinct from a pharmacy retail assistant.",
+      "legacyCode": "B:PRO:PHA"
+    },
+    {
+      "id": "PHY",
+      "name": "Physiotherapist",
+      "description": "Provides physical rehabilitation and movement therapy, for example rehabilitation after an injury. Also called a physical therapist; distinct from a fitness trainer.",
+      "legacyCode": "B:PRO:PHY"
+    },
+    {
+      "id": "PSY",
+      "name": "Psychologist",
+      "description": "Works in psychological assessment, research or interventions, for example a clinical psychologist. Distinct from a psychiatrist, who is a medical doctor.",
+      "legacyCode": "B:PRO:PSY"
+    },
+    {
+      "id": "VET",
+      "name": "Veterinarian",
+      "description": "Provides medical care for animals, for example a companion-animal vet. Distinct from a human medical doctor or animal groomer.",
+      "legacyCode": "B:PRO:VET"
+    },
+    {
+      "id": "ACC",
+      "name": "Accountant",
+      "description": "Prepares, examines or advises on financial accounts, for example a tax accountant. Distinct from a financial adviser recommending financial plans.",
+      "legacyCode": "B:PRO:ACC"
+    },
+    {
+      "id": "FAD",
+      "name": "Financial adviser",
+      "description": "Advises on financial planning and financial decisions, for example retirement planning. Distinct from accounting or merely selling a financial product.",
+      "legacyCode": "B:PRO:FAD"
+    },
+    {
+      "id": "INS",
+      "name": "Insurance broker",
+      "description": "Arranges insurance cover for clients, for example a commercial insurance broker. Describes the person’s work, not an insurance policy or product.",
+      "legacyCode": "B:PRO:INS"
+    },
+    {
+      "id": "REA",
+      "name": "Real estate agent",
+      "description": "Helps clients buy, sell or lease property, for example a residential estate agent. Distinct from an architect or building contractor.",
+      "legacyCode": "B:PRO:REA"
+    },
+    {
+      "id": "ENG",
+      "name": "Engineer",
+      "description": "Designs, develops or evaluates engineered systems, for example a civil or mechanical engineer. Software developers have a separate code; both can apply when relevant.",
+      "legacyCode": "B:PRO:ENG"
+    },
+    {
+      "id": "ARC",
+      "name": "Architect",
+      "description": "Designs buildings and their spatial organization, for example a residential architect. Does not mean a software architect or every building designer.",
+      "legacyCode": "B:PRO:ARC"
+    },
+    {
+      "id": "DEV",
+      "name": "Software developer",
+      "description": "Creates and maintains software, for example an application programmer or software engineer. Distinct from general IT support.",
+      "legacyCode": "B:PRO:DEV"
+    },
+    {
+      "id": "ITS",
+      "name": "IT specialist",
+      "description": "Supports or administers computing systems, networks or security, for example a systems administrator. Software development is classified separately when that is the work being described.",
+      "legacyCode": "B:PRO:ITS"
+    },
+    {
+      "id": "SCI",
+      "name": "Scientist",
+      "description": "Conducts scientific research, for example a laboratory biologist or physicist. Distinct from a teacher whose primary work is teaching science.",
+      "legacyCode": "B:PRO:SCI"
+    },
+    {
+      "id": "TEA",
+      "name": "Teacher",
+      "description": "Teaches learners in an educational setting, for example a school teacher or private tutor. University lecturers have a separate code.",
+      "legacyCode": "B:PRO:TEA"
+    },
+    {
+      "id": "LEC",
+      "name": "Lecturer",
+      "description": "Teaches in higher education, for example a university lecturer or teaching professor. Research work may additionally be classified as Scientist.",
+      "legacyCode": "B:PRO:LEC"
+    },
+    {
+      "id": "DES",
+      "name": "Designer",
+      "description": "Creates visual, digital or product designs, for example a graphic or interaction designer. Building architecture has a separate code.",
+      "legacyCode": "B:PRO:DES"
+    },
+    {
+      "id": "ART",
+      "name": "Artist",
+      "description": "Creates works of art, for example a painter or sculptor. Photography, music and design have separate codes where those better describe the work.",
+      "legacyCode": "B:PRO:ART"
+    },
+    {
+      "id": "WRI",
+      "name": "Writer",
+      "description": "Creates written works, for example a novelist or copywriter. Journalists have a separate code for news reporting.",
+      "legacyCode": "B:PRO:WRI"
+    },
+    {
+      "id": "JOU",
+      "name": "Journalist",
+      "description": "Researches and reports news, for example a newspaper reporter. Distinct from other writing such as fiction or advertising copy.",
+      "legacyCode": "B:PRO:JOU"
+    },
+    {
+      "id": "PHO",
+      "name": "Photographer",
+      "description": "Creates photographs professionally, for example a portrait photographer. Does not classify someone merely because they take personal photographs.",
+      "legacyCode": "B:PRO:PHO"
+    },
+    {
+      "id": "MUS",
+      "name": "Musician",
+      "description": "Performs or creates music, for example a pianist or composer. Music teaching can additionally use Teacher.",
+      "legacyCode": "B:PRO:MUS"
+    },
+    {
+      "id": "ELE",
+      "name": "Electrician",
+      "description": "Installs, maintains or repairs electrical wiring and equipment, for example domestic wiring. Distinct from electrical engineering design.",
+      "legacyCode": "B:PRO:ELE"
+    },
+    {
+      "id": "PLU",
+      "name": "Plumber",
+      "description": "Installs, maintains or repairs water, drainage and related pipe systems, for example domestic plumbing. Distinct from general building work.",
+      "legacyCode": "B:PRO:PLU"
+    },
+    {
+      "id": "CAR",
+      "name": "Carpenter",
+      "description": "Builds, installs or repairs wooden structures and fittings, for example cabinetry or framing. Distinct from general building contracting.",
+      "legacyCode": "B:PRO:CAR"
+    },
+    {
+      "id": "BLD",
+      "name": "Builder",
+      "description": "Carries out or coordinates building construction, for example a residential building contractor. Specialized trades can use their own codes.",
+      "legacyCode": "B:PRO:BLD"
+    },
+    {
+      "id": "MEC",
+      "name": "Mechanic",
+      "description": "Maintains and repairs vehicles or machinery, for example an automotive mechanic. Distinct from engineering design.",
+      "legacyCode": "B:PRO:MEC"
+    },
+    {
+      "id": "CHE",
+      "name": "Chef",
+      "description": "Prepares food professionally, for example a restaurant chef or cook. Distinct from a restaurant owner whose work is management.",
+      "legacyCode": "B:PRO:CHE"
+    },
+    {
+      "id": "HAI",
+      "name": "Hairdresser",
+      "description": "Cuts, styles or treats hair, for example a salon stylist or barber. Distinct from other beauty services.",
+      "legacyCode": "B:PRO:HAI"
+    },
+    {
+      "id": "FIT",
+      "name": "Fitness trainer",
+      "description": "Guides exercise and physical conditioning, for example a personal trainer. Distinct from physiotherapy rehabilitation.",
+      "legacyCode": "B:PRO:FIT"
+    },
+    {
+      "id": "TRA",
+      "name": "Translator",
+      "description": "Converts written content between languages, for example a document translator. Spoken or signed interpretation has a separate code.",
+      "legacyCode": "B:PRO:TRA"
+    },
+    {
+      "id": "INT",
+      "name": "Interpreter",
+      "description": "Converts spoken or signed communication between languages, for example a conference interpreter. Distinct from written translation.",
+      "legacyCode": "B:PRO:INT"
+    },
+    {
+      "id": "SOC",
+      "name": "Social worker",
+      "description": "Supports people with social needs and access to services, for example a family social worker. Distinct from clinical psychology or nursing.",
+      "legacyCode": "B:PRO:SOC"
+    }
+  ]
+}

@@ -16,20 +16,20 @@ test('source integrity and materialized definitions are validated offline',()=>{
  const directory=mkdtempSync(join(tmpdir(),'ontology-sources-'));
  try{
   cpSync(ontologyRoot,directory,{recursive:true,filter:source=>!source.split('/').some(p=>['.git','node_modules'].includes(p))});
-  const baseline=loadCatalogue(directory);assert.equal(baseline.nodes['G:CO:US'].ISO3,'USA');
+  const baseline=loadCatalogue(directory);assert.equal(baseline.datasets.countries.records.find(r=>r.id==='G:CO:US').ISO3,'USA');
   const source=join(directory,'_support/sources/geo/data/country/US.json'),bytes=readFileSync(source);
   writeFileSync(source,Buffer.concat([bytes,Buffer.from(' ')]));assert.throws(()=>loadCatalogue(directory),/checksum mismatch/);
   writeFileSync(source,bytes);
-  const definition=join(directory,'Geography/Country/US/index.json'),data=JSON.parse(readFileSync(definition));
-  data.Name='Changed local name';writeFileSync(definition,JSON.stringify(data));assert.throws(()=>loadCatalogue(directory),/differs from source/);
+  const definition=join(directory,'data/countries/index.json'),data=JSON.parse(readFileSync(definition));
+  data.records.find(r=>r.id==='G:CO:US').Name='Changed local name';writeFileSync(definition,JSON.stringify(data));assert.throws(()=>loadCatalogue(directory),/differs from source/);
  }finally{rmSync(directory,{recursive:true,force:true});}
 });
 test('catalogue rejects invalid choice references and branch custom text escapes',()=>{
  const directory=mkdtempSync(join(tmpdir(),'ontology-choices-'));
  try{
   cpSync(ontologyRoot,directory,{recursive:true,filter:source=>!source.split('/').some(p=>['.git','node_modules'].includes(p))});
-  const file=join(directory,'Geography/Address/US/Role.json'),original=JSON.parse(readFileSync(file));
-  for(const change of [{Choices:'G:UNKNOWN'},{Choices:'G:AD:RO:SH'},{AllowCustom:true,CustomChoice:'Other'},{ChoiceAliases:{Shipping:'G:AD:RO:SH'}}]){
+  const file=join(directory,'Science/Geography/Address/US/Role.json'),original=JSON.parse(readFileSync(file));
+  for(const change of [{Choices:'G:UNKNOWN'},{Choices:'S:G:AD:RO:SH'},{AllowCustom:true,CustomChoice:'Other'},{ChoiceAliases:{Shipping:'S:G:AD:RO:SH'}}]){
    writeFileSync(file,JSON.stringify({...original,...change}));assert.throws(()=>loadCatalogue(directory),/Choices|choices/);
   }
  }finally{rmSync(directory,{recursive:true,force:true});}

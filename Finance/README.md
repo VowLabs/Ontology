@@ -4,7 +4,7 @@ Canonical code: `F`. Definition: [index.json](index.json).
 
 Finance separates customer account and payment references, physical asset records, transaction records and financial product classifications. F:P describes product types; it does not replace the existing answer-bearing account records.
 
-Parent: [NokNok ontology](../README.md).
+Parent: [VowLabs ontology](../README.md).
 
 ## Subclassifications
 
@@ -40,13 +40,6 @@ Further classifications: Vehicle (`F:A:V`), Property (`F:A:P`).
 
 [Detailed classification guide](Assets/README.md) · [Definition](Assets/index.json).
 
-### Wallet accounts — `F:AC`
-
-Managed wallet accounts record an application account number, display name, address, chain ID and derivation path. They are distinct from deposit-account products and from a minimal network/address reference.
-
-Record fields: Account name (`F:AC:N`), Account number (`F:AC:NO`), Wallet address (`F:AC:A`), Chain ID (`F:AC:CH`), Derivation path (`F:AC:DP`).
-
-[Detailed classification guide](Accounts/README.md) · [Definition](Accounts/index.json).
 
 ### Invoice — `F:INV`
 

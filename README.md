@@ -5,8 +5,7 @@ with `npm --prefix VowLabs/Ontology start` from the Vow workspace; it requires
 Node.js 22 or later and has no external dependencies.
 
 This repository provides a canonical, open-source vocabulary for applications.
-Definitions describe concepts, questions, value types, constraints, and shared
-reference data. Applications use stable codes to interpret their own records
+Definitions describe concepts, questions, value types, and constraints. Applications use stable codes to interpret their own records
 and exchange information consistently.
 
 User records, identifiers, consent, authentication, and storage belong to the
@@ -33,7 +32,12 @@ The root contains `index.json`, this README and the domain directories. Each
 domain directory is a branch connected through the root's `Children` references.
 Supporting material lives in `_support/`: collection definitions, protocol
 specifications, storage mappings, tooling and contribution guidelines. Supporting
-files are not ontology nodes and do not contribute code segments.
+files are not ontology nodes and do not contribute code segments. Reference data
+lives separately in `data/`; see the [dataset guide](data/README.md).
+
+Version 5 removes application-owned schemas from the active tree. NokNok keeps
+its compatibility schemas in its own `shared/application-schema.json`. See the
+[boundary audit](_support/BOUNDARIES.md) and [migration guide](_support/migrations/README.md).
 
 ## Top-level domains
 
@@ -43,9 +47,8 @@ for particular workflows.
 
 | Code | Domain | Scope |
 | --- | --- | --- |
-| `I` | Identity | Describes people and organizations, how they identify themselves, how they can be contacted, and their preferences and connections. Its current branches cover personal and organizational information, identifiers, contact details, preferences, and relationships such as contacts and witnesses. Identity provides the subjects to which records in other domains belong; possessing an identifier or declaring a relationship does not establish its authenticity. |
-| `F` | Finance | Covers money, assets, accounts, payment instruments, and financial transactions for individuals, organizations, and public bodies. Current definitions include bank accounts, wallets, payment instruments, assets, generated wallet accounts, invoices, settlement proofs, and refunds. Finance remains a peer of Business because financial information also describes personal holdings and noncommercial activity, while business operations extend beyond financial matters. |
-| `G` | Geography | Covers places, locations, and the spatial relationships used to situate people, organizations, assets, and activities. The current branches define address formats, address roles and sourced country/territory concepts; its broader scope accommodates geographic areas, coordinates, and physical locations as additional vocabulary is defined. Geographic facts identify where something is situated, while the identity of its occupant or owner belongs to the relevant subject. |
+| `I` | Identity | Describes people and organizations, how they identify themselves, how they can be contacted, and issued documents. Its current branches cover personal and organizational information, identifiers, contact details, and documents. Identity provides the subjects to which records in other domains belong; possessing an identifier or declaring a relationship does not establish its authenticity. |
+| `F` | Finance | Covers money, assets, accounts, payment instruments, and financial transactions for individuals, organizations, and public bodies. Current definitions include bank accounts, wallets, payment instruments, assets, invoices, settlement proofs, and refunds. Finance remains a peer of Business because financial information also describes personal holdings and noncommercial activity, while business operations extend beyond financial matters. |
 | `H` | Health | Covers physical and mental health, care needs, accessibility, and food-related information relevant to wellbeing. Current definitions include allergies, medications, medical history, accessibility needs, and food requirements. These records support selective disclosure for contexts such as care intake and food service; a recorded answer is a person's or organization's statement, and the catalogue itself supplies neither a diagnosis nor clinical validation. |
 | `B` | Business | Covers commercial activity and the organization of work, including products, services, trading relationships, employment, insurance, and operational processes. Its current branches are Commerce, Employment, Insurance, and Professions. Business uses financial facts through their Finance codes, allowing a commercial workflow to combine operational and financial information without duplicating the same concept in both domains. |
 | `S` | Science | Covers scientific knowledge, technical systems, and the information structures used to describe and process data. Its current branches are Technology and Information, including the shared primitive types used throughout the ontology. This domain provides a home for scientific and technical subject matter; the fact that another domain can be studied systematically does not make that entire domain a subdivision of Science. |
@@ -63,14 +66,9 @@ These are product-type concepts, separate from existing customer records such
 as `F:BA` (bank account). See the [financial product taxonomy](_support/finance-products.md)
 for codes, classification examples and compatibility notes for ontology `2.1.0`.
 
-### Professions
+### Professions and other reference data
 
-[Business:Professions](Business/Professions/README.md) (`B:PRO`) supplies a starter
-list of occupations and trades for classifying people and contacts, including
-Lawyer (`B:PRO:LAW`) and Doctor (`B:PRO:DOC`). Contacts reference these through
-canonical record tags. Professions is separate from employer-specific Employment
-records (`B:EMP`). Ontology `4.2.0` adds this vocabulary without changing existing
-codes or answers; no stored-record migration is required.
+`B:PRO` defines a profession; named professions live in [data/professions](data/professions/README.md). Services and countries follow the same boundary. The service offers them through `/v1/datasets` and dedicated aliases. They are absent from the definition tree and cannot be used as canonical tags.
 
 ### Definition structure
 
@@ -159,9 +157,9 @@ omit empty lines and dangling punctuation, and keep each record separate.
 does not change stored answers. Address omits `US` from the domestic display and
 retains other country values and any public delivery instructions.
 
-`G:AD:US:R` is Role. Its `Choices` value is the branch reference `G:AD:RO`.
+`S:G:AD:US:R` is Role. Its `Choices` value is the branch reference `S:G:AD:RO`.
 Clients resolve that branch recursively, display leaf names and store leaf codes.
-The Country field similarly references `G:CO`. Literal choice arrays remain
+The Country field uses `Choices: {"Dataset":"countries"}` to select a reference-data ID. Literal choice arrays remain
 supported for fields that enumerate primitive values. Branch references do not
 permit custom strings, display-label aliases or intermediate branch values.
 
@@ -176,7 +174,7 @@ use canonical ontology codes to classify their records.
 Definition flags such as `Public`, `PublicRequired`, and `PrivateRequired`
 describe visibility semantics for application data. They do not make schema
 metadata private: canonical definitions are publicly readable through the API.
-For example, account facts (`F:AC`) require private handling (`PrivateRequired`).
+Application-specific visibility policy belongs to the consuming app.
 
 Applications enforce access control, collect consent, and determine which values
 may be disclosed. A canonical code, collection, or reference never grants access
@@ -185,11 +183,11 @@ historical signed facts.
 
 ## Shared service data and identity documents
 
-`Science:Technology:Service` (`S:T:SV`) describes the shared service registry.
+`Science:Technology:Service` (`S:T:SV`) defines a service.
 `GET /v1/services` supplies its versioned records: Telegram, WhatsApp, X, LinkedIn, Instagram,
 Facebook, YouTube, TikTok, Threads, Bluesky, Reddit, Pinterest, Snapchat, Twitch,
 and GitHub. The canonical records live in
-[Science/Technology/Service/index.json](Science/Technology/Service/index.json).
+[data/services/index.json](data/services/index.json).
 An application-owned online account can retain `I:C:SM:S` (service ID) and
 `I:C:SM:ID` (identifier); the existing codes remain compatible. Templates and
 icon URLs come from the service record. WhatsApp retains an international phone
@@ -232,12 +230,11 @@ Each folder containing an `index.json` has a README explaining its immediate
 children. Record guides describe fields rather than pretending those fields are
 subtypes. Terminal classification guides state when no finer subclasses exist.
 
-- [Identity (`I`)](Identity/README.md): Identity separates who a subject is from how to contact them, their identifiers, issued documents, preferences and wallet connections. Personal and organizational identity define the subject types used by records elsewhere in the tree.
+- [Identity (`I`)](Identity/README.md): Identity separates who a subject is from how to contact them, their identifiers, issued documents and contact information. Personal and organizational identity define the subject types used by records elsewhere in the tree.
 - [Finance (`F`)](Finance/README.md): Finance separates customer account and payment references, physical asset records, transaction records and financial product classifications. F:P describes product types; it does not replace the existing answer-bearing account records.
-- [Geography (`G`)](Geography/README.md): Geography supplies spatial context. The present vocabulary covers addresses; it does not yet define separate coordinate, boundary or geographic-area subclasses.
 - [Health (`H`)](Health/README.md): Health separates reported allergies, medication use, medical history, accessibility accommodations and food requirements. Preferences, restrictions and reported conditions have different meanings and are kept in separate records.
 - [Business (`B`)](Business/README.md): Business groups commercial workflows, employment records and insurance policy records. Finance remains separate so the same financial facts can be used in personal and commercial contexts.
-- [Science (`S`)](Science/README.md): Science currently organizes Technology and Information. Technology supplies shared service metadata; Information supplies data types and information-system record classifications. These branches describe technical concepts rather than granting applications access to user data.
+- [Science (`S`)](Science/README.md): Science currently organizes Technology and Information. Technology defines online services; Information supplies data types and information-system record classifications. These branches describe technical concepts rather than granting applications access to user data.
 - [Humanities (`U`)](Humanities/README.md): Humanities is reserved for human culture, language, history, philosophy and interpretation. No child definitions are published yet; these scope examples do not create canonical subclasses.
 - [Society (`R`)](Society/README.md): Society is reserved for collective institutions, governance, law, civic participation and communities. It differs from Identity, which describes particular people and organizations. No child definitions are published yet.
 
@@ -246,11 +243,10 @@ Supporting indexes are documented separately: [workflow collections](_support/co
 ## Tree-backed choices and sourced definitions
 
 `Choices` can be a literal array or a canonical branch code. For example,
-`"Choices": "G:AD:RO"` accepts only terminal descendants of Address:Roles.
+`"Choices": "S:G:AD:RO"` accepts only terminal descendants of Address:Roles.
 This is a constrained relationship; `tags` remains the general relationship
-mechanism and does not replace Role. See [Address](Geography/Address/README.md).
+mechanism and does not replace Role. See [Address](Science/Geography/Address/README.md).
 
-Ontology `4.0.0` moves the former Address record to `G:AD:US`. The country list
-at `G:CO` is sourced from a pinned `ekkis/geo` revision. See the
+Ontology `4.0.0` moves the former Address record to `S:G:AD:US`. The country dataset is sourced from a pinned `ekkis/geo` revision. See the
 [address migration](_support/protocol/README.md#address-migration) and
 [external source workflow](_support/sources/README.md).

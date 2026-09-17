@@ -1,0 +1,21 @@
+{
+  "To": "7.0.0",
+  "Prefixes": {
+    "G": "S:G"
+  },
+  "SubjectTypes": {},
+  "Legacy": "6.1.0",
+  "Values": {
+    "G:AD:US:R": {
+      "G:AD:RO:RE": "S:G:AD:RO:RE",
+      "G:AD:RO:OF": "S:G:AD:RO:OF",
+      "G:AD:RO:RG": "S:G:AD:RO:RG",
+      "G:AD:RO:SH": "S:G:AD:RO:SH",
+      "G:AD:RO:BI": "S:G:AD:RO:BI",
+      "G:AD:RO:MA": "S:G:AD:RO:MA",
+      "G:AD:RO:RT": "S:G:AD:RO:RT",
+      "G:AD:RO:PU": "S:G:AD:RO:PU"
+    }
+  },
+  "Description": "Move Geography under Science. Migrate definition codes, tags and address role choices; retain stable dataset IDs and historical signed statements."
+}

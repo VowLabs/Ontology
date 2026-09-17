@@ -69,7 +69,7 @@ The storage inventory declares version `2.0.0`. This is the inventory’s own re
 
 Tables mapped by this inventory:
 
-- `addresses` → [Wallet accounts (`F:AC`)](../../Finance/Accounts/index.json).
+- `addresses` → Wallet accounts (`F:AC`, historical application schema).
 - `consumer_onboarding_profiles` → [Onboarding (`B:C:ON`)](../../Business/Commerce/Onboarding/index.json).
 - `contact_requests` → [Support request (`B:C:SU`)](../../Business/Commerce/SupportRequest/index.json).
 - `customer_profiles` → [Customer profile (`B:C:CP`)](../../Business/Commerce/CustomerProfile/index.json).
@@ -144,3 +144,7 @@ Files mapped by this inventory:
 ### Public-code metadata
 
 The inventory’s `PublicCodes` list contains `F:AC`, `B:C:O`, `B:C:P`, `B:C:MN`, `B:C:MT`. This is storage metadata, not a disclosure grant. In particular, the F:AC definition requires private handling; consumers must apply definition-level restrictions and their own access controls rather than treating this list as permission to publish entire records.
+
+The version 2 storage mappings above remain historical contracts. Retired application
+codes validate against the archived schema, not the active definition tree.
+`field-mappings.json` preserves historic `SourceKey` annotations outside definitions.

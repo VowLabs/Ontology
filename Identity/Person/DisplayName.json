@@ -1,0 +1,5 @@
+{
+  "Name": "Display Name",
+  "Question": "What name should be displayed for this person?",
+  "Type": "S:I:D:T:S"
+}

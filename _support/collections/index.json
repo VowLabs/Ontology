@@ -2,16 +2,16 @@
   "checkout": {
     "Name": "Checkout and delivery",
     "Fields": [
-      "I:P:PN",
+      "I:P:DN",
       "I:C:P:EM",
       "I:C:P:PH",
-      "G:AD:US:L1",
-      "G:AD:US:L2",
-      "G:AD:US:C",
-      "G:AD:US:RE",
-      "G:AD:US:PC",
-      "G:AD:US:CO",
-      "G:AD:US:DI"
+      "S:G:AD:US:L1",
+      "S:G:AD:US:L2",
+      "S:G:AD:US:C",
+      "S:G:AD:US:RE",
+      "S:G:AD:US:PC",
+      "S:G:AD:US:CO",
+      "S:G:AD:US:DI"
     ]
   },
   "food": {

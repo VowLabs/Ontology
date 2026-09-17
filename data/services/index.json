@@ -1,0 +1,157 @@
+{
+  "id": "services",
+  "definitionCode": "S:T:SV",
+  "version": 2,
+  "records": [
+    {
+      "id": "telegram",
+      "name": "Telegram",
+      "identifierLabel": "Username",
+      "identifierType": "S:I:D:T:ID",
+      "displayTemplate": "@{identifier}",
+      "urlTemplate": "https://t.me/{identifier}",
+      "iconUrl": "/api/services/telegram/icon.svg",
+      "normalization": "username"
+    },
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp",
+      "identifierLabel": "Phone number",
+      "identifierType": "S:I:D:T:PH",
+      "displayTemplate": "{identifier}",
+      "urlTemplate": "https://wa.me/{identifierDigits}",
+      "iconUrl": "/api/services/whatsapp/icon.svg",
+      "normalization": "internationalPhone"
+    },
+    {
+      "id": "x",
+      "name": "X",
+      "identifierLabel": "Username",
+      "identifierType": "S:I:D:T:ID",
+      "displayTemplate": "@{identifier}",
+      "urlTemplate": "https://x.com/{identifier}",
+      "iconUrl": "/api/services/x/icon.svg",
+      "normalization": "username"
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "identifierLabel": "Public profile identifier",
+      "identifierType": "S:I:D:T:ID",
+      "displayTemplate": "{identifier}",
+      "urlTemplate": "https://www.linkedin.com/in/{identifier}",
+      "iconUrl": "/api/services/linkedin/icon.svg",
+      "normalization": "username"
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "identifierLabel": "Username",
+      "identifierType": "S:I:D:T:ID",
+      "displayTemplate": "@{identifier}",
+      "urlTemplate": "https://www.instagram.com/{identifier}/",
+      "iconUrl": "/api/services/instagram/icon.svg",
+      "normalization": "username"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "identifierLabel": "Username",
+      "identifierType": "S:I:D:T:ID",
+      "displayTemplate": "{identifier}",
+      "urlTemplate": "https://www.facebook.com/{identifier}",
+      "iconUrl": "/api/services/facebook/icon.svg",
+      "normalization": "username"
+    },
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "identifierLabel": "Handle",
+      "identifierType": "S:I:D:T:ID",
+      "displayTemplate": "@{identifier}",
+      "urlTemplate": "https://www.youtube.com/@{identifier}",
+      "iconUrl": "/api/services/youtube/icon.svg",
+      "normalization": "username"
+    },
+    {
+      "id": "tiktok",
+      "name": "TikTok",
+      "identifierLabel": "Username",
+      "identifierType": "S:I:D:T:ID",
+      "displayTemplate": "@{identifier}",
+      "urlTemplate": "https://www.tiktok.com/@{identifier}",
+      "iconUrl": "/api/services/tiktok/icon.svg",
+      "normalization": "username"
+    },
+    {
+      "id": "threads",
+      "name": "Threads",
+      "identifierLabel": "Username",
+      "identifierType": "S:I:D:T:ID",
+      "displayTemplate": "@{identifier}",
+      "urlTemplate": "https://www.threads.com/@{identifier}",
+      "iconUrl": "/api/services/threads/icon.svg",
+      "normalization": "username"
+    },
+    {
+      "id": "bluesky",
+      "name": "Bluesky",
+      "identifierLabel": "Full handle (e.g. ekkis.bsky.social)",
+      "identifierType": "S:I:D:T:ID",
+      "displayTemplate": "@{identifier}",
+      "urlTemplate": "https://bsky.app/profile/{identifier}",
+      "iconUrl": "/api/services/bluesky/icon.svg",
+      "normalization": "username"
+    },
+    {
+      "id": "reddit",
+      "name": "Reddit",
+      "identifierLabel": "Username",
+      "identifierType": "S:I:D:T:ID",
+      "displayTemplate": "u/{identifier}",
+      "urlTemplate": "https://www.reddit.com/user/{identifier}/",
+      "iconUrl": "/api/services/reddit/icon.svg",
+      "normalization": "username"
+    },
+    {
+      "id": "pinterest",
+      "name": "Pinterest",
+      "identifierLabel": "Username",
+      "identifierType": "S:I:D:T:ID",
+      "displayTemplate": "@{identifier}",
+      "urlTemplate": "https://www.pinterest.com/{identifier}/",
+      "iconUrl": "/api/services/pinterest/icon.svg",
+      "normalization": "username"
+    },
+    {
+      "id": "snapchat",
+      "name": "Snapchat",
+      "identifierLabel": "Username",
+      "identifierType": "S:I:D:T:ID",
+      "displayTemplate": "@{identifier}",
+      "urlTemplate": "https://www.snapchat.com/add/{identifier}",
+      "iconUrl": "/api/services/snapchat/icon.svg",
+      "normalization": "username"
+    },
+    {
+      "id": "twitch",
+      "name": "Twitch",
+      "identifierLabel": "Username",
+      "identifierType": "S:I:D:T:ID",
+      "displayTemplate": "{identifier}",
+      "urlTemplate": "https://www.twitch.tv/{identifier}",
+      "iconUrl": "/api/services/twitch/icon.svg",
+      "normalization": "username"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "identifierLabel": "Username",
+      "identifierType": "S:I:D:T:ID",
+      "displayTemplate": "{identifier}",
+      "urlTemplate": "https://github.com/{identifier}",
+      "iconUrl": "/api/services/github/icon.svg",
+      "normalization": "username"
+    }
+  ]
+}

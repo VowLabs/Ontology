@@ -1,15 +1,12 @@
 {
-  "Name": "NokNok ontology",
-  "Version": "4.2.0",
+  "Name": "VowLabs ontology",
+  "Version": "7.0.0",
   "Children": {
     "I": {
       "$ref": "./Identity/index.json"
     },
     "F": {
       "$ref": "./Finance/index.json"
-    },
-    "G": {
-      "$ref": "./Geography/index.json"
     },
     "H": {
       "$ref": "./Health/index.json"

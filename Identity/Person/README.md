@@ -1,8 +1,8 @@
-# Personal identity
+# Personal
 
 Canonical code: `I:P`. Definition: [index.json](index.json).
 
-Personal identity groups one person’s legal and preferred names, birth details, US Social Security number and profile image. A preferred name is a presentation choice, while a legal name describes formal identity; neither field verifies the person.
+Personal groups one person’s legal and display names, birth details, US Social Security number and profile image. A display name is a presentation choice, while a legal name describes formal identity; neither field verifies the person.
 
 Parent: [Identity](../README.md).
 
@@ -10,7 +10,7 @@ Parent: [Identity](../README.md).
 
 At most one record per subject (`Scalar: true`).
 
-Applicable subjects: [Personal identity (`I:P`)](index.json).
+Applicable subjects: [Personal (`I:P`)](index.json).
 
 The children below are optional scalar fields of one record, not subtypes. An unanswered field does not mean false, zero or not applicable.
 
@@ -28,15 +28,15 @@ Maximum length: `2000`.
 
 [Field definition](LegalName.json).
 
-### Preferred name — `I:P:PN`
+### Display Name — `I:P:DN`
 
-The field answers: “What name do you prefer to use?”
+The field answers: “What name should be displayed for this person?”
 
 Value type: [String (`S:I:D:T:S`)](../../Science/Information/Data/Types/String.json); stored as `string`.
 
 Maximum length: `2000`.
 
-[Field definition](PreferredName.json).
+[Field definition](DisplayName.json).
 
 ### Date of birth — `I:P:DOB`
 

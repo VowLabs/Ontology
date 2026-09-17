@@ -1,0 +1,18 @@
+{
+  "To": "5.0.0",
+  "Prefixes": {},
+  "SubjectTypes": {},
+  "Legacy": "4.2.0",
+  "CanonicalTags": true,
+  "RetiredApplicationPrefixes": [
+    "I:CN",
+    "I:PR",
+    "F:AC",
+    "S:I:D:LEX"
+  ],
+  "ReferenceDatasets": {
+    "B:PRO:*": "professions",
+    "G:CO:*": "countries",
+    "S:T:SV/records": "services"
+  }
+}

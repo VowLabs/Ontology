@@ -34,3 +34,16 @@ invalid answer examples in tests when changing constraints. Do not commit the
 compiled catalogue. Review changes to shared types for effects on every referring
 field. Request collections must list leaves explicitly and must not grant access
 to future descendants automatically.
+
+## Definitions, reference data and application state
+
+The definition tree describes things, their properties, types and constraints.
+Named reference lists (professions, countries, providers) belong in `data/`, with
+independent dataset versions and stable IDs. Serve them through dataset endpoints;
+do not embed `Records` or create ontology children for each entry. A field may
+select dataset IDs through `Choices: {"Dataset":"countries"}`.
+
+User list membership, UI settings, application-specific account schemas and
+persistence keys belong to the owning application. A generic concept such as an
+order can be defined here; a particular application's orders or settings cannot.
+Review the [boundary audit](BOUNDARIES.md) before adding new branches.

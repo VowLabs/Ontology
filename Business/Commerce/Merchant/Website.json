@@ -1,6 +1,5 @@
 {
   "Name": "Website",
   "Question": "What is the website?",
-  "Type": "S:I:D:T:URL",
-  "SourceKey": "website"
+  "Type": "S:I:D:T:URL"
 }

@@ -14,9 +14,6 @@
     "A": {
       "$ref": "./Assets/index.json"
     },
-    "AC": {
-      "$ref": "./Accounts/index.json"
-    },
     "INV": {
       "$ref": "./Invoice/index.json"
     },

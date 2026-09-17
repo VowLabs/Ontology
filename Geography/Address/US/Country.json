@@ -1,7 +1,0 @@
-{
-  "Name": "Country",
-  "Question": "What is the country?",
-  "Type": "S:I:D:T:S",
-  "Choices": "G:CO",
-  "Description": "Reference a country or territory in the sourced country vocabulary. The value is a canonical code such as G:CO:US."
-}

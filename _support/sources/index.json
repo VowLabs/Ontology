@@ -254,7 +254,8 @@
       "data/country/YT.json": "eb0215d06a2dc1f0a2f79f5fb39a937b5f61325e39cbf3e841a35e83d384daf2",
       "data/country/ZA.json": "da5e234009734eb7aa38cc0f6319276b103176c7a02cb127b80605d9acf49388",
       "data/country/ZM.json": "1d433516281b11bd45ab66f46c0d242c22a6e8b0e6a46a31ca5f049d0cdfd1fd",
-      "data/country/ZW.json": "64e3aebada55daaa6196bc21dd437ff865af6b368377c0e8c52887365fa19756"
+      "data/country/ZW.json": "64e3aebada55daaa6196bc21dd437ff865af6b368377c0e8c52887365fa19756",
+      "data/country/US.state.json": "325edddadb7a0a1ea33c2edcf36691ff0b07357078db87e13e8915cc4bb4a520"
     }
   }
 }

@@ -1,6 +1,0 @@
-{
-  "Name": "Preferred name",
-  "Question": "What is this preferred name?",
-  "Type": "S:I:D:T:S",
-  "SourceKey": "displayName"
-}

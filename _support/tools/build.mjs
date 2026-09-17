@@ -4,8 +4,10 @@ import { resolve, dirname } from 'node:path';
 import { loadCatalogue, ontologyRoot as root } from '../catalogue.mjs';
 const noknokRoot = resolve(root, '../../NokNok');
 const catalogue = loadCatalogue();
+// Application schemas are owned by NokNok and excluded from the ontology API.
+catalogue.application = JSON.parse(readFileSync(resolve(noknokRoot, 'shared/application-schema.json'), 'utf8'));
 // Bundle canonical service artwork for offline profile rendering on every client.
-for (const service of catalogue.nodes['S:T:SV'].Records) {
+for (const service of catalogue.datasets.services.records) {
   service.iconSvg = readFileSync(resolve(root, '_support/service-icons', `${service.id}.svg`), 'utf8');
 }
 const out = resolve(noknokRoot, 'shared/ontology-catalogue.js');

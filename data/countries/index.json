@@ -1,0 +1,4507 @@
+{
+  "id": "countries",
+  "definitionCode": "S:G:CO",
+  "version": 1,
+  "records": [
+    {
+      "id": "G:CO:AD",
+      "Name": "Andorra",
+      "name": "Andorra",
+      "ISO2": "AD",
+      "ISO3": "AND",
+      "OfficialName": "Principality of Andorra",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AD.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AE",
+      "Name": "United Arab Emirates",
+      "name": "United Arab Emirates",
+      "ISO2": "AE",
+      "ISO3": "ARE",
+      "OfficialName": "United Arab Emirates",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AE.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AF",
+      "Name": "Afghanistan",
+      "name": "Afghanistan",
+      "ISO2": "AF",
+      "ISO3": "AFG",
+      "OfficialName": "Islamic Republic of Afghanistan",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AF.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AG",
+      "Name": "Antigua and Barbuda",
+      "name": "Antigua and Barbuda",
+      "ISO2": "AG",
+      "ISO3": "ATG",
+      "OfficialName": "Antigua and Barbuda",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AG.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AI",
+      "Name": "Anguilla",
+      "name": "Anguilla",
+      "ISO2": "AI",
+      "ISO3": "AIA",
+      "OfficialName": "Anguilla",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AI.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AL",
+      "Name": "Albania",
+      "name": "Albania",
+      "ISO2": "AL",
+      "ISO3": "ALB",
+      "OfficialName": "Republic of Albania",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AL.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AM",
+      "Name": "Armenia",
+      "name": "Armenia",
+      "ISO2": "AM",
+      "ISO3": "ARM",
+      "OfficialName": "Republic of Armenia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AO",
+      "Name": "Angola",
+      "name": "Angola",
+      "ISO2": "AO",
+      "ISO3": "AGO",
+      "OfficialName": "Republic of Angola",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AO.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AQ",
+      "Name": "Antarctica",
+      "name": "Antarctica",
+      "ISO2": "AQ",
+      "ISO3": "ATA",
+      "OfficialName": "Antarctica",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AQ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AR",
+      "Name": "Argentina",
+      "name": "Argentina",
+      "ISO2": "AR",
+      "ISO3": "ARG",
+      "OfficialName": "Argentine Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AR.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AS",
+      "Name": "American Samoa",
+      "name": "American Samoa",
+      "ISO2": "AS",
+      "ISO3": "ASM",
+      "OfficialName": "American Samoa",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AS.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AT",
+      "Name": "Austria",
+      "name": "Austria",
+      "ISO2": "AT",
+      "ISO3": "AUT",
+      "OfficialName": "Republic of Austria",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AT.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AU",
+      "Name": "Australia",
+      "name": "Australia",
+      "ISO2": "AU",
+      "ISO3": "AUS",
+      "OfficialName": "Commonwealth of Australia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AU.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AW",
+      "Name": "Aruba",
+      "name": "Aruba",
+      "ISO2": "AW",
+      "ISO3": "ABW",
+      "OfficialName": "Aruba",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AW.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AX",
+      "Name": "Åland Islands",
+      "name": "Åland Islands",
+      "ISO2": "AX",
+      "ISO3": "ALA",
+      "OfficialName": "Åland Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AX.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:AZ",
+      "Name": "Azerbaijan",
+      "name": "Azerbaijan",
+      "ISO2": "AZ",
+      "ISO3": "AZE",
+      "OfficialName": "Republic of Azerbaijan",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/AZ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BA",
+      "Name": "Bosnia and Herzegovina",
+      "name": "Bosnia and Herzegovina",
+      "ISO2": "BA",
+      "ISO3": "BIH",
+      "OfficialName": "Bosnia and Herzegovina",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BA.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BB",
+      "Name": "Barbados",
+      "name": "Barbados",
+      "ISO2": "BB",
+      "ISO3": "BRB",
+      "OfficialName": "Barbados",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BB.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BD",
+      "Name": "Bangladesh",
+      "name": "Bangladesh",
+      "ISO2": "BD",
+      "ISO3": "BGD",
+      "OfficialName": "People's Republic of Bangladesh",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BD.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BE",
+      "Name": "Belgium",
+      "name": "Belgium",
+      "ISO2": "BE",
+      "ISO3": "BEL",
+      "OfficialName": "Kingdom of Belgium",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BE.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BF",
+      "Name": "Burkina Faso",
+      "name": "Burkina Faso",
+      "ISO2": "BF",
+      "ISO3": "BFA",
+      "OfficialName": "Burkina Faso",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BF.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BG",
+      "Name": "Bulgaria",
+      "name": "Bulgaria",
+      "ISO2": "BG",
+      "ISO3": "BGR",
+      "OfficialName": "Republic of Bulgaria",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BG.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BH",
+      "Name": "Bahrain",
+      "name": "Bahrain",
+      "ISO2": "BH",
+      "ISO3": "BHR",
+      "OfficialName": "Kingdom of Bahrain",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BH.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BI",
+      "Name": "Burundi",
+      "name": "Burundi",
+      "ISO2": "BI",
+      "ISO3": "BDI",
+      "OfficialName": "Republic of Burundi",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BI.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BJ",
+      "Name": "Benin",
+      "name": "Benin",
+      "ISO2": "BJ",
+      "ISO3": "BEN",
+      "OfficialName": "Republic of Benin",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BJ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BL",
+      "Name": "Saint Barthélemy",
+      "name": "Saint Barthélemy",
+      "ISO2": "BL",
+      "ISO3": "BLM",
+      "OfficialName": "Collectivity of Saint Barthélemy",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BL.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BM",
+      "Name": "Bermuda",
+      "name": "Bermuda",
+      "ISO2": "BM",
+      "ISO3": "BMU",
+      "OfficialName": "Bermuda",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BN",
+      "Name": "Brunei",
+      "name": "Brunei",
+      "ISO2": "BN",
+      "ISO3": "BRN",
+      "OfficialName": "Nation of Brunei, Abode of Peace",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BN.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BO",
+      "Name": "Bolivia",
+      "name": "Bolivia",
+      "ISO2": "BO",
+      "ISO3": "BOL",
+      "OfficialName": "Plurinational State of Bolivia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BO.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BQ",
+      "Name": "Caribbean Netherlands",
+      "name": "Caribbean Netherlands",
+      "ISO2": "BQ",
+      "ISO3": "BES",
+      "OfficialName": "Bonaire, Sint Eustatius and Saba",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BQ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BR",
+      "Name": "Brazil",
+      "name": "Brazil",
+      "ISO2": "BR",
+      "ISO3": "BRA",
+      "OfficialName": "Federative Republic of Brazil",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BR.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BS",
+      "Name": "Bahamas",
+      "name": "Bahamas",
+      "ISO2": "BS",
+      "ISO3": "BHS",
+      "OfficialName": "Commonwealth of the Bahamas",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BS.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BT",
+      "Name": "Bhutan",
+      "name": "Bhutan",
+      "ISO2": "BT",
+      "ISO3": "BTN",
+      "OfficialName": "Kingdom of Bhutan",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BT.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BV",
+      "Name": "Bouvet Island",
+      "name": "Bouvet Island",
+      "ISO2": "BV",
+      "ISO3": "BVT",
+      "OfficialName": "Bouvet Island",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BV.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BW",
+      "Name": "Botswana",
+      "name": "Botswana",
+      "ISO2": "BW",
+      "ISO3": "BWA",
+      "OfficialName": "Republic of Botswana",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BW.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BY",
+      "Name": "Belarus",
+      "name": "Belarus",
+      "ISO2": "BY",
+      "ISO3": "BLR",
+      "OfficialName": "Republic of Belarus",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BY.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:BZ",
+      "Name": "Belize",
+      "name": "Belize",
+      "ISO2": "BZ",
+      "ISO3": "BLZ",
+      "OfficialName": "Belize",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/BZ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CA",
+      "Name": "Canada",
+      "name": "Canada",
+      "ISO2": "CA",
+      "ISO3": "CAN",
+      "OfficialName": "Canada",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CA.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CC",
+      "Name": "Cocos (Keeling) Islands",
+      "name": "Cocos (Keeling) Islands",
+      "ISO2": "CC",
+      "ISO3": "CCK",
+      "OfficialName": "Territory of the Cocos (Keeling) Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CC.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CD",
+      "Name": "DR Congo",
+      "name": "DR Congo",
+      "ISO2": "CD",
+      "ISO3": "COD",
+      "OfficialName": "Democratic Republic of the Congo",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CD.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CF",
+      "Name": "Central African Republic",
+      "name": "Central African Republic",
+      "ISO2": "CF",
+      "ISO3": "CAF",
+      "OfficialName": "Central African Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CF.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CG",
+      "Name": "Republic of the Congo",
+      "name": "Republic of the Congo",
+      "ISO2": "CG",
+      "ISO3": "COG",
+      "OfficialName": "Republic of the Congo",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CG.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CH",
+      "Name": "Switzerland",
+      "name": "Switzerland",
+      "ISO2": "CH",
+      "ISO3": "CHE",
+      "OfficialName": "Swiss Confederation",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CH.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CI",
+      "Name": "Ivory Coast",
+      "name": "Ivory Coast",
+      "ISO2": "CI",
+      "ISO3": "CIV",
+      "OfficialName": "Republic of Côte d'Ivoire",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CI.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CK",
+      "Name": "Cook Islands",
+      "name": "Cook Islands",
+      "ISO2": "CK",
+      "ISO3": "COK",
+      "OfficialName": "Cook Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CK.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CL",
+      "Name": "Chile",
+      "name": "Chile",
+      "ISO2": "CL",
+      "ISO3": "CHL",
+      "OfficialName": "Republic of Chile",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CL.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CM",
+      "Name": "Cameroon",
+      "name": "Cameroon",
+      "ISO2": "CM",
+      "ISO3": "CMR",
+      "OfficialName": "Republic of Cameroon",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CN",
+      "Name": "China",
+      "name": "China",
+      "ISO2": "CN",
+      "ISO3": "CHN",
+      "OfficialName": "People's Republic of China",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CN.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CO",
+      "Name": "Colombia",
+      "name": "Colombia",
+      "ISO2": "CO",
+      "ISO3": "COL",
+      "OfficialName": "Republic of Colombia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CO.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CR",
+      "Name": "Costa Rica",
+      "name": "Costa Rica",
+      "ISO2": "CR",
+      "ISO3": "CRI",
+      "OfficialName": "Republic of Costa Rica",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CR.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CU",
+      "Name": "Cuba",
+      "name": "Cuba",
+      "ISO2": "CU",
+      "ISO3": "CUB",
+      "OfficialName": "Republic of Cuba",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CU.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CV",
+      "Name": "Cape Verde",
+      "name": "Cape Verde",
+      "ISO2": "CV",
+      "ISO3": "CPV",
+      "OfficialName": "Republic of Cabo Verde",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CV.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CW",
+      "Name": "Curaçao",
+      "name": "Curaçao",
+      "ISO2": "CW",
+      "ISO3": "CUW",
+      "OfficialName": "Country of Curaçao",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CW.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CX",
+      "Name": "Christmas Island",
+      "name": "Christmas Island",
+      "ISO2": "CX",
+      "ISO3": "CXR",
+      "OfficialName": "Territory of Christmas Island",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CX.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CY",
+      "Name": "Cyprus",
+      "name": "Cyprus",
+      "ISO2": "CY",
+      "ISO3": "CYP",
+      "OfficialName": "Republic of Cyprus",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CY.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:CZ",
+      "Name": "Czechia",
+      "name": "Czechia",
+      "ISO2": "CZ",
+      "ISO3": "CZE",
+      "OfficialName": "Czech Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/CZ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:DE",
+      "Name": "Germany",
+      "name": "Germany",
+      "ISO2": "DE",
+      "ISO3": "DEU",
+      "OfficialName": "Federal Republic of Germany",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/DE.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:DJ",
+      "Name": "Djibouti",
+      "name": "Djibouti",
+      "ISO2": "DJ",
+      "ISO3": "DJI",
+      "OfficialName": "Republic of Djibouti",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/DJ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:DK",
+      "Name": "Denmark",
+      "name": "Denmark",
+      "ISO2": "DK",
+      "ISO3": "DNK",
+      "OfficialName": "Kingdom of Denmark",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/DK.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:DM",
+      "Name": "Dominica",
+      "name": "Dominica",
+      "ISO2": "DM",
+      "ISO3": "DMA",
+      "OfficialName": "Commonwealth of Dominica",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/DM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:DO",
+      "Name": "Dominican Republic",
+      "name": "Dominican Republic",
+      "ISO2": "DO",
+      "ISO3": "DOM",
+      "OfficialName": "Dominican Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/DO.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:DZ",
+      "Name": "Algeria",
+      "name": "Algeria",
+      "ISO2": "DZ",
+      "ISO3": "DZA",
+      "OfficialName": "People's Democratic Republic of Algeria",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/DZ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:EC",
+      "Name": "Ecuador",
+      "name": "Ecuador",
+      "ISO2": "EC",
+      "ISO3": "ECU",
+      "OfficialName": "Republic of Ecuador",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/EC.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:EE",
+      "Name": "Estonia",
+      "name": "Estonia",
+      "ISO2": "EE",
+      "ISO3": "EST",
+      "OfficialName": "Republic of Estonia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/EE.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:EG",
+      "Name": "Egypt",
+      "name": "Egypt",
+      "ISO2": "EG",
+      "ISO3": "EGY",
+      "OfficialName": "Arab Republic of Egypt",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/EG.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:EH",
+      "Name": "Western Sahara",
+      "name": "Western Sahara",
+      "ISO2": "EH",
+      "ISO3": "ESH",
+      "OfficialName": "Sahrawi Arab Democratic Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/EH.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:ER",
+      "Name": "Eritrea",
+      "name": "Eritrea",
+      "ISO2": "ER",
+      "ISO3": "ERI",
+      "OfficialName": "State of Eritrea",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/ER.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:ES",
+      "Name": "Spain",
+      "name": "Spain",
+      "ISO2": "ES",
+      "ISO3": "ESP",
+      "OfficialName": "Kingdom of Spain",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/ES.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:ET",
+      "Name": "Ethiopia",
+      "name": "Ethiopia",
+      "ISO2": "ET",
+      "ISO3": "ETH",
+      "OfficialName": "Federal Democratic Republic of Ethiopia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/ET.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:FI",
+      "Name": "Finland",
+      "name": "Finland",
+      "ISO2": "FI",
+      "ISO3": "FIN",
+      "OfficialName": "Republic of Finland",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/FI.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:FJ",
+      "Name": "Fiji",
+      "name": "Fiji",
+      "ISO2": "FJ",
+      "ISO3": "FJI",
+      "OfficialName": "Republic of Fiji",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/FJ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:FK",
+      "Name": "Falkland Islands",
+      "name": "Falkland Islands",
+      "ISO2": "FK",
+      "ISO3": "FLK",
+      "OfficialName": "Falkland Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/FK.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:FM",
+      "Name": "Micronesia",
+      "name": "Micronesia",
+      "ISO2": "FM",
+      "ISO3": "FSM",
+      "OfficialName": "Federated States of Micronesia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/FM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:FO",
+      "Name": "Faroe Islands",
+      "name": "Faroe Islands",
+      "ISO2": "FO",
+      "ISO3": "FRO",
+      "OfficialName": "Faroe Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/FO.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:FR",
+      "Name": "France",
+      "name": "France",
+      "ISO2": "FR",
+      "ISO3": "FRA",
+      "OfficialName": "French Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/FR.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GA",
+      "Name": "Gabon",
+      "name": "Gabon",
+      "ISO2": "GA",
+      "ISO3": "GAB",
+      "OfficialName": "Gabonese Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GA.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GB",
+      "Name": "United Kingdom",
+      "name": "United Kingdom",
+      "ISO2": "GB",
+      "ISO3": "GBR",
+      "OfficialName": "United Kingdom of Great Britain and Northern Ireland",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GB.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GD",
+      "Name": "Grenada",
+      "name": "Grenada",
+      "ISO2": "GD",
+      "ISO3": "GRD",
+      "OfficialName": "Grenada",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GD.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GE",
+      "Name": "Georgia",
+      "name": "Georgia",
+      "ISO2": "GE",
+      "ISO3": "GEO",
+      "OfficialName": "Georgia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GE.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GF",
+      "Name": "French Guiana",
+      "name": "French Guiana",
+      "ISO2": "GF",
+      "ISO3": "GUF",
+      "OfficialName": "Guiana",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GF.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GG",
+      "Name": "Guernsey",
+      "name": "Guernsey",
+      "ISO2": "GG",
+      "ISO3": "GGY",
+      "OfficialName": "Bailiwick of Guernsey",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GG.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GH",
+      "Name": "Ghana",
+      "name": "Ghana",
+      "ISO2": "GH",
+      "ISO3": "GHA",
+      "OfficialName": "Republic of Ghana",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GH.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GI",
+      "Name": "Gibraltar",
+      "name": "Gibraltar",
+      "ISO2": "GI",
+      "ISO3": "GIB",
+      "OfficialName": "Gibraltar",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GI.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GL",
+      "Name": "Greenland",
+      "name": "Greenland",
+      "ISO2": "GL",
+      "ISO3": "GRL",
+      "OfficialName": "Greenland",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GL.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GM",
+      "Name": "Gambia",
+      "name": "Gambia",
+      "ISO2": "GM",
+      "ISO3": "GMB",
+      "OfficialName": "Republic of the Gambia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GN",
+      "Name": "Guinea",
+      "name": "Guinea",
+      "ISO2": "GN",
+      "ISO3": "GIN",
+      "OfficialName": "Republic of Guinea",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GN.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GP",
+      "Name": "Guadeloupe",
+      "name": "Guadeloupe",
+      "ISO2": "GP",
+      "ISO3": "GLP",
+      "OfficialName": "Guadeloupe",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GP.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GQ",
+      "Name": "Equatorial Guinea",
+      "name": "Equatorial Guinea",
+      "ISO2": "GQ",
+      "ISO3": "GNQ",
+      "OfficialName": "Republic of Equatorial Guinea",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GQ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GR",
+      "Name": "Greece",
+      "name": "Greece",
+      "ISO2": "GR",
+      "ISO3": "GRC",
+      "OfficialName": "Hellenic Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GR.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GS",
+      "Name": "South Georgia",
+      "name": "South Georgia",
+      "ISO2": "GS",
+      "ISO3": "SGS",
+      "OfficialName": "South Georgia and the South Sandwich Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GS.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GT",
+      "Name": "Guatemala",
+      "name": "Guatemala",
+      "ISO2": "GT",
+      "ISO3": "GTM",
+      "OfficialName": "Republic of Guatemala",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GT.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GU",
+      "Name": "Guam",
+      "name": "Guam",
+      "ISO2": "GU",
+      "ISO3": "GUM",
+      "OfficialName": "Guam",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GU.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GW",
+      "Name": "Guinea-Bissau",
+      "name": "Guinea-Bissau",
+      "ISO2": "GW",
+      "ISO3": "GNB",
+      "OfficialName": "Republic of Guinea-Bissau",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GW.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:GY",
+      "Name": "Guyana",
+      "name": "Guyana",
+      "ISO2": "GY",
+      "ISO3": "GUY",
+      "OfficialName": "Co-operative Republic of Guyana",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/GY.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:HK",
+      "Name": "Hong Kong",
+      "name": "Hong Kong",
+      "ISO2": "HK",
+      "ISO3": "HKG",
+      "OfficialName": "Hong Kong Special Administrative Region of the People's Republic of China",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/HK.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:HM",
+      "Name": "Heard Island and McDonald Islands",
+      "name": "Heard Island and McDonald Islands",
+      "ISO2": "HM",
+      "ISO3": "HMD",
+      "OfficialName": "Heard Island and McDonald Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/HM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:HN",
+      "Name": "Honduras",
+      "name": "Honduras",
+      "ISO2": "HN",
+      "ISO3": "HND",
+      "OfficialName": "Republic of Honduras",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/HN.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:HR",
+      "Name": "Croatia",
+      "name": "Croatia",
+      "ISO2": "HR",
+      "ISO3": "HRV",
+      "OfficialName": "Republic of Croatia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/HR.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:HT",
+      "Name": "Haiti",
+      "name": "Haiti",
+      "ISO2": "HT",
+      "ISO3": "HTI",
+      "OfficialName": "Republic of Haiti",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/HT.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:HU",
+      "Name": "Hungary",
+      "name": "Hungary",
+      "ISO2": "HU",
+      "ISO3": "HUN",
+      "OfficialName": "Hungary",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/HU.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:ID",
+      "Name": "Indonesia",
+      "name": "Indonesia",
+      "ISO2": "ID",
+      "ISO3": "IDN",
+      "OfficialName": "Republic of Indonesia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/ID.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:IE",
+      "Name": "Ireland",
+      "name": "Ireland",
+      "ISO2": "IE",
+      "ISO3": "IRL",
+      "OfficialName": "Republic of Ireland",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/IE.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:IL",
+      "Name": "Israel",
+      "name": "Israel",
+      "ISO2": "IL",
+      "ISO3": "ISR",
+      "OfficialName": "State of Israel",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/IL.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:IM",
+      "Name": "Isle of Man",
+      "name": "Isle of Man",
+      "ISO2": "IM",
+      "ISO3": "IMN",
+      "OfficialName": "Isle of Man",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/IM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:IN",
+      "Name": "India",
+      "name": "India",
+      "ISO2": "IN",
+      "ISO3": "IND",
+      "OfficialName": "Republic of India",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/IN.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:IO",
+      "Name": "British Indian Ocean Territory",
+      "name": "British Indian Ocean Territory",
+      "ISO2": "IO",
+      "ISO3": "IOT",
+      "OfficialName": "British Indian Ocean Territory",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/IO.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:IQ",
+      "Name": "Iraq",
+      "name": "Iraq",
+      "ISO2": "IQ",
+      "ISO3": "IRQ",
+      "OfficialName": "Republic of Iraq",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/IQ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:IR",
+      "Name": "Iran",
+      "name": "Iran",
+      "ISO2": "IR",
+      "ISO3": "IRN",
+      "OfficialName": "Islamic Republic of Iran",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/IR.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:IS",
+      "Name": "Iceland",
+      "name": "Iceland",
+      "ISO2": "IS",
+      "ISO3": "ISL",
+      "OfficialName": "Iceland",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/IS.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:IT",
+      "Name": "Italy",
+      "name": "Italy",
+      "ISO2": "IT",
+      "ISO3": "ITA",
+      "OfficialName": "Italian Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/IT.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:JE",
+      "Name": "Jersey",
+      "name": "Jersey",
+      "ISO2": "JE",
+      "ISO3": "JEY",
+      "OfficialName": "Bailiwick of Jersey",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/JE.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:JM",
+      "Name": "Jamaica",
+      "name": "Jamaica",
+      "ISO2": "JM",
+      "ISO3": "JAM",
+      "OfficialName": "Jamaica",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/JM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:JO",
+      "Name": "Jordan",
+      "name": "Jordan",
+      "ISO2": "JO",
+      "ISO3": "JOR",
+      "OfficialName": "Hashemite Kingdom of Jordan",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/JO.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:JP",
+      "Name": "Japan",
+      "name": "Japan",
+      "ISO2": "JP",
+      "ISO3": "JPN",
+      "OfficialName": "Japan",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/JP.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:KE",
+      "Name": "Kenya",
+      "name": "Kenya",
+      "ISO2": "KE",
+      "ISO3": "KEN",
+      "OfficialName": "Republic of Kenya",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/KE.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:KG",
+      "Name": "Kyrgyzstan",
+      "name": "Kyrgyzstan",
+      "ISO2": "KG",
+      "ISO3": "KGZ",
+      "OfficialName": "Kyrgyz Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/KG.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:KH",
+      "Name": "Cambodia",
+      "name": "Cambodia",
+      "ISO2": "KH",
+      "ISO3": "KHM",
+      "OfficialName": "Kingdom of Cambodia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/KH.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:KI",
+      "Name": "Kiribati",
+      "name": "Kiribati",
+      "ISO2": "KI",
+      "ISO3": "KIR",
+      "OfficialName": "Independent and Sovereign Republic of Kiribati",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/KI.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:KM",
+      "Name": "Comoros",
+      "name": "Comoros",
+      "ISO2": "KM",
+      "ISO3": "COM",
+      "OfficialName": "Union of the Comoros",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/KM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:KN",
+      "Name": "Saint Kitts and Nevis",
+      "name": "Saint Kitts and Nevis",
+      "ISO2": "KN",
+      "ISO3": "KNA",
+      "OfficialName": "Federation of Saint Christopher and Nevis",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/KN.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:KP",
+      "Name": "North Korea",
+      "name": "North Korea",
+      "ISO2": "KP",
+      "ISO3": "PRK",
+      "OfficialName": "Democratic People's Republic of Korea",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/KP.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:KR",
+      "Name": "South Korea",
+      "name": "South Korea",
+      "ISO2": "KR",
+      "ISO3": "KOR",
+      "OfficialName": "Republic of Korea",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/KR.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:KW",
+      "Name": "Kuwait",
+      "name": "Kuwait",
+      "ISO2": "KW",
+      "ISO3": "KWT",
+      "OfficialName": "State of Kuwait",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/KW.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:KY",
+      "Name": "Cayman Islands",
+      "name": "Cayman Islands",
+      "ISO2": "KY",
+      "ISO3": "CYM",
+      "OfficialName": "Cayman Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/KY.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:KZ",
+      "Name": "Kazakhstan",
+      "name": "Kazakhstan",
+      "ISO2": "KZ",
+      "ISO3": "KAZ",
+      "OfficialName": "Republic of Kazakhstan",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/KZ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:LA",
+      "Name": "Laos",
+      "name": "Laos",
+      "ISO2": "LA",
+      "ISO3": "LAO",
+      "OfficialName": "Lao People's Democratic Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/LA.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:LB",
+      "Name": "Lebanon",
+      "name": "Lebanon",
+      "ISO2": "LB",
+      "ISO3": "LBN",
+      "OfficialName": "Lebanese Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/LB.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:LC",
+      "Name": "Saint Lucia",
+      "name": "Saint Lucia",
+      "ISO2": "LC",
+      "ISO3": "LCA",
+      "OfficialName": "Saint Lucia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/LC.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:LI",
+      "Name": "Liechtenstein",
+      "name": "Liechtenstein",
+      "ISO2": "LI",
+      "ISO3": "LIE",
+      "OfficialName": "Principality of Liechtenstein",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/LI.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:LK",
+      "Name": "Sri Lanka",
+      "name": "Sri Lanka",
+      "ISO2": "LK",
+      "ISO3": "LKA",
+      "OfficialName": "Democratic Socialist Republic of Sri Lanka",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/LK.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:LR",
+      "Name": "Liberia",
+      "name": "Liberia",
+      "ISO2": "LR",
+      "ISO3": "LBR",
+      "OfficialName": "Republic of Liberia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/LR.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:LS",
+      "Name": "Lesotho",
+      "name": "Lesotho",
+      "ISO2": "LS",
+      "ISO3": "LSO",
+      "OfficialName": "Kingdom of Lesotho",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/LS.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:LT",
+      "Name": "Lithuania",
+      "name": "Lithuania",
+      "ISO2": "LT",
+      "ISO3": "LTU",
+      "OfficialName": "Republic of Lithuania",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/LT.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:LU",
+      "Name": "Luxembourg",
+      "name": "Luxembourg",
+      "ISO2": "LU",
+      "ISO3": "LUX",
+      "OfficialName": "Grand Duchy of Luxembourg",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/LU.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:LV",
+      "Name": "Latvia",
+      "name": "Latvia",
+      "ISO2": "LV",
+      "ISO3": "LVA",
+      "OfficialName": "Republic of Latvia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/LV.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:LY",
+      "Name": "Libya",
+      "name": "Libya",
+      "ISO2": "LY",
+      "ISO3": "LBY",
+      "OfficialName": "State of Libya",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/LY.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MA",
+      "Name": "Morocco",
+      "name": "Morocco",
+      "ISO2": "MA",
+      "ISO3": "MAR",
+      "OfficialName": "Kingdom of Morocco",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MA.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MC",
+      "Name": "Monaco",
+      "name": "Monaco",
+      "ISO2": "MC",
+      "ISO3": "MCO",
+      "OfficialName": "Principality of Monaco",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MC.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MD",
+      "Name": "Moldova",
+      "name": "Moldova",
+      "ISO2": "MD",
+      "ISO3": "MDA",
+      "OfficialName": "Republic of Moldova",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MD.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:ME",
+      "Name": "Montenegro",
+      "name": "Montenegro",
+      "ISO2": "ME",
+      "ISO3": "MNE",
+      "OfficialName": "Montenegro",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/ME.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MF",
+      "Name": "Saint Martin",
+      "name": "Saint Martin",
+      "ISO2": "MF",
+      "ISO3": "MAF",
+      "OfficialName": "Saint Martin",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MF.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MG",
+      "Name": "Madagascar",
+      "name": "Madagascar",
+      "ISO2": "MG",
+      "ISO3": "MDG",
+      "OfficialName": "Republic of Madagascar",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MG.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MH",
+      "Name": "Marshall Islands",
+      "name": "Marshall Islands",
+      "ISO2": "MH",
+      "ISO3": "MHL",
+      "OfficialName": "Republic of the Marshall Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MH.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MK",
+      "Name": "North Macedonia",
+      "name": "North Macedonia",
+      "ISO2": "MK",
+      "ISO3": "MKD",
+      "OfficialName": "Republic of North Macedonia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MK.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:ML",
+      "Name": "Mali",
+      "name": "Mali",
+      "ISO2": "ML",
+      "ISO3": "MLI",
+      "OfficialName": "Republic of Mali",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/ML.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MM",
+      "Name": "Myanmar",
+      "name": "Myanmar",
+      "ISO2": "MM",
+      "ISO3": "MMR",
+      "OfficialName": "Republic of the Union of Myanmar",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MN",
+      "Name": "Mongolia",
+      "name": "Mongolia",
+      "ISO2": "MN",
+      "ISO3": "MNG",
+      "OfficialName": "Mongolia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MN.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MO",
+      "Name": "Macau",
+      "name": "Macau",
+      "ISO2": "MO",
+      "ISO3": "MAC",
+      "OfficialName": "Macao Special Administrative Region of the People's Republic of China",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MO.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MP",
+      "Name": "Northern Mariana Islands",
+      "name": "Northern Mariana Islands",
+      "ISO2": "MP",
+      "ISO3": "MNP",
+      "OfficialName": "Commonwealth of the Northern Mariana Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MP.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MQ",
+      "Name": "Martinique",
+      "name": "Martinique",
+      "ISO2": "MQ",
+      "ISO3": "MTQ",
+      "OfficialName": "Martinique",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MQ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MR",
+      "Name": "Mauritania",
+      "name": "Mauritania",
+      "ISO2": "MR",
+      "ISO3": "MRT",
+      "OfficialName": "Islamic Republic of Mauritania",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MR.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MS",
+      "Name": "Montserrat",
+      "name": "Montserrat",
+      "ISO2": "MS",
+      "ISO3": "MSR",
+      "OfficialName": "Montserrat",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MS.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MT",
+      "Name": "Malta",
+      "name": "Malta",
+      "ISO2": "MT",
+      "ISO3": "MLT",
+      "OfficialName": "Republic of Malta",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MT.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MU",
+      "Name": "Mauritius",
+      "name": "Mauritius",
+      "ISO2": "MU",
+      "ISO3": "MUS",
+      "OfficialName": "Republic of Mauritius",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MU.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MV",
+      "Name": "Maldives",
+      "name": "Maldives",
+      "ISO2": "MV",
+      "ISO3": "MDV",
+      "OfficialName": "Republic of the Maldives",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MV.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MW",
+      "Name": "Malawi",
+      "name": "Malawi",
+      "ISO2": "MW",
+      "ISO3": "MWI",
+      "OfficialName": "Republic of Malawi",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MW.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MX",
+      "Name": "Mexico",
+      "name": "Mexico",
+      "ISO2": "MX",
+      "ISO3": "MEX",
+      "OfficialName": "United Mexican States",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MX.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MY",
+      "Name": "Malaysia",
+      "name": "Malaysia",
+      "ISO2": "MY",
+      "ISO3": "MYS",
+      "OfficialName": "Malaysia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MY.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:MZ",
+      "Name": "Mozambique",
+      "name": "Mozambique",
+      "ISO2": "MZ",
+      "ISO3": "MOZ",
+      "OfficialName": "Republic of Mozambique",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/MZ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:NA",
+      "Name": "Namibia",
+      "name": "Namibia",
+      "ISO2": "NA",
+      "ISO3": "NAM",
+      "OfficialName": "Republic of Namibia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/NA.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:NC",
+      "Name": "New Caledonia",
+      "name": "New Caledonia",
+      "ISO2": "NC",
+      "ISO3": "NCL",
+      "OfficialName": "New Caledonia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/NC.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:NE",
+      "Name": "Niger",
+      "name": "Niger",
+      "ISO2": "NE",
+      "ISO3": "NER",
+      "OfficialName": "Republic of Niger",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/NE.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:NF",
+      "Name": "Norfolk Island",
+      "name": "Norfolk Island",
+      "ISO2": "NF",
+      "ISO3": "NFK",
+      "OfficialName": "Territory of Norfolk Island",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/NF.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:NG",
+      "Name": "Nigeria",
+      "name": "Nigeria",
+      "ISO2": "NG",
+      "ISO3": "NGA",
+      "OfficialName": "Federal Republic of Nigeria",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/NG.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:NI",
+      "Name": "Nicaragua",
+      "name": "Nicaragua",
+      "ISO2": "NI",
+      "ISO3": "NIC",
+      "OfficialName": "Republic of Nicaragua",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/NI.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:NL",
+      "Name": "Netherlands",
+      "name": "Netherlands",
+      "ISO2": "NL",
+      "ISO3": "NLD",
+      "OfficialName": "Kingdom of the Netherlands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/NL.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:NO",
+      "Name": "Norway",
+      "name": "Norway",
+      "ISO2": "NO",
+      "ISO3": "NOR",
+      "OfficialName": "Kingdom of Norway",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/NO.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:NP",
+      "Name": "Nepal",
+      "name": "Nepal",
+      "ISO2": "NP",
+      "ISO3": "NPL",
+      "OfficialName": "Federal Democratic Republic of Nepal",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/NP.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:NR",
+      "Name": "Nauru",
+      "name": "Nauru",
+      "ISO2": "NR",
+      "ISO3": "NRU",
+      "OfficialName": "Republic of Nauru",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/NR.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:NU",
+      "Name": "Niue",
+      "name": "Niue",
+      "ISO2": "NU",
+      "ISO3": "NIU",
+      "OfficialName": "Niue",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/NU.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:NZ",
+      "Name": "New Zealand",
+      "name": "New Zealand",
+      "ISO2": "NZ",
+      "ISO3": "NZL",
+      "OfficialName": "New Zealand",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/NZ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:OM",
+      "Name": "Oman",
+      "name": "Oman",
+      "ISO2": "OM",
+      "ISO3": "OMN",
+      "OfficialName": "Sultanate of Oman",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/OM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:PA",
+      "Name": "Panama",
+      "name": "Panama",
+      "ISO2": "PA",
+      "ISO3": "PAN",
+      "OfficialName": "Republic of Panama",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/PA.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:PE",
+      "Name": "Peru",
+      "name": "Peru",
+      "ISO2": "PE",
+      "ISO3": "PER",
+      "OfficialName": "Republic of Peru",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/PE.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:PF",
+      "Name": "French Polynesia",
+      "name": "French Polynesia",
+      "ISO2": "PF",
+      "ISO3": "PYF",
+      "OfficialName": "French Polynesia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/PF.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:PG",
+      "Name": "Papua New Guinea",
+      "name": "Papua New Guinea",
+      "ISO2": "PG",
+      "ISO3": "PNG",
+      "OfficialName": "Independent State of Papua New Guinea",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/PG.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:PH",
+      "Name": "Philippines",
+      "name": "Philippines",
+      "ISO2": "PH",
+      "ISO3": "PHL",
+      "OfficialName": "Republic of the Philippines",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/PH.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:PK",
+      "Name": "Pakistan",
+      "name": "Pakistan",
+      "ISO2": "PK",
+      "ISO3": "PAK",
+      "OfficialName": "Islamic Republic of Pakistan",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/PK.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:PL",
+      "Name": "Poland",
+      "name": "Poland",
+      "ISO2": "PL",
+      "ISO3": "POL",
+      "OfficialName": "Republic of Poland",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/PL.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:PM",
+      "Name": "Saint Pierre and Miquelon",
+      "name": "Saint Pierre and Miquelon",
+      "ISO2": "PM",
+      "ISO3": "SPM",
+      "OfficialName": "Saint Pierre and Miquelon",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/PM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:PN",
+      "Name": "Pitcairn Islands",
+      "name": "Pitcairn Islands",
+      "ISO2": "PN",
+      "ISO3": "PCN",
+      "OfficialName": "Pitcairn Group of Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/PN.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:PR",
+      "Name": "Puerto Rico",
+      "name": "Puerto Rico",
+      "ISO2": "PR",
+      "ISO3": "PRI",
+      "OfficialName": "Commonwealth of Puerto Rico",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/PR.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:PS",
+      "Name": "Palestine",
+      "name": "Palestine",
+      "ISO2": "PS",
+      "ISO3": "PSE",
+      "OfficialName": "State of Palestine",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/PS.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:PT",
+      "Name": "Portugal",
+      "name": "Portugal",
+      "ISO2": "PT",
+      "ISO3": "PRT",
+      "OfficialName": "Portuguese Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/PT.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:PW",
+      "Name": "Palau",
+      "name": "Palau",
+      "ISO2": "PW",
+      "ISO3": "PLW",
+      "OfficialName": "Republic of Palau",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/PW.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:PY",
+      "Name": "Paraguay",
+      "name": "Paraguay",
+      "ISO2": "PY",
+      "ISO3": "PRY",
+      "OfficialName": "Republic of Paraguay",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/PY.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:QA",
+      "Name": "Qatar",
+      "name": "Qatar",
+      "ISO2": "QA",
+      "ISO3": "QAT",
+      "OfficialName": "State of Qatar",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/QA.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:RE",
+      "Name": "Réunion",
+      "name": "Réunion",
+      "ISO2": "RE",
+      "ISO3": "REU",
+      "OfficialName": "Réunion Island",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/RE.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:RO",
+      "Name": "Romania",
+      "name": "Romania",
+      "ISO2": "RO",
+      "ISO3": "ROU",
+      "OfficialName": "Romania",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/RO.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:RS",
+      "Name": "Serbia",
+      "name": "Serbia",
+      "ISO2": "RS",
+      "ISO3": "SRB",
+      "OfficialName": "Republic of Serbia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/RS.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:RU",
+      "Name": "Russia",
+      "name": "Russia",
+      "ISO2": "RU",
+      "ISO3": "RUS",
+      "OfficialName": "Russian Federation",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/RU.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:RW",
+      "Name": "Rwanda",
+      "name": "Rwanda",
+      "ISO2": "RW",
+      "ISO3": "RWA",
+      "OfficialName": "Republic of Rwanda",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/RW.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SA",
+      "Name": "Saudi Arabia",
+      "name": "Saudi Arabia",
+      "ISO2": "SA",
+      "ISO3": "SAU",
+      "OfficialName": "Kingdom of Saudi Arabia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SA.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SB",
+      "Name": "Solomon Islands",
+      "name": "Solomon Islands",
+      "ISO2": "SB",
+      "ISO3": "SLB",
+      "OfficialName": "Solomon Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SB.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SC",
+      "Name": "Seychelles",
+      "name": "Seychelles",
+      "ISO2": "SC",
+      "ISO3": "SYC",
+      "OfficialName": "Republic of Seychelles",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SC.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SD",
+      "Name": "Sudan",
+      "name": "Sudan",
+      "ISO2": "SD",
+      "ISO3": "SDN",
+      "OfficialName": "Republic of the Sudan",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SD.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SE",
+      "Name": "Sweden",
+      "name": "Sweden",
+      "ISO2": "SE",
+      "ISO3": "SWE",
+      "OfficialName": "Kingdom of Sweden",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SE.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SG",
+      "Name": "Singapore",
+      "name": "Singapore",
+      "ISO2": "SG",
+      "ISO3": "SGP",
+      "OfficialName": "Republic of Singapore",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SG.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SH",
+      "Name": "Saint Helena, Ascension and Tristan da Cunha",
+      "name": "Saint Helena, Ascension and Tristan da Cunha",
+      "ISO2": "SH",
+      "ISO3": "SHN",
+      "OfficialName": "Saint Helena, Ascension and Tristan da Cunha",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SH.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SI",
+      "Name": "Slovenia",
+      "name": "Slovenia",
+      "ISO2": "SI",
+      "ISO3": "SVN",
+      "OfficialName": "Republic of Slovenia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SI.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SJ",
+      "Name": "Svalbard and Jan Mayen",
+      "name": "Svalbard and Jan Mayen",
+      "ISO2": "SJ",
+      "ISO3": "SJM",
+      "OfficialName": "Svalbard og Jan Mayen",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SJ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SK",
+      "Name": "Slovakia",
+      "name": "Slovakia",
+      "ISO2": "SK",
+      "ISO3": "SVK",
+      "OfficialName": "Slovak Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SK.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SL",
+      "Name": "Sierra Leone",
+      "name": "Sierra Leone",
+      "ISO2": "SL",
+      "ISO3": "SLE",
+      "OfficialName": "Republic of Sierra Leone",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SL.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SM",
+      "Name": "San Marino",
+      "name": "San Marino",
+      "ISO2": "SM",
+      "ISO3": "SMR",
+      "OfficialName": "Republic of San Marino",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SN",
+      "Name": "Senegal",
+      "name": "Senegal",
+      "ISO2": "SN",
+      "ISO3": "SEN",
+      "OfficialName": "Republic of Senegal",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SN.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SO",
+      "Name": "Somalia",
+      "name": "Somalia",
+      "ISO2": "SO",
+      "ISO3": "SOM",
+      "OfficialName": "Federal Republic of Somalia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SO.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SR",
+      "Name": "Suriname",
+      "name": "Suriname",
+      "ISO2": "SR",
+      "ISO3": "SUR",
+      "OfficialName": "Republic of Suriname",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SR.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SS",
+      "Name": "South Sudan",
+      "name": "South Sudan",
+      "ISO2": "SS",
+      "ISO3": "SSD",
+      "OfficialName": "Republic of South Sudan",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SS.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:ST",
+      "Name": "São Tomé and Príncipe",
+      "name": "São Tomé and Príncipe",
+      "ISO2": "ST",
+      "ISO3": "STP",
+      "OfficialName": "Democratic Republic of São Tomé and Príncipe",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/ST.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SV",
+      "Name": "El Salvador",
+      "name": "El Salvador",
+      "ISO2": "SV",
+      "ISO3": "SLV",
+      "OfficialName": "Republic of El Salvador",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SV.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SX",
+      "Name": "Sint Maarten",
+      "name": "Sint Maarten",
+      "ISO2": "SX",
+      "ISO3": "SXM",
+      "OfficialName": "Sint Maarten",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SX.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SY",
+      "Name": "Syria",
+      "name": "Syria",
+      "ISO2": "SY",
+      "ISO3": "SYR",
+      "OfficialName": "Syrian Arab Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SY.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:SZ",
+      "Name": "Eswatini",
+      "name": "Eswatini",
+      "ISO2": "SZ",
+      "ISO3": "SWZ",
+      "OfficialName": "Kingdom of Eswatini",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/SZ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TC",
+      "Name": "Turks and Caicos Islands",
+      "name": "Turks and Caicos Islands",
+      "ISO2": "TC",
+      "ISO3": "TCA",
+      "OfficialName": "Turks and Caicos Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TC.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TD",
+      "Name": "Chad",
+      "name": "Chad",
+      "ISO2": "TD",
+      "ISO3": "TCD",
+      "OfficialName": "Republic of Chad",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TD.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TF",
+      "Name": "French Southern and Antarctic Lands",
+      "name": "French Southern and Antarctic Lands",
+      "ISO2": "TF",
+      "ISO3": "ATF",
+      "OfficialName": "Territory of the French Southern and Antarctic Lands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TF.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TG",
+      "Name": "Togo",
+      "name": "Togo",
+      "ISO2": "TG",
+      "ISO3": "TGO",
+      "OfficialName": "Togolese Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TG.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TH",
+      "Name": "Thailand",
+      "name": "Thailand",
+      "ISO2": "TH",
+      "ISO3": "THA",
+      "OfficialName": "Kingdom of Thailand",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TH.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TJ",
+      "Name": "Tajikistan",
+      "name": "Tajikistan",
+      "ISO2": "TJ",
+      "ISO3": "TJK",
+      "OfficialName": "Republic of Tajikistan",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TJ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TK",
+      "Name": "Tokelau",
+      "name": "Tokelau",
+      "ISO2": "TK",
+      "ISO3": "TKL",
+      "OfficialName": "Tokelau",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TK.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TL",
+      "Name": "Timor-Leste",
+      "name": "Timor-Leste",
+      "ISO2": "TL",
+      "ISO3": "TLS",
+      "OfficialName": "Democratic Republic of Timor-Leste",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TL.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TM",
+      "Name": "Turkmenistan",
+      "name": "Turkmenistan",
+      "ISO2": "TM",
+      "ISO3": "TKM",
+      "OfficialName": "Turkmenistan",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TN",
+      "Name": "Tunisia",
+      "name": "Tunisia",
+      "ISO2": "TN",
+      "ISO3": "TUN",
+      "OfficialName": "Tunisian Republic",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TN.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TO",
+      "Name": "Tonga",
+      "name": "Tonga",
+      "ISO2": "TO",
+      "ISO3": "TON",
+      "OfficialName": "Kingdom of Tonga",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TO.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TR",
+      "Name": "Turkey",
+      "name": "Turkey",
+      "ISO2": "TR",
+      "ISO3": "TUR",
+      "OfficialName": "Republic of Turkey",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TR.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TT",
+      "Name": "Trinidad and Tobago",
+      "name": "Trinidad and Tobago",
+      "ISO2": "TT",
+      "ISO3": "TTO",
+      "OfficialName": "Republic of Trinidad and Tobago",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TT.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TV",
+      "Name": "Tuvalu",
+      "name": "Tuvalu",
+      "ISO2": "TV",
+      "ISO3": "TUV",
+      "OfficialName": "Tuvalu",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TV.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TW",
+      "Name": "Taiwan",
+      "name": "Taiwan",
+      "ISO2": "TW",
+      "ISO3": "TWN",
+      "OfficialName": "Republic of China (Taiwan)",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TW.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:TZ",
+      "Name": "Tanzania",
+      "name": "Tanzania",
+      "ISO2": "TZ",
+      "ISO3": "TZA",
+      "OfficialName": "United Republic of Tanzania",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/TZ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:UA",
+      "Name": "Ukraine",
+      "name": "Ukraine",
+      "ISO2": "UA",
+      "ISO3": "UKR",
+      "OfficialName": "Ukraine",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/UA.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:UG",
+      "Name": "Uganda",
+      "name": "Uganda",
+      "ISO2": "UG",
+      "ISO3": "UGA",
+      "OfficialName": "Republic of Uganda",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/UG.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:UM",
+      "Name": "United States Minor Outlying Islands",
+      "name": "United States Minor Outlying Islands",
+      "ISO2": "UM",
+      "ISO3": "UMI",
+      "OfficialName": "United States Minor Outlying Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/UM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:US",
+      "Name": "United States",
+      "name": "United States",
+      "ISO2": "US",
+      "ISO3": "USA",
+      "OfficialName": "United States of America",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/US.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:UY",
+      "Name": "Uruguay",
+      "name": "Uruguay",
+      "ISO2": "UY",
+      "ISO3": "URY",
+      "OfficialName": "Oriental Republic of Uruguay",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/UY.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:UZ",
+      "Name": "Uzbekistan",
+      "name": "Uzbekistan",
+      "ISO2": "UZ",
+      "ISO3": "UZB",
+      "OfficialName": "Republic of Uzbekistan",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/UZ.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:VA",
+      "Name": "Vatican City",
+      "name": "Vatican City",
+      "ISO2": "VA",
+      "ISO3": "VAT",
+      "OfficialName": "Vatican City State",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/VA.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:VC",
+      "Name": "Saint Vincent and the Grenadines",
+      "name": "Saint Vincent and the Grenadines",
+      "ISO2": "VC",
+      "ISO3": "VCT",
+      "OfficialName": "Saint Vincent and the Grenadines",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/VC.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:VE",
+      "Name": "Venezuela",
+      "name": "Venezuela",
+      "ISO2": "VE",
+      "ISO3": "VEN",
+      "OfficialName": "Bolivarian Republic of Venezuela",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/VE.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:VG",
+      "Name": "British Virgin Islands",
+      "name": "British Virgin Islands",
+      "ISO2": "VG",
+      "ISO3": "VGB",
+      "OfficialName": "Virgin Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/VG.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:VI",
+      "Name": "United States Virgin Islands",
+      "name": "United States Virgin Islands",
+      "ISO2": "VI",
+      "ISO3": "VIR",
+      "OfficialName": "Virgin Islands of the United States",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/VI.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:VN",
+      "Name": "Vietnam",
+      "name": "Vietnam",
+      "ISO2": "VN",
+      "ISO3": "VNM",
+      "OfficialName": "Socialist Republic of Vietnam",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/VN.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:VU",
+      "Name": "Vanuatu",
+      "name": "Vanuatu",
+      "ISO2": "VU",
+      "ISO3": "VUT",
+      "OfficialName": "Republic of Vanuatu",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/VU.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:WF",
+      "Name": "Wallis and Futuna",
+      "name": "Wallis and Futuna",
+      "ISO2": "WF",
+      "ISO3": "WLF",
+      "OfficialName": "Territory of the Wallis and Futuna Islands",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/WF.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:WS",
+      "Name": "Samoa",
+      "name": "Samoa",
+      "ISO2": "WS",
+      "ISO3": "WSM",
+      "OfficialName": "Independent State of Samoa",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/WS.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:XK",
+      "Name": "Kosovo",
+      "name": "Kosovo",
+      "ISO2": "XK",
+      "ISO3": "XKX",
+      "OfficialName": "Republic of Kosovo",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/XK.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:YE",
+      "Name": "Yemen",
+      "name": "Yemen",
+      "ISO2": "YE",
+      "ISO3": "YEM",
+      "OfficialName": "Republic of Yemen",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/YE.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:YT",
+      "Name": "Mayotte",
+      "name": "Mayotte",
+      "ISO2": "YT",
+      "ISO3": "MYT",
+      "OfficialName": "Department of Mayotte",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/YT.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:ZA",
+      "Name": "South Africa",
+      "name": "South Africa",
+      "ISO2": "ZA",
+      "ISO3": "ZAF",
+      "OfficialName": "Republic of South Africa",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/ZA.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:ZM",
+      "Name": "Zambia",
+      "name": "Zambia",
+      "ISO2": "ZM",
+      "ISO3": "ZMB",
+      "OfficialName": "Republic of Zambia",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/ZM.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    },
+    {
+      "id": "G:CO:ZW",
+      "Name": "Zimbabwe",
+      "name": "Zimbabwe",
+      "ISO2": "ZW",
+      "ISO3": "ZWE",
+      "OfficialName": "Republic of Zimbabwe",
+      "Source": {
+        "Provider": "geo",
+        "Path": "data/country/ZW.json",
+        "Pointer": "/data",
+        "Fields": {
+          "Name": "/data/name/common",
+          "OfficialName": "/data/name/official",
+          "ISO3": "/data/iso3"
+        }
+      }
+    }
+  ]
+}

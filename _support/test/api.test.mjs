@@ -55,19 +55,19 @@ test('choices, collection resolution and offline catalogue', async () => {
   assert.equal(catalogue.version, loadCatalogue().version);
 });
 test('branch choices expose canonical role and country leaves with pagination', async () => {
-  const definition = await get('/v1/definitions/G:AD:US:R');
-  assert.equal(definition.data.Choices, 'G:AD:RO');
-  const roles = await get('/v1/definitions/G:AD:US:R/choices');
+  const definition = await get('/v1/definitions/S:G:AD:US:R');
+  assert.equal(definition.data.Choices, 'S:G:AD:RO');
+  const roles = await get('/v1/definitions/S:G:AD:US:R/choices');
   assert.equal(roles.data.length, 8);
-  assert(roles.data.includes('G:AD:RO:SH'));
+  assert(roles.data.includes('S:G:AD:RO:SH'));
   assert(!roles.data.includes('Shipping'));
-  assert(!roles.data.includes('G:AD:RO'));
-  const first = await get('/v1/definitions/G:AD:US:CO/choices?limit=200');
-  const second = await get('/v1/definitions/G:AD:US:CO/choices?limit=200&offset=200');
+  assert(!roles.data.includes('S:G:AD:RO'));
+  const first = await get('/v1/definitions/S:G:AD:US:CO/choices?limit=200');
+  const second = await get('/v1/definitions/S:G:AD:US:CO/choices?limit=200&offset=200');
   assert.equal(first.meta.total, 250);
   assert.equal(first.data.length + second.data.length, 250);
   assert([...first.data, ...second.data].includes('G:CO:US'));
-  assert.equal((await get('/v1/definitions/G:CO:US')).data.Source.Provider, 'geo');
+  assert.equal((await get('/v1/countries/G:CO:US')).data.Source.Provider, 'geo');
 });
 test('errors, prototype keys, malformed codes and user-data routes', async () => {
   for (const path of ['/v1/services/nobody','/v1/definitions/__proto__','/v1/collections/constructor','/v1/definitions/I:P/records','/v1/users','/api/lexicon']) {
@@ -98,4 +98,27 @@ test('loader and server module work in an isolated checkout without NokNok', () 
     assert.deepEqual(loadCatalogue(directory), loadCatalogue());
     execFileSync(process.execPath,['--input-type=module','-e',"import { createOntologyServer } from './_support/server/api.mjs'; createOntologyServer();"],{cwd:directory});
   } finally { rmSync(directory,{recursive:true,force:true}); }
+});
+
+test('datasets are discoverable and never returned as active definitions',async()=>{
+ assert.deepEqual((await get('/v1/datasets')).data.map(d=>d.id),['countries','professions','services','states']);
+ const law=(await get('/v1/datasets/professions/records/LAW')).data;
+ assert.equal(law.name,'Lawyer');assert.match(law.reference,/^urn:vl:data:professions:1:/);
+ assert.deepEqual((await get('/v1/professions/LAW')).data,law);
+ assert.equal((await get('/v1/datasets/countries')).data.count,250);
+ assert.equal((await get('/v1/professions?q=lawyer')).data[0].id,'LAW');
+ assert.equal((await get('/v1/definitions/S:T:SV')).data.Records,undefined);
+ for(const code of ['I:CN','I:PR:NN','F:AC','S:I:D:LEX','B:PRO:LAW','G:CO:US'])assert.equal((await fetch(base+'/v1/definitions/'+code)).status,404,code);
+ for(const path of ['/v1/datasets/__proto__','/v1/datasets/services/records/constructor','/v1/datasets/services/extra'])assert.equal((await fetch(base+path)).status,404,path);
+});
+
+test('California is discoverable as state reference data, not an ontology definition',async()=>{
+ const result=await get('/v1/states?q=California');assert.equal(result.meta.total,1);
+ assert.equal(result.data[0].id,'US-CA');assert.equal(result.data[0].name,'California');
+ assert.equal(result.data[0].country,'G:CO:US');assert.equal(result.data[0].definitionCode,'S:G:SD');
+ assert.match(result.data[0].reference,/^urn:vl:data:states:1:/);
+ assert.deepEqual((await get('/v1/datasets/states/records/US-CA')).data,result.data[0]);
+ assert.deepEqual((await get('/v1/states/US-CA')).data,result.data[0]);
+ assert.equal((await get('/v1/datasets/states')).data.count,50);
+ assert.equal((await fetch(base+'/v1/definitions/US-CA')).status,404);
 });

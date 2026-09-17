@@ -1,10 +1,12 @@
 {
   "name": "@vowlabs/ontology",
-  "version": "0.1.7",
+  "version": "0.1.12",
   "private": true,
   "type": "module",
   "description": "Canonical VowLabs ontology and read-only HTTP API.",
-  "engines": { "node": ">=22" },
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
     "start": "node _support/server/main.mjs",
     "test": "node --test _support/test/*.test.mjs",

@@ -8,16 +8,16 @@ Combines a preferred name and contact channels with postal and delivery details.
 
 Explicitly included fields:
 
-- [Preferred name (`I:P:PN`)](../../Identity/Person/PreferredName.json): What name do you prefer to use?
+- [Display Name (`I:P:DN`)](../../Identity/Person/DisplayName.json): What name should be displayed for this person?
 - [Email (`I:C:P:EM`)](../../Identity/Contact/Points/Email.json): What is the email address?
 - [Phone (`I:C:P:PH`)](../../Identity/Contact/Points/Phone.json): What is the international phone number?
-- [Address line 1 (`G:AD:US:L1`)](../../Geography/Address/US/Line1.json): What is the first address line?
-- [Address line 2 (`G:AD:US:L2`)](../../Geography/Address/US/Line2.json): What is the second address line?
-- [City (`G:AD:US:C`)](../../Geography/Address/US/City.json): What is the city or locality?
-- [Region (`G:AD:US:RE`)](../../Geography/Address/US/Region.json): What is the state, province, or region?
-- [Postal code (`G:AD:US:PC`)](../../Geography/Address/US/PostalCode.json): What is the postal code?
-- [Country (`G:AD:US:CO`)](../../Geography/Address/US/Country.json): What is the country?
-- [Delivery instructions (`G:AD:US:DI`)](../../Geography/Address/US/DeliveryInstructions.json): What instructions should a delivery service follow?
+- [Address line 1 (`S:G:AD:US:L1`)](../../Geography/Address/US/Line1.json): What is the first address line?
+- [Address line 2 (`S:G:AD:US:L2`)](../../Geography/Address/US/Line2.json): What is the second address line?
+- [City (`S:G:AD:US:C`)](../../Geography/Address/US/City.json): What is the city or locality?
+- [Region (`S:G:AD:US:RE`)](../../Geography/Address/US/Region.json): What is the state, province, or region?
+- [Postal code (`S:G:AD:US:PC`)](../../Geography/Address/US/PostalCode.json): What is the postal code?
+- [Country (`S:G:AD:US:CO`)](../../Geography/Address/US/Country.json): What is the country?
+- [Delivery instructions (`S:G:AD:US:DI`)](../../Geography/Address/US/DeliveryInstructions.json): What instructions should a delivery service follow?
 
 Applications resolve each code to its field definition and retain the containing record and subject context when requesting or disclosing answers.
 

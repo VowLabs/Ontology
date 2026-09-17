@@ -1,6 +1,5 @@
 {
   "Name": "Wallet address",
   "Question": "What is the wallet address?",
-  "Type": "S:I:D:T:ID",
-  "SourceKey": "walletAddress"
+  "Type": "S:I:D:T:ID"
 }

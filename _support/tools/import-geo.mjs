@@ -18,7 +18,7 @@ if (!/^[a-f0-9]{40}$/.test(revision)) throw Error('Use a full pinned commit SHA.
 const git = (...args) => execFileSync('git', ['-C', checkout, ...args], {encoding:'utf8'}).trim();
 if (git('rev-parse', 'HEAD') !== revision) throw Error('Checkout HEAD does not match the requested revision.');
 if (git('status', '--porcelain', '--', 'data/country', 'LICENSE')) throw Error('Source country files or license have local changes.');
-const outputs = new Map(), files = {}, children = {};
+const outputs = new Map(), files = {}, records = [];
 const json = value => JSON.stringify(value, null, 2) + '\n';
 const put = (path, value) => outputs.set(path, typeof value === 'string' || Buffer.isBuffer(value) ? value : json(value));
 function sourceBytes(path) {
@@ -32,19 +32,34 @@ for (const filename of readdirSync(resolve(checkout, 'data/country')).filter(nam
   if (![name, official].every(v => typeof v === 'string' && v.trim()) || !/^[A-Z]{3}$/.test(iso3 || '')) throw Error('Invalid country identity in ' + path);
   files[path] = createHash('sha256').update(bytes).digest('hex');
   put('_support/sources/geo/' + path, bytes);
-  children[iso2] = {$ref:`./${iso2}/index.json`};
-  put(`Geography/Country/${iso2}/index.json`, {
-    Name:name, Description:`Country or territory identified as ${iso2} in the pinned ekkis/geo dataset. This classification identifies a geographic entity, not an address format.`,
-    ISO2:iso2, ISO3:iso3, OfficialName:official,
-    Source:{Provider:'geo',Path:path,Pointer:'/data',Fields:{Name:'/data/name/common',OfficialName:'/data/name/official',ISO3:'/data/iso3'}},Children:{},
+  records.push({
+    id:`G:CO:${iso2}`, Name:name, name, ISO2:iso2, ISO3:iso3, OfficialName:official,
+    Source:{Provider:'geo',Path:path,Pointer:'/data',Fields:{Name:'/data/name/common',OfficialName:'/data/name/official',ISO3:'/data/iso3'}},
   });
-  put(`Geography/Country/${iso2}/README.md`, `# ${name}\n\nCanonical code: \`G:CO:${iso2}\`. [Definition](index.json).\n\nThis is a country or territory entry from the pinned \`ekkis/geo\` dataset. The\nsource’s common name is **${name}** and its official name is **${official}**.\nIts two-letter key is \`${iso2}\` and its three-letter code is \`${iso3}\`.\nThese identifiers follow the source vocabulary; inclusion does not assert\nsovereignty or resolve jurisdictional disputes.\n\nUse \`G:CO:${iso2}\` for a country relationship, for example as a Country choice in an\naddress. The country concept is distinct from a country-specific postal format.\nNo finer subclasses are currently imported. Capital, currency, population and\nsubdivision data in the upstream repository are outside this imported vocabulary.\n\nSource: [${path}](https://github.com/ekkis/geo/blob/${revision}/${path}),\nrevision \`${revision}\`. [Country list](../README.md) ·\n[Source and refresh policy](../../../_support/sources/README.md).\n`);
 }
-const countryPath = resolve(root, 'Geography/Country/index.json');
-const branch = JSON.parse(readFileSync(countryPath));
-for (const code of Object.keys(branch.Children)) if (!children[code]) throw Error(`Source removes ${code}; define a migration before removing a published country.`);
-if (!Object.keys(children).length) throw Error('No country entries found.');
-put('Geography/Country/index.json', {...branch, Children:children});
+const countryPath = resolve(root, 'data/countries/index.json');
+const dataset = JSON.parse(readFileSync(countryPath));
+for (const record of dataset.records) if (!records.some(row => row.id === record.id)) throw Error(`Source removes ${record.id}; define a migration before removing a published country.`);
+if (!records.length) throw Error('No country entries found.');
+const changed = JSON.stringify(dataset.records) !== JSON.stringify(records);
+put('data/countries/index.json', {...dataset, version: dataset.version + (changed ? 1 : 0), records});
+const introduction = readFileSync(resolve(root, 'data/countries/README.md'), 'utf8').split('## Entries')[0];
+put('data/countries/README.md', introduction + '## Entries\n\n' + records.map(row => `### ${row.name} — \`${row.id}\`\n\nCountry/territory code \`${row.ISO2}\`, three-letter code \`${row.ISO3}\`; official name: ${row.OfficialName}.\n\n`).join(''));
+const stateSourcePath = 'data/country/US.state.json', stateBytes = sourceBytes(stateSourcePath);
+files[stateSourcePath] = createHash('sha256').update(stateBytes).digest('hex');
+put('_support/sources/geo/' + stateSourcePath, stateBytes);
+const stateRecords = Object.entries(JSON.parse(stateBytes)).sort(([a], [b]) => a.localeCompare(b)).map(([abbreviation, row]) => {
+  if (!/^[A-Z]{2}$/.test(abbreviation) || typeof row.name !== 'string' || !row.name.trim()) throw Error('Invalid US state');
+  return {id:`US-${abbreviation}`, name:row.name, abbreviation, country:'G:CO:US',
+    Source:{Provider:'geo',Path:stateSourcePath,Fields:{name:`/${abbreviation}/name`}}};
+});
+const states = JSON.parse(readFileSync(resolve(root, 'data/states/index.json')));
+for (const record of states.records) if (!stateRecords.some(row => row.id === record.id)) throw Error(`Source removes ${record.id}; define a migration before removing a published state.`);
+if (stateRecords.length !== 50) throw Error('Expected the 50 US states. Review changes to the source scope.');
+const statesChanged = states.records.length && JSON.stringify(states.records) !== JSON.stringify(stateRecords);
+put('data/states/index.json', {...states, version:states.version + (statesChanged ? 1 : 0), records:stateRecords});
+const stateIntroduction = readFileSync(resolve(root, 'data/states/README.md'), 'utf8').split('## Entries')[0];
+put('data/states/README.md', stateIntroduction + '## Entries\n\n' + stateRecords.map(row => `- **${row.name}** (\`${row.id}\`): US state, postal abbreviation \`${row.abbreviation}\`.\n`).join(''));
 put('_support/sources/geo/LICENSE', sourceBytes('LICENSE'));
 put('_support/sources/index.json', {...locks,geo:{...locks.geo,Revision:revision,Files:files}});
 for (const [path, value] of outputs) {
@@ -53,4 +68,4 @@ for (const [path, value] of outputs) {
     if (!readFileSync(file).equals(bytes)) throw Error('Imported file differs: ' + path);
   } else { mkdirSync(dirname(file),{recursive:true}); writeFileSync(file,bytes); }
 }
-console.log(`${options.check ? 'Verified' : 'Imported'} ${Object.keys(children).length} countries at ${revision}.`);
+console.log(`${options.check ? 'Verified' : 'Imported'} ${records.length} countries and ${stateRecords.length} US states at ${revision}.`);
