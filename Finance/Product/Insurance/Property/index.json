@@ -1,5 +1,7 @@
 {
   "Name": "Property insurance",
+  "Collection": false,
   "Description": "Coverage for loss of or damage to property.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

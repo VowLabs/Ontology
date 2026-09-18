@@ -1,5 +1,7 @@
 {
   "Name": "Restriction",
+  "Collection": false,
   "Question": "What dietary restriction should a provider observe?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

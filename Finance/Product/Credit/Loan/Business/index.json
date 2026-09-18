@@ -1,5 +1,7 @@
 {
   "Name": "Business loan",
+  "Collection": false,
   "Description": "Loan for business purposes, excluding loans more specifically classified by collateral or structure.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

@@ -1,5 +1,7 @@
 {
   "Name": "Account holder",
+  "Collection": false,
   "Question": "What is the account holder\u2019s name?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

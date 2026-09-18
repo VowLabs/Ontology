@@ -1,0 +1,8 @@
+{
+  "Name": "Description",
+  "Collection": false,
+  "Composite": false,
+  "Question": "What does the organization do?",
+  "Type": "S:I:D:T:S",
+  "MaxLength": 2000
+}

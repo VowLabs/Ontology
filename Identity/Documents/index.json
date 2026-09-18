@@ -1,5 +1,6 @@
 {
   "Name": "Documents",
+  "Collection": false,
   "Description": "Documents issued to identify a person or certify an entitlement. Values describe documents; validity and authenticity require separate verification.",
   "Children": {
     "DL": {
@@ -8,5 +9,6 @@
     "PP": {
       "$ref": "./Passport/index.json"
     }
-  }
+  },
+  "Composite": false
 }

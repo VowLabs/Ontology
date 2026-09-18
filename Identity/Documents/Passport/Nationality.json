@@ -1,5 +1,7 @@
 {
   "Name": "Nationality",
+  "Collection": false,
   "Question": "What nationality is recorded in this passport?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

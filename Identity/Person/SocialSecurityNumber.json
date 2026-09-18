@@ -1,7 +1,9 @@
 {
   "Name": "US Social Security number",
+  "Collection": false,
   "Question": "What is your US Social Security number?",
   "Type": "S:I:D:T:ID",
   "Pattern": "^[0-9]{3}-[0-9]{2}-[0-9]{4}$",
-  "Description": "Optional, one current value per person. Formatting does not prove issuance."
+  "Description": "Optional, one current value per person. Formatting does not prove issuance.",
+  "Composite": false
 }

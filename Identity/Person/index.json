@@ -1,5 +1,6 @@
 {
-  "Name": "Personal",
+  "Name": "Individual",
+  "Collection": false,
   "Scalar": true,
   "Subjects": [
     "I:P"
@@ -24,5 +25,6 @@
       "$ref": "./ProfileImage.json"
     }
   },
-  "SubjectType": true
+  "SubjectType": true,
+  "Composite": false
 }

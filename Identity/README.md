@@ -2,15 +2,15 @@
 
 Canonical code: `I`. Definition: [index.json](index.json).
 
-Identity separates who a subject is from how to contact them, their identifiers, issued documents and contact information. Personal and organizational identity define the subject types used by records elsewhere in the tree.
+Identity separates who a subject is from how to contact them, their identifiers, issued documents and contact information. Individual and organizational identity define the subject types used by records elsewhere in the tree.
 
 Parent: [VowLabs ontology](../README.md).
 
 ## Subclassifications
 
-### Personal — `I:P`
+### Individual — `I:P`
 
-Personal groups one person’s legal and display names, birth details, US Social Security number and profile image. A display name is a presentation choice, while a legal name describes formal identity; neither field verifies the person.
+Individual groups one person’s legal and display names, birth details, US Social Security number and profile image. A display name is a presentation choice, while a legal name describes formal identity; neither field verifies the person.
 
 Record fields: Legal name (`I:P:LN`), Display Name (`I:P:DN`), Date of birth (`I:P:DOB`), Country of birth (`I:P:COB`), US Social Security number (`I:P:SSN`), Profile image (`I:P:IMG`).
 
@@ -20,7 +20,7 @@ Record fields: Legal name (`I:P:LN`), Display Name (`I:P:DN`), Date of birth (`I
 
 Organization separates legal name from trading name and pairs registration number with its jurisdiction. The record describes an organization; it does not establish the submitting person’s authority to act for it.
 
-Record fields: Legal name (`I:O:LN`), Trading name (`I:O:TN`), Registration jurisdiction (`I:O:J`), Registration number (`I:O:RN`).
+Record fields include legal and trading names, registration details, organization type, formation year and jurisdiction, headquarters address and description.
 
 [Detailed classification guide](Organization/README.md) · [Definition](Organization/index.json).
 
@@ -34,9 +34,9 @@ Record fields: Scheme (`I:ID:S`), Value (`I:ID:V`), Issuer (`I:ID:IS`).
 
 ### Contact — `I:C`
 
-Contact separates direct communication channels, accounts on named online services and emergency contacts. An emergency contact describes another person to reach; it is not an alternative legal identity for the subject.
+Contact describes methods by which a person or organization can be reached: electronic mail, phone, a website, calendar booking or social media. It does not describe individuals in an address book.
 
-Further classifications: Contact point (`I:C:P`), Online account (`I:C:SM`), Emergency contact (`I:C:EC`).
+Further classifications: Electronic mail (`I:C:EM`), Phone (`I:C:PH`), Website (`I:C:URL`), Calendar booking (`I:C:BOOK`), Social media (`I:C:SM`), Address (`I:C:AD`).
 
 [Detailed classification guide](Contact/README.md) · [Definition](Contact/index.json).
 

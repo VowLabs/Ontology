@@ -1,7 +1,9 @@
 {
   "Name": "Service",
+  "Collection": false,
   "Question": "Which service is this account on?",
   "Type": "S:I:D:T:S",
   "Reference": "S:T:SV",
-  "Dataset": "services"
+  "Dataset": "services",
+  "Composite": false
 }

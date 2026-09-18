@@ -1,5 +1,7 @@
 {
   "Name": "Retirement account",
+  "Collection": false,
   "Description": "Individual or employer-sponsored account with retirement-specific rules; local schemes are jurisdictional variants.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

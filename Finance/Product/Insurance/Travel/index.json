@@ -1,5 +1,7 @@
 {
   "Name": "Travel insurance",
+  "Collection": false,
   "Description": "Travel-related coverage that may combine medical, cancellation and other protections.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

@@ -1,5 +1,6 @@
 {
   "Name": "Offer response",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -13,5 +14,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "Acceptance or decline of an offer by a user."
+  "Description": "Acceptance or decline of an offer by a user.",
+  "Composite": true
 }

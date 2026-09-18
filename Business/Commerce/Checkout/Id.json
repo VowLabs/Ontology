@@ -1,5 +1,7 @@
 {
   "Name": "Record identifier",
+  "Collection": false,
   "Question": "What is the record identifier?",
-  "Type": "S:I:D:T:ID"
+  "Type": "S:I:D:T:ID",
+  "Composite": false
 }

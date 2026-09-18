@@ -1,5 +1,7 @@
 {
   "Name": "Brokerage account",
+  "Collection": false,
   "Description": "Account used to hold and transact investments; the investments are classified separately.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

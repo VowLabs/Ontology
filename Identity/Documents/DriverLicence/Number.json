@@ -1,5 +1,7 @@
 {
   "Name": "Document number",
+  "Collection": false,
   "Question": "What is the document number?",
-  "Type": "S:I:D:T:ID"
+  "Type": "S:I:D:T:ID",
+  "Composite": false
 }

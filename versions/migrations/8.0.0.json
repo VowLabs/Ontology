@@ -1,0 +1,6 @@
+{
+  "To": "8.1.0",
+  "Prefixes": {},
+  "SubjectTypes": {},
+  "Description": "Delegate Geography and countries/states data to Geo. Codes and historical signed facts are unchanged; live definitions and datasets are obtained through the Ontology proxy."
+}

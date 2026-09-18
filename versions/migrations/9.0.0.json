@@ -1,0 +1,10 @@
+{
+  "To": "10.0.0",
+  "Prefixes": {},
+  "SubjectTypes": {},
+  "Legacy": "identity-v9",
+  "RetiredPrefixes": [
+    "I:C:EC"
+  ],
+  "Description": "Rename Personal to Individual and contact method labels; expand Organization and delegate Contact Address to Geo. Retire emergency-person records from the ontology, retaining them as read-only application history. Emergency is a flag on saved NokNok contacts; no wallet identity is guessed."
+}

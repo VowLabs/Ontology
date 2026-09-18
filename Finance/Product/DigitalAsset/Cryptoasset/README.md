@@ -12,7 +12,7 @@ Parent: [Native digital asset](../README.md).
 
 This is a product-type concept, not an answer-bearing customer record. Provider, jurisdiction, currency, legal terms and tokenization are additional characteristics; this node defines no fields for storing them.
 
-See the [financial product guide](../../../../_support/finance-products.md) for cross-category examples and compatibility with existing records.
+See the [financial product guide](../../../../docs/finance-products.md) for cross-category examples and compatibility with existing records.
 
 ## Subclassifications
 

@@ -1,5 +1,7 @@
 {
   "Name": "Passport type",
+  "Collection": false,
   "Question": "What type of passport is this?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

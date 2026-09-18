@@ -14,8 +14,8 @@ From the Vow workspace:
 npm --prefix VowLabs/Ontology start
 ```
 
-Or from a standalone clone: `npm start`. The default address is
-`http://127.0.0.1:24108`. To listen on a container or server interface:
+Or from a standalone clone: `npm start`. Development binds to `0.0.0.0:24108`;
+`NODE_ENV=production` binds to `127.0.0.1:24108`. Explicit development example:
 
 ```sh
 HOST=0.0.0.0 PORT=24108 npm --prefix VowLabs/Ontology start
@@ -25,8 +25,9 @@ Use your deployment's HTTPS reverse proxy for public access. Configure apps with
 that public origin. All paths below are relative to the origin; icon paths are
 relative to the ontology origin, not the consuming application's origin.
 
-The server validates and loads one consistent snapshot on startup. After changing
-ontology sources or icons, stop the process and rerun the same start command.
+The server validates local definitions and delegation assignments on startup.
+Foreign requests fetch the assigned service at request time. After changing local
+ontology sources, assignments or icons, stop the process and rerun the same start command.
 `GET /health` reports availability and the loaded version/revision. The service
 handles SIGTERM/SIGINT. It runs independently of any consuming application.
 
@@ -57,10 +58,17 @@ Codes are case-sensitive colon-delimited identifiers, e.g. `I:P:LN`. URL-encodin
 colons is supported. Original definition property names (`Code`, `Name`, `Type`,
 `Reference`, `Children`, etc.) are preserved. `Reference` is a schema link to
 another definition; lowercase `reference` is the API's canonical resource URN.
+Definitions other than delegated type references include boolean `Collection` (repeatable/vector) and `Composite`
+(constituent datapoints entered together). Email is repeatable but non-composite;
+a US address is both. Children alone do not imply either flag. `/v1/collections`
+continues to describe explicit disclosure-request field sets, not cardinality.
+`I:C:AD` is a typed reference to Geo (`Type: S:G:AD`): follow the referenced
+definition for its structure. It deliberately omits both flags; applications
+decide how many address records they retain.
 
 Lists support `q` (case-insensitive text search), `limit` (1–200, default 50), and
 `offset` (default 0). Definitions additionally support `parent=I:C` for immediate
-children and `codes=I:P:LN,I:C:P:EM` for up to 100 explicit lookups. An empty
+children and `codes=I:P:LN,I:C:EM` for up to 100 explicit lookups. An empty
 `parent` selects root children. Batch lookup fails with 404 if any code is unknown.
 When combining filters, explicit codes are filtered by parent and then query.
 
@@ -173,8 +181,9 @@ short endpoints support the same list parameters and ID lookup. All retain
 GET/HEAD, ETag, CORS and the usual response envelope.
 
 Data references use `urn:vl:data:{dataset}:{version}:{encoded-id}`; definitions
-use `urn:vl:ontology:{ontology-version}:{code}`. `/v1/catalogue` is an offline
-snapshot with separate `nodes` and `datasets` members. Dataset versions govern
+use `urn:vl:ontology:{ontology-version}:{code}`. `/v1/catalogue` contains the local
+snapshot and delegation boundaries, with separate `nodes` and `datasets` members.
+Use `/v1/catalogue?expand=delegations` to fetch a complete offline snapshot. Dataset versions govern
 records; `meta.ontologyVersion` governs definitions. `/v1/services/{id}/icon.svg`
 continues to work. `/v1/definitions/S:T:SV/records` is a compatibility alias for
 service data and returns data references; it does not embed records in a definition.
@@ -186,10 +195,25 @@ as `LAW`, with `legacyCode` identifying their retired ontology code.
 NokNok settings and contact-list schemas are absent from the API; their consumer
 owns them. Migration metadata and archived historical schemas preserve older data.
 
-## US state reference data
+## Political subdivision reference data
 
 `GET /v1/states?q=California` returns the `US-CA` record;
 `GET /v1/states/US-CA` retrieves it directly. The standard dataset routes also
 work: `/v1/datasets/states` and `/v1/datasets/states/records`. This dataset contains
-the 50 US states and instantiates `S:G:SD` (Subdivision). State names are reference
+Geo’s worldwide political subdivisions, including the original 50 US states,
+and instantiates `S:G:SD` (Subdivision). State names are reference
 data, absent from `/v1/definitions`.
+
+## Foreign services
+
+Geography requests (`S:G` and descendants), country/state metadata and records
+are proxied to Geo. Existing Ontology URLs remain valid; clients are not redirected.
+Mixed definition batches and collections resolve foreign entries. The default
+catalogue is local (`meta.complete: false`); `?expand=delegations` fetches the full
+snapshot. Global search reports `scope: local-and-delegation-boundaries`.
+Foreign errors retain meaningful HTTP status codes. See the
+[proxy contract](docs/contributions/README.md).
+
+Record definitions may declare `RequiredFields`, a list of child keys that must
+be present together when a record is saved. Endorsement (`R:EN`) requires both
+`T` (free text) and `R` (integer rating, 1–3).

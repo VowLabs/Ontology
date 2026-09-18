@@ -1,5 +1,6 @@
 {
   "Name": "Medication",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P"
@@ -14,5 +15,6 @@
     "F": {
       "$ref": "./Frequency.json"
     }
-  }
+  },
+  "Composite": true
 }

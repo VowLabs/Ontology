@@ -1,5 +1,7 @@
 {
   "Name": "Term deposit",
+  "Collection": false,
   "Description": "Deposit for an agreed term, including non-negotiable certificates of deposit. Negotiable certificates are debt securities.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

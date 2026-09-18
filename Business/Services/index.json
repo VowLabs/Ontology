@@ -1,0 +1,53 @@
+{
+  "Name": "Services",
+  "Collection": false,
+  "Description": "Service offerings aimed at business and organizational customers, distinguished from offerings aimed at individuals and households.",
+  "Children": {
+    "AC": {
+      "$ref": "./Accounting/index.json"
+    },
+    "HR": {
+      "$ref": "./HumanResources/index.json"
+    },
+    "MK": {
+      "$ref": "./Marketing/index.json"
+    },
+    "IT": {
+      "$ref": "./InformationTechnology/index.json"
+    },
+    "LG": {
+      "$ref": "./LegalCompliance/index.json"
+    },
+    "AD": {
+      "$ref": "./Administration/index.json"
+    },
+    "FM": {
+      "$ref": "./Facilities/index.json"
+    },
+    "SC": {
+      "$ref": "./SupplyChain/index.json"
+    },
+    "MC": {
+      "$ref": "./Management/index.json"
+    },
+    "TC": {
+      "$ref": "./TechnicalAssurance/index.json"
+    },
+    "FI": {
+      "$ref": "./BusinessFinance/index.json"
+    },
+    "IN": {
+      "$ref": "./CommercialInsurance/index.json"
+    },
+    "ED": {
+      "$ref": "./WorkforceTraining/index.json"
+    },
+    "HC": {
+      "$ref": "./WorkplaceHealth/index.json"
+    },
+    "FD": {
+      "$ref": "./WorkplaceCatering/index.json"
+    }
+  },
+  "Composite": false
+}

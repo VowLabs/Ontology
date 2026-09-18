@@ -1,5 +1,6 @@
 {
   "Name": "Product",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -16,5 +17,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "A catalogued good or service."
+  "Description": "A catalogued good or service.",
+  "Composite": true
 }

@@ -1,5 +1,6 @@
 {
   "Name": "Checkout",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -13,5 +14,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "A checkout session and its proposed transaction."
+  "Description": "A checkout session and its proposed transaction.",
+  "Composite": true
 }

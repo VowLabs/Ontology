@@ -1,5 +1,7 @@
 {
   "Name": "Employer",
+  "Collection": false,
   "Question": "What is the employer\u2019s name?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

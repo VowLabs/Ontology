@@ -1,5 +1,7 @@
 {
   "Name": "Common stock",
+  "Collection": false,
   "Description": "Ordinary shares representing equity ownership.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

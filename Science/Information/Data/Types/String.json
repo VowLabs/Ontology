@@ -1,5 +1,7 @@
 {
   "Name": "String",
+  "Collection": false,
   "ValueType": "string",
-  "MaxLength": 2000
+  "MaxLength": 2000,
+  "Composite": false
 }

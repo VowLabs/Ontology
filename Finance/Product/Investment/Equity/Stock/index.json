@@ -1,5 +1,6 @@
 {
   "Name": "Stock",
+  "Collection": false,
   "Description": "Company shares, also called stocks. Listing venue and public or private status are additional characteristics.",
   "Children": {
     "CO": {
@@ -8,5 +9,6 @@
     "PR": {
       "$ref": "./Preferred/index.json"
     }
-  }
+  },
+  "Composite": false
 }

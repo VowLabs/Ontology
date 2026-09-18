@@ -1,0 +1,5 @@
+{
+  "Name": "Address",
+  "Type": "S:G:AD",
+  "Description": "A physical address defined by Geo. Select a country-specific format. Applications decide how many address records to retain; canonical Geo tags such as Shipping classify their use."
+}

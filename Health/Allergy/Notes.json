@@ -1,5 +1,7 @@
 {
   "Name": "Notes",
+  "Collection": false,
   "Question": "What additional information would you like to provide?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

@@ -1,5 +1,6 @@
 {
   "Name": "Data",
+  "Collection": false,
   "Children": {
     "T": {
       "$ref": "./Types/index.json"
@@ -7,5 +8,6 @@
     "OP": {
       "$ref": "./Operations/index.json"
     }
-  }
+  },
+  "Composite": false
 }

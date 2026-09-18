@@ -1,5 +1,7 @@
 {
   "Name": "Image URL",
+  "Collection": false,
   "Question": "What is the image url?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

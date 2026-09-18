@@ -1,5 +1,6 @@
 {
   "Name": "Driver licence",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P"
@@ -31,5 +32,7 @@
     "RS": {
       "$ref": "./Restrictions.json"
     }
-  }
+  },
+  "Composite": true,
+  "DisplayFormat": "Driver licence\nNumber: {N}\nIssuer: {IS}\nIssuing region: {RE}\nIssuing Country: {CO}\nIssued: {ISS}\nExpires: {EXP}\nClasses: {CL}\nRestrictions: {RS}"
 }

@@ -1,26 +1,34 @@
-# Geography
+# Geography — delegated to Geo
 
-Canonical code: `S:G`. [Definition](index.json).
-
-Geography currently separates address formats and uses from the countries or
-territories those addresses identify.
-
-## Subclassifications
-
-- [Address](Address/README.md) (`S:G:AD`) contains Roles (`S:G:AD:RO`) and the US
-  address format (`S:G:AD:US`). A format defines record fields and presentation;
-  a role defines an address’s use. These are distinct from the location itself.
-- [Country](Country/README.md) (`S:G:CO`) defines a country or territory. Named
-  places live in the separate countries dataset, used by dataset-backed Choices.
-
-For example, a record at `S:G:AD:US` can have Role `S:G:AD:RO:BI` and Country
-`G:CO:US`: it uses the US address form, is used for billing and identifies a
-location in the United States. A tag provides an additional generic relationship
-and does not replace either constrained field.
-
-Countries are imported locally with a pinned source revision and checksums;
-no remote service is needed to load the catalogue. See [sources](../../_support/sources/README.md).
-
-- [Subdivision](Subdivision/README.md) (`S:G:SD`) defines administrative or constituent subdivisions. Named US states are available in the separate [states dataset](../../data/states/README.md).
-
+Canonical code: `S:G`. [Boundary definition](index.json).
 Parent: [Science](../README.md).
+
+Geo owns Geography's definitions and reference data. This directory contains
+only the parent-assigned boundary; it has no local child definitions or rows.
+The absence of `Children` does not mean the foreign branch is empty.
+
+The public `Delegation` object in [this boundary definition](index.json)
+reserves `S:G` and descendants plus `countries` and `states` for Geo. Geography
+covers places, addresses, countries and political subdivisions. Address roles
+and formats are distinct from the places they identify. Examples include a
+shipping-address record and a country reference; they remain separate from
+Identity's descriptions of people and organizations.
+
+Clients fetching `Science/Geography/index.json` or `/v1/definitions/S:G` receive
+the boundary and its `Delegation.url`, and can follow that URL directly. Boundary
+lookup requires no Geo request and remains available during an upstream outage.
+For compatibility, `/v1/definitions/S:G/children`, descendant definitions and the
+country/state dataset endpoints still proxy Geo, including search and pagination.
+The remote classifications retain their existing canonical codes. See the
+[delegation contract](../../docs/contributions/README.md).
+
+Authoritative service: [Geo Ontology API](https://geo-ekkis.vercel.app/v1/).
+The registered authority remains this public URL when a development proxy uses
+a local upstream. Definition responses and expanded catalogues retain
+`delegation: "geo"` and `authoritativeUrl` on delegated nodes.
+
+`Delegation` contains the public service `url`, authority `id` and `name`, source
+`repository`, and parent-assigned `datasets`. The prefix derives from this node’s
+canonical path; the compatibility version derives from the ontology root.
+The catalogue’s delegation index is generated from these public definitions,
+not maintained separately. Expanded offline snapshots preserve this declaration.

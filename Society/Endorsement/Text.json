@@ -1,0 +1,8 @@
+{
+  "Name": "Endorsement",
+  "Collection": false,
+  "Composite": false,
+  "Question": "What would you like to say in your endorsement?",
+  "Type": "S:I:D:T:S",
+  "MaxLength": 2000
+}

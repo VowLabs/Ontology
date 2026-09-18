@@ -1,5 +1,6 @@
 {
   "Name": "Derivative",
+  "Collection": false,
   "Description": "Contracts whose value depends on an underlying asset, rate, index or event. Underlier and trading venue are separate characteristics.",
   "Children": {
     "OP": {
@@ -20,5 +21,6 @@
     "WA": {
       "$ref": "./Warrant/index.json"
     }
-  }
+  },
+  "Composite": false
 }

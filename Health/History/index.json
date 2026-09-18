@@ -1,5 +1,6 @@
 {
   "Name": "Medical history",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P"
@@ -14,5 +15,6 @@
     "N": {
       "$ref": "./Notes.json"
     }
-  }
+  },
+  "Composite": true
 }

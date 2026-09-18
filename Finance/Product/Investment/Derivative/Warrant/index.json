@@ -1,5 +1,7 @@
 {
   "Name": "Warrant",
+  "Collection": false,
   "Description": "Issued instrument granting a right to acquire or dispose of an underlying asset on specified terms.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

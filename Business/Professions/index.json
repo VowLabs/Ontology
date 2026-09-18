@@ -1,5 +1,7 @@
 {
   "Name": "Profession",
+  "Collection": false,
   "Description": "An occupation or skilled trade practiced by a person. This describes work, not a particular employer or proof of qualifications. Named professions are reference data.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

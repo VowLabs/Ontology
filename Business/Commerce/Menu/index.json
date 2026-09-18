@@ -1,5 +1,6 @@
 {
   "Name": "Menu",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -13,5 +14,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "An ordered collection of products offered by a merchant."
+  "Description": "An ordered collection of products offered by a merchant.",
+  "Composite": true
 }

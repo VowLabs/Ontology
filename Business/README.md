@@ -8,6 +8,16 @@ Parent: [VowLabs ontology](../README.md).
 
 ## Subclassifications
 
+### Services — `B:SV`
+
+Services offered to business and organizational customers, such as accounting,
+recruitment, marketing, IT, business banking, commercial insurance and staff training.
+Offerings aimed at individuals and households belong to Society / Services (`R:SV`).
+A provider may supply both; classify the intended customer of the offering.
+Products, offers and orders for either branch remain Commerce concepts.
+
+[Detailed classification guide](Services/README.md) · [Definition](Services/index.json).
+
 ### Insurance policy — `B:IN`
 
 Insurance policy records describe an actual policy using type, provider, policy number and expiry date. The policy type choices are the existing broad record vocabulary; the more detailed product taxonomy at F:P:IS does not silently replace them.

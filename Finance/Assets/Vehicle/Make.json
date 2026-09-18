@@ -1,5 +1,7 @@
 {
   "Name": "Make",
+  "Collection": false,
   "Question": "What is this vehicle\u2019s make?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

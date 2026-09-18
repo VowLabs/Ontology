@@ -1,5 +1,7 @@
 {
   "Name": "Savings account",
+  "Collection": false,
   "Description": "Deposit account primarily intended for saving.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

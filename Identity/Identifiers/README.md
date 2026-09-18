@@ -10,7 +10,7 @@ Parent: [Identity](../README.md).
 
 Multiple records are permitted per subject (`Scalar: false`); each instance has its own stable record ID.
 
-Applicable subjects: [Personal (`I:P`)](../Person/index.json), [Organization (`I:O`)](../Organization/index.json).
+Applicable subjects: [Individual (`I:P`)](../Person/index.json), [Organization (`I:O`)](../Organization/index.json).
 
 The children below are optional scalar fields of one record, not subtypes. An unanswered field does not mean false, zero or not applicable.
 

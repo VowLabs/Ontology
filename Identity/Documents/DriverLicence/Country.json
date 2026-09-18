@@ -1,5 +1,7 @@
 {
   "Name": "Issuing country",
+  "Collection": false,
   "Question": "Which country issued this document?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

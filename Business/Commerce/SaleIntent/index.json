@@ -1,5 +1,6 @@
 {
   "Name": "Sale intent",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -13,5 +14,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "A proposed sale and its satisfaction conditions."
+  "Description": "A proposed sale and its satisfaction conditions.",
+  "Composite": true
 }

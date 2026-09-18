@@ -1,5 +1,7 @@
 {
   "Name": "Future",
+  "Collection": false,
   "Description": "Standardized futures contract for future delivery or settlement.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

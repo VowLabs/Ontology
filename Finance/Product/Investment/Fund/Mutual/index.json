@@ -1,5 +1,7 @@
 {
   "Name": "Mutual fund",
+  "Collection": false,
   "Description": "Interests in an open-ended pooled investment fund, excluding exchange-traded funds in this navigation taxonomy.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

@@ -1,6 +1,8 @@
 {
   "Name": "Web address",
+  "Collection": false,
   "ValueType": "string",
   "Format": "url",
-  "MaxLength": 2000
+  "MaxLength": 2000,
+  "Composite": false
 }

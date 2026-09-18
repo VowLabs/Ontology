@@ -1,0 +1,23 @@
+{
+  "Name": "Endorsement",
+  "Description": "An authored endorsement of an individual or organization, combining free text with a one-to-three-star rating. Attribution and consent are controlled by the application.",
+  "Collection": true,
+  "Composite": true,
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "RequiredFields": [
+    "T",
+    "R"
+  ],
+  "Children": {
+    "T": {
+      "$ref": "./Text.json"
+    },
+    "R": {
+      "$ref": "./Rating.json"
+    }
+  }
+}

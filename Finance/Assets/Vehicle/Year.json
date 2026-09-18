@@ -1,7 +1,9 @@
 {
   "Name": "Model year",
+  "Collection": false,
   "Question": "What is this vehicle\u2019s model year?",
   "Type": "S:I:D:T:I",
   "Minimum": 1886,
-  "Maximum": 2200
+  "Maximum": 2200,
+  "Composite": false
 }

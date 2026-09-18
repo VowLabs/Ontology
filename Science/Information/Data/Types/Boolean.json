@@ -1,4 +1,6 @@
 {
   "Name": "Boolean",
-  "ValueType": "boolean"
+  "Collection": false,
+  "ValueType": "boolean",
+  "Composite": false
 }

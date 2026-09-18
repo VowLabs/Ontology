@@ -1,5 +1,7 @@
 {
   "Name": "Name",
+  "Collection": false,
   "Question": "What medication do you take?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

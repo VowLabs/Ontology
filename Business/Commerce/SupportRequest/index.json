@@ -1,5 +1,6 @@
 {
   "Name": "Support request",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -13,5 +14,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "An inquiry or request for support."
+  "Description": "An inquiry or request for support.",
+  "Composite": true
 }

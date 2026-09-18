@@ -1,0 +1,74 @@
+{
+  "Name": "Services",
+  "Collection": false,
+  "Description": "Service offerings aimed at individuals and households, including commercial, public, nonprofit and unpaid provision; offerings aimed at businesses belong to Business / Services.",
+  "Children": {
+    "HC": {
+      "$ref": "./Healthcare/index.json"
+    },
+    "ED": {
+      "$ref": "./Education/index.json"
+    },
+    "HO": {
+      "$ref": "./Housing/index.json"
+    },
+    "UT": {
+      "$ref": "./Utilities/index.json"
+    },
+    "FD": {
+      "$ref": "./Food/index.json"
+    },
+    "TR": {
+      "$ref": "./Transport/index.json"
+    },
+    "CM": {
+      "$ref": "./Communication/index.json"
+    },
+    "FI": {
+      "$ref": "./Financial/index.json"
+    },
+    "IN": {
+      "$ref": "./Insurance/index.json"
+    },
+    "LG": {
+      "$ref": "./Legal/index.json"
+    },
+    "GV": {
+      "$ref": "./PublicAdministration/index.json"
+    },
+    "SC": {
+      "$ref": "./SocialCare/index.json"
+    },
+    "PC": {
+      "$ref": "./PersonalCare/index.json"
+    },
+    "HM": {
+      "$ref": "./Household/index.json"
+    },
+    "RP": {
+      "$ref": "./MaintenanceRepair/index.json"
+    },
+    "RC": {
+      "$ref": "./RecreationCulture/index.json"
+    },
+    "HT": {
+      "$ref": "./HospitalityTravel/index.json"
+    },
+    "SE": {
+      "$ref": "./SecurityEmergency/index.json"
+    },
+    "FU": {
+      "$ref": "./Funeral/index.json"
+    },
+    "PS": {
+      "$ref": "./Professional/index.json"
+    },
+    "RT": {
+      "$ref": "./Retail/index.json"
+    },
+    "AC": {
+      "$ref": "./AnimalCare/index.json"
+    }
+  },
+  "Composite": false
+}

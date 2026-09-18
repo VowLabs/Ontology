@@ -1,5 +1,7 @@
 {
   "Name": "Network",
+  "Collection": false,
   "Question": "Which network does this address belong to?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

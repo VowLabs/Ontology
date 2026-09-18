@@ -1,5 +1,6 @@
 {
   "Name": "Identity",
+  "Collection": false,
   "Description": "Open for community-maintained extensions.",
   "Children": {
     "P": {
@@ -17,5 +18,6 @@
     "DOC": {
       "$ref": "./Documents/index.json"
     }
-  }
+  },
+  "Composite": false
 }

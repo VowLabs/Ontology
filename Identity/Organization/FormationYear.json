@@ -1,0 +1,9 @@
+{
+  "Name": "Formation year",
+  "Collection": false,
+  "Composite": false,
+  "Question": "In which year was the organization formed?",
+  "Type": "S:I:D:T:I",
+  "Minimum": 1,
+  "Maximum": 9999
+}

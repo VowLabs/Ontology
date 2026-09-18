@@ -1,5 +1,7 @@
 {
   "Name": "Pension arrangement",
+  "Collection": false,
   "Description": "Retirement benefit arrangement, including defined-benefit and defined-contribution schemes.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

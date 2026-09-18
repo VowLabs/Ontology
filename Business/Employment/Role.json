@@ -1,5 +1,7 @@
 {
   "Name": "Role",
+  "Collection": false,
   "Question": "What is your role?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

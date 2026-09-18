@@ -1,5 +1,6 @@
 {
   "Name": "Product",
+  "Collection": false,
   "Description": "Financial product types, organized by economic function rather than provider. These are classification concepts, not customer records or statements of ownership. Categories are extensible and do not imply regulatory status or eligibility.",
   "Children": {
     "AC": {
@@ -23,5 +24,6 @@
     "DA": {
       "$ref": "./DigitalAsset/index.json"
     }
-  }
+  },
+  "Composite": false
 }

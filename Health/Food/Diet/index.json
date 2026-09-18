@@ -1,5 +1,6 @@
 {
   "Name": "Dietary restriction",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P",
@@ -12,5 +13,6 @@
     "I": {
       "$ref": "./Instructions.json"
     }
-  }
+  },
+  "Composite": true
 }

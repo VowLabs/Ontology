@@ -1,5 +1,6 @@
 {
   "Name": "Status",
+  "Collection": false,
   "Question": "What is your reported allergy status for this substance?",
   "Type": "S:I:D:T:S",
   "Choices": [
@@ -7,5 +8,6 @@
     "suspected",
     "no-known-allergy",
     "unknown"
-  ]
+  ],
+  "Composite": false
 }

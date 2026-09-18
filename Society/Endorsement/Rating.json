@@ -1,0 +1,9 @@
+{
+  "Name": "Rating",
+  "Collection": false,
+  "Composite": false,
+  "Question": "How many stars do you give, from one to three?",
+  "Type": "S:I:D:T:I",
+  "Minimum": 1,
+  "Maximum": 3
+}

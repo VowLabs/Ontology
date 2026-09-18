@@ -1,5 +1,6 @@
 {
   "Name": "Insurance",
+  "Collection": false,
   "Description": "Risk coverage contracts. Product types are distinct from customer insurance enquiry records at B:IN.",
   "Children": {
     "LI": {
@@ -26,5 +27,6 @@
     "AN": {
       "$ref": "./Annuity/index.json"
     }
-  }
+  },
+  "Composite": false
 }

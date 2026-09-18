@@ -1,5 +1,7 @@
 {
   "Name": "Contract for difference",
+  "Collection": false,
   "Description": "Contract settling differences in the value of an underlying reference.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

@@ -1,5 +1,6 @@
 {
   "Name": "Service",
+  "Collection": false,
   "Description": "An online service through which a person or organization has an account or can be contacted. Named providers and their presentation rules are reference data.",
   "Schema": {
     "id": "Identifier",
@@ -11,5 +12,6 @@
     "iconUrl": "Web address",
     "normalization": "Named normalization rule"
   },
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

@@ -1,4 +1,6 @@
 {
   "Name": "Integer",
-  "ValueType": "integer"
+  "Collection": false,
+  "ValueType": "integer",
+  "Composite": false
 }

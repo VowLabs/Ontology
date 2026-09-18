@@ -1,5 +1,6 @@
 {
   "Name": "Fund",
+  "Collection": false,
   "Description": "Interests in pooled investment vehicles. Strategy, underlying assets and legal form are additional characteristics.",
   "Children": {
     "MF": {
@@ -14,5 +15,6 @@
     "PF": {
       "$ref": "./Private/index.json"
     }
-  }
+  },
+  "Composite": false
 }

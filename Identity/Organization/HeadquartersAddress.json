@@ -1,0 +1,8 @@
+{
+  "Name": "Headquarters address",
+  "Collection": false,
+  "Composite": false,
+  "Question": "Which address is the organization\u2019s headquarters?",
+  "Type": "S:I:D:T:ID",
+  "RecordReference": "S:G:AD"
+}

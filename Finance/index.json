@@ -1,5 +1,6 @@
 {
   "Name": "Finance",
+  "Collection": false,
   "Description": "Open for community-maintained extensions.",
   "Children": {
     "BA": {
@@ -26,5 +27,6 @@
     "P": {
       "$ref": "./Product/index.json"
     }
-  }
+  },
+  "Composite": false
 }

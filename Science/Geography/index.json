@@ -1,15 +1,22 @@
 {
   "Name": "Geography",
-  "Description": "Open for community-maintained extensions.",
-  "Children": {
-    "AD": {
-      "$ref": "./Address/index.json"
-    },
-    "CO": {
-      "$ref": "./Country/index.json"
-    },
-    "SD": {
-      "$ref": "./Subdivision/index.json"
+  "Collection": false,
+  "Description": "Definitions and reference data delegated to Geo.",
+  "Composite": false,
+  "Delegation": {
+    "id": "geo",
+    "name": "Geo",
+    "repository": "https://github.com/ekkis/Geo",
+    "url": "https://geo-ekkis.vercel.app/v1/",
+    "datasets": {
+      "countries": {
+        "id": "countries",
+        "definitionCode": "S:G:CO"
+      },
+      "states": {
+        "id": "states",
+        "definitionCode": "S:G:SD"
+      }
     }
   }
 }

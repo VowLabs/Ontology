@@ -1,5 +1,6 @@
 {
   "Name": "Insurance policy",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P",
@@ -18,5 +19,6 @@
     "END": {
       "$ref": "./Expiry.json"
     }
-  }
+  },
+  "Composite": true
 }

@@ -1,5 +1,7 @@
 {
   "Name": "Condition",
+  "Collection": false,
   "Question": "What condition would you like to record?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

@@ -1,0 +1,7 @@
+{
+  "Name": "Website",
+  "Collection": true,
+  "Question": "What is the website address?",
+  "Type": "S:I:D:T:URL",
+  "Composite": false
+}

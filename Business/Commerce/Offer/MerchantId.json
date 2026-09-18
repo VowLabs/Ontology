@@ -1,5 +1,7 @@
 {
   "Name": "Merchant identifier",
+  "Collection": false,
   "Question": "What is the merchant identifier?",
-  "Type": "S:I:D:T:ID"
+  "Type": "S:I:D:T:ID",
+  "Composite": false
 }

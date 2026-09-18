@@ -1,5 +1,6 @@
 {
   "Name": "Onboarding",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -13,5 +14,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "An application or onboarding workflow."
+  "Description": "An application or onboarding workflow.",
+  "Composite": true
 }

@@ -1,5 +1,6 @@
 {
   "Name": "Bank account",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P",
@@ -18,5 +19,6 @@
     "ID": {
       "$ref": "./Identifier.json"
     }
-  }
+  },
+  "Composite": true
 }

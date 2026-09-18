@@ -1,5 +1,6 @@
 {
   "Name": "Debt security",
+  "Collection": false,
   "Description": "Transferable debt instruments. Direct borrowing facilities belong under Credit.",
   "Children": {
     "BO": {
@@ -20,5 +21,6 @@
     "AB": {
       "$ref": "./AssetBacked/index.json"
     }
-  }
+  },
+  "Composite": false
 }

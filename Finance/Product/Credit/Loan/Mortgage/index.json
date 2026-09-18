@@ -1,5 +1,7 @@
 {
   "Name": "Mortgage loan",
+  "Collection": false,
   "Description": "Loan secured by real property, including residential and commercial mortgages; not restricted to bank lenders.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

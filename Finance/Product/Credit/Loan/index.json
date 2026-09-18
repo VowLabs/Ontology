@@ -1,5 +1,6 @@
 {
   "Name": "Loan",
+  "Collection": false,
   "Description": "Lending products with contractual repayment obligations. Purpose, collateral, interest basis and lender type are additional characteristics.",
   "Children": {
     "MO": {
@@ -20,5 +21,6 @@
     "BN": {
       "$ref": "./BuyNowPayLater/index.json"
     }
-  }
+  },
+  "Composite": false
 }

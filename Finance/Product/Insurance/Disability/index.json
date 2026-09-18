@@ -1,5 +1,7 @@
 {
   "Name": "Disability and income protection",
+  "Collection": false,
   "Description": "Coverage replacing income or paying benefits for qualifying disability or inability to work.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

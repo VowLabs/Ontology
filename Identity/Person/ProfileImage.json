@@ -1,7 +1,9 @@
 {
   "Name": "Profile image",
+  "Collection": false,
   "Question": "What profile image do you use?",
   "Type": "S:I:D:T:S",
   "MaxLength": 100000,
-  "Pattern": "^data:image/jpeg;base64,[a-zA-Z0-9+/=]+$"
+  "Pattern": "^data:image/jpeg;base64,[a-zA-Z0-9+/=]+$",
+  "Composite": false
 }

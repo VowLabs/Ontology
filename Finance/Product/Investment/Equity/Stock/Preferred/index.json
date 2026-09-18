@@ -1,5 +1,7 @@
 {
   "Name": "Preferred stock",
+  "Collection": false,
   "Description": "Preference shares with specified priority or rights; terms vary by issue.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

@@ -1,5 +1,6 @@
 {
   "Name": "Business",
+  "Collection": false,
   "Description": "Open for community-maintained extensions.",
   "Children": {
     "IN": {
@@ -13,6 +14,10 @@
     },
     "PRO": {
       "$ref": "./Professions/index.json"
+    },
+    "SV": {
+      "$ref": "./Services/index.json"
     }
-  }
+  },
+  "Composite": false
 }

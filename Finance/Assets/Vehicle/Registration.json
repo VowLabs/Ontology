@@ -1,5 +1,7 @@
 {
   "Name": "Registration plate",
+  "Collection": false,
   "Question": "What is this vehicle\u2019s registration plate?",
-  "Type": "S:I:D:T:ID"
+  "Type": "S:I:D:T:ID",
+  "Composite": false
 }

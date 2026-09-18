@@ -12,7 +12,7 @@ Parent: [Documents](../README.md).
 
 Multiple records are permitted per subject (`Scalar: false`); each instance has its own stable record ID.
 
-Applicable subjects: [Personal (`I:P`)](../../Person/index.json).
+Applicable subjects: [Individual (`I:P`)](../../Person/index.json).
 
 The children below are optional scalar fields of one record, not subtypes. An unanswered field does not mean false, zero or not applicable.
 
@@ -99,3 +99,7 @@ Value type: [String (`S:I:D:T:S`)](../../../Science/Information/Data/Types/Strin
 Maximum length: `2000`.
 
 [Field definition](Restrictions.json).
+
+Public presentation uses `DisplayFormat` to show one document per record, including number, issuer, region/country, issue and expiry dates, classes and restrictions. Only disclosed fields appear; omit lines whose referenced fields are all private or empty. A fully private document produces no public item.
+
+Issuing country and issuing region have separately labelled display lines. Each is omitted independently when absent or private.

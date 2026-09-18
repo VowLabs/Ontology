@@ -1,5 +1,7 @@
 {
   "Name": "Issuing region",
+  "Collection": false,
   "Question": "Which state, province or region issued this licence?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

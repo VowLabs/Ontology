@@ -1,4 +1,4 @@
-# Personal
+# Individual
 
 Canonical code: `I:P`. Definition: [index.json](index.json).
 
@@ -10,7 +10,7 @@ Parent: [Identity](../README.md).
 
 At most one record per subject (`Scalar: true`).
 
-Applicable subjects: [Personal (`I:P`)](index.json).
+Applicable subjects: [Individual (`I:P`)](index.json).
 
 The children below are optional scalar fields of one record, not subtypes. An unanswered field does not mean false, zero or not applicable.
 

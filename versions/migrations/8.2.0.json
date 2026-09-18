@@ -1,0 +1,12 @@
+{
+  "To": "9.0.0",
+  "Prefixes": {
+    "I:C:P": "I:C"
+  },
+  "SubjectTypes": {},
+  "Legacy": "contact-v8",
+  "RecordLabels": {
+    "I:C:P": "N"
+  },
+  "Description": "Flatten Contact point into Contact. Archive the former Label answer and copy its text to record.label only when no label exists. Preserve answer metadata and historical signed statements. Add explicit Collection (repeatability) and Composite (grouped-value) flags to definitions."
+}

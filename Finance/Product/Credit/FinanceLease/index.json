@@ -1,5 +1,7 @@
 {
   "Name": "Finance lease",
+  "Collection": false,
   "Description": "Financing arrangement granting use of an asset for payments; distinct from a short-term operating rental.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

@@ -1,5 +1,7 @@
 {
   "Name": "Current account",
+  "Collection": false,
   "Description": "Transaction deposit account, also called a checking account.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

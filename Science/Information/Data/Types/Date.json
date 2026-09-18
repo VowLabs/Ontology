@@ -1,5 +1,7 @@
 {
   "Name": "Calendar date",
+  "Collection": false,
   "ValueType": "string",
-  "Format": "date"
+  "Format": "date",
+  "Composite": false
 }

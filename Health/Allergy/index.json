@@ -1,5 +1,6 @@
 {
   "Name": "Allergy record",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P"
@@ -17,5 +18,6 @@
     "N": {
       "$ref": "./Notes.json"
     }
-  }
+  },
+  "Composite": true
 }

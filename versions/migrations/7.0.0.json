@@ -1,0 +1,9 @@
+{
+  "To": "8.0.0",
+  "Prefixes": {
+    "U": "R:U"
+  },
+  "SubjectTypes": {},
+  "Legacy": "7.0.0",
+  "Description": "Move Humanities under Society. Migrate definition references and canonical tags while retaining historical signed statements unchanged."
+}

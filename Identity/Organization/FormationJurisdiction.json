@@ -1,0 +1,8 @@
+{
+  "Name": "Formation jurisdiction",
+  "Collection": false,
+  "Composite": false,
+  "Question": "In which jurisdiction was the organization formed?",
+  "Type": "S:I:D:T:S",
+  "MaxLength": 200
+}

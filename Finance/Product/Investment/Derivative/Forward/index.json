@@ -1,5 +1,7 @@
 {
   "Name": "Forward",
+  "Collection": false,
   "Description": "Bilateral contract for future delivery or settlement on agreed terms.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

@@ -1,6 +1,8 @@
 {
   "Name": "Last four digits",
+  "Collection": false,
   "Question": "What are its last four digits?",
   "Type": "S:I:D:T:ID",
-  "Pattern": "^[0-9]{4}$"
+  "Pattern": "^[0-9]{4}$",
+  "Composite": false
 }

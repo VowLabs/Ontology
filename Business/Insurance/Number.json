@@ -1,5 +1,7 @@
 {
   "Name": "Policy number",
+  "Collection": false,
   "Question": "What is the policy number?",
-  "Type": "S:I:D:T:ID"
+  "Type": "S:I:D:T:ID",
+  "Composite": false
 }

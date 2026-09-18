@@ -1,5 +1,7 @@
 {
   "Name": "Negotiable certificate of deposit",
+  "Collection": false,
   "Description": "Transferable deposit certificate traded as a debt security; non-negotiable term deposits belong under bank accounts.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

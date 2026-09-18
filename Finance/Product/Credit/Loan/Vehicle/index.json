@@ -1,5 +1,7 @@
 {
   "Name": "Vehicle loan",
+  "Collection": false,
   "Description": "Loan to finance a vehicle purchase.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

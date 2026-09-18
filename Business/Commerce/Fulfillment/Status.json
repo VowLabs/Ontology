@@ -1,5 +1,7 @@
 {
   "Name": "Status",
+  "Collection": false,
   "Question": "What is the status?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

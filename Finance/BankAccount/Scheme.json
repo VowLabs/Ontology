@@ -1,5 +1,7 @@
 {
   "Name": "Identifier scheme",
+  "Collection": false,
   "Question": "Which account identifier scheme applies?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

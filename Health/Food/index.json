@@ -1,5 +1,6 @@
 {
   "Name": "Food",
+  "Collection": false,
   "Description": "Open for community-maintained extensions.",
   "Children": {
     "P": {
@@ -8,5 +9,6 @@
     "D": {
       "$ref": "./Diet/index.json"
     }
-  }
+  },
+  "Composite": false
 }

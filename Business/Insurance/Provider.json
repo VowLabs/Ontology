@@ -1,5 +1,7 @@
 {
   "Name": "Provider",
+  "Collection": false,
   "Question": "Who provides this policy?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

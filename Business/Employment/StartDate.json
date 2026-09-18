@@ -1,5 +1,7 @@
 {
   "Name": "Start date",
+  "Collection": false,
   "Question": "When did this employment begin?",
-  "Type": "S:I:D:T:DT"
+  "Type": "S:I:D:T:DT",
+  "Composite": false
 }

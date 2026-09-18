@@ -1,5 +1,6 @@
 {
   "Name": "Account",
+  "Collection": false,
   "Description": "Account products for holding deposits, investments or assets. Credit facilities are classified under Credit; tax and retirement wrappers under Retirement.",
   "Children": {
     "BA": {
@@ -11,5 +12,6 @@
     "CU": {
       "$ref": "./Custody/index.json"
     }
-  }
+  },
+  "Composite": false
 }

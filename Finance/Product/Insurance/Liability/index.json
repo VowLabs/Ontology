@@ -1,5 +1,7 @@
 {
   "Name": "Liability insurance",
+  "Collection": false,
   "Description": "Coverage for specified legal liabilities.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

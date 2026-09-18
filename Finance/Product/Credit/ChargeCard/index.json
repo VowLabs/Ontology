@@ -1,5 +1,7 @@
 {
   "Name": "Charge card",
+  "Collection": false,
   "Description": "Card facility generally requiring the statement balance to be paid in full each cycle.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

@@ -1,5 +1,7 @@
 {
   "Name": "Commercial paper",
+  "Collection": false,
   "Description": "Short-term corporate debt security.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

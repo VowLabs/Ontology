@@ -1,5 +1,7 @@
 {
   "Name": "Health insurance",
+  "Collection": false,
   "Description": "Coverage of specified healthcare costs or benefits.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

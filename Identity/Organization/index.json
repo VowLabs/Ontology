@@ -1,5 +1,6 @@
 {
   "Name": "Organization",
+  "Collection": false,
   "Scalar": true,
   "Subjects": [
     "I:O"
@@ -16,7 +17,26 @@
     },
     "RN": {
       "$ref": "./RegistrationNumber.json"
+    },
+    "T": {
+      "$ref": "./OrganizationType.json"
+    },
+    "FY": {
+      "$ref": "./FormationYear.json"
+    },
+    "FJ": {
+      "$ref": "./FormationJurisdiction.json"
+    },
+    "HQ": {
+      "$ref": "./HeadquartersAddress.json"
+    },
+    "D": {
+      "$ref": "./Description.json"
+    },
+    "K": {
+      "$ref": "./Types/index.json"
     }
   },
-  "SubjectType": true
+  "SubjectType": true,
+  "Composite": false
 }

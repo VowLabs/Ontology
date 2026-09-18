@@ -1,5 +1,7 @@
 {
   "Name": "Vehicle identification number",
+  "Collection": false,
   "Question": "What is this vehicle\u2019s VIN?",
-  "Type": "S:I:D:T:ID"
+  "Type": "S:I:D:T:ID",
+  "Composite": false
 }

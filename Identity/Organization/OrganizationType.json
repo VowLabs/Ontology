@@ -1,0 +1,8 @@
+{
+  "Name": "Organization type",
+  "Collection": false,
+  "Composite": false,
+  "Question": "What type of organization is this?",
+  "Type": "S:I:D:T:S",
+  "Choices": "I:O:K"
+}

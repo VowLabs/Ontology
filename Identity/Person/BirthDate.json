@@ -1,5 +1,7 @@
 {
   "Name": "Date of birth",
+  "Collection": false,
   "Question": "What is your date of birth?",
-  "Type": "S:I:D:T:DT"
+  "Type": "S:I:D:T:DT",
+  "Composite": false
 }

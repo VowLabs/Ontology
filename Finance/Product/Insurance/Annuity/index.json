@@ -1,5 +1,7 @@
 {
   "Name": "Annuity",
+  "Collection": false,
   "Description": "Contract providing payments under specified terms, including lifetime or fixed-period income. Retirement use is an additional characteristic.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

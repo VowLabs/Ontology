@@ -1,5 +1,7 @@
 {
   "Name": "Closed-end fund",
+  "Collection": false,
   "Description": "Interests in a closed-ended investment fund.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

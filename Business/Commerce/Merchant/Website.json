@@ -1,5 +1,7 @@
 {
   "Name": "Website",
+  "Collection": false,
   "Question": "What is the website?",
-  "Type": "S:I:D:T:URL"
+  "Type": "S:I:D:T:URL",
+  "Composite": false
 }

@@ -1,5 +1,7 @@
 {
   "Name": "Electronic money account",
+  "Collection": false,
   "Description": "Account holding issued electronic money for payments; not inherently a bank deposit or a cryptoasset.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

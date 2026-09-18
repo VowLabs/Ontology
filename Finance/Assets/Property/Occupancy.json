@@ -1,5 +1,6 @@
 {
   "Name": "Occupancy",
+  "Collection": false,
   "Question": "How is this property occupied?",
   "Type": "S:I:D:T:S",
   "Choices": [
@@ -7,5 +8,6 @@
     "rented",
     "vacant",
     "other"
-  ]
+  ],
+  "Composite": false
 }

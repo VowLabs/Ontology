@@ -1,5 +1,7 @@
 {
   "Name": "Issue date",
+  "Collection": false,
   "Question": "When was this document issued?",
-  "Type": "S:I:D:T:DT"
+  "Type": "S:I:D:T:DT",
+  "Composite": false
 }

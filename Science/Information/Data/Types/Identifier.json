@@ -1,6 +1,8 @@
 {
   "Name": "Identifier",
+  "Collection": false,
   "Description": "Text preserves leading zeros. Pair external identifiers with a scheme and issuer.",
   "ValueType": "string",
-  "MaxLength": 256
+  "MaxLength": 256,
+  "Composite": false
 }

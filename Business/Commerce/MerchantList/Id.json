@@ -1,5 +1,7 @@
 {
   "Name": "List identifier",
+  "Collection": false,
   "Question": "What is the list identifier?",
-  "Type": "S:I:D:T:ID"
+  "Type": "S:I:D:T:ID",
+  "Composite": false
 }

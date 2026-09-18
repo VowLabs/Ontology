@@ -1,5 +1,6 @@
 {
   "Name": "Merchant enrollment",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -13,5 +14,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "Enrollment of a merchant in a project or program."
+  "Description": "Enrollment of a merchant in a project or program.",
+  "Composite": true
 }

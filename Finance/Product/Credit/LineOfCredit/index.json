@@ -1,5 +1,7 @@
 {
   "Name": "Line of credit",
+  "Collection": false,
   "Description": "Facility allowing borrowing up to an agreed limit, including overdrafts, home-equity lines and margin credit. Card facilities have their own categories.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

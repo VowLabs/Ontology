@@ -1,0 +1,7 @@
+{
+  "Name": "Electronic mail",
+  "Collection": true,
+  "Question": "What is the email address?",
+  "Type": "S:I:D:T:EM",
+  "Composite": false
+}

@@ -1,5 +1,6 @@
 {
   "Name": "Wallet address",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P",
@@ -12,5 +13,6 @@
     "A": {
       "$ref": "./Address.json"
     }
-  }
+  },
+  "Composite": true
 }

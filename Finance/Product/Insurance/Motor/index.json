@@ -1,5 +1,7 @@
 {
   "Name": "Motor insurance",
+  "Collection": false,
   "Description": "Vehicle-related coverage that may combine property and liability protection.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

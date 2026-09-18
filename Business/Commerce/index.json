@@ -1,5 +1,6 @@
 {
   "Name": "Commerce",
+  "Collection": false,
   "Children": {
     "M": {
       "$ref": "./Merchant/index.json"
@@ -76,5 +77,6 @@
     "OE": {
       "$ref": "./OrderEvent/index.json"
     }
-  }
+  },
+  "Composite": false
 }

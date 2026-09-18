@@ -1,5 +1,7 @@
 {
   "Name": "Scheme",
+  "Collection": false,
   "Question": "Which identifier scheme is this?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

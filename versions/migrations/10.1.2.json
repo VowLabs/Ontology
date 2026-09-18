@@ -1,0 +1,6 @@
+{
+  "To": "10.2.0",
+  "Prefixes": {},
+  "SubjectTypes": {},
+  "Description": "Expose delegation URL and scope in the canonical boundary definition instead of a private registry. Answer codes and stored values are unchanged."
+}

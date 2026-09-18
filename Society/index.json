@@ -1,5 +1,17 @@
 {
   "Name": "Society",
-  "Description": "Open for community-maintained extensions.",
-  "Children": {}
+  "Collection": false,
+  "Description": "Collective life, institutions, communities, human culture and services people use.",
+  "Children": {
+    "U": {
+      "$ref": "./Humanities/index.json"
+    },
+    "SV": {
+      "$ref": "./Services/index.json"
+    },
+    "EN": {
+      "$ref": "./Endorsement/index.json"
+    }
+  },
+  "Composite": false
 }

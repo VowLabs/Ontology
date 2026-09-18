@@ -1,5 +1,6 @@
 {
   "Name": "Accessibility need",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P",
@@ -9,5 +10,6 @@
     "N": {
       "$ref": "./Need.json"
     }
-  }
+  },
+  "Composite": false
 }

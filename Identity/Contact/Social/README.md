@@ -1,8 +1,8 @@
-# Online account
+# Social media
 
 Canonical code: `I:C:SM`. Definition: [index.json](index.json).
 
-An online account pairs a service ID with the subject’s identifier on that service. Shared service names, icons and URL templates belong to S:T:SV; usernames and phone identifiers belong to this record.
+Social media is a contact method pairing a service ID with the subject’s identifier on that service, including messaging services. It describes how to reach the subject, not a person in their address book. Shared service names, icons and URL templates belong to S:T:SV; usernames and phone identifiers belong to this record.
 
 Parent: [Contact](../README.md).
 
@@ -10,7 +10,7 @@ Parent: [Contact](../README.md).
 
 Multiple records are permitted per subject (`Scalar: false`); each instance has its own stable record ID.
 
-Applicable subjects: [Personal (`I:P`)](../../Person/index.json), [Organization (`I:O`)](../../Organization/index.json).
+Applicable subjects: [Individual (`I:P`)](../../Person/index.json), [Organization (`I:O`)](../../Organization/index.json).
 
 The children below are optional scalar fields of one record, not subtypes. An unanswered field does not mean false, zero or not applicable.
 

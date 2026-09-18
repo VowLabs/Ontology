@@ -1,0 +1,6 @@
+{
+  "To": "10.1.0",
+  "Prefixes": {},
+  "SubjectTypes": {},
+  "Description": "Add Society Endorsement (R:EN) with required free text and an integer rating from one to three. Existing records and signatures are unchanged."
+}

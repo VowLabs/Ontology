@@ -1,5 +1,6 @@
 {
   "Name": "Order event",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -13,5 +14,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "An event in an order lifecycle."
+  "Description": "An event in an order lifecycle.",
+  "Composite": true
 }

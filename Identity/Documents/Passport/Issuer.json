@@ -1,5 +1,7 @@
 {
   "Name": "Issuing authority",
+  "Collection": false,
   "Question": "Which authority issued this document?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

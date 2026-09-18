@@ -1,5 +1,7 @@
 {
   "Name": "Substance",
+  "Collection": false,
   "Question": "Which substance does this record concern?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

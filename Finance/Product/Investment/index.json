@@ -1,5 +1,6 @@
 {
   "Name": "Investment",
+  "Collection": false,
   "Description": "Instruments and pooled investment interests. Classify the instrument separately from the account or wrapper holding it.",
   "Children": {
     "EQ": {
@@ -17,5 +18,6 @@
     "ST": {
       "$ref": "./Structured/index.json"
     }
-  }
+  },
+  "Composite": false
 }

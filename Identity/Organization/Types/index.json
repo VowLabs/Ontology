@@ -1,0 +1,56 @@
+{
+  "Name": "Organization types",
+  "Collection": false,
+  "Composite": false,
+  "Description": "Legal and organizational forms. Choice labels reuse the merchant-onboarding vocabulary; Foundation and generic Corporation cover additional forms.",
+  "Children": {
+    "SP": {
+      "$ref": "./SP.json"
+    },
+    "LLC": {
+      "$ref": "./LLC.json"
+    },
+    "GP": {
+      "$ref": "./GP.json"
+    },
+    "LP": {
+      "$ref": "./LP.json"
+    },
+    "LLP": {
+      "$ref": "./LLP.json"
+    },
+    "SC": {
+      "$ref": "./SC.json"
+    },
+    "CC": {
+      "$ref": "./CC.json"
+    },
+    "PRIVATE": {
+      "$ref": "./PRIVATE.json"
+    },
+    "PUBLIC": {
+      "$ref": "./PUBLIC.json"
+    },
+    "NP": {
+      "$ref": "./NP.json"
+    },
+    "COOP": {
+      "$ref": "./COOP.json"
+    },
+    "TR": {
+      "$ref": "./TR.json"
+    },
+    "GOV": {
+      "$ref": "./GOV.json"
+    },
+    "UA": {
+      "$ref": "./UA.json"
+    },
+    "FD": {
+      "$ref": "./FD.json"
+    },
+    "CORP": {
+      "$ref": "./CORP.json"
+    }
+  }
+}

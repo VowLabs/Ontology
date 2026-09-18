@@ -1,5 +1,6 @@
 {
   "Name": "Vehicle",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P",
@@ -24,5 +25,6 @@
     "USE": {
       "$ref": "./Use.json"
     }
-  }
+  },
+  "Composite": true
 }

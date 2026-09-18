@@ -1,5 +1,6 @@
 {
   "Name": "Passport",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P"
@@ -28,5 +29,6 @@
     "NA": {
       "$ref": "./Nationality.json"
     }
-  }
+  },
+  "Composite": true
 }

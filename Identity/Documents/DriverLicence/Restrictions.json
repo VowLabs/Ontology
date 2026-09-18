@@ -1,5 +1,7 @@
 {
   "Name": "Restrictions and endorsements",
+  "Collection": false,
   "Question": "Which restrictions or endorsements are recorded?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

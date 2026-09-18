@@ -1,5 +1,6 @@
 {
   "Name": "Value types",
+  "Collection": false,
   "Children": {
     "S": {
       "$ref": "./String.json"
@@ -28,5 +29,6 @@
     "URL": {
       "$ref": "./URL.json"
     }
-  }
+  },
+  "Composite": false
 }

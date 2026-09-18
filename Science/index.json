@@ -1,5 +1,6 @@
 {
   "Name": "Science",
+  "Collection": false,
   "Description": "Open for community-maintained extensions.",
   "Children": {
     "T": {
@@ -11,5 +12,6 @@
     "G": {
       "$ref": "./Geography/index.json"
     }
-  }
+  },
+  "Composite": false
 }

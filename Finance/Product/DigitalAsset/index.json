@@ -1,5 +1,6 @@
 {
   "Name": "Native digital asset",
+  "Collection": false,
   "Description": "Natively digital instruments not better described by another product category. A tokenized share, bond, deposit or fund keeps its economic product classification; tokenization is a representation characteristic.",
   "Children": {
     "CR": {
@@ -8,5 +9,6 @@
     "ST": {
       "$ref": "./Stablecoin/index.json"
     }
-  }
+  },
+  "Composite": false
 }

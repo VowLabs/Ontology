@@ -1,5 +1,7 @@
 {
   "Name": "Address",
+  "Collection": false,
   "Question": "What is the property\u2019s address?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

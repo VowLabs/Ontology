@@ -1,5 +1,6 @@
 {
   "Name": "Employment",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P"
@@ -14,5 +15,6 @@
     "S": {
       "$ref": "./StartDate.json"
     }
-  }
+  },
+  "Composite": true
 }

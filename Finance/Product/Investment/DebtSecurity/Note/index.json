@@ -1,5 +1,7 @@
 {
   "Name": "Note",
+  "Collection": false,
   "Description": "Debt notes other than products more specifically classified as structured investments.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

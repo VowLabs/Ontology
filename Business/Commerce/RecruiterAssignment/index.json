@@ -1,5 +1,6 @@
 {
   "Name": "Recruiter assignment",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -13,5 +14,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "Assignment of a merchant to a recruiter."
+  "Description": "Assignment of a merchant to a recruiter.",
+  "Composite": true
 }

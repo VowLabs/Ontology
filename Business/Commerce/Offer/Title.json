@@ -1,5 +1,7 @@
 {
   "Name": "Title",
+  "Collection": false,
   "Question": "What is the title?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

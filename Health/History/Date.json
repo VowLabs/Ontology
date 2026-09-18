@@ -1,5 +1,7 @@
 {
   "Name": "Diagnosis date",
+  "Collection": false,
   "Question": "When was this condition diagnosed, if known?",
-  "Type": "S:I:D:T:DT"
+  "Type": "S:I:D:T:DT",
+  "Composite": false
 }

@@ -1,5 +1,6 @@
 {
   "Name": "Food preference",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P",
@@ -12,5 +13,6 @@
     "P": {
       "$ref": "./Preference.json"
     }
-  }
+  },
+  "Composite": true
 }

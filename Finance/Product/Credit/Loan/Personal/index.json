@@ -1,5 +1,7 @@
 {
   "Name": "Personal loan",
+  "Collection": false,
   "Description": "Loan for personal use, excluding the more specific mortgage, vehicle and education categories.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

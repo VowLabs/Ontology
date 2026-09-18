@@ -1,7 +1,9 @@
 {
   "Name": "Year built",
+  "Collection": false,
   "Question": "In what year was this property built?",
   "Type": "S:I:D:T:I",
   "Minimum": 1,
-  "Maximum": 2200
+  "Maximum": 2200,
+  "Composite": false
 }

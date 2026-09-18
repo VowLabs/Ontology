@@ -1,5 +1,7 @@
 {
   "Name": "Business name",
+  "Collection": false,
   "Question": "What is the business name?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

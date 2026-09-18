@@ -1,5 +1,7 @@
 {
   "Name": "Notes",
+  "Collection": false,
   "Question": "What else should a practitioner know about this condition?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

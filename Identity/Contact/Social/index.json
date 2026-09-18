@@ -1,5 +1,6 @@
 {
-  "Name": "Online account",
+  "Name": "Social media",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P",
@@ -12,5 +13,6 @@
     "ID": {
       "$ref": "./Handle.json"
     }
-  }
+  },
+  "Composite": true
 }

@@ -1,6 +1,8 @@
 {
   "Name": "Email address",
+  "Collection": false,
   "ValueType": "string",
   "Format": "email",
-  "MaxLength": 254
+  "MaxLength": 254,
+  "Composite": false
 }

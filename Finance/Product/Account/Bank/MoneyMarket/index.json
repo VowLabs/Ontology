@@ -1,5 +1,7 @@
 {
   "Name": "Money market deposit account",
+  "Collection": false,
   "Description": "Deposit account; distinct from a money market investment fund.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

@@ -1,5 +1,6 @@
 {
   "Name": "Information system operations",
+  "Collection": false,
   "Children": {
     "CFG": {
       "$ref": "./Configuration/index.json"
@@ -28,5 +29,6 @@
     "MSG": {
       "$ref": "./Message/index.json"
     }
-  }
+  },
+  "Composite": false
 }

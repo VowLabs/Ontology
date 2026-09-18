@@ -1,0 +1,6 @@
+{
+  "To": "10.1.2",
+  "Prefixes": {},
+  "SubjectTypes": {},
+  "Description": "Label issuing country and region separately in the driver licence display format. Values, codes and signatures are unchanged."
+}

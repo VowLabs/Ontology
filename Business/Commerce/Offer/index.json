@@ -1,5 +1,6 @@
 {
   "Name": "Offer",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -28,5 +29,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "A merchant proposal to supply goods or services; separate from the underlying product."
+  "Description": "A merchant proposal to supply goods or services; separate from the underlying product.",
+  "Composite": true
 }

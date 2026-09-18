@@ -1,5 +1,7 @@
 {
   "Name": "Bond",
+  "Collection": false,
   "Description": "Bond instruments; issuer sector, security, convertibility and coupon basis are additional characteristics.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

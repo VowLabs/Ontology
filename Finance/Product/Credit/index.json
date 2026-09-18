@@ -1,5 +1,6 @@
 {
   "Name": "Credit",
+  "Collection": false,
   "Description": "Borrowing and financing products, regardless of whether the provider is a bank.",
   "Children": {
     "CA": {
@@ -20,5 +21,6 @@
     "TF": {
       "$ref": "./TradeFinance/index.json"
     }
-  }
+  },
+  "Composite": false
 }

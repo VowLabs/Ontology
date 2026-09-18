@@ -1,5 +1,6 @@
 {
   "Name": "Equity",
+  "Collection": false,
   "Description": "Ownership interests in an enterprise, including public and private equity.",
   "Children": {
     "ST": {
@@ -8,5 +9,6 @@
     "DR": {
       "$ref": "./DepositaryReceipt/index.json"
     }
-  }
+  },
+  "Composite": false
 }

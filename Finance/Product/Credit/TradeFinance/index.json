@@ -1,5 +1,7 @@
 {
   "Name": "Trade and receivables finance",
+  "Collection": false,
   "Description": "Products financing trade or receivables, including factoring, invoice finance and letters of credit.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

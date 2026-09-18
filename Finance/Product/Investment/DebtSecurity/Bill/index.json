@@ -1,5 +1,7 @@
 {
   "Name": "Bill",
+  "Collection": false,
   "Description": "Short-term debt security commonly issued at a discount, including treasury bills.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

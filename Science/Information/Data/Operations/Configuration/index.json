@@ -1,5 +1,6 @@
 {
   "Name": "Application configuration",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -13,5 +14,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "Internal operational data; classification does not make it shareable."
+  "Description": "Internal operational data; classification does not make it shareable.",
+  "Composite": true
 }

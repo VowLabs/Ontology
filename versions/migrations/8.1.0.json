@@ -1,0 +1,6 @@
+{
+  "To": "8.2.0",
+  "Prefixes": {},
+  "SubjectTypes": {},
+  "Description": "Add Society / Services (R:SV) for individual and household customers and Business / Services (B:SV) for business and organizational customers. Existing codes, values, subject types, provider datasets and signatures are unchanged."
+}

@@ -1,5 +1,7 @@
 {
   "Name": "Depositary receipt",
+  "Collection": false,
   "Description": "Receipt representing an interest in underlying shares, including ADRs and GDRs.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

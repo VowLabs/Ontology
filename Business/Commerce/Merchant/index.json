@@ -1,5 +1,6 @@
 {
   "Name": "Merchant",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -22,5 +23,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "A person or organization acting as a seller. Membership in a directory does not attest legal identity."
+  "Description": "A person or organization acting as a seller. Membership in a directory does not attest legal identity.",
+  "Composite": true
 }

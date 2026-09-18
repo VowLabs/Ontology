@@ -1,8 +1,10 @@
 {
   "Name": "Information",
+  "Collection": false,
   "Children": {
     "D": {
       "$ref": "./Data/index.json"
     }
-  }
+  },
+  "Composite": false
 }

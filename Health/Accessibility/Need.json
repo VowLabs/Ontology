@@ -1,5 +1,7 @@
 {
   "Name": "Need",
+  "Collection": true,
   "Question": "What accessibility accommodation do you need?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

@@ -1,5 +1,6 @@
 {
   "Name": "Assets",
+  "Collection": false,
   "Description": "Open for community-maintained extensions.",
   "Children": {
     "V": {
@@ -8,5 +9,6 @@
     "P": {
       "$ref": "./Property/index.json"
     }
-  }
+  },
+  "Composite": false
 }

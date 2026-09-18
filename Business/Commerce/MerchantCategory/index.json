@@ -1,5 +1,6 @@
 {
   "Name": "Merchant category",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -13,5 +14,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "A classification of merchant business activity."
+  "Description": "A classification of merchant business activity.",
+  "Composite": true
 }

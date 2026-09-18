@@ -1,5 +1,6 @@
 {
   "Name": "Order line",
+  "Collection": true,
   "Children": {
     "ID": {
       "$ref": "./Id.json"
@@ -13,5 +14,6 @@
     "I:P",
     "I:O"
   ],
-  "Description": "One line of an order or checkout."
+  "Description": "One line of an order or checkout.",
+  "Composite": true
 }

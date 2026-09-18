@@ -1,5 +1,7 @@
 {
   "Name": "Acceptance URL",
+  "Collection": false,
   "Question": "What is the acceptance url?",
-  "Type": "S:I:D:T:URL"
+  "Type": "S:I:D:T:URL",
+  "Composite": false
 }

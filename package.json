@@ -1,6 +1,6 @@
 {
   "name": "@vowlabs/ontology",
-  "version": "0.1.12",
+  "version": "0.1.23",
   "private": true,
   "type": "module",
   "description": "Canonical VowLabs ontology and read-only HTTP API.",

@@ -1,5 +1,6 @@
 {
   "Name": "External identifier",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P",
@@ -15,5 +16,6 @@
     "IS": {
       "$ref": "./Issuer.json"
     }
-  }
+  },
+  "Composite": true
 }

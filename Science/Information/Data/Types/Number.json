@@ -1,4 +1,6 @@
 {
   "Name": "Number",
-  "ValueType": "number"
+  "Collection": false,
+  "ValueType": "number",
+  "Composite": false
 }

@@ -1,5 +1,7 @@
 {
   "Name": "Reaction",
+  "Collection": false,
   "Question": "What reaction have you experienced, if any?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

@@ -1,5 +1,7 @@
 {
   "Name": "Wallet address",
+  "Collection": false,
   "Question": "What is the wallet address?",
-  "Type": "S:I:D:T:ID"
+  "Type": "S:I:D:T:ID",
+  "Composite": false
 }

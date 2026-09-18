@@ -1,5 +1,7 @@
 {
   "Name": "Prepaid card",
+  "Collection": false,
   "Description": "Card used to spend prefunded value.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

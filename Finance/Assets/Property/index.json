@@ -1,5 +1,6 @@
 {
   "Name": "Property",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P",
@@ -18,5 +19,6 @@
     "Y": {
       "$ref": "./YearBuilt.json"
     }
-  }
+  },
+  "Composite": true
 }

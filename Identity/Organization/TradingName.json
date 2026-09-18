@@ -1,5 +1,7 @@
 {
   "Name": "Trading name",
+  "Collection": false,
   "Question": "What trading name does the organization use?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

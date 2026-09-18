@@ -1,5 +1,7 @@
 {
   "Name": "Country of birth",
+  "Collection": false,
   "Question": "In which country were you born?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

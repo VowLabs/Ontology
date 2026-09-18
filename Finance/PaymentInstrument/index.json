@@ -1,5 +1,6 @@
 {
   "Name": "Payment instrument reference",
+  "Collection": true,
   "Scalar": false,
   "Subjects": [
     "I:P",
@@ -15,5 +16,6 @@
     "L4": {
       "$ref": "./LastFour.json"
     }
-  }
+  },
+  "Composite": true
 }

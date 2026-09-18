@@ -8,12 +8,12 @@
   state when no finer subclasses exist. Update the parent README when adding a
   child. JSON alone is not sufficient documentation.
 - Keep READMEs synchronized whenever a definition changes. Follow
-  [_support/GOVERNANCE.md](_support/GOVERNANCE.md) for stable codes, versioning,
+  [_support/GOVERNANCE.md](docs/GOVERNANCE.md) for stable codes, versioning,
   migration and validation requirements.
 - Record `tags` contain only distinct, nonempty canonical codes resolving to
   points in the record's ontology version. Free-text labels, display paths,
   unknown codes and wildcard expressions are not tags. See the
-  [protocol guide](_support/protocol/README.md#canonical-record-tags).
+  [protocol guide](docs/protocol/README.md#canonical-record-tags).
 - Do not create commits without the user's explicit permission. A request to
   implement, fix, test or finish work does not authorize a commit. Changes to
   this instruction remain uncommitted unless separately authorized.

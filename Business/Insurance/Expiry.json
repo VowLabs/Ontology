@@ -1,5 +1,7 @@
 {
   "Name": "Expiry date",
+  "Collection": false,
   "Question": "When does this policy expire?",
-  "Type": "S:I:D:T:DT"
+  "Type": "S:I:D:T:DT",
+  "Composite": false
 }

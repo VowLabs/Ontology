@@ -1,5 +1,7 @@
 {
   "Name": "Account identifier",
+  "Collection": false,
   "Question": "What is the account identifier?",
-  "Type": "S:I:D:T:ID"
+  "Type": "S:I:D:T:ID",
+  "Composite": false
 }

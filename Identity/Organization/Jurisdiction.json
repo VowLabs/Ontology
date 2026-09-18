@@ -1,5 +1,7 @@
 {
   "Name": "Registration jurisdiction",
+  "Collection": false,
   "Question": "Where is the organization registered?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

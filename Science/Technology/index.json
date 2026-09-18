@@ -1,9 +1,11 @@
 {
   "Name": "Technology",
+  "Collection": false,
   "Description": "Open for community-maintained extensions.",
   "Children": {
     "SV": {
       "$ref": "./Service/index.json"
     }
-  }
+  },
+  "Composite": false
 }

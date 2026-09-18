@@ -1,5 +1,7 @@
 {
   "Name": "Private fund",
+  "Collection": false,
   "Description": "Privately offered pooled investment interests, including private equity, venture capital, private credit and hedge funds.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

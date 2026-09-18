@@ -1,5 +1,7 @@
 {
   "Name": "Food or ingredient",
+  "Collection": false,
   "Question": "Which food, ingredient, or cuisine does this concern?",
-  "Type": "S:I:D:T:S"
+  "Type": "S:I:D:T:S",
+  "Composite": false
 }

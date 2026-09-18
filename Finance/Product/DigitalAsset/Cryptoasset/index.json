@@ -1,5 +1,7 @@
 {
   "Name": "Unbacked cryptoasset",
+  "Collection": false,
   "Description": "Native cryptoasset without a contractual claim on a reserve asset or issuer, such as bitcoin.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

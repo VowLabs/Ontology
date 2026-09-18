@@ -1,5 +1,7 @@
 {
   "Name": "International phone number",
+  "Collection": false,
   "ValueType": "string",
-  "Pattern": "^\\+[1-9][0-9]{1,14}$"
+  "Pattern": "^\\+[1-9][0-9]{1,14}$",
+  "Composite": false
 }

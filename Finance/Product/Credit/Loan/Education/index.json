@@ -1,5 +1,7 @@
 {
   "Name": "Education loan",
+  "Collection": false,
   "Description": "Loan to finance education, also called a student loan.",
-  "Children": {}
+  "Children": {},
+  "Composite": false
 }

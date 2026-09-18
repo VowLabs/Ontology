@@ -1,15 +1,31 @@
 {
   "Name": "Contact",
-  "Description": "Open for community-maintained extensions.",
+  "Collection": true,
+  "Description": "Methods by which a person or organization can be contacted. These are communication channels, not individuals in an address book.",
   "Children": {
-    "P": {
-      "$ref": "./Points/index.json"
-    },
     "SM": {
       "$ref": "./Social/index.json"
     },
-    "EC": {
-      "$ref": "./Emergency/index.json"
+    "EM": {
+      "$ref": "./Email.json"
+    },
+    "PH": {
+      "$ref": "./Phone.json"
+    },
+    "URL": {
+      "$ref": "./Website.json"
+    },
+    "BOOK": {
+      "$ref": "./Booking.json"
+    },
+    "AD": {
+      "$ref": "./Address.json"
     }
-  }
+  },
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Composite": false
 }
