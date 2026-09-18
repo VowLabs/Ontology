@@ -8,7 +8,8 @@ only the parent-assigned boundary; it has no local child definitions or rows.
 The absence of `Children` does not mean the foreign branch is empty.
 
 The public `Delegation` object in [this boundary definition](index.json)
-reserves `S:G` and descendants plus `countries` and `states` for Geo. Geography
+reserves `S:G` and descendants for Geo. Dataset declarations are obtained from
+the authoritative Geo catalogue; none are declared in this boundary. Geography
 covers places, addresses, countries and political subdivisions. Address roles
 and formats are distinct from the places they identify. Examples include a
 shipping-address record and a country reference; they remain separate from
@@ -28,7 +29,7 @@ a local upstream. Definition responses and expanded catalogues retain
 `delegation: "geo"` and `authoritativeUrl` on delegated nodes.
 
 `Delegation` contains the public service `url`, authority `id` and `name`, source
-`repository`, and parent-assigned `datasets`. The prefix derives from this node’s
+`repository`. The prefix derives from this node’s
 canonical path; the compatibility version derives from the ontology root.
 The catalogue’s delegation index is generated from these public definitions,
 not maintained separately. Expanded offline snapshots preserve this declaration.

@@ -34,7 +34,11 @@ Prefixes match code segments: `S:G` and `S:G:...` belong to Geo; `S:GG` does not
 Mixed `codes` queries and collections resolve each delegated definition through
 its authority. Parent listings contain delegation boundary descriptors. Global
 search covers local nodes and boundary descriptors only and states this scope.
-`/v1/datasets` lists delegated metadata descriptors without requiring local rows.
+`/v1/datasets` discovers delegated datasets from authoritative catalogues.
+The parent declares no dataset names or descriptors. Each discovered dataset
+must reference a definition within its authority’s assigned prefix, and must
+not overwrite a local or another authority’s dataset. Discovery requires the
+upstream service; an outage is reported rather than hiding its datasets.
 
 ## Foreign responses
 
@@ -62,7 +66,7 @@ uses version 2 and retains the previous US state IDs.
 The default `/v1/catalogue` describes the local tree and delegation boundaries;
 `meta.complete` is false. `/v1/catalogue?expand=delegations` explicitly queries
 foreign `/v1/catalogue` endpoints and returns an assembled snapshot. Likewise,
-`_support/tools/build.mjs` fetches Geo when generating the shared NokNok offline
+`NokNok/scripts/build-ontology.mjs` fetches Geo when generating the shared NokNok offline
 bundle. A failure aborts generation; it never substitutes an empty branch.
 Snapshots record upstream revision and fetch time. The importer rejects foreign
 codes outside their assigned prefix, missing children, conflicting dataset
@@ -72,7 +76,7 @@ artifact is not committed as Ontology source or served as live authority.
 ## Ownership and compatibility
 
 The `Delegation` object in each canonical boundary definition reserves its
-path-derived prefix and named datasets. Its `url` is directly discoverable by
+path-derived prefix. Its `url` is directly discoverable by
 clients fetching the definition; no separate private registry is required.
 `GEO_ONTOLOGY_URL` overrides Geo's URL. Development defaults to the local Geo
 service on port 24109; production uses the public HTTPS registry URL. Production

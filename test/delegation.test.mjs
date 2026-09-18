@@ -2,10 +2,10 @@ import {test} from 'node:test';
 import assert from 'node:assert/strict';
 import {createServer} from 'node:http';
 import {once} from 'node:events';
-import {loadCatalogue} from '../catalogue.mjs';
-import {createOntologyServer} from '../server/api.mjs';
+import {loadCatalogue} from '../src/catalogue.mjs';
+import {createOntologyServer} from '../src/server/api.mjs';
 import {foreignFixture} from './delegation-fixture.mjs';
-import {hydrateCatalogue} from '../delegation.mjs';
+import {hydrateCatalogue} from '../src/delegation.mjs';
 
 const start = async server => { server.listen(0, '127.0.0.1'); await once(server, 'listening'); return `http://127.0.0.1:${server.address().port}`; };
 const stop = server => new Promise(resolve => { server.closeAllConnections(); server.close(resolve); });
@@ -67,4 +67,26 @@ test('foreign offline snapshots cannot overwrite local definitions',async()=>{
  const catalogue=loadCatalogue();
  const fetchImpl=async()=>new Response(JSON.stringify({data:{version:catalogue.version,nodes:{'S:G':{Code:'S:G',Name:'Geography',Collection:false,Composite:false},'I:P':{Code:'I:P',Name:'Hijacked',Collection:false,Composite:false}},datasets:{}},meta:{ontologyVersion:catalogue.version}}));
  await assert.rejects(hydrateCatalogue(catalogue,{fetchImpl}),/namespace/);
+});
+
+test('authoritative datasets are discovered without parent declarations and cannot collide', async () => {
+ const catalogue = loadCatalogue();
+ assert.equal(catalogue.nodes['S:G'].Delegation.datasets, undefined);
+ assert.equal(catalogue.datasets.countries, undefined);
+ const node = {Code:'S:G',Name:'Geography',Collection:false,Composite:false};
+ let datasets = {places:{id:'places',definitionCode:'S:G',version:1,records:[]}};
+ const fetchImpl = async () => new Response(JSON.stringify({data:{version:catalogue.version,nodes:{'S:G':node},datasets},meta:{ontologyVersion:catalogue.version}}));
+ const hydrated = await hydrateCatalogue(catalogue,{fetchImpl});
+ assert.deepEqual(hydrated.datasets.places,datasets.places);
+ const server = createOntologyServer({catalogue,fetchImpl});
+ const base = await start(server);
+ try {
+  const response = await fetch(base+'/v1/datasets');
+  assert.equal(response.status,200);
+  assert.ok((await response.json()).data.some(row=>row.id==='places'));
+ } finally { await stop(server); }
+ datasets = {services:{id:'services',definitionCode:'S:G',version:1,records:[]}};
+ await assert.rejects(hydrateCatalogue(catalogue,{fetchImpl}),/Invalid delegated dataset/);
+ datasets = {places:{id:'places',definitionCode:'I:P',version:1,records:[]}};
+ await assert.rejects(hydrateCatalogue(catalogue,{fetchImpl}),/Invalid delegated dataset/);
 });

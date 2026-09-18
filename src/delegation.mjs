@@ -63,9 +63,8 @@ export async function hydrateCatalogue(catalogue, options = {}) {
       if (!ownsCode(delegation, code) || node.Code !== code || !node.Name || Object.values(node.Children || {}).some(child => !ownsCode(delegation, child) || !snapshot.nodes[child])) throw Error('Delegated catalogue escaped its assigned namespace');
     }
     for (const [id, dataset] of Object.entries(snapshot.datasets)) {
-      if (!delegation.datasets[id] || dataset.definitionCode !== delegation.datasets[id].definitionCode || !Number.isInteger(dataset.version) || dataset.version < 1 || !Array.isArray(dataset.records) || new Set(dataset.records.map(row => row.id)).size !== dataset.records.length || dataset.records.some(row => !row.id || !row.name)) throw Error('Invalid delegated dataset');
+      if (!/^[a-z][a-z0-9-]*$/.test(id) || !dataset || dataset.id !== id || Object.hasOwn(result.datasets, id) || !ownsCode(delegation, dataset.definitionCode) || !snapshot.nodes[dataset.definitionCode] || !Number.isInteger(dataset.version) || dataset.version < 1 || !Array.isArray(dataset.records) || new Set(dataset.records.map(row => row.id)).size !== dataset.records.length || dataset.records.some(row => !row.id || !row.name)) throw Error('Invalid delegated dataset');
     }
-    if (Object.keys(delegation.datasets).some(id => !snapshot.datasets[id])) throw Error('Missing delegated dataset');
     Object.assign(result.nodes, snapshot.nodes);
     result.nodes[delegation.prefix].Delegation=structuredClone(catalogue.nodes[delegation.prefix].Delegation);
     Object.assign(result.datasets, snapshot.datasets);

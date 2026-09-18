@@ -30,8 +30,8 @@ define stable canonical codes and are unique within their parent. A definition n
 
 The root contains `index.json`, this README and the domain directories. Each
 domain directory is a branch connected through the root's `Children` references.
-Supporting material lives in `_support/`: collection definitions, protocol
-specifications, storage mappings, tooling and contribution guidelines. Supporting
+Supporting material lives in `src/`, `test/`, `docs/` and `versions/`: runtime
+code, tests, protocol specifications, contribution guidelines and history. Supporting
 files are not ontology nodes and do not contribute code segments. Reference data
 lives separately in `data/`; see the [dataset guide](data/README.md).
 
@@ -139,9 +139,10 @@ Record IDs, not array offsets, identify repeated objects. Scalar limits apply
 per subject. There is no claim that a subject ID is a globally verified identity
 or that its controller is an authorized company representative.
 
-[collections](_support/collections/index.json) defines starter collections for
+[Application request presets](../../NokNok/examples/request-presets/README.md) define starter collections for
 checkout, food service, medical intake, motor insurance and business onboarding.
-Collections reference exact leaf codes. Applications can expand a collection
+The ontology catalogue exposes an empty collections field for compatibility;
+applications load their own presets. Collections reference exact leaf codes. Applications can expand a collection
 into explicit fields; collection membership does not grant access to user data.
 
 See [protocol documentation](docs/protocol/README.md) for guidance on using codes in application-owned
@@ -162,7 +163,7 @@ files, type references, and collection fields. API tests cover lookups, shared
 records, pagination, errors, caching, and standalone operation.
 
 Applications can retrieve the compiled catalogue through `GET /v1/catalogue`
-or load it with the repository's `_support/catalogue.mjs` module. Application
+or load it with the repository's `src/catalogue.mjs` module. Application
 asset generation and deployment belong to the consuming project's build process.
 
 ## Record display and custom choices

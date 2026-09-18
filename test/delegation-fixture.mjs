@@ -1,6 +1,6 @@
 import {createServer} from 'node:http';
-import {loadCatalogue} from '../catalogue.mjs';
-import {createOntologyServer} from '../server/api.mjs';
+import {loadCatalogue} from '../src/catalogue.mjs';
+import {createOntologyServer} from '../src/server/api.mjs';
 
 // A foreign HTTP authority, not an imported branch of the active catalogue.
 export function foreignFixture() {

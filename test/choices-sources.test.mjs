@@ -3,8 +3,8 @@ import assert from 'node:assert/strict';
 import {cpSync,mkdtempSync,rmSync,readFileSync,writeFileSync} from 'node:fs';
 import {join} from 'node:path';
 import {tmpdir} from 'node:os';
-import {loadCatalogue,ontologyRoot} from '../catalogue.mjs';
-import {resolveChoices} from '../choices.mjs';
+import {loadCatalogue,ontologyRoot} from '../src/catalogue.mjs';
+import {resolveChoices} from '../src/choices.mjs';
 test('branch choices resolve recursively and reject missing, empty and cyclic targets',()=>{
  const nodes={field:{Choices:'B'},B:{Children:{one:'B:G',two:'B:T'}},'B:G':{Children:{leaf:'B:G:L'}},'B:G:L':{Children:{}},'B:T':{Children:{}}};
  assert.deepEqual(resolveChoices(nodes,'field'),['B:G:L','B:T']);
@@ -15,7 +15,7 @@ test('branch choices resolve recursively and reject missing, empty and cyclic ta
 test('active catalogue contains only the Geography delegation boundary',()=>{
  const c=loadCatalogue();
  assert.equal(Object.keys(c.nodes).filter(code=>code.startsWith('S:G:')).length,0);
- assert.equal(c.datasets.states.records,undefined);
+ assert.equal(c.datasets.states,undefined);
  assert.equal(c.sources.geo,undefined);
 });
 test('catalogue rejects invalid choice references and branch custom text escapes',()=>{

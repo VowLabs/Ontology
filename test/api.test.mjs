@@ -1,8 +1,8 @@
 import {foreignFixture} from './delegation-fixture.mjs';
 import { test, before, after } from 'node:test';
 import assert from 'node:assert/strict';
-import { createOntologyServer } from '../server/api.mjs';
-import { loadCatalogue } from '../catalogue.mjs';
+import { createOntologyServer } from '../src/server/api.mjs';
+import { loadCatalogue } from '../src/catalogue.mjs';
 import { cpSync, mkdtempSync, rmSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
@@ -51,8 +51,7 @@ test('choices, collection resolution and offline catalogue', async () => {
   const catalogue = (await get('/v1/catalogue')).data;
   const field = Object.values(catalogue.nodes).find(n => Array.isArray(n.Choices));
   assert.deepEqual((await get(`/v1/definitions/${field.Code}/choices?limit=200`)).data, field.Choices.slice(0,200));
-  const collection = (await get('/v1/collections/checkout')).data;
-  assert.deepEqual(collection.definitions.map(n=>n.Code), collection.Fields);
+  assert.deepEqual((await get('/v1/collections')).data, []);
   assert.deepEqual((await get('/v1/migrations')).data, catalogue.migrations);
   assert.deepEqual(Object.keys(catalogue.nodes).sort(), Object.keys(loadCatalogue().nodes).sort());
   assert.equal(catalogue.version, loadCatalogue().version);
@@ -97,9 +96,9 @@ test('OpenAPI documents available resources',async()=> {
 test('loader and server module work in an isolated checkout without NokNok', () => {
   const directory = mkdtempSync(join(tmpdir(),'vl-ontology-'));
   try {
-    cpSync(new URL('../../',import.meta.url),directory,{recursive:true,filter:source=>!source.split('/').some(p=>['.git','node_modules'].includes(p))});
+    cpSync(new URL('../',import.meta.url),directory,{recursive:true,filter:source=>!source.split('/').some(p=>['.git','node_modules'].includes(p))});
     assert.deepEqual(loadCatalogue(directory), loadCatalogue());
-    execFileSync(process.execPath,['--input-type=module','-e',"import { createOntologyServer } from './_support/server/api.mjs'; createOntologyServer();"],{cwd:directory});
+    execFileSync(process.execPath,['--input-type=module','-e',"import { createOntologyServer } from './src/server/api.mjs'; createOntologyServer();"],{cwd:directory});
   } finally { rmSync(directory,{recursive:true,force:true}); }
 });
 

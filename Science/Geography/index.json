@@ -7,16 +7,6 @@
     "id": "geo",
     "name": "Geo",
     "repository": "https://github.com/ekkis/Geo",
-    "url": "https://geo-ekkis.vercel.app/v1/",
-    "datasets": {
-      "countries": {
-        "id": "countries",
-        "definitionCode": "S:G:CO"
-      },
-      "states": {
-        "id": "states",
-        "definitionCode": "S:G:SD"
-      }
-    }
+    "url": "https://geo-ekkis.vercel.app/v1/"
   }
 }

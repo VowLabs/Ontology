@@ -10,7 +10,7 @@ export const ontologyRoot = resolve(dirname(fileURLToPath(import.meta.url)), '..
 // Pure loader: validates canonical source without reading or writing client data.
 export function loadCatalogue(directory = ontologyRoot) {
   const root = realpathSync(directory);
-  const sourcesPath = resolve(root, '_support/sources/index.json');
+  const sourcesPath = resolve(root, 'data/provenance/index.json');
   const sources = existsSync(sourcesPath) ? JSON.parse(readFileSync(sourcesPath, 'utf8')) : {};
   const sourceCache = new Map();
   function validateSource(node) {
@@ -19,9 +19,9 @@ export function loadCatalogue(directory = ontologyRoot) {
     if (!provider || !/^[a-f0-9]{40}$/.test(provider.Revision) || !/^https:\/\//.test(provider.Repository)
       || typeof source.Path !== 'string' || !provider.Files?.[source.Path] || !source.Fields)
       throw Error('Invalid definition source');
-    const folder = realpathSync(resolve(root, '_support/sources', provider.Snapshot));
+    const folder = realpathSync(resolve(root, 'data/provenance', provider.Snapshot));
     const file = realpathSync(resolve(folder, source.Path));
-    if (!folder.startsWith(root + '/_support/sources/') || !file.startsWith(folder + '/')) throw Error('Escaping definition source');
+    if (!folder.startsWith(root + '/data/provenance/') || !file.startsWith(folder + '/')) throw Error('Escaping definition source');
     if (!sourceCache.has(file)) {
       const bytes = readFileSync(file);
       if (createHash('sha256').update(bytes).digest('hex') !== provider.Files[source.Path]) throw Error(`Source checksum mismatch: ${source.Path}`);
@@ -94,8 +94,7 @@ export function loadCatalogue(directory = ontologyRoot) {
     if (!grant || typeof grant !== 'object' || Array.isArray(grant)
       || !/^[a-z][a-z0-9-]*$/.test(grant.id) || Object.hasOwn(delegations,grant.id)
       || typeof grant.name !== 'string' || !grant.name || typeof grant.url !== 'string'
-      || !grant.datasets || typeof grant.datasets !== 'object' || Array.isArray(grant.datasets)
-      || Object.keys(grant).some(key=>!['id','name','url','repository','datasets'].includes(key))) throw Error('Invalid boundary delegation');
+      || Object.keys(grant).some(key=>!['id','name','url','repository'].includes(key))) throw Error('Invalid boundary delegation');
     const url=new URL(grant.url);
     if (url.protocol!=='https:' || url.username || url.password || url.search || url.hash || !url.pathname.endsWith('/')) throw Error('Invalid delegation URL');
     delegations[grant.id]={...grant,prefix,ontologyVersion:nodes[''].Version};
@@ -103,10 +102,6 @@ export function loadCatalogue(directory = ontologyRoot) {
   for (const [id, delegation] of Object.entries(delegations)) {
     if (delegation.id !== id || !/^[A-Z][A-Z0-9]*(?::[A-Z][A-Z0-9]*)*$/.test(delegation.prefix) || !nodes[delegation.prefix] || delegation.ontologyVersion !== nodes[''].Version) throw Error('Invalid delegation assignment');
     if (Object.keys(nodes).some(code => code.startsWith(delegation.prefix + ':')) || nodes[delegation.prefix].Children) throw Error('Delegated definitions must not be stored locally');
-    for (const [datasetId, data] of Object.entries(delegation.datasets)) {
-      if (!data || data.id !== datasetId || assigned(data.definitionCode)?.id !== id || Object.hasOwn(datasets,datasetId)) throw Error('Invalid delegated dataset assignment');
-      datasets[datasetId]={...data,delegation:id};
-    }
     nodes[delegation.prefix].delegation = id;
     nodes[delegation.prefix].authoritativeUrl = delegation.url;
   }
@@ -151,17 +146,13 @@ export function loadCatalogue(directory = ontologyRoot) {
     if (node.ChoiceAliases && Object.values(node.ChoiceAliases).some(value => !choices?.includes(value))) throw Error(`Invalid choice alias: ${node.Code}`);
     if (node.Pattern) new RegExp(node.Pattern);
   }
-  const collections = JSON.parse(
-    readFileSync(resolve(root, '_support/collections/index.json')),
-  );
-  for (const collection of Object.values(collections))
-    for (const code of collection.Fields)
-      if (!nodes[code]?.Type && !assigned(code)) throw Error(`Unknown collection field: ${code}`);
+  // Request presets belong to consuming applications. Preserve the empty API field.
+  const collections = {};
   function checkOrphans(dir) {
     for (const entry of readdirSync(dir, { withFileTypes: true })) {
       const p = resolve(dir, entry.name);
       if (entry.isDirectory()) {
-        if (p !== resolve(root, '_support') && p !== resolve(root, 'data') && entry.name !== 'node_modules' && !entry.name.startsWith('.'))
+        if (!['data', 'docs', 'src', 'test', 'versions'].some(name => p === resolve(root, name)) && entry.name !== 'node_modules' && !entry.name.startsWith('.'))
           checkOrphans(p);
       } else if (
         entry.name.endsWith('.json') &&
@@ -172,8 +163,8 @@ export function loadCatalogue(directory = ontologyRoot) {
     }
   }
   checkOrphans(root);
-  const migrations = Object.fromEntries(readdirSync(resolve(root, '_support/migrations')).filter(f => f.endsWith('.json')).map(f => [f.slice(0, -5), JSON.parse(readFileSync(resolve(root, '_support/migrations', f), 'utf8'))]));
-  const legacyPath = resolve(root, '_support/legacy.json');
+  const migrations = Object.fromEntries(readdirSync(resolve(root, 'versions/migrations')).filter(f => f.endsWith('.json')).map(f => [f.slice(0, -5), JSON.parse(readFileSync(resolve(root, 'versions/migrations', f), 'utf8'))]));
+  const legacyPath = resolve(root, 'versions/legacy.json');
   const legacy = existsSync(legacyPath) ? JSON.parse(readFileSync(legacyPath, 'utf8')) : {};
   for (const dataset of Object.values(datasets)) if (!nodes[dataset.definitionCode] && !assigned(dataset.definitionCode)) throw Error(`Unknown dataset definition: ${dataset.id}`);
   return { version: nodes[''].Version, nodes, datasets, collections, migrations, legacy, sources, delegations };

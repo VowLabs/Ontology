@@ -40,7 +40,7 @@ export function createOntologyServer({ catalogue = loadCatalogue(), delegationUr
     }));
   };
   const icons = new Map(records('services').map(record => [record.id,
-    readFileSync(new URL(`../service-icons/${record.id}.svg`, import.meta.url))]));
+    readFileSync(new URL(`../../data/services/icons/${record.id}.svg`, import.meta.url))]));
   const resolvedDefinition = async code => delegate(code) && !catalogue.nodes[code]?.Delegation ? (await proxy(delegate(code), ["definitions", code])).data : definition(code);
   const collection = async id => {
     if (!own(catalogue.collections, id)) return missing();
@@ -69,7 +69,9 @@ export function createOntologyServer({ catalogue = loadCatalogue(), delegationUr
       return proxy(delegate(code), ['definitions', code, 'children'], forwarded);
     }
     const datasetId = kind === 'datasets' ? identifier : ['countries', 'states'].includes(kind) ? kind : null;
-    const owner = datasetId && Object.values(delegations).find(d => Object.hasOwn(d.datasets, datasetId));
+    const expandedDatasets = (kind === 'datasets' || datasetId) && (!datasetId || !own(catalogue.datasets, datasetId)) && Object.keys(delegations).length
+      ? (await hydrateCatalogue(catalogue, {...upstreamOptions, urls: delegationUrls})).datasets : catalogue.datasets;
+    const owner = datasetId && own(expandedDatasets, datasetId) && expandedDatasets[datasetId] && delegate(expandedDatasets[datasetId].definitionCode);
     if (owner) return proxy(owner, kind === 'datasets' ? parts : ['datasets', datasetId, 'records', ...parts.slice(1)], params);
     if (!parts.length) return { data: { name: 'VL Ontology API', endpoints: ['/v1/ontology', '/v1/definitions', '/v1/datasets', '/v1/services', '/v1/professions', '/v1/countries', '/v1/states', '/v1/collections', '/v1/catalogue', '/v1/migrations', '/openapi.json'] }, meta };
     const [resource, code, subresource, id] = parts;
@@ -110,8 +112,8 @@ export function createOntologyServer({ catalogue = loadCatalogue(), delegationUr
       }
     }
     if (resource === 'datasets') {
-      const describe = id => { const {records: rows, ...info} = dataset(id); return {...info, ...(rows ? {count: rows.length} : {}), href: `/v1/datasets/${id}/records`}; };
-      if (parts.length === 1) return list(Object.keys(catalogue.datasets).sort().map(describe), params);
+      const describe = id => { const {records: rows, ...info} = (own(expandedDatasets, id) ? expandedDatasets[id] : missing()); return {...info, ...(rows ? {count: rows.length} : {}), href: `/v1/datasets/${id}/records`}; };
+      if (parts.length === 1) return list(Object.keys(expandedDatasets).sort().map(describe), params);
       if (parts.length === 2) return {data: describe(code), meta};
       if (subresource === 'records') {
         const rows = records(code);

@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import {cpSync,mkdtempSync,rmSync,readFileSync,writeFileSync,existsSync} from 'node:fs';
 import {join} from 'node:path';
 import {tmpdir} from 'node:os';
-import {loadCatalogue,ontologyRoot} from '../catalogue.mjs';
+import {loadCatalogue,ontologyRoot} from '../src/catalogue.mjs';
 
 test('Humanities moves into Society with a versioned migration and historical definitions',()=>{
  const c=loadCatalogue();
@@ -37,8 +37,8 @@ test('active definitions exclude reference rows and application schemas',()=>{
  for(const n of Object.values(c.nodes))for(const key of ['Records','ManagedBy','Preference','RegistryVersion','Storage'])assert.equal(n[key],undefined,n.Code);
  assert.equal(c.datasets.services.records.length,15);
  assert.equal(c.datasets.professions.records.length,36);
- assert.equal(c.datasets.countries.records,undefined);
- assert.equal(c.datasets.countries.delegation,'geo');
+ assert.equal(c.datasets.countries,undefined);
+ assert.equal(c.nodes['S:G'].Delegation.datasets,undefined);
  assert.equal(c.nodes['S:G'].Children,undefined);
  assert.equal(c.datasets.professions.records.find(r=>r.id==='LAW').legacyCode,'B:PRO:LAW');
  assert.ok(c.legacy['4.2.0'].Nodes['I:CN']);
@@ -80,7 +80,7 @@ test('collection means repeatable while composite means one grouped value',()=>{
  assert.equal(c.nodes['I:C:P'],undefined);
  assert.equal(c.nodes['I:C:N'],undefined);
  assert.equal(c.nodes['I:C'].Children.EM,'I:C:EM');
- assert.equal(c.collections.checkout.Fields.includes('I:C:EM'),true);
+ assert.deepEqual(c.collections,{});
 });
 
  test('organization fields and contact methods use canonical definitions',()=>{
