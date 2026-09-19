@@ -26,6 +26,33 @@ canonical code: F:A:V:Y
 Changing a filename or display label preserves the code. Published child keys
 define stable canonical codes and are unique within their parent. A definition never repeats its own path and has no `Kind` field.
 
+## Datapoint taxonomy graph
+
+The arrows follow canonical `Children` references from parent to child. They
+show containment: children may be classifications, records, or fields, so an
+edge does not necessarily mean “is a subtype of.”
+
+```mermaid
+flowchart LR
+    root["VowLabs ontology"]
+    n_I["I · Identity"]
+    n_F["F · Finance"]
+    n_H["H · Health"]
+    n_B["B · Business"]
+    n_S["S · Science"]
+    n_R["R · Society"]
+    root --> n_I
+    root --> n_F
+    root --> n_H
+    root --> n_B
+    root --> n_S
+    root --> n_R
+```
+
+[Explore the full datapoint taxonomy](docs/taxonomy.md), with a graph for each
+domain, canonical codes, and links to the source definitions. Geography (`S:G`)
+is a delegated boundary; its descendants are maintained by Geo.
+
 ## Repository layout
 
 The root contains `index.json`, this README and the domain directories. Each
