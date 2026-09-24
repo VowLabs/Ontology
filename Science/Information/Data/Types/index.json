@@ -5,6 +5,9 @@
     "S": {
       "$ref": "./String.json"
     },
+    "T": {
+      "$ref": "./Text.json"
+    },
     "I": {
       "$ref": "./Integer.json"
     },

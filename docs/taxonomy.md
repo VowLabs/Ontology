@@ -2,8 +2,8 @@
 
 [Back to the ontology README](../README.md#datapoint-taxonomy-graph)
 
-This graph documents the 376 local definitions (including the root) in
-ontology `10.2.0`, following `Children` references from [index.json](../index.json).
+This graph documents the 377 local definitions (including the root) in
+ontology `10.3.0`, following `Children` references from [index.json](../index.json).
 Each domain graph includes every local descendant, with its canonical code.
 
 Arrows mean parent–child containment. Organizing branches, classification
@@ -1002,7 +1002,7 @@ flowchart LR
 
 ## Science (`S`)
 
-[Domain guide](../Science/README.md) · 44 local definitions.
+[Domain guide](../Science/README.md) · 45 local definitions.
 
 ```mermaid
 flowchart LR
@@ -1013,6 +1013,7 @@ flowchart LR
     n_S_I_D["S:I:D · Data"]
     n_S_I_D_T["S:I:D:T · Value types"]
     n_S_I_D_T_S["S:I:D:T:S · String"]
+    n_S_I_D_T_T["S:I:D:T:T · Text"]
     n_S_I_D_T_I["S:I:D:T:I · Integer"]
     n_S_I_D_T_N["S:I:D:T:N · Number"]
     n_S_I_D_T_B["S:I:D:T:B · Boolean"]
@@ -1056,6 +1057,7 @@ flowchart LR
     n_S_I --> n_S_I_D
     n_S_I_D --> n_S_I_D_T
     n_S_I_D_T --> n_S_I_D_T_S
+    n_S_I_D_T --> n_S_I_D_T_T
     n_S_I_D_T --> n_S_I_D_T_I
     n_S_I_D_T --> n_S_I_D_T_N
     n_S_I_D_T --> n_S_I_D_T_B
@@ -1105,6 +1107,7 @@ flowchart LR
 - [`S:I:D` — Data](../Science/Information/Data/index.json)
 - [`S:I:D:T` — Value types](../Science/Information/Data/Types/index.json)
 - [`S:I:D:T:S` — String](../Science/Information/Data/Types/String.json)
+- [`S:I:D:T:T` — Text](../Science/Information/Data/Types/Text.json)
 - [`S:I:D:T:I` — Integer](../Science/Information/Data/Types/Integer.json)
 - [`S:I:D:T:N` — Number](../Science/Information/Data/Types/Number.json)
 - [`S:I:D:T:B` — Boolean](../Science/Information/Data/Types/Boolean.json)

@@ -115,3 +115,10 @@ Move Geography’s delegation URL and scope into its public boundary definition.
 Boundary API responses now return that declaration without querying Geo; child
 and descendant proxy endpoints remain compatible. Answer codes and values do
 not change. The former private delegation registry is removed.
+
+## 10.2.0 → 10.3.0
+
+Text becomes an explicit multiline value type, while String remains the
+single-line type. Society Endorsement text uses Text; its answer code and
+stored string value do not change. Existing signed statements remain valid
+against their original ontology version.

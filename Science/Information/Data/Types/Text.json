@@ -1,0 +1,8 @@
+{
+  "Name": "Text",
+  "Collection": false,
+  "ValueType": "string",
+  "Format": "text",
+  "MaxLength": 2000,
+  "Composite": false
+}

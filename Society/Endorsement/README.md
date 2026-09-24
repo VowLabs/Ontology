@@ -9,9 +9,10 @@ attribution separately and decide who may contribute and read endorsements.
 
 An endorsement is one composite value with two required fields (`RequiredFields`):
 
-- **Endorsement — `R:EN:T`**: nonempty free text, at most 2000 characters; for
-  example, “Clear communication and reliable delivery.” No markup interpretation
-  or finer subclasses are defined. Type: String (`S:I:D:T:S`).
+- **Endorsement — `R:EN:T`**: nonempty multiline text, at most 2000 characters;
+  for example, “Clear communication and reliable delivery.” No markup interpretation
+  or finer subclasses are defined. Type: Text (`S:I:D:T:T`), stored as a string
+  and presented as a two-line text field.
 - **Rating — `R:EN:R`**: integer from 1 through 3, rendered as one, two or three
   stars. Higher values express a more favorable assessment. Zero, fractions and
   ratings above three are invalid. Type: Integer (`S:I:D:T:I`). No finer

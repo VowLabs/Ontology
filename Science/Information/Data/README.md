@@ -10,9 +10,9 @@ Parent: [Information](../README.md).
 
 ### Value types — `S:I:D:T`
 
-Value types are reusable primitive definitions referenced by answer properties. They are not answer records themselves. Integer and Number are numeric values; Identifier remains text so leading zeros survive. Specialized text types add format or pattern constraints.
+Value types are reusable primitive definitions referenced by answer properties. They are not answer records themselves. String is for concise, single-line values; Text is for multiline prose. Identifier remains text so leading zeros survive. Specialized text types add format or pattern constraints.
 
-Further classifications: String (`S:I:D:T:S`), Integer (`S:I:D:T:I`), Number (`S:I:D:T:N`), Boolean (`S:I:D:T:B`), Calendar date (`S:I:D:T:DT`), Email address (`S:I:D:T:EM`), International phone number (`S:I:D:T:PH`), Identifier (`S:I:D:T:ID`), Web address (`S:I:D:T:URL`).
+Further classifications: String (`S:I:D:T:S`), Text (`S:I:D:T:T`), Integer (`S:I:D:T:I`), Number (`S:I:D:T:N`), Boolean (`S:I:D:T:B`), Calendar date (`S:I:D:T:DT`), Email address (`S:I:D:T:EM`), International phone number (`S:I:D:T:PH`), Identifier (`S:I:D:T:ID`), Web address (`S:I:D:T:URL`).
 
 [Detailed classification guide](Types/README.md) · [Definition](Types/index.json).
 

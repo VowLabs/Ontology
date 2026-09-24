@@ -7,13 +7,16 @@ import {loadCatalogue,ontologyRoot} from '../src/catalogue.mjs';
 
 test('Humanities moves into Society with a versioned migration and historical definitions',()=>{
  const c=loadCatalogue();
- assert.equal(c.version,'10.2.0');
- assert.equal(c.migrations['10.1.2'].To,c.version);
+ assert.equal(c.version,'10.3.0');
+ assert.equal(c.migrations['10.2.0'].To,c.version);
+ assert.equal(c.migrations['10.1.2'].To,'10.2.0');
  assert.equal(c.migrations['10.1.1'].To,'10.1.2');
  assert.equal(c.migrations['10.1.0'].To,'10.1.1');
  assert.equal(c.nodes.U,undefined);
  assert.equal(c.nodes['R'].Children.U,'R:U');
  assert.equal(c.nodes['R:U'].Name,'Humanities');
+ assert.equal(c.nodes['S:I:D:T:T'].Name,'Text');
+ assert.equal(c.nodes['R:EN:T'].Type,'S:I:D:T:T');
  assert.deepEqual(c.nodes['R:U'].Children,{});
  assert.equal(c.migrations['7.0.0'].To,'8.0.0');
  assert.equal(c.migrations['8.0.0'].To,'8.1.0');
@@ -24,7 +27,7 @@ test('Humanities moves into Society with a versioned migration and historical de
  assert.deepEqual(c.migrations['7.0.0'].Prefixes,{U:'R:U'});
  assert.equal(c.legacy[c.migrations['7.0.0'].Legacy].Nodes.U.Name,'Humanities');
  for(const [code,node] of Object.entries(c.legacy['7.0.0'].Nodes)) {
-  if(!['','B','R','U','S:G','I:C'].includes(code) && !code.startsWith('S:G:') && !code.startsWith('I:')) {
+  if(!['','B','R','U','S:G','I:C','S:I:D:T'].includes(code) && !code.startsWith('S:G:') && !code.startsWith('I:')) {
    const {Collection,Composite,...current}=c.nodes[code];
    assert.deepEqual(current,node,code);
   }

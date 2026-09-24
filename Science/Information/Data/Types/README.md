@@ -2,7 +2,7 @@
 
 Canonical code: `S:I:D:T`. Definition: [index.json](index.json).
 
-Value types are reusable primitive definitions referenced by answer properties. They are not answer records themselves. Integer and Number are numeric values; Identifier remains text so leading zeros survive. Specialized text types add format or pattern constraints.
+Value types are reusable primitive definitions referenced by answer properties. They are not answer records themselves. Integer and Number are numeric values; Identifier remains text so leading zeros survive. String is a single-line value; Text is a multiline value. Specialized text types add format or pattern constraints.
 
 Parent: [Data](../README.md).
 
@@ -15,6 +15,14 @@ Stored as `string`.
 MaxLength: `2000`.
 
 [Type definition](String.json).
+
+### Text — `S:I:D:T:T`
+
+Stored as `string`, presented as a two-line multiline field. Use Text for prose that may contain line breaks; use String for concise, single-line values such as labels.
+
+MaxLength: `2000`.
+
+[Type definition](Text.json).
 
 ### Integer — `S:I:D:T:I`
 

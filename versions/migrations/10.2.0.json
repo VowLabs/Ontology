@@ -1,0 +1,6 @@
+{
+  "To": "10.3.0",
+  "Prefixes": {},
+  "SubjectTypes": {},
+  "Description": "Add the multiline Text value type and apply it to Society Endorsement text. Existing values, codes and signatures are unchanged."
+}
