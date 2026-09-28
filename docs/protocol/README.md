@@ -28,7 +28,7 @@ snapshot lookup.
 
 Starting with ontology `3.0.0`, a record's optional `tags` array contains only
 canonical ontology codes. Each entry must be a distinct, nonempty code resolving
-to a definition in that record's declared ontology version. NokNok permits up
+to a definition in that record's declared ontology version. Memiki permits up
 to 32 tags, each at most 64 characters. The anonymous root is not a tag.
 Organizing concepts, record definitions and leaf datapoints can all be referenced.
 
@@ -43,7 +43,7 @@ in the picker. A tag is classification metadata; it does not prove ownership,
 coverage, consent, or any attested fact. Existing selective-disclosure envelopes
 do not automatically include tags, and their presence never grants access.
 
-NokNok migrates snapshots from `1.0.0`, `2.0.0` and `2.1.0` through the published
+Memiki migrates snapshots from `1.0.0`, `2.0.0` and `2.1.0` through the published
 migration maps. Recognized codes retain their canonical meaning; duplicate codes
 are collapsed. Earlier free-text tags are retained verbatim in `legacyTags` for
 human review and are excluded from canonical tag matching. No fuzzy matching of
@@ -160,7 +160,7 @@ reviewed and requested again with a permitted value.
 
 Applications may separately attach `dataTags`, an array of `{dataset,id}` references
 to records in the loaded datasets, for example `{"dataset":"states","id":"US-CA"}`.
-NokNok accepts at most 32 distinct references, rejects unknown datasets/IDs and
+Memiki accepts at most 32 distinct references, rejects unknown datasets/IDs and
 extra properties, and preserves them in the encrypted record. They do not become
 canonical ontology codes, prove a fact, or grant disclosure permissions. Existing
 `tags` retain their canonical-code-only contract.

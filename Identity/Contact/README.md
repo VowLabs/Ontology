@@ -94,6 +94,6 @@ country-specific format; the record is stored under that Geo format's canonical
 code. No address fields are duplicated here. Shipping is the canonical tag
 `S:G:AD:RO:SH`; it can be selected in Tags and qualifies the address for checkout.
 
-Emergency is a flag on a saved NokNok person contact, not a communication-method
+Emergency is a flag on a saved Memiki person contact, not a communication-method
 subtype. Earlier emergency-person records are retained as read-only application
 history; they are not silently matched to wallet contacts.

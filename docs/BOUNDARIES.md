@@ -7,7 +7,7 @@ records. One service can deliver both definitions and data through separate APIs
 | Area reviewed | Decision |
 | --- | --- |
 | Identity, contact points, documents | Keep definitions of subjects, communication channels and documents. Membership in a user's contact list is application state. |
-| Connect contacts, NokNok preferences, account notifications | Remove from the active tree. The owning application retains its compatibility schemas and storage. |
+| Connect contacts, Memiki preferences, account notifications | Remove from the active tree. The owning application retains its compatibility schemas and storage. |
 | Generated wallet accounts, Lexicon snapshots | Remove application schemas and persistence conventions from the active tree; retain legacy validation only. Generic wallet-address and bank-account definitions remain. |
 | Named professions | Move the 36 entries to `data/professions`; keep the definition of Profession. Retired profession codes are not active tags. |
 | Named service providers | Move the 15 records to `data/services`; keep Service and Online account definitions. |

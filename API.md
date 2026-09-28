@@ -192,7 +192,7 @@ service data and returns data references; it does not embed records in a definit
 Country IDs retain `G:CO:XX` for existing answers, but those IDs no longer resolve
 through `/v1/definitions` and are not canonical tags. Professions have IDs such
 as `LAW`, with `legacyCode` identifying their retired ontology code.
-NokNok settings and contact-list schemas are absent from the API; their consumer
+Memiki settings and contact-list schemas are absent from the API; their consumer
 owns them. Migration metadata and archived historical schemas preserve older data.
 
 ## Political subdivision reference data

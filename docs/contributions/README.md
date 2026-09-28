@@ -66,7 +66,7 @@ uses version 2 and retains the previous US state IDs.
 The default `/v1/catalogue` describes the local tree and delegation boundaries;
 `meta.complete` is false. `/v1/catalogue?expand=delegations` explicitly queries
 foreign `/v1/catalogue` endpoints and returns an assembled snapshot. Likewise,
-`NokNok/scripts/build-ontology.mjs` fetches Geo when generating the shared NokNok offline
+`Memiki/scripts/build-ontology.mjs` fetches Geo when generating the shared Memiki offline
 bundle. A failure aborts generation; it never substitutes an empty branch.
 Snapshots record upstream revision and fetch time. The importer rejects foreign
 codes outside their assigned prefix, missing children, conflicting dataset

@@ -93,7 +93,7 @@ test('OpenAPI documents available resources',async()=> {
   const spec = await get('/openapi.json'); assert.equal(spec.openapi,'3.1.0');
   for (const path of Object.keys(spec.paths).filter(path=>!path.includes('{'))) await get(path);
 });
-test('loader and server module work in an isolated checkout without NokNok', () => {
+test('loader and server module work in an isolated checkout without Memiki', () => {
   const directory = mkdtempSync(join(tmpdir(),'vl-ontology-'));
   try {
     cpSync(new URL('../',import.meta.url),directory,{recursive:true,filter:source=>!source.split('/').some(p=>['.git','node_modules'].includes(p))});

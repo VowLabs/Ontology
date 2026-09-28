@@ -62,7 +62,7 @@ code, tests, protocol specifications, contribution guidelines and history. Suppo
 files are not ontology nodes and do not contribute code segments. Reference data
 lives separately in `data/`; see the [dataset guide](data/README.md).
 
-Version 5 removes application-owned schemas from the active tree. NokNok keeps
+Version 5 removes application-owned schemas from the active tree. Memiki keeps
 its compatibility schemas in its own `shared/application-schema.json`. See the
 [boundary audit](docs/BOUNDARIES.md) and [migration guide](versions/migrations/README.md).
 
@@ -166,7 +166,7 @@ Record IDs, not array offsets, identify repeated objects. Scalar limits apply
 per subject. There is no claim that a subject ID is a globally verified identity
 or that its controller is an authorized company representative.
 
-[Application request presets](../../NokNok/examples/request-presets/README.md) define starter collections for
+[Application request presets](../../Memiki/examples/request-presets/README.md) define starter collections for
 checkout, food service, medical intake, motor insurance and business onboarding.
 The ontology catalogue exposes an empty collections field for compatibility;
 applications load their own presets. Collections reference exact leaf codes. Applications can expand a collection
@@ -282,7 +282,7 @@ subtypes. Terminal classification guides state when no finer subclasses exist.
 - [Science (`S`)](Science/README.md): Science currently organizes Technology and Information. Technology defines online services; Information supplies data types and information-system record classifications. These branches describe technical concepts rather than granting applications access to user data.
 - [Society (`R`)](Society/README.md): Society covers collective institutions, governance, law, civic participation, communities and culture. Its [Humanities (`R:U`)](Society/Humanities/README.md) branch covers language, history, philosophy and interpretation. Its [Services (`R:SV`)](Society/Services/README.md) branch classifies services people consume. Identity describes particular people and organizations.
 
-Supporting indexes are documented separately: [workflow collections](../../NokNok/examples/request-presets/README.md) and [application storage classifications](../../docs/application-ontology-storage.md). These indexes are not ontology domains.
+Supporting indexes are documented separately: [workflow collections](../../Memiki/examples/request-presets/README.md) and [application storage classifications](../../docs/application-ontology-storage.md). These indexes are not ontology domains.
 
 ## Tree-backed choices and sourced definitions
 

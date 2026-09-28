@@ -112,7 +112,7 @@
   "4.2.0": {
     "Nodes": {
       "": {
-        "Name": "NokNok ontology",
+        "Name": "Memiki ontology",
         "Version": "4.2.0",
         "Children": {
           "I": "I",
@@ -390,7 +390,7 @@
         "Code": "I:PR"
       },
       "I:PR:NN": {
-        "Name": "NokNok settings",
+        "Name": "Memiki settings",
         "Scalar": true,
         "Subjects": [
           "I:P",
@@ -410,10 +410,10 @@
       },
       "I:PR:NN:AT": {
         "Name": "Authentication timeout",
-        "Question": "How long should NokNok remain unlocked?",
+        "Question": "How long should Memiki remain unlocked?",
         "Type": "S:I:D:T:I",
         "Preference": "authTimeoutMs",
-        "StorageKey": "noknok_auth_timeout_ms",
+        "StorageKey": "memiki_auth_timeout_ms",
         "Default": 180000,
         "Choices": [
           60000,
@@ -427,10 +427,10 @@
       },
       "I:PR:NN:SC": {
         "Name": "Sovereign currency",
-        "Question": "Which currency should NokNok use?",
+        "Question": "Which currency should Memiki use?",
         "Type": "S:I:D:T:S",
         "Preference": "sovereignCurrency",
-        "StorageKey": "noknok_sovereign_currency",
+        "StorageKey": "memiki_sovereign_currency",
         "Default": "USD",
         "Choices": [
           "USD",
@@ -444,37 +444,37 @@
       },
       "I:PR:NN:DR": {
         "Name": "Skip duress reminder",
-        "Question": "Should NokNok skip the duress-code reminder?",
+        "Question": "Should Memiki skip the duress-code reminder?",
         "Type": "S:I:D:T:B",
         "Preference": "duressReminderDisabled",
-        "StorageKey": "noknok_duress_reminder_disabled",
+        "StorageKey": "memiki_duress_reminder_disabled",
         "Default": false,
         "Code": "I:PR:NN:DR"
       },
       "I:PR:NN:TN": {
         "Name": "Show testnets",
-        "Question": "Should NokNok display test networks?",
+        "Question": "Should Memiki display test networks?",
         "Type": "S:I:D:T:B",
         "Preference": "showTestnets",
-        "StorageKey": "noknok.showTestnets",
+        "StorageKey": "memiki.showTestnets",
         "Default": false,
         "Code": "I:PR:NN:TN"
       },
       "I:PR:NN:AM": {
         "Name": "Advanced mode",
-        "Question": "Should NokNok enable advanced mode?",
+        "Question": "Should Memiki enable advanced mode?",
         "Type": "S:I:D:T:B",
         "Preference": "advancedMode",
-        "StorageKey": "noknok.advancedMode",
+        "StorageKey": "memiki.advancedMode",
         "Default": false,
         "Code": "I:PR:NN:AM"
       },
       "I:PR:NN:DM": {
         "Name": "Debug mode",
-        "Question": "Should NokNok enable debug logging?",
+        "Question": "Should Memiki enable debug logging?",
         "Type": "S:I:D:T:B",
         "Preference": "debugMode",
-        "StorageKey": "noknok.debugMode",
+        "StorageKey": "memiki.debugMode",
         "Default": false,
         "Code": "I:PR:NN:DM"
       },
@@ -483,7 +483,7 @@
         "Question": "How should the Chrome wallet open?",
         "Type": "S:I:D:T:S",
         "Preference": "chromeWindowMode",
-        "StorageKey": "noknok_chrome_window_mode",
+        "StorageKey": "memiki_chrome_window_mode",
         "Default": "docked",
         "Choices": [
           "docked",
@@ -496,7 +496,7 @@
         "Question": "May the Chrome wallet open inside supported pages?",
         "Type": "S:I:D:T:B",
         "Preference": "allowEmbedded",
-        "StorageKey": "noknok_allow_embedded",
+        "StorageKey": "memiki_allow_embedded",
         "Default": true,
         "Code": "I:PR:NN:EM"
       },
@@ -525,7 +525,7 @@
       },
       "I:PR:SUB:EN": {
         "Name": "Notifications enabled",
-        "Question": "Should NokNok notify you about this account?",
+        "Question": "Should Memiki notify you about this account?",
         "Type": "S:I:D:T:B",
         "SourceKey": "enabled",
         "Code": "I:PR:SUB:EN"
