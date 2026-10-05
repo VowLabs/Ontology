@@ -1,0 +1,10 @@
+{
+  "Name": "Claim reporting window",
+  "Collection": false,
+  "Composite": false,
+  "Question": "What is the claim reporting window?",
+  "Type": "S:I:D:T:I",
+  "Description": "Seconds after coverage expiry during which a covered incident can still be reported; at most one ACT/365 year.",
+  "Minimum": 1,
+  "Maximum": 31536000
+}

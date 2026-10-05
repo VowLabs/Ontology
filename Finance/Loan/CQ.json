@@ -1,0 +1,10 @@
+{
+  "Name": "Collateral quantity",
+  "Collection": false,
+  "Composite": false,
+  "Question": "How much collateral will you pledge?",
+  "Type": "S:I:D:T:S",
+  "Description": "Decimal quantity in whole collateral-asset units. Borrowers pledge a positive amount; lenders omit it or enter zero.",
+  "Pattern": "^(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$",
+  "MaxLength": 100
+}

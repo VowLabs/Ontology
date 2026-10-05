@@ -1,0 +1,10 @@
+{
+  "Name": "Auction closing time",
+  "Collection": false,
+  "Composite": false,
+  "Question": "What is the auction closing time?",
+  "Type": "S:I:D:T:I",
+  "Description": "Unix timestamp in seconds at which underwriting bids close. Execution requires a future deadline within 30 days.",
+  "Minimum": 1,
+  "Maximum": 9007199254740991
+}

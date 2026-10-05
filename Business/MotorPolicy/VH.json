@@ -1,0 +1,9 @@
+{
+  "Name": "Vehicle commitment",
+  "Collection": false,
+  "Composite": false,
+  "Question": "What is the vehicle commitment?",
+  "Type": "S:I:D:T:S",
+  "Description": "Salted 32-byte commitment identifying the privately disclosed vehicle; never a raw VIN.",
+  "Pattern": "^0x[0-9a-fA-F]{64}$"
+}

@@ -1,0 +1,9 @@
+{
+  "Name": "Loan asset",
+  "Collection": false,
+  "Composite": false,
+  "Question": "Which asset is lent and repaid?",
+  "Type": "S:I:D:T:S",
+  "Description": "Asset identifier, including its network where applicable. EVM execution uses eip155:<chain>/erc20:<address>; other identifiers may describe off-chain loans.",
+  "MaxLength": 160
+}

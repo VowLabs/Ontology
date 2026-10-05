@@ -1,0 +1,10 @@
+{
+  "Name": "Deductible",
+  "Collection": false,
+  "Composite": false,
+  "Question": "What is the deductible?",
+  "Type": "S:I:D:T:S",
+  "Description": "Loss paid by the holder before coverage applies, in settlement-asset units; exact decimal string.",
+  "Pattern": "^(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$",
+  "MaxLength": 100
+}

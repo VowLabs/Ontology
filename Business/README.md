@@ -47,3 +47,5 @@ Further classifications: Merchant (`B:C:M`), Merchant list (`B:C:ML`), Offer (`B
 A profession is an occupation or skilled trade, separate from employer-specific employment and proof of qualifications. Named professions live in a service-hosted dataset.
 
 [Definition guide](Professions/README.md) · [Dataset](../data/professions/README.md).
+
+- `B:MP` — [Motor insurance policy terms](MotorPolicy/README.md): proposed motor coverage and underwriting auction terms, separate from issued policies at `B:IN`.

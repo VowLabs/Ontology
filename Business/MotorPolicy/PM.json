@@ -1,0 +1,10 @@
+{
+  "Name": "Maximum premium",
+  "Collection": false,
+  "Composite": false,
+  "Question": "What is the maximum premium?",
+  "Type": "S:I:D:T:S",
+  "Description": "Maximum premium offered for the entire coverage term, in settlement-asset units; exact decimal string.",
+  "Pattern": "^(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$",
+  "MaxLength": 100
+}

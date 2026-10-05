@@ -1,0 +1,40 @@
+{
+  "Name": "Motor insurance policy terms",
+  "Collection": true,
+  "Composite": true,
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Description": "Proposed motor coverage terms. Saving a record does not bind an insurer or create coverage.",
+  "Children": {
+    "VH": {
+      "$ref": "./VH.json"
+    },
+    "WD": {
+      "$ref": "./WD.json"
+    },
+    "AS": {
+      "$ref": "./AS.json"
+    },
+    "CV": {
+      "$ref": "./CV.json"
+    },
+    "DD": {
+      "$ref": "./DD.json"
+    },
+    "PM": {
+      "$ref": "./PM.json"
+    },
+    "TM": {
+      "$ref": "./TM.json"
+    },
+    "CL": {
+      "$ref": "./CL.json"
+    },
+    "RW": {
+      "$ref": "./RW.json"
+    }
+  }
+}

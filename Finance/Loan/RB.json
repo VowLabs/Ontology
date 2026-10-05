@@ -1,0 +1,13 @@
+{
+  "Name": "Rate basis",
+  "Collection": false,
+  "Composite": false,
+  "Question": "How is interest calculated?",
+  "Type": "S:I:D:T:S",
+  "Description": "Discount deducts interest from the initial advance; simple adds interest to principal; compound accrues interest on accrued interest. A venue must explicitly support the selected basis.",
+  "Choices": [
+    "Discount",
+    "Simple",
+    "Compound"
+  ]
+}

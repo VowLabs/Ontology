@@ -7,8 +7,10 @@ import {loadCatalogue,ontologyRoot} from '../src/catalogue.mjs';
 
 test('Humanities moves into Society with a versioned migration and historical definitions',()=>{
  const c=loadCatalogue();
- assert.equal(c.version,'10.3.0');
- assert.equal(c.migrations['10.2.0'].To,c.version);
+ assert.equal(c.version,'10.5.0');
+ assert.equal(c.migrations['10.4.0'].To,c.version);
+ assert.equal(c.migrations['10.3.0'].To,'10.4.0');
+ assert.equal(c.migrations['10.2.0'].To,'10.3.0');
  assert.equal(c.migrations['10.1.2'].To,'10.2.0');
  assert.equal(c.migrations['10.1.1'].To,'10.1.2');
  assert.equal(c.migrations['10.1.0'].To,'10.1.1');
@@ -29,7 +31,11 @@ test('Humanities moves into Society with a versioned migration and historical de
  for(const [code,node] of Object.entries(c.legacy['7.0.0'].Nodes)) {
   if(!['','B','R','U','S:G','I:C','S:I:D:T'].includes(code) && !code.startsWith('S:G:') && !code.startsWith('I:')) {
    const {Collection,Composite,...current}=c.nodes[code];
-   assert.deepEqual(current,node,code);
+   if (code === 'F') {
+    const {LN,...historicalChildren}=current.Children;
+    assert.equal(LN,'F:LN');
+    assert.deepEqual({...current,Children:historicalChildren},node,code);
+   } else assert.deepEqual(current,node,code);
   }
  }
 });

@@ -1,0 +1,12 @@
+{
+  "Name": "Rate instruction",
+  "Collection": false,
+  "Composite": false,
+  "Question": "Is this a limit-rate order or a market-rate order?",
+  "Type": "S:I:D:T:S",
+  "Description": "Limit constrains the annual rate; Market accepts the venue\u2019s rate-discovery rules subject to execution review. This is an instruction, not an observed market price.",
+  "Choices": [
+    "Limit",
+    "Market"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "Name": "Allow resizing",
+  "Collection": false,
+  "Composite": false,
+  "Question": "May the exchange reduce the executable amount to fit available collateral?",
+  "Type": "S:I:D:T:B",
+  "Description": "True permits a smaller executable order when the exchange supports collateral-based resizing. It does not authorize an increased amount or changed rate limit."
+}

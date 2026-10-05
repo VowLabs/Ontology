@@ -1,0 +1,6 @@
+{
+  "To": "10.4.0",
+  "Prefixes": {},
+  "SubjectTypes": {},
+  "Description": "Add editable Loan terms at F:LN. Existing product classifications, records, values and signed statements are unchanged."
+}

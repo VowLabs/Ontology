@@ -1,0 +1,10 @@
+{
+  "Name": "Term in seconds",
+  "Collection": false,
+  "Composite": false,
+  "Question": "How long is the loan term, in seconds?",
+  "Type": "S:I:D:T:I",
+  "Description": "Elapsed duration, from 1 second to 30 ACT/365 years; a venue may accept only selected terms. One ACT/365 year is 31536000 seconds.",
+  "Minimum": 1,
+  "Maximum": 946080000
+}

@@ -122,3 +122,8 @@ Text becomes an explicit multiline value type, while String remains the
 single-line type. Society Endorsement text uses Text; its answer code and
 stored string value do not change. Existing signed statements remain valid
 against their original ontology version.
+
+## 10.3.0 → 10.4.0
+
+Adds the `F:LN` loan-terms record. Empty maps preserve existing codes, values,
+subjects, and signatures. Saving a new loan record does not submit a trade.

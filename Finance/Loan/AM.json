@@ -1,0 +1,10 @@
+{
+  "Name": "Face amount",
+  "Collection": false,
+  "Composite": false,
+  "Question": "What face amount will be owed at maturity?",
+  "Type": "S:I:D:T:S",
+  "Description": "Decimal amount in whole loan-asset units, never binary floating point. For a discount loan this is the maturity obligation, not the smaller initial advance.",
+  "Pattern": "^(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$",
+  "MaxLength": 100
+}

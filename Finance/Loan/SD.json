@@ -1,0 +1,12 @@
+{
+  "Name": "Side",
+  "Collection": false,
+  "Composite": false,
+  "Question": "Are you offering to lend or requesting to borrow?",
+  "Type": "S:I:D:T:S",
+  "Description": "The subject\u2019s proposed role. A lending offer supplies currency; a borrowing request supplies collateral.",
+  "Choices": [
+    "Lend",
+    "Borrow"
+  ]
+}

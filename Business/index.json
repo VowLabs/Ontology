@@ -17,6 +17,9 @@
     },
     "SV": {
       "$ref": "./Services/index.json"
+    },
+    "MP": {
+      "$ref": "./MotorPolicy/index.json"
     }
   },
   "Composite": false

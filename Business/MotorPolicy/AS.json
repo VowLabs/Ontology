@@ -1,0 +1,9 @@
+{
+  "Name": "Settlement asset",
+  "Collection": false,
+  "Composite": false,
+  "Question": "What is the settlement asset?",
+  "Type": "S:I:D:T:S",
+  "Description": "Fully qualified asset identifier, e.g. eip155:1/erc20:0x0000000000000000000000000000000000000001.",
+  "MaxLength": 160
+}

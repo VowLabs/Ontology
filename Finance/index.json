@@ -26,6 +26,9 @@
     },
     "P": {
       "$ref": "./Product/index.json"
+    },
+    "LN": {
+      "$ref": "./Loan/index.json"
     }
   },
   "Composite": false

@@ -1,0 +1,10 @@
+{
+  "Name": "Annual rate percent",
+  "Collection": false,
+  "Composite": false,
+  "Question": "What is your annual rate limit, as a percentage?",
+  "Type": "S:I:D:T:S",
+  "Description": "Annual nominal percentage with at most two decimal places, e.g. 10.25 means 10.25 percent (1025 basis points). A lender sets a minimum; a borrower sets a maximum. Market orders omit this or use zero.",
+  "Pattern": "^(?:0|[1-9][0-9]*)(?:\\.[0-9]{1,2})?$",
+  "MaxLength": 20
+}

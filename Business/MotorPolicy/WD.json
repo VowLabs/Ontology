@@ -1,0 +1,9 @@
+{
+  "Name": "Policy wording commitment",
+  "Collection": false,
+  "Composite": false,
+  "Question": "What is the policy wording commitment?",
+  "Type": "S:I:D:T:S",
+  "Description": "32-byte content hash of agreed motor coverage wording, exclusions, jurisdiction, claims authority and single-claim termination terms.",
+  "Pattern": "^0x[0-9a-fA-F]{64}$"
+}

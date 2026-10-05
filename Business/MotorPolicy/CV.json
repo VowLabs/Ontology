@@ -1,0 +1,10 @@
+{
+  "Name": "Coverage limit",
+  "Collection": false,
+  "Composite": false,
+  "Question": "What is the coverage limit?",
+  "Type": "S:I:D:T:S",
+  "Description": "Maximum net payout in settlement-asset units after deductible; exact decimal string.",
+  "Pattern": "^(?:0|[1-9][0-9]*)(?:\\.[0-9]+)?$",
+  "MaxLength": 100
+}

@@ -1,0 +1,10 @@
+{
+  "Name": "Coverage duration",
+  "Collection": false,
+  "Composite": false,
+  "Question": "What is the coverage duration?",
+  "Type": "S:I:D:T:I",
+  "Description": "Elapsed seconds of coverage beginning at auction settlement; at most one ACT/365 year.",
+  "Minimum": 1,
+  "Maximum": 31536000
+}

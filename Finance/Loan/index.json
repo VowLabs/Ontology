@@ -1,0 +1,46 @@
+{
+  "Name": "Loan",
+  "Collection": true,
+  "Composite": true,
+  "Scalar": false,
+  "Subjects": [
+    "I:P",
+    "I:O"
+  ],
+  "Description": "Answer-bearing loan terms, including proposed lending offers and borrowing requests. Saving a record is not execution, acceptance, or proof of an outstanding debt.",
+  "Children": {
+    "SD": {
+      "$ref": "./SD.json"
+    },
+    "AS": {
+      "$ref": "./AS.json"
+    },
+    "AM": {
+      "$ref": "./AM.json"
+    },
+    "TM": {
+      "$ref": "./TM.json"
+    },
+    "RB": {
+      "$ref": "./RB.json"
+    },
+    "RM": {
+      "$ref": "./RM.json"
+    },
+    "RT": {
+      "$ref": "./RT.json"
+    },
+    "CA": {
+      "$ref": "./CA.json"
+    },
+    "CQ": {
+      "$ref": "./CQ.json"
+    },
+    "LV": {
+      "$ref": "./LV.json"
+    },
+    "RS": {
+      "$ref": "./RS.json"
+    }
+  }
+}

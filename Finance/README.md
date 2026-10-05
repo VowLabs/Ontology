@@ -80,3 +80,12 @@ The product tree organizes economic function rather than provider: accounts, cre
 Further classifications: Account (`F:P:AC`), Credit (`F:P:CR`), Investment (`F:P:IN`), Payment (`F:P:PA`), Insurance (`F:P:IS`), Retirement (`F:P:RE`), Native digital asset (`F:P:DA`).
 
 [Detailed classification guide](Product/README.md) · [Definition](Product/index.json).
+
+### Loan — `F:LN`
+
+Editable loan terms for individuals and organizations, including lending offers
+and borrowing requests. Separate from the product classification `F:P:CR:LN`.
+Saving terms neither establishes debt nor submits an order. Fields cover side,
+asset, face amount, term, rate basis and instruction, rate, collateral asset and
+quantity, maximum LTV, and resizing. See [Loan](Loan/README.md) for all canonical
+codes, types, units, examples, and execution boundaries.

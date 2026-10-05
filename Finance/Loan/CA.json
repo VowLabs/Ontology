@@ -1,0 +1,9 @@
+{
+  "Name": "Collateral asset",
+  "Collection": false,
+  "Composite": false,
+  "Question": "Which asset backs the loan?",
+  "Type": "S:I:D:T:S",
+  "Description": "Collateral asset identifier. A borrowing request specifies it. A venue may allow a lender to omit it to accept any supported collateral; omission never means an unsecured borrowing request.",
+  "MaxLength": 160
+}
