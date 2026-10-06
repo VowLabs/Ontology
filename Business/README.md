@@ -2,7 +2,7 @@
 
 Canonical code: `B`. Definition: [index.json](index.json).
 
-Business groups commercial workflows, employment records and insurance policy records. Finance remains separate so the same financial facts can be used in personal and commercial contexts.
+Business covers the economic affairs of individuals, households, organizations and public bodies. Finance is a branch of Business, alongside commerce, employment, insurance, professions and services.
 
 Parent: [VowLabs ontology](../README.md).
 
@@ -20,7 +20,7 @@ Products, offers and orders for either branch remain Commerce concepts.
 
 ### Insurance policy — `B:IN`
 
-Insurance policy records describe an actual policy using type, provider, policy number and expiry date. The policy type choices are the existing broad record vocabulary; the more detailed product taxonomy at F:P:IS does not silently replace them.
+Insurance policy records describe an actual policy using type, provider, policy number and expiry date. The policy type choices are the existing broad record vocabulary; the more detailed product taxonomy at B:F:P:IS does not silently replace them.
 
 Record fields: Policy type (`B:IN:T`), Provider (`B:IN:P`), Policy number (`B:IN:N`), Expiry date (`B:IN:END`).
 
@@ -49,3 +49,7 @@ A profession is an occupation or skilled trade, separate from employer-specific 
 [Definition guide](Professions/README.md) · [Dataset](../data/professions/README.md).
 
 - `B:MP` — [Motor insurance policy terms](MotorPolicy/README.md): proposed motor coverage and underwriting auction terms, separate from issued policies at `B:IN`.
+
+### Finance — `B:F`
+
+Money, accounts, assets, products and financial transactions for personal, corporate and public contexts. Shared financial records remain defined once. See the [Finance guide](Finance/README.md).

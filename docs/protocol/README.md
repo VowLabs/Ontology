@@ -13,13 +13,13 @@ canonical code. For example, this fragment identifies a vehicle year:
 ```json
 {
   "ontologyVersion": "2.0.0",
-  "code": "F:A:V:Y",
+  "code": "B:F:A:V:Y",
   "reference": "urn:vl:ontology:2.0.0:F:A:V:Y"
 }
 ```
 
 This is a reference example, not a prescribed request or signature envelope.
-Resolve the code through `GET /v1/definitions/F:A:V:Y`. For reproducible
+Resolve the code through `GET /v1/definitions/B:F:A:V:Y`. For reproducible
 interpretation, retain the catalogue revision and the corresponding snapshot.
 The API serves the currently loaded ontology; it does not provide historical
 snapshot lookup.
@@ -32,9 +32,9 @@ to a definition in that record's declared ontology version. Memiki permits up
 to 32 tags, each at most 64 characters. The anonymous root is not a tag.
 Organizing concepts, record definitions and leaf datapoints can all be referenced.
 
-For example, `"tags": ["F:P:IS:MO"]` qualifies an item in terms of motor
+For example, `"tags": ["B:F:P:IS:MO"]` qualifies an item in terms of motor
 insurance. The stored value is the code, while the UI can display its full
-human-readable path. `"Insured"`, `"Finance:Product"`, `"F:P:*"`, URLs and
+human-readable path. `"Insured"`, `"Finance:Product"`, `"B:F:P:*"`, URLs and
 unknown codes are not valid tags. A reference to a field does not assert that
 field's value: `S:G:AD:R` means Role, not the Role value Shipping.
 

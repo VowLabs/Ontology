@@ -1,0 +1,44 @@
+{
+  "Name": "Finance",
+  "Collection": false,
+  "Description": "Money, assets, accounts, financial products and transactions across personal, corporate and public economic affairs.",
+  "Children": {
+    "BA": {
+      "$ref": "./BankAccount/index.json"
+    },
+    "WA": {
+      "$ref": "./Wallet/index.json"
+    },
+    "PI": {
+      "$ref": "./PaymentInstrument/index.json"
+    },
+    "A": {
+      "$ref": "./Assets/index.json"
+    },
+    "INV": {
+      "$ref": "./Invoice/index.json"
+    },
+    "SP": {
+      "$ref": "./SettlementProof/index.json"
+    },
+    "RF": {
+      "$ref": "./Refund/index.json"
+    },
+    "P": {
+      "$ref": "./Product/index.json"
+    },
+    "LN": {
+      "$ref": "./Loan/index.json"
+    },
+    "PE": {
+      "$ref": "./Personal/index.json"
+    },
+    "CO": {
+      "$ref": "./Corporate/index.json"
+    },
+    "PU": {
+      "$ref": "./Public/index.json"
+    }
+  },
+  "Composite": false
+}

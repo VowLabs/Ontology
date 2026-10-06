@@ -4,7 +4,7 @@ Canonical code: `H:AC`. Definition: [index.json](index.json).
 
 Accessibility records describe requested accommodations. They can apply to people or organizations under the schema and do not require a diagnosis or medical explanation.
 
-Parent: [Health](../README.md).
+Parent: [Food & Health](../README.md).
 
 ## Record scope
 

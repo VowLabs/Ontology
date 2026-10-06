@@ -4,7 +4,7 @@ Canonical code: `H:D`. Definition: [index.json](index.json).
 
 Food separates preferences from dietary restrictions. Disliking an ingredient is different from requiring a preparation restriction; allergy status remains in H:AL.
 
-Parent: [Health](../README.md).
+Parent: [Food & Health](../README.md).
 
 ## Subclassifications
 

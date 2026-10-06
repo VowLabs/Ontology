@@ -3,7 +3,7 @@
 Canonical code: `B:MP`. A repeatable proposed policy associated with an individual
 or organization. It describes motor coverage to procure through underwriting,
 including a reverse premium auction. It is distinct from the issued-policy record
-`B:IN` and motor product classification `F:P:IS:MO`; neither is replaced. Saving
+`B:IN` and motor product classification `B:F:P:IS:MO`; neither is replaced. Saving
 a draft creates no coverage, escrow or insurer obligation. There are no finer
 subclasses; the children below are answer fields.
 

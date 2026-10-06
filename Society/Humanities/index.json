@@ -1,7 +1,14 @@
 {
   "Name": "Humanities",
   "Collection": false,
-  "Description": "Open for community-maintained extensions.",
-  "Children": {},
+  "Description": "Human culture, expression, language, history, philosophy and interpretation, including Art and Beliefs and values.",
+  "Children": {
+    "A": {
+      "$ref": "./Art/index.json"
+    },
+    "BV": {
+      "$ref": "./BeliefsValues/index.json"
+    }
+  },
   "Composite": false
 }

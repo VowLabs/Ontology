@@ -127,3 +127,34 @@ against their original ontology version.
 
 Adds the `F:LN` loan-terms record. Empty maps preserve existing codes, values,
 subjects, and signatures. Saving a new loan record does not submit a trade.
+
+## 10.5.0 → 11.0.0
+
+Business includes the economic affairs of individuals and public bodies as well
+as organizations. Finance moves from `F` to `B:F`; apply the prefix mapping only
+to an exact code or a colon-delimited descendant. For example `F:BA` becomes
+`B:F:BA`, and a `F:P:IS:MO` tag becomes `B:F:P:IS:MO`. Record field keys, values,
+IDs, subjects, visibility and timestamps remain unchanged. Migrate code-bearing
+references and canonical tags, including application presets and storage mappings;
+do not replace ordinary strings or financial answer values. Reject conflicting
+old/new entries rather than overwriting them. Consumers that cannot migrate must
+reject version 11 rather than interpreting retired codes as current definitions.
+
+The complete 10.5.0 local definitions are archived in `legacy.json`. Signed
+statements, attestations and disclosure history retain their original bytes and
+version; validate them against that archive. Earlier migration steps remain
+unchanged and chain through 10.5.0. No production database is changed by this
+repository update. Consumers must update their code references and regenerate
+bundled catalogues as part of their own release before adopting version 11.
+
+New classifications are Personal (`B:F:PE`), Corporate (`B:F:CO`) and Public
+(`B:F:PU`) finance; Art (`R:U:A`); Government (`R:G`); and Beliefs and values
+(`R:U:BV`), with Beliefs (`R:U:BV:B`) and Values (`R:U:BV:V`). Product retains
+key `P`; Personal uses `PE`. Shared financial records stay directly under Finance
+and are not duplicated under each context. New branches do not add answer fields.
+
+Health is relabelled Food & Health (`H`), preserving every existing descendant
+code and answer meaning. Home (`HOME`) is a new top-level organizing branch for
+domestic life, with no finer subclasses or answer fields. These additions are
+part of the same unpublished 11.0.0 release; no additional prefix migration is
+needed for either domain.

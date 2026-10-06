@@ -4,7 +4,7 @@ Canonical code: `H:AL`. Definition: [index.json](index.json).
 
 An allergy record is scoped to one substance. Reported allergy, suspected, no-known-allergy and unknown are explicit statuses; a missing answer is not a declaration of no allergy. Reaction and notes add context without changing that distinction.
 
-Parent: [Health](../README.md).
+Parent: [Food & Health](../README.md).
 
 ## Record scope
 

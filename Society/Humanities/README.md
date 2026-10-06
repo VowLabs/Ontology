@@ -2,15 +2,17 @@
 
 Canonical code: `R:U`. Definition: [index.json](index.json).
 
-Humanities is reserved for human culture, language, history, philosophy and interpretation. No child definitions are published yet; these scope examples do not create canonical subclasses.
-
-Parent: [Society (`R`)](../README.md).
-
-This branch concerns the meanings, works and traditions of collective life.
-Examples include literature, language, history and philosophy; it does not
-classify particular people or organizations, which belong to Identity.
-The former top-level code `U` migrates to `R:U` in ontology version 8.0.0.
+Human culture, expression, language, history, philosophy and interpretation.
+Parent: [Society (`R`)](../README.md). Particular people and organizations are
+identified under Identity; this branch concerns works, ideas and traditions.
+The former top-level code `U` migrated here in version 8.0.0.
 
 ## Subclassifications
 
-No child classifications are currently defined (`Children: {}`). Examples and characteristics described here do not introduce additional canonical codes.
+- [Art (`R:U:A`)](Art/README.md): creative expression, works and practices,
+  including visual art, music, literature and performance.
+- [Beliefs and values (`R:U:BV`)](BeliefsValues/README.md): religious and secular
+  worldviews, convictions and guiding principles; separates Beliefs from Values.
+
+These are organizing classifications with no answer types, units or constraints.
+Language and history remain scope examples, not additional canonical codes.

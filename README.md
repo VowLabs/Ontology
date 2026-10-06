@@ -19,8 +19,8 @@ a colon-delimited code. References explicitly connect files; filenames do not
 contribute to identifiers. For example:
 
 ```
-index.json → F → Finance/index.json → A → Assets/index.json → V → Vehicle/index.json → Y → Year.json
-canonical code: F:A:V:Y
+index.json → B → Business/index.json → F → Finance/index.json → A → Assets/index.json → V → Vehicle/index.json → Y → Year.json
+canonical code: B:F:A:V:Y
 ```
 
 Changing a filename or display label preserves the code. Published child keys
@@ -36,17 +36,17 @@ edge does not necessarily mean “is a subtype of.”
 flowchart LR
     root["VowLabs ontology"]
     n_I["I · Identity"]
-    n_F["F · Finance"]
-    n_H["H · Health"]
+    n_H["H · Food &amp; Health"]
     n_B["B · Business"]
     n_S["S · Science"]
     n_R["R · Society"]
+    n_HOME["HOME · Home"]
     root --> n_I
-    root --> n_F
     root --> n_H
     root --> n_B
     root --> n_S
     root --> n_R
+    root --> n_HOME
 ```
 
 [Explore the full datapoint taxonomy](docs/taxonomy.md), with a graph for each
@@ -75,21 +75,22 @@ for particular workflows.
 | Code | Domain | Scope |
 | --- | --- | --- |
 | `I` | Identity | Describes people and organizations, how they identify themselves, how they can be contacted, and issued documents. Its current branches cover personal and organizational information, identifiers, contact details, and documents. Identity provides the subjects to which records in other domains belong; possessing an identifier or declaring a relationship does not establish its authenticity. |
-| `F` | Finance | Covers money, assets, accounts, payment instruments, and financial transactions for individuals, organizations, and public bodies. Current definitions include bank accounts, wallets, payment instruments, assets, invoices, settlement proofs, and refunds. Finance remains a peer of Business because financial information also describes personal holdings and noncommercial activity, while business operations extend beyond financial matters. |
-| `H` | Health | Covers physical and mental health, care needs, accessibility, and food-related information relevant to wellbeing. Current definitions include allergies, medications, medical history, accessibility needs, and food requirements. These records support selective disclosure for contexts such as care intake and food service; a recorded answer is a person's or organization's statement, and the catalogue itself supplies neither a diagnosis nor clinical validation. |
-| `B` | Business | Covers commercial activity and the organization of work, including products, services, trading relationships, employment, insurance, and operational processes. Its current branches are Commerce, Employment, Insurance, Professions, and Services offered to business and organizational customers. Business uses financial facts through their Finance codes, allowing a commercial workflow to combine operational and financial information without duplicating the same concept in both domains. |
+| `H` | Food & Health | Covers physical and mental health, care needs, accessibility, and food-related information relevant to wellbeing. Current definitions include allergies, medications, medical history, accessibility needs, and food requirements. These records support selective disclosure for contexts such as care intake and food service; a recorded answer is a person's or organization's statement, and the catalogue itself supplies neither a diagnosis nor clinical validation. |
+| `B` | Business | Business covers the economic affairs of individuals, households, organizations and public bodies. Finance is a branch of Business, alongside commerce, employment, insurance, professions and services. Personal (`B:F:PE`), Corporate (`B:F:CO`) and Public (`B:F:PU`) classify financial contexts while shared records and product types stay under Finance. |
 | `S` | Science | Covers scientific knowledge, technical systems, and the information structures used to describe and process data. Its current branches are Technology and Information, including the shared primitive types used throughout the ontology. This domain provides a home for scientific and technical subject matter; the fact that another domain can be studied systematically does not make that entire domain a subdivision of Science. |
-| `R` | Society | Covers collective life, social institutions, civic participation, governance, law, communities, and relationships between groups. Identity describes particular people and organizations, while Society provides a home for the collective structures and practices in which they participate. Its Humanities branch (`R:U`) covers culture, expression, language, history, philosophy and interpretation; Services (`R:SV`) classifies services people use. |
+| `R` | Society | Covers collective life, social institutions, civic participation, governance, law, communities, and relationships between groups. Identity describes particular people and organizations, while Society provides a home for the collective structures and practices in which they participate. Its Humanities branch (`R:U`) includes Art (`R:U:A`) and Beliefs and values (`R:U:BV`); Government (`R:G`) covers public institutions and civic processes; Services (`R:SV`) classifies services people use. |
+
+| `HOME` | Home | Organizes domestic life, living spaces, housekeeping, furnishing and home maintenance. This branch currently has no finer classifications or answer fields. Contact addresses remain in Identity, property assets and household finances in Business:Finance, and food and health information in Food & Health. |
 
 ## Definitions
 
 ### Financial products
 
-[`Finance:Product`](Finance/Product/index.json) (`F:P`) classifies account,
+[`Finance:Product`](Business/Finance/Product/index.json) (`B:F:P`) classifies account,
 credit, investment, payment, insurance, retirement and native digital-asset
 products. Mortgages sit under Credit:Loan and stocks under Investment:Equity.
 These are product-type concepts, separate from existing customer records such
-as `F:BA` (bank account). See the [financial product taxonomy](docs/finance-products.md)
+as `B:F:BA` (bank account). See the [financial product taxonomy](docs/finance-products.md)
 for codes, classification examples and compatibility notes for ontology `2.1.0`.
 
 ### Professions and other reference data
@@ -152,9 +153,9 @@ For example, an application might store the following record in its own database
 {
   "id": "vehicle1",
   "subject": "person1",
-  "code": "F:A:V",
+  "code": "B:F:A:V",
   "label": "Family car",
-  "tags": ["F:P:IS:MO"],
+  "tags": ["B:F:P:IS:MO"],
   "values": {
     "MK": { "value": "Toyota", "public": false, "updatedAt": "2026-09-13T12:00:00.000Z" },
     "Y": { "value": 2022, "public": false, "updatedAt": "2026-09-13T12:00:00.000Z" }
@@ -259,7 +260,7 @@ labels from public answers. `DisplayFormat` describes the body, excluding the la
 ## Canonical tags and contribution requirements
 
 Record `tags` contain at most 32 distinct, nonempty ontology codes such as
-`F:P:IS:MO`. Each code must resolve in the record's declared ontology version;
+`B:F:P:IS:MO`. Each code must resolve in the record's declared ontology version;
 labels, wildcard expressions and guessed codes are rejected. Tags qualify the
 item without asserting a field value, granting access or attesting truth.
 See the [tag contract](docs/protocol/README.md#canonical-record-tags) for
@@ -276,11 +277,12 @@ children. Record guides describe fields rather than pretending those fields are
 subtypes. Terminal classification guides state when no finer subclasses exist.
 
 - [Identity (`I`)](Identity/README.md): Identity separates who a subject is from how to contact them, their identifiers, issued documents and contact information. Personal and organizational identity define the subject types used by records elsewhere in the tree.
-- [Finance (`F`)](Finance/README.md): Finance separates customer account and payment references, physical asset records, transaction records and financial product classifications. F:P describes product types; it does not replace the existing answer-bearing account records.
-- [Health (`H`)](Health/README.md): Health separates reported allergies, medication use, medical history, accessibility accommodations and food requirements. Preferences, restrictions and reported conditions have different meanings and are kept in separate records.
-- [Business (`B`)](Business/README.md): Business groups commercial workflows, employment records and insurance policy records. Finance remains separate so the same financial facts can be used in personal and commercial contexts.
+- [Food & Health (`H`)](Health/README.md): Food & Health separates reported allergies, medication use, medical history, accessibility accommodations and food requirements. Preferences, restrictions and reported conditions have different meanings and are kept in separate records.
+- [Business (`B`)](Business/README.md): Business covers the economic affairs of individuals, households, organizations and public bodies. Finance is a branch of Business, alongside commerce, employment, insurance, professions and services.
 - [Science (`S`)](Science/README.md): Science currently organizes Technology and Information. Technology defines online services; Information supplies data types and information-system record classifications. These branches describe technical concepts rather than granting applications access to user data.
 - [Society (`R`)](Society/README.md): Society covers collective institutions, governance, law, civic participation, communities and culture. Its [Humanities (`R:U`)](Society/Humanities/README.md) branch covers language, history, philosophy and interpretation. Its [Services (`R:SV`)](Society/Services/README.md) branch classifies services people consume. Identity describes particular people and organizations.
+
+- [Home (`HOME`)](Home/README.md): Domestic life, living spaces and household care and organization; no finer subclasses or answer fields are currently defined.
 
 Supporting indexes are documented separately: [workflow collections](../../Memiki/examples/request-presets/README.md) and [application storage classifications](../../docs/application-ontology-storage.md). These indexes are not ontology domains.
 
@@ -309,3 +311,10 @@ Ontology proxies node, children, choices and dataset requests to Geo. The defaul
 catalogue and global search identify their local scope; explicit
 `/v1/catalogue?expand=delegations` fetches an offline snapshot. See the
 [proxy contract](docs/contributions/README.md) for errors, versions and links.
+
+## Version 11 hierarchy migration
+
+Finance moves from `F` to `B:F`, including all descendants. See the
+[migration guide](versions/migrations/README.md#1050--1100) before updating
+consumers or stored records. Art, Government, and Beliefs and values are
+classifications; they do not collect or infer personal beliefs.

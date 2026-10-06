@@ -1,8 +1,8 @@
-# Health
+# Food & Health
 
 Canonical code: `H`. Definition: [index.json](index.json).
 
-Health separates reported allergies, medication use, medical history, accessibility accommodations and food requirements. Preferences, restrictions and reported conditions have different meanings and are kept in separate records.
+Food & Health separates reported allergies, medication use, medical history, accessibility accommodations and food requirements. Preferences, restrictions and reported conditions have different meanings and are kept in separate records.
 
 Parent: [VowLabs ontology](../README.md).
 

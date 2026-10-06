@@ -4,7 +4,7 @@ Canonical code: `H:MED`. Definition: [index.json](index.json).
 
 A medication record groups the name with a dose including units and a frequency. Dose and frequency are text, allowing the recorded regimen to retain its wording; the ontology does not calculate doses or prescribe treatment.
 
-Parent: [Health](../README.md).
+Parent: [Food & Health](../README.md).
 
 ## Record scope
 

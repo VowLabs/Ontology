@@ -1,7 +1,7 @@
 {
   "Name": "Business",
   "Collection": false,
-  "Description": "Open for community-maintained extensions.",
+  "Description": "Economic affairs of individuals, households, organizations and public bodies, including finance, commerce, employment and insurance.",
   "Children": {
     "IN": {
       "$ref": "./Insurance/index.json"
@@ -20,6 +20,9 @@
     },
     "MP": {
       "$ref": "./MotorPolicy/index.json"
+    },
+    "F": {
+      "$ref": "./Finance/index.json"
     }
   },
   "Composite": false

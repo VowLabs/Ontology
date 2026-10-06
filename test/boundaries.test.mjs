@@ -7,8 +7,9 @@ import {loadCatalogue,ontologyRoot} from '../src/catalogue.mjs';
 
 test('Humanities moves into Society with a versioned migration and historical definitions',()=>{
  const c=loadCatalogue();
- assert.equal(c.version,'10.5.0');
- assert.equal(c.migrations['10.4.0'].To,c.version);
+ assert.equal(c.version,'11.0.0');
+ assert.equal(c.migrations['10.5.0'].To,c.version);
+ assert.equal(c.migrations['10.4.0'].To,'10.5.0');
  assert.equal(c.migrations['10.3.0'].To,'10.4.0');
  assert.equal(c.migrations['10.2.0'].To,'10.3.0');
  assert.equal(c.migrations['10.1.2'].To,'10.2.0');
@@ -19,7 +20,7 @@ test('Humanities moves into Society with a versioned migration and historical de
  assert.equal(c.nodes['R:U'].Name,'Humanities');
  assert.equal(c.nodes['S:I:D:T:T'].Name,'Text');
  assert.equal(c.nodes['R:EN:T'].Type,'S:I:D:T:T');
- assert.deepEqual(c.nodes['R:U'].Children,{});
+ assert.deepEqual(c.nodes['R:U'].Children,{A:'R:U:A',BV:'R:U:BV'});
  assert.equal(c.migrations['7.0.0'].To,'8.0.0');
  assert.equal(c.migrations['8.0.0'].To,'8.1.0');
  assert.equal(c.migrations['8.1.0'].To,'8.2.0');
@@ -30,7 +31,7 @@ test('Humanities moves into Society with a versioned migration and historical de
  assert.equal(c.legacy[c.migrations['7.0.0'].Legacy].Nodes.U.Name,'Humanities');
  for(const [code,node] of Object.entries(c.legacy['7.0.0'].Nodes)) {
   if(!['','B','R','U','S:G','I:C','S:I:D:T'].includes(code) && !code.startsWith('S:G:') && !code.startsWith('I:')) {
-   const {Collection,Composite,...current}=c.nodes[code];
+   const {Collection,Composite,...current}=c.legacy['10.5.0'].Nodes[code];
    if (code === 'F') {
     const {LN,...historicalChildren}=current.Children;
     assert.equal(LN,'F:LN');
@@ -42,7 +43,7 @@ test('Humanities moves into Society with a versioned migration and historical de
 
 test('active definitions exclude reference rows and application schemas',()=>{
  const c=loadCatalogue();
- for(const code of ['I:CN','I:PR:NN','I:PR:SUB','F:AC','S:I:D:LEX','G:CO:US','B:PRO:LAW'])assert.equal(c.nodes[code],undefined,code);
+ for(const code of ['I:CN','I:PR:NN','I:PR:SUB','B:F:AC','S:I:D:LEX','G:CO:US','B:PRO:LAW'])assert.equal(c.nodes[code],undefined,code);
  for(const n of Object.values(c.nodes))for(const key of ['Records','ManagedBy','Preference','RegistryVersion','Storage'])assert.equal(n[key],undefined,n.Code);
  assert.equal(c.datasets.services.records.length,15);
  assert.equal(c.datasets.professions.records.length,36);
@@ -108,4 +109,26 @@ test('delegation routing is derived from the public boundary definition',()=>{
  assert.equal(source.Delegation.url,'https://geo-ekkis.vercel.app/v1/');
  assert.equal(existsSync(join(ontologyRoot,'_support/delegations.json')),false);
  assert.deepEqual(catalogue.delegations.geo,{...source.Delegation,prefix:'S:G',ontologyVersion:catalogue.version});
+});
+
+test('version 11 moves Finance losslessly and exposes the expanded domains',()=>{
+ const c=loadCatalogue();
+ assert.deepEqual(c.migrations['10.5.0'].Prefixes,{F:'B:F'});
+ const move=code=>code==='F'||code.startsWith('F:')?`B:${code}`:code;
+ const migrate=value=>typeof value==='string'?move(value):Array.isArray(value)?value.map(migrate):value&&typeof value==='object'?Object.fromEntries(Object.entries(value).map(([key,item])=>[key,migrate(item)])):value;
+ for(const [code,node] of Object.entries(c.legacy['10.5.0'].Nodes)) {
+  if(!code.startsWith('F:'))continue;
+  assert.equal(c.nodes[code],undefined,code);
+  const expected=migrate(node);
+  if(expected.Description)expected.Description=expected.Description.replace(/\bF:/g,'B:F:');
+  assert.deepEqual(c.nodes[move(code)],expected,code);
+ }
+ assert.equal(c.nodes.F,undefined);
+ assert.equal(c.nodes.B.Children.F,'B:F');
+ for(const code of ['B:F:PE','B:F:CO','B:F:PU','R:U:A','R:G','R:U:BV','R:U:BV:B','R:U:BV:V','HOME'])assert.ok(c.nodes[code],code);
+ assert.equal(c.nodes.H.Name,'Food & Health');
+ for(const [code,node] of Object.entries(c.legacy['10.5.0'].Nodes))if(code.startsWith('H:'))assert.deepEqual(c.nodes[code],node,code);
+ assert.equal(c.nodes[''].Children.HOME,'HOME');
+ assert.equal(c.nodes.HOME.Name,'Home');
+ assert.deepEqual(c.nodes.HOME.Children,{});
 });

@@ -19,10 +19,9 @@ Parent: [VowLabs ontology](../README.md).
   history, philosophy and interpretation. It applies to the meanings, ideas,
   works and traditions through which people understand human experience.
   Literature and philosophy are scope examples, not separately published codes.
-  Humanities currently has no finer classifications or answer fields.
+  Its published children are Art (`R:U:A`) and Beliefs and values (`R:U:BV`).
 
-Institutions, governance, law and civic participation remain scope examples;
-no separate child classifications or answer fields are published for them yet.
+- [Government (`R:G`)](Government/README.md): public institutions, authority, governance and civic processes, including elections and public policy. Public finance remains `B:F:PU`; public administration services remain `R:SV:GV`. No finer Government subclasses or answer fields are currently defined.
 
 - [Endorsement (`R:EN`)](Endorsement/README.md): An authored free-text assessment
   of an individual or organization with a required one-to-three-star rating.

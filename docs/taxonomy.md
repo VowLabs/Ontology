@@ -2,8 +2,8 @@
 
 [Back to the ontology README](../README.md#datapoint-taxonomy-graph)
 
-This graph documents the 377 local definitions (including the root) in
-ontology `10.3.0`, following `Children` references from [index.json](../index.json).
+This graph documents the 408 local definitions (including the root) in
+ontology `11.0.0`, following `Children` references from [index.json](../index.json).
 Each domain graph includes every local descendant, with its canonical code.
 
 Arrows mean parent–child containment. Organizing branches, classification
@@ -17,8 +17,8 @@ ontology nodes.
 are owned by Geo and are not part of this local snapshot. See the
 [delegation guide](../Science/Geography/README.md).
 
-When `Children`, names, codes, or delegation boundaries change, update these
-graphs and the README overview to match the canonical definitions.
+Regenerate these graphs and the README overview from the canonical definitions
+with `npm --prefix VowLabs/Ontology run docs:taxonomy` from the Vow workspace.
 
 ## Domains
 
@@ -26,17 +26,17 @@ graphs and the README overview to match the canonical definitions.
 flowchart LR
     root["VowLabs ontology"]
     n_I["I · Identity"]
-    n_F["F · Finance"]
-    n_H["H · Health"]
+    n_H["H · Food &amp; Health"]
     n_B["B · Business"]
     n_S["S · Science"]
     n_R["R · Society"]
+    n_HOME["HOME · Home"]
     root --> n_I
-    root --> n_F
     root --> n_H
     root --> n_B
     root --> n_S
     root --> n_R
+    root --> n_HOME
 ```
 
 ## Identity (`I`)
@@ -112,13 +112,16 @@ flowchart LR
     n_I_DOC_PP_TY["I:DOC:PP:TY · Passport type"]
     n_I_DOC_PP_NA["I:DOC:PP:NA · Nationality"]
     n_I --> n_I_P
+    n_I --> n_I_O
+    n_I --> n_I_ID
+    n_I --> n_I_C
+    n_I --> n_I_DOC
     n_I_P --> n_I_P_LN
     n_I_P --> n_I_P_DN
     n_I_P --> n_I_P_DOB
     n_I_P --> n_I_P_COB
     n_I_P --> n_I_P_SSN
     n_I_P --> n_I_P_IMG
-    n_I --> n_I_O
     n_I_O --> n_I_O_LN
     n_I_O --> n_I_O_TN
     n_I_O --> n_I_O_J
@@ -145,21 +148,19 @@ flowchart LR
     n_I_O_K --> n_I_O_K_UA
     n_I_O_K --> n_I_O_K_FD
     n_I_O_K --> n_I_O_K_CORP
-    n_I --> n_I_ID
     n_I_ID --> n_I_ID_S
     n_I_ID --> n_I_ID_V
     n_I_ID --> n_I_ID_IS
-    n_I --> n_I_C
     n_I_C --> n_I_C_SM
-    n_I_C_SM --> n_I_C_SM_S
-    n_I_C_SM --> n_I_C_SM_ID
     n_I_C --> n_I_C_EM
     n_I_C --> n_I_C_PH
     n_I_C --> n_I_C_URL
     n_I_C --> n_I_C_BOOK
     n_I_C --> n_I_C_AD
-    n_I --> n_I_DOC
+    n_I_C_SM --> n_I_C_SM_S
+    n_I_C_SM --> n_I_C_SM_ID
     n_I_DOC --> n_I_DOC_DL
+    n_I_DOC --> n_I_DOC_PP
     n_I_DOC_DL --> n_I_DOC_DL_N
     n_I_DOC_DL --> n_I_DOC_DL_CO
     n_I_DOC_DL --> n_I_DOC_DL_IS
@@ -168,7 +169,6 @@ flowchart LR
     n_I_DOC_DL --> n_I_DOC_DL_RE
     n_I_DOC_DL --> n_I_DOC_DL_CL
     n_I_DOC_DL --> n_I_DOC_DL_RS
-    n_I_DOC --> n_I_DOC_PP
     n_I_DOC_PP --> n_I_DOC_PP_N
     n_I_DOC_PP --> n_I_DOC_PP_CO
     n_I_DOC_PP --> n_I_DOC_PP_IS
@@ -178,8 +178,7 @@ flowchart LR
     n_I_DOC_PP --> n_I_DOC_PP_NA
 ```
 
-<details>
-<summary>Source definitions</summary>
+### Source definitions
 
 - [`I` — Identity](../Identity/index.json)
 - [`I:P` — Individual](../Identity/Person/index.json)
@@ -248,334 +247,13 @@ flowchart LR
 - [`I:DOC:PP:TY` — Passport type](../Identity/Documents/Passport/PassportType.json)
 - [`I:DOC:PP:NA` — Nationality](../Identity/Documents/Passport/Nationality.json)
 
-</details>
-
-## Finance (`F`)
-
-[Domain guide](../Finance/README.md) · 102 local definitions.
-
-```mermaid
-flowchart LR
-    n_F["F · Finance"]
-    n_F_BA["F:BA · Bank account"]
-    n_F_BA_H["F:BA:H · Account holder"]
-    n_F_BA_B["F:BA:B · Bank"]
-    n_F_BA_S["F:BA:S · Identifier scheme"]
-    n_F_BA_ID["F:BA:ID · Account identifier"]
-    n_F_WA["F:WA · Wallet address"]
-    n_F_WA_N["F:WA:N · Network"]
-    n_F_WA_A["F:WA:A · Address"]
-    n_F_PI["F:PI · Payment instrument reference"]
-    n_F_PI_P["F:PI:P · Provider"]
-    n_F_PI_R["F:PI:R · Reference"]
-    n_F_PI_L4["F:PI:L4 · Last four digits"]
-    n_F_A["F:A · Assets"]
-    n_F_A_V["F:A:V · Vehicle"]
-    n_F_A_V_MK["F:A:V:MK · Make"]
-    n_F_A_V_MD["F:A:V:MD · Model"]
-    n_F_A_V_Y["F:A:V:Y · Model year"]
-    n_F_A_V_VIN["F:A:V:VIN · Vehicle identification number"]
-    n_F_A_V_REG["F:A:V:REG · Registration plate"]
-    n_F_A_V_USE["F:A:V:USE · Usage"]
-    n_F_A_P["F:A:P · Property"]
-    n_F_A_P_N["F:A:P:N · Label"]
-    n_F_A_P_AD["F:A:P:AD · Address"]
-    n_F_A_P_O["F:A:P:O · Occupancy"]
-    n_F_A_P_Y["F:A:P:Y · Year built"]
-    n_F_INV["F:INV · Invoice"]
-    n_F_INV_ID["F:INV:ID · Record identifier"]
-    n_F_INV_ST["F:INV:ST · Status"]
-    n_F_SP["F:SP · Settlement proof"]
-    n_F_SP_ID["F:SP:ID · Record identifier"]
-    n_F_SP_ST["F:SP:ST · Status"]
-    n_F_RF["F:RF · Refund"]
-    n_F_RF_ID["F:RF:ID · Record identifier"]
-    n_F_RF_ST["F:RF:ST · Status"]
-    n_F_P["F:P · Product"]
-    n_F_P_AC["F:P:AC · Account"]
-    n_F_P_AC_BA["F:P:AC:BA · Bank account"]
-    n_F_P_AC_BA_CU["F:P:AC:BA:CU · Current account"]
-    n_F_P_AC_BA_SA["F:P:AC:BA:SA · Savings account"]
-    n_F_P_AC_BA_TD["F:P:AC:BA:TD · Term deposit"]
-    n_F_P_AC_BA_MM["F:P:AC:BA:MM · Money market deposit account"]
-    n_F_P_AC_BR["F:P:AC:BR · Brokerage account"]
-    n_F_P_AC_CU["F:P:AC:CU · Custody account"]
-    n_F_P_CR["F:P:CR · Credit"]
-    n_F_P_CR_CA["F:P:CR:CA · Credit card"]
-    n_F_P_CR_CH["F:P:CR:CH · Charge card"]
-    n_F_P_CR_LN["F:P:CR:LN · Loan"]
-    n_F_P_CR_LN_MO["F:P:CR:LN:MO · Mortgage loan"]
-    n_F_P_CR_LN_PE["F:P:CR:LN:PE · Personal loan"]
-    n_F_P_CR_LN_VE["F:P:CR:LN:VE · Vehicle loan"]
-    n_F_P_CR_LN_ED["F:P:CR:LN:ED · Education loan"]
-    n_F_P_CR_LN_BU["F:P:CR:LN:BU · Business loan"]
-    n_F_P_CR_LN_BN["F:P:CR:LN:BN · Buy now, pay later"]
-    n_F_P_CR_LC["F:P:CR:LC · Line of credit"]
-    n_F_P_CR_LE["F:P:CR:LE · Finance lease"]
-    n_F_P_CR_TF["F:P:CR:TF · Trade and receivables finance"]
-    n_F_P_IN["F:P:IN · Investment"]
-    n_F_P_IN_EQ["F:P:IN:EQ · Equity"]
-    n_F_P_IN_EQ_ST["F:P:IN:EQ:ST · Stock"]
-    n_F_P_IN_EQ_ST_CO["F:P:IN:EQ:ST:CO · Common stock"]
-    n_F_P_IN_EQ_ST_PR["F:P:IN:EQ:ST:PR · Preferred stock"]
-    n_F_P_IN_EQ_DR["F:P:IN:EQ:DR · Depositary receipt"]
-    n_F_P_IN_DE["F:P:IN:DE · Debt security"]
-    n_F_P_IN_DE_BO["F:P:IN:DE:BO · Bond"]
-    n_F_P_IN_DE_BI["F:P:IN:DE:BI · Bill"]
-    n_F_P_IN_DE_NO["F:P:IN:DE:NO · Note"]
-    n_F_P_IN_DE_CP["F:P:IN:DE:CP · Commercial paper"]
-    n_F_P_IN_DE_CD["F:P:IN:DE:CD · Negotiable certificate of deposit"]
-    n_F_P_IN_DE_AB["F:P:IN:DE:AB · Asset-backed security"]
-    n_F_P_IN_FU["F:P:IN:FU · Fund"]
-    n_F_P_IN_FU_MF["F:P:IN:FU:MF · Mutual fund"]
-    n_F_P_IN_FU_ET["F:P:IN:FU:ET · Exchange-traded fund"]
-    n_F_P_IN_FU_CE["F:P:IN:FU:CE · Closed-end fund"]
-    n_F_P_IN_FU_PF["F:P:IN:FU:PF · Private fund"]
-    n_F_P_IN_DR["F:P:IN:DR · Derivative"]
-    n_F_P_IN_DR_OP["F:P:IN:DR:OP · Option"]
-    n_F_P_IN_DR_FU["F:P:IN:DR:FU · Future"]
-    n_F_P_IN_DR_FW["F:P:IN:DR:FW · Forward"]
-    n_F_P_IN_DR_SW["F:P:IN:DR:SW · Swap"]
-    n_F_P_IN_DR_CF["F:P:IN:DR:CF · Contract for difference"]
-    n_F_P_IN_DR_WA["F:P:IN:DR:WA · Warrant"]
-    n_F_P_IN_ST["F:P:IN:ST · Structured investment"]
-    n_F_P_PA["F:P:PA · Payment"]
-    n_F_P_PA_DC["F:P:PA:DC · Debit card"]
-    n_F_P_PA_PC["F:P:PA:PC · Prepaid card"]
-    n_F_P_PA_EM["F:P:PA:EM · Electronic money account"]
-    n_F_P_IS["F:P:IS · Insurance"]
-    n_F_P_IS_LI["F:P:IS:LI · Life insurance"]
-    n_F_P_IS_HE["F:P:IS:HE · Health insurance"]
-    n_F_P_IS_DI["F:P:IS:DI · Disability and income protection"]
-    n_F_P_IS_PR["F:P:IS:PR · Property insurance"]
-    n_F_P_IS_LA["F:P:IS:LA · Liability insurance"]
-    n_F_P_IS_MO["F:P:IS:MO · Motor insurance"]
-    n_F_P_IS_TR["F:P:IS:TR · Travel insurance"]
-    n_F_P_IS_AN["F:P:IS:AN · Annuity"]
-    n_F_P_RE["F:P:RE · Retirement"]
-    n_F_P_RE_PE["F:P:RE:PE · Pension arrangement"]
-    n_F_P_RE_AC["F:P:RE:AC · Retirement account"]
-    n_F_P_DA["F:P:DA · Native digital asset"]
-    n_F_P_DA_CR["F:P:DA:CR · Unbacked cryptoasset"]
-    n_F_P_DA_ST["F:P:DA:ST · Stablecoin"]
-    n_F --> n_F_BA
-    n_F_BA --> n_F_BA_H
-    n_F_BA --> n_F_BA_B
-    n_F_BA --> n_F_BA_S
-    n_F_BA --> n_F_BA_ID
-    n_F --> n_F_WA
-    n_F_WA --> n_F_WA_N
-    n_F_WA --> n_F_WA_A
-    n_F --> n_F_PI
-    n_F_PI --> n_F_PI_P
-    n_F_PI --> n_F_PI_R
-    n_F_PI --> n_F_PI_L4
-    n_F --> n_F_A
-    n_F_A --> n_F_A_V
-    n_F_A_V --> n_F_A_V_MK
-    n_F_A_V --> n_F_A_V_MD
-    n_F_A_V --> n_F_A_V_Y
-    n_F_A_V --> n_F_A_V_VIN
-    n_F_A_V --> n_F_A_V_REG
-    n_F_A_V --> n_F_A_V_USE
-    n_F_A --> n_F_A_P
-    n_F_A_P --> n_F_A_P_N
-    n_F_A_P --> n_F_A_P_AD
-    n_F_A_P --> n_F_A_P_O
-    n_F_A_P --> n_F_A_P_Y
-    n_F --> n_F_INV
-    n_F_INV --> n_F_INV_ID
-    n_F_INV --> n_F_INV_ST
-    n_F --> n_F_SP
-    n_F_SP --> n_F_SP_ID
-    n_F_SP --> n_F_SP_ST
-    n_F --> n_F_RF
-    n_F_RF --> n_F_RF_ID
-    n_F_RF --> n_F_RF_ST
-    n_F --> n_F_P
-    n_F_P --> n_F_P_AC
-    n_F_P_AC --> n_F_P_AC_BA
-    n_F_P_AC_BA --> n_F_P_AC_BA_CU
-    n_F_P_AC_BA --> n_F_P_AC_BA_SA
-    n_F_P_AC_BA --> n_F_P_AC_BA_TD
-    n_F_P_AC_BA --> n_F_P_AC_BA_MM
-    n_F_P_AC --> n_F_P_AC_BR
-    n_F_P_AC --> n_F_P_AC_CU
-    n_F_P --> n_F_P_CR
-    n_F_P_CR --> n_F_P_CR_CA
-    n_F_P_CR --> n_F_P_CR_CH
-    n_F_P_CR --> n_F_P_CR_LN
-    n_F_P_CR_LN --> n_F_P_CR_LN_MO
-    n_F_P_CR_LN --> n_F_P_CR_LN_PE
-    n_F_P_CR_LN --> n_F_P_CR_LN_VE
-    n_F_P_CR_LN --> n_F_P_CR_LN_ED
-    n_F_P_CR_LN --> n_F_P_CR_LN_BU
-    n_F_P_CR_LN --> n_F_P_CR_LN_BN
-    n_F_P_CR --> n_F_P_CR_LC
-    n_F_P_CR --> n_F_P_CR_LE
-    n_F_P_CR --> n_F_P_CR_TF
-    n_F_P --> n_F_P_IN
-    n_F_P_IN --> n_F_P_IN_EQ
-    n_F_P_IN_EQ --> n_F_P_IN_EQ_ST
-    n_F_P_IN_EQ_ST --> n_F_P_IN_EQ_ST_CO
-    n_F_P_IN_EQ_ST --> n_F_P_IN_EQ_ST_PR
-    n_F_P_IN_EQ --> n_F_P_IN_EQ_DR
-    n_F_P_IN --> n_F_P_IN_DE
-    n_F_P_IN_DE --> n_F_P_IN_DE_BO
-    n_F_P_IN_DE --> n_F_P_IN_DE_BI
-    n_F_P_IN_DE --> n_F_P_IN_DE_NO
-    n_F_P_IN_DE --> n_F_P_IN_DE_CP
-    n_F_P_IN_DE --> n_F_P_IN_DE_CD
-    n_F_P_IN_DE --> n_F_P_IN_DE_AB
-    n_F_P_IN --> n_F_P_IN_FU
-    n_F_P_IN_FU --> n_F_P_IN_FU_MF
-    n_F_P_IN_FU --> n_F_P_IN_FU_ET
-    n_F_P_IN_FU --> n_F_P_IN_FU_CE
-    n_F_P_IN_FU --> n_F_P_IN_FU_PF
-    n_F_P_IN --> n_F_P_IN_DR
-    n_F_P_IN_DR --> n_F_P_IN_DR_OP
-    n_F_P_IN_DR --> n_F_P_IN_DR_FU
-    n_F_P_IN_DR --> n_F_P_IN_DR_FW
-    n_F_P_IN_DR --> n_F_P_IN_DR_SW
-    n_F_P_IN_DR --> n_F_P_IN_DR_CF
-    n_F_P_IN_DR --> n_F_P_IN_DR_WA
-    n_F_P_IN --> n_F_P_IN_ST
-    n_F_P --> n_F_P_PA
-    n_F_P_PA --> n_F_P_PA_DC
-    n_F_P_PA --> n_F_P_PA_PC
-    n_F_P_PA --> n_F_P_PA_EM
-    n_F_P --> n_F_P_IS
-    n_F_P_IS --> n_F_P_IS_LI
-    n_F_P_IS --> n_F_P_IS_HE
-    n_F_P_IS --> n_F_P_IS_DI
-    n_F_P_IS --> n_F_P_IS_PR
-    n_F_P_IS --> n_F_P_IS_LA
-    n_F_P_IS --> n_F_P_IS_MO
-    n_F_P_IS --> n_F_P_IS_TR
-    n_F_P_IS --> n_F_P_IS_AN
-    n_F_P --> n_F_P_RE
-    n_F_P_RE --> n_F_P_RE_PE
-    n_F_P_RE --> n_F_P_RE_AC
-    n_F_P --> n_F_P_DA
-    n_F_P_DA --> n_F_P_DA_CR
-    n_F_P_DA --> n_F_P_DA_ST
-```
-
-<details>
-<summary>Source definitions</summary>
-
-- [`F` — Finance](../Finance/index.json)
-- [`F:BA` — Bank account](../Finance/BankAccount/index.json)
-- [`F:BA:H` — Account holder](../Finance/BankAccount/Holder.json)
-- [`F:BA:B` — Bank](../Finance/BankAccount/Bank.json)
-- [`F:BA:S` — Identifier scheme](../Finance/BankAccount/Scheme.json)
-- [`F:BA:ID` — Account identifier](../Finance/BankAccount/Identifier.json)
-- [`F:WA` — Wallet address](../Finance/Wallet/index.json)
-- [`F:WA:N` — Network](../Finance/Wallet/Network.json)
-- [`F:WA:A` — Address](../Finance/Wallet/Address.json)
-- [`F:PI` — Payment instrument reference](../Finance/PaymentInstrument/index.json)
-- [`F:PI:P` — Provider](../Finance/PaymentInstrument/Provider.json)
-- [`F:PI:R` — Reference](../Finance/PaymentInstrument/Reference.json)
-- [`F:PI:L4` — Last four digits](../Finance/PaymentInstrument/LastFour.json)
-- [`F:A` — Assets](../Finance/Assets/index.json)
-- [`F:A:V` — Vehicle](../Finance/Assets/Vehicle/index.json)
-- [`F:A:V:MK` — Make](../Finance/Assets/Vehicle/Make.json)
-- [`F:A:V:MD` — Model](../Finance/Assets/Vehicle/Model.json)
-- [`F:A:V:Y` — Model year](../Finance/Assets/Vehicle/Year.json)
-- [`F:A:V:VIN` — Vehicle identification number](../Finance/Assets/Vehicle/VIN.json)
-- [`F:A:V:REG` — Registration plate](../Finance/Assets/Vehicle/Registration.json)
-- [`F:A:V:USE` — Usage](../Finance/Assets/Vehicle/Use.json)
-- [`F:A:P` — Property](../Finance/Assets/Property/index.json)
-- [`F:A:P:N` — Label](../Finance/Assets/Property/Name.json)
-- [`F:A:P:AD` — Address](../Finance/Assets/Property/Address.json)
-- [`F:A:P:O` — Occupancy](../Finance/Assets/Property/Occupancy.json)
-- [`F:A:P:Y` — Year built](../Finance/Assets/Property/YearBuilt.json)
-- [`F:INV` — Invoice](../Finance/Invoice/index.json)
-- [`F:INV:ID` — Record identifier](../Finance/Invoice/Id.json)
-- [`F:INV:ST` — Status](../Finance/Invoice/Status.json)
-- [`F:SP` — Settlement proof](../Finance/SettlementProof/index.json)
-- [`F:SP:ID` — Record identifier](../Finance/SettlementProof/Id.json)
-- [`F:SP:ST` — Status](../Finance/SettlementProof/Status.json)
-- [`F:RF` — Refund](../Finance/Refund/index.json)
-- [`F:RF:ID` — Record identifier](../Finance/Refund/Id.json)
-- [`F:RF:ST` — Status](../Finance/Refund/Status.json)
-- [`F:P` — Product](../Finance/Product/index.json)
-- [`F:P:AC` — Account](../Finance/Product/Account/index.json)
-- [`F:P:AC:BA` — Bank account](../Finance/Product/Account/Bank/index.json)
-- [`F:P:AC:BA:CU` — Current account](../Finance/Product/Account/Bank/Current/index.json)
-- [`F:P:AC:BA:SA` — Savings account](../Finance/Product/Account/Bank/Savings/index.json)
-- [`F:P:AC:BA:TD` — Term deposit](../Finance/Product/Account/Bank/TermDeposit/index.json)
-- [`F:P:AC:BA:MM` — Money market deposit account](../Finance/Product/Account/Bank/MoneyMarket/index.json)
-- [`F:P:AC:BR` — Brokerage account](../Finance/Product/Account/Brokerage/index.json)
-- [`F:P:AC:CU` — Custody account](../Finance/Product/Account/Custody/index.json)
-- [`F:P:CR` — Credit](../Finance/Product/Credit/index.json)
-- [`F:P:CR:CA` — Credit card](../Finance/Product/Credit/Card/index.json)
-- [`F:P:CR:CH` — Charge card](../Finance/Product/Credit/ChargeCard/index.json)
-- [`F:P:CR:LN` — Loan](../Finance/Product/Credit/Loan/index.json)
-- [`F:P:CR:LN:MO` — Mortgage loan](../Finance/Product/Credit/Loan/Mortgage/index.json)
-- [`F:P:CR:LN:PE` — Personal loan](../Finance/Product/Credit/Loan/Personal/index.json)
-- [`F:P:CR:LN:VE` — Vehicle loan](../Finance/Product/Credit/Loan/Vehicle/index.json)
-- [`F:P:CR:LN:ED` — Education loan](../Finance/Product/Credit/Loan/Education/index.json)
-- [`F:P:CR:LN:BU` — Business loan](../Finance/Product/Credit/Loan/Business/index.json)
-- [`F:P:CR:LN:BN` — Buy now, pay later](../Finance/Product/Credit/Loan/BuyNowPayLater/index.json)
-- [`F:P:CR:LC` — Line of credit](../Finance/Product/Credit/LineOfCredit/index.json)
-- [`F:P:CR:LE` — Finance lease](../Finance/Product/Credit/FinanceLease/index.json)
-- [`F:P:CR:TF` — Trade and receivables finance](../Finance/Product/Credit/TradeFinance/index.json)
-- [`F:P:IN` — Investment](../Finance/Product/Investment/index.json)
-- [`F:P:IN:EQ` — Equity](../Finance/Product/Investment/Equity/index.json)
-- [`F:P:IN:EQ:ST` — Stock](../Finance/Product/Investment/Equity/Stock/index.json)
-- [`F:P:IN:EQ:ST:CO` — Common stock](../Finance/Product/Investment/Equity/Stock/Common/index.json)
-- [`F:P:IN:EQ:ST:PR` — Preferred stock](../Finance/Product/Investment/Equity/Stock/Preferred/index.json)
-- [`F:P:IN:EQ:DR` — Depositary receipt](../Finance/Product/Investment/Equity/DepositaryReceipt/index.json)
-- [`F:P:IN:DE` — Debt security](../Finance/Product/Investment/DebtSecurity/index.json)
-- [`F:P:IN:DE:BO` — Bond](../Finance/Product/Investment/DebtSecurity/Bond/index.json)
-- [`F:P:IN:DE:BI` — Bill](../Finance/Product/Investment/DebtSecurity/Bill/index.json)
-- [`F:P:IN:DE:NO` — Note](../Finance/Product/Investment/DebtSecurity/Note/index.json)
-- [`F:P:IN:DE:CP` — Commercial paper](../Finance/Product/Investment/DebtSecurity/CommercialPaper/index.json)
-- [`F:P:IN:DE:CD` — Negotiable certificate of deposit](../Finance/Product/Investment/DebtSecurity/NegotiableCertificateOfDeposit/index.json)
-- [`F:P:IN:DE:AB` — Asset-backed security](../Finance/Product/Investment/DebtSecurity/AssetBacked/index.json)
-- [`F:P:IN:FU` — Fund](../Finance/Product/Investment/Fund/index.json)
-- [`F:P:IN:FU:MF` — Mutual fund](../Finance/Product/Investment/Fund/Mutual/index.json)
-- [`F:P:IN:FU:ET` — Exchange-traded fund](../Finance/Product/Investment/Fund/ExchangeTraded/index.json)
-- [`F:P:IN:FU:CE` — Closed-end fund](../Finance/Product/Investment/Fund/ClosedEnd/index.json)
-- [`F:P:IN:FU:PF` — Private fund](../Finance/Product/Investment/Fund/Private/index.json)
-- [`F:P:IN:DR` — Derivative](../Finance/Product/Investment/Derivative/index.json)
-- [`F:P:IN:DR:OP` — Option](../Finance/Product/Investment/Derivative/Option/index.json)
-- [`F:P:IN:DR:FU` — Future](../Finance/Product/Investment/Derivative/Future/index.json)
-- [`F:P:IN:DR:FW` — Forward](../Finance/Product/Investment/Derivative/Forward/index.json)
-- [`F:P:IN:DR:SW` — Swap](../Finance/Product/Investment/Derivative/Swap/index.json)
-- [`F:P:IN:DR:CF` — Contract for difference](../Finance/Product/Investment/Derivative/ContractForDifference/index.json)
-- [`F:P:IN:DR:WA` — Warrant](../Finance/Product/Investment/Derivative/Warrant/index.json)
-- [`F:P:IN:ST` — Structured investment](../Finance/Product/Investment/Structured/index.json)
-- [`F:P:PA` — Payment](../Finance/Product/Payment/index.json)
-- [`F:P:PA:DC` — Debit card](../Finance/Product/Payment/DebitCard/index.json)
-- [`F:P:PA:PC` — Prepaid card](../Finance/Product/Payment/PrepaidCard/index.json)
-- [`F:P:PA:EM` — Electronic money account](../Finance/Product/Payment/ElectronicMoney/index.json)
-- [`F:P:IS` — Insurance](../Finance/Product/Insurance/index.json)
-- [`F:P:IS:LI` — Life insurance](../Finance/Product/Insurance/Life/index.json)
-- [`F:P:IS:HE` — Health insurance](../Finance/Product/Insurance/Health/index.json)
-- [`F:P:IS:DI` — Disability and income protection](../Finance/Product/Insurance/Disability/index.json)
-- [`F:P:IS:PR` — Property insurance](../Finance/Product/Insurance/Property/index.json)
-- [`F:P:IS:LA` — Liability insurance](../Finance/Product/Insurance/Liability/index.json)
-- [`F:P:IS:MO` — Motor insurance](../Finance/Product/Insurance/Motor/index.json)
-- [`F:P:IS:TR` — Travel insurance](../Finance/Product/Insurance/Travel/index.json)
-- [`F:P:IS:AN` — Annuity](../Finance/Product/Insurance/Annuity/index.json)
-- [`F:P:RE` — Retirement](../Finance/Product/Retirement/index.json)
-- [`F:P:RE:PE` — Pension arrangement](../Finance/Product/Retirement/Pension/index.json)
-- [`F:P:RE:AC` — Retirement account](../Finance/Product/Retirement/Account/index.json)
-- [`F:P:DA` — Native digital asset](../Finance/Product/DigitalAsset/index.json)
-- [`F:P:DA:CR` — Unbacked cryptoasset](../Finance/Product/DigitalAsset/Cryptoasset/index.json)
-- [`F:P:DA:ST` — Stablecoin](../Finance/Product/DigitalAsset/Stablecoin/index.json)
-
-</details>
-
-## Health (`H`)
+## Food & Health (`H`)
 
 [Domain guide](../Health/README.md) · 23 local definitions.
 
 ```mermaid
 flowchart LR
-    n_H["H · Health"]
+    n_H["H · Food &amp; Health"]
     n_H_AL["H:AL · Allergy record"]
     n_H_AL_S["H:AL:S · Substance"]
     n_H_AL_ST["H:AL:ST · Status"]
@@ -599,33 +277,32 @@ flowchart LR
     n_H_D_D_N["H:D:D:N · Restriction"]
     n_H_D_D_I["H:D:D:I · Instructions"]
     n_H --> n_H_AL
+    n_H --> n_H_MED
+    n_H --> n_H_HX
+    n_H --> n_H_AC
+    n_H --> n_H_D
     n_H_AL --> n_H_AL_S
     n_H_AL --> n_H_AL_ST
     n_H_AL --> n_H_AL_R
     n_H_AL --> n_H_AL_N
-    n_H --> n_H_MED
     n_H_MED --> n_H_MED_N
     n_H_MED --> n_H_MED_D
     n_H_MED --> n_H_MED_F
-    n_H --> n_H_HX
     n_H_HX --> n_H_HX_C
     n_H_HX --> n_H_HX_D
     n_H_HX --> n_H_HX_N
-    n_H --> n_H_AC
     n_H_AC --> n_H_AC_N
-    n_H --> n_H_D
     n_H_D --> n_H_D_P
+    n_H_D --> n_H_D_D
     n_H_D_P --> n_H_D_P_I
     n_H_D_P --> n_H_D_P_P
-    n_H_D --> n_H_D_D
     n_H_D_D --> n_H_D_D_N
     n_H_D_D --> n_H_D_D_I
 ```
 
-<details>
-<summary>Source definitions</summary>
+### Source definitions
 
-- [`H` — Health](../Health/index.json)
+- [`H` — Food & Health](../Health/index.json)
 - [`H:AL` — Allergy record](../Health/Allergy/index.json)
 - [`H:AL:S` — Substance](../Health/Allergy/Substance.json)
 - [`H:AL:ST` — Status](../Health/Allergy/Status.json)
@@ -649,11 +326,9 @@ flowchart LR
 - [`H:D:D:N` — Restriction](../Health/Food/Diet/Name.json)
 - [`H:D:D:I` — Instructions](../Health/Food/Diet/Instructions.json)
 
-</details>
-
 ## Business (`B`)
 
-[Domain guide](../Business/README.md) · 112 local definitions.
+[Domain guide](../Business/README.md) · 239 local definitions.
 
 ```mermaid
 flowchart LR
@@ -769,26 +444,179 @@ flowchart LR
     n_B_SV_ED["B:SV:ED · Workforce training"]
     n_B_SV_HC["B:SV:HC · Workplace health services"]
     n_B_SV_FD["B:SV:FD · Workplace catering"]
+    n_B_MP["B:MP · Motor insurance policy terms"]
+    n_B_MP_VH["B:MP:VH · Vehicle commitment"]
+    n_B_MP_WD["B:MP:WD · Policy wording commitment"]
+    n_B_MP_AS["B:MP:AS · Settlement asset"]
+    n_B_MP_CV["B:MP:CV · Coverage limit"]
+    n_B_MP_DD["B:MP:DD · Deductible"]
+    n_B_MP_PM["B:MP:PM · Maximum premium"]
+    n_B_MP_TM["B:MP:TM · Coverage duration"]
+    n_B_MP_CL["B:MP:CL · Auction closing time"]
+    n_B_MP_RW["B:MP:RW · Claim reporting window"]
+    n_B_F["B:F · Finance"]
+    n_B_F_BA["B:F:BA · Bank account"]
+    n_B_F_BA_H["B:F:BA:H · Account holder"]
+    n_B_F_BA_B["B:F:BA:B · Bank"]
+    n_B_F_BA_S["B:F:BA:S · Identifier scheme"]
+    n_B_F_BA_ID["B:F:BA:ID · Account identifier"]
+    n_B_F_WA["B:F:WA · Wallet address"]
+    n_B_F_WA_N["B:F:WA:N · Network"]
+    n_B_F_WA_A["B:F:WA:A · Address"]
+    n_B_F_PI["B:F:PI · Payment instrument reference"]
+    n_B_F_PI_P["B:F:PI:P · Provider"]
+    n_B_F_PI_R["B:F:PI:R · Reference"]
+    n_B_F_PI_L4["B:F:PI:L4 · Last four digits"]
+    n_B_F_A["B:F:A · Assets"]
+    n_B_F_A_V["B:F:A:V · Vehicle"]
+    n_B_F_A_V_MK["B:F:A:V:MK · Make"]
+    n_B_F_A_V_MD["B:F:A:V:MD · Model"]
+    n_B_F_A_V_Y["B:F:A:V:Y · Model year"]
+    n_B_F_A_V_VIN["B:F:A:V:VIN · Vehicle identification number"]
+    n_B_F_A_V_REG["B:F:A:V:REG · Registration plate"]
+    n_B_F_A_V_USE["B:F:A:V:USE · Usage"]
+    n_B_F_A_P["B:F:A:P · Property"]
+    n_B_F_A_P_N["B:F:A:P:N · Label"]
+    n_B_F_A_P_AD["B:F:A:P:AD · Address"]
+    n_B_F_A_P_O["B:F:A:P:O · Occupancy"]
+    n_B_F_A_P_Y["B:F:A:P:Y · Year built"]
+    n_B_F_INV["B:F:INV · Invoice"]
+    n_B_F_INV_ID["B:F:INV:ID · Record identifier"]
+    n_B_F_INV_ST["B:F:INV:ST · Status"]
+    n_B_F_SP["B:F:SP · Settlement proof"]
+    n_B_F_SP_ID["B:F:SP:ID · Record identifier"]
+    n_B_F_SP_ST["B:F:SP:ST · Status"]
+    n_B_F_RF["B:F:RF · Refund"]
+    n_B_F_RF_ID["B:F:RF:ID · Record identifier"]
+    n_B_F_RF_ST["B:F:RF:ST · Status"]
+    n_B_F_P["B:F:P · Product"]
+    n_B_F_P_AC["B:F:P:AC · Account"]
+    n_B_F_P_AC_BA["B:F:P:AC:BA · Bank account"]
+    n_B_F_P_AC_BA_CU["B:F:P:AC:BA:CU · Current account"]
+    n_B_F_P_AC_BA_SA["B:F:P:AC:BA:SA · Savings account"]
+    n_B_F_P_AC_BA_TD["B:F:P:AC:BA:TD · Term deposit"]
+    n_B_F_P_AC_BA_MM["B:F:P:AC:BA:MM · Money market deposit account"]
+    n_B_F_P_AC_BR["B:F:P:AC:BR · Brokerage account"]
+    n_B_F_P_AC_CU["B:F:P:AC:CU · Custody account"]
+    n_B_F_P_CR["B:F:P:CR · Credit"]
+    n_B_F_P_CR_CA["B:F:P:CR:CA · Credit card"]
+    n_B_F_P_CR_CH["B:F:P:CR:CH · Charge card"]
+    n_B_F_P_CR_LN["B:F:P:CR:LN · Loan"]
+    n_B_F_P_CR_LN_MO["B:F:P:CR:LN:MO · Mortgage loan"]
+    n_B_F_P_CR_LN_PE["B:F:P:CR:LN:PE · Personal loan"]
+    n_B_F_P_CR_LN_VE["B:F:P:CR:LN:VE · Vehicle loan"]
+    n_B_F_P_CR_LN_ED["B:F:P:CR:LN:ED · Education loan"]
+    n_B_F_P_CR_LN_BU["B:F:P:CR:LN:BU · Business loan"]
+    n_B_F_P_CR_LN_BN["B:F:P:CR:LN:BN · Buy now, pay later"]
+    n_B_F_P_CR_LC["B:F:P:CR:LC · Line of credit"]
+    n_B_F_P_CR_LE["B:F:P:CR:LE · Finance lease"]
+    n_B_F_P_CR_TF["B:F:P:CR:TF · Trade and receivables finance"]
+    n_B_F_P_IN["B:F:P:IN · Investment"]
+    n_B_F_P_IN_EQ["B:F:P:IN:EQ · Equity"]
+    n_B_F_P_IN_EQ_ST["B:F:P:IN:EQ:ST · Stock"]
+    n_B_F_P_IN_EQ_ST_CO["B:F:P:IN:EQ:ST:CO · Common stock"]
+    n_B_F_P_IN_EQ_ST_PR["B:F:P:IN:EQ:ST:PR · Preferred stock"]
+    n_B_F_P_IN_EQ_DR["B:F:P:IN:EQ:DR · Depositary receipt"]
+    n_B_F_P_IN_DE["B:F:P:IN:DE · Debt security"]
+    n_B_F_P_IN_DE_BO["B:F:P:IN:DE:BO · Bond"]
+    n_B_F_P_IN_DE_BI["B:F:P:IN:DE:BI · Bill"]
+    n_B_F_P_IN_DE_NO["B:F:P:IN:DE:NO · Note"]
+    n_B_F_P_IN_DE_CP["B:F:P:IN:DE:CP · Commercial paper"]
+    n_B_F_P_IN_DE_CD["B:F:P:IN:DE:CD · Negotiable certificate of deposit"]
+    n_B_F_P_IN_DE_AB["B:F:P:IN:DE:AB · Asset-backed security"]
+    n_B_F_P_IN_FU["B:F:P:IN:FU · Fund"]
+    n_B_F_P_IN_FU_MF["B:F:P:IN:FU:MF · Mutual fund"]
+    n_B_F_P_IN_FU_ET["B:F:P:IN:FU:ET · Exchange-traded fund"]
+    n_B_F_P_IN_FU_CE["B:F:P:IN:FU:CE · Closed-end fund"]
+    n_B_F_P_IN_FU_PF["B:F:P:IN:FU:PF · Private fund"]
+    n_B_F_P_IN_DR["B:F:P:IN:DR · Derivative"]
+    n_B_F_P_IN_DR_OP["B:F:P:IN:DR:OP · Option"]
+    n_B_F_P_IN_DR_FU["B:F:P:IN:DR:FU · Future"]
+    n_B_F_P_IN_DR_FW["B:F:P:IN:DR:FW · Forward"]
+    n_B_F_P_IN_DR_SW["B:F:P:IN:DR:SW · Swap"]
+    n_B_F_P_IN_DR_CF["B:F:P:IN:DR:CF · Contract for difference"]
+    n_B_F_P_IN_DR_WA["B:F:P:IN:DR:WA · Warrant"]
+    n_B_F_P_IN_ST["B:F:P:IN:ST · Structured investment"]
+    n_B_F_P_PA["B:F:P:PA · Payment"]
+    n_B_F_P_PA_DC["B:F:P:PA:DC · Debit card"]
+    n_B_F_P_PA_PC["B:F:P:PA:PC · Prepaid card"]
+    n_B_F_P_PA_EM["B:F:P:PA:EM · Electronic money account"]
+    n_B_F_P_IS["B:F:P:IS · Insurance"]
+    n_B_F_P_IS_LI["B:F:P:IS:LI · Life insurance"]
+    n_B_F_P_IS_HE["B:F:P:IS:HE · Health insurance"]
+    n_B_F_P_IS_DI["B:F:P:IS:DI · Disability and income protection"]
+    n_B_F_P_IS_PR["B:F:P:IS:PR · Property insurance"]
+    n_B_F_P_IS_LA["B:F:P:IS:LA · Liability insurance"]
+    n_B_F_P_IS_MO["B:F:P:IS:MO · Motor insurance"]
+    n_B_F_P_IS_TR["B:F:P:IS:TR · Travel insurance"]
+    n_B_F_P_IS_AN["B:F:P:IS:AN · Annuity"]
+    n_B_F_P_RE["B:F:P:RE · Retirement"]
+    n_B_F_P_RE_PE["B:F:P:RE:PE · Pension arrangement"]
+    n_B_F_P_RE_AC["B:F:P:RE:AC · Retirement account"]
+    n_B_F_P_DA["B:F:P:DA · Native digital asset"]
+    n_B_F_P_DA_CR["B:F:P:DA:CR · Unbacked cryptoasset"]
+    n_B_F_P_DA_ST["B:F:P:DA:ST · Stablecoin"]
+    n_B_F_LN["B:F:LN · Loan"]
+    n_B_F_LN_SD["B:F:LN:SD · Side"]
+    n_B_F_LN_AS["B:F:LN:AS · Loan asset"]
+    n_B_F_LN_AM["B:F:LN:AM · Face amount"]
+    n_B_F_LN_TM["B:F:LN:TM · Term in seconds"]
+    n_B_F_LN_RB["B:F:LN:RB · Rate basis"]
+    n_B_F_LN_RM["B:F:LN:RM · Rate instruction"]
+    n_B_F_LN_RT["B:F:LN:RT · Annual rate percent"]
+    n_B_F_LN_CA["B:F:LN:CA · Collateral asset"]
+    n_B_F_LN_CQ["B:F:LN:CQ · Collateral quantity"]
+    n_B_F_LN_LV["B:F:LN:LV · Maximum loan-to-value percent"]
+    n_B_F_LN_RS["B:F:LN:RS · Allow resizing"]
+    n_B_F_PE["B:F:PE · Personal"]
+    n_B_F_CO["B:F:CO · Corporate"]
+    n_B_F_PU["B:F:PU · Public"]
     n_B --> n_B_IN
+    n_B --> n_B_EMP
+    n_B --> n_B_C
+    n_B --> n_B_PRO
+    n_B --> n_B_SV
+    n_B --> n_B_MP
+    n_B --> n_B_F
     n_B_IN --> n_B_IN_T
     n_B_IN --> n_B_IN_P
     n_B_IN --> n_B_IN_N
     n_B_IN --> n_B_IN_END
-    n_B --> n_B_EMP
     n_B_EMP --> n_B_EMP_O
     n_B_EMP --> n_B_EMP_R
     n_B_EMP --> n_B_EMP_S
-    n_B --> n_B_C
     n_B_C --> n_B_C_M
+    n_B_C --> n_B_C_ML
+    n_B_C --> n_B_C_O
+    n_B_C --> n_B_C_OR
+    n_B_C --> n_B_C_OL
+    n_B_C --> n_B_C_P
+    n_B_C --> n_B_C_CK
+    n_B_C --> n_B_C_FU
+    n_B_C --> n_B_C_WL
+    n_B_C --> n_B_C_SI
+    n_B_C --> n_B_C_OA
+    n_B_C --> n_B_C_ME
+    n_B_C --> n_B_C_CP
+    n_B_C --> n_B_C_ON
+    n_B_C --> n_B_C_MB
+    n_B_C --> n_B_C_SU
+    n_B_C --> n_B_C_NS
+    n_B_C --> n_B_C_RC
+    n_B_C --> n_B_C_RA
+    n_B_C --> n_B_C_MN
+    n_B_C --> n_B_C_MT
+    n_B_C --> n_B_C_PM
+    n_B_C --> n_B_C_MU
+    n_B_C --> n_B_C_MR
+    n_B_C --> n_B_C_OE
     n_B_C_M --> n_B_C_M_ID
     n_B_C_M --> n_B_C_M_ST
     n_B_C_M --> n_B_C_M_N
     n_B_C_M --> n_B_C_M_W
     n_B_C_M --> n_B_C_M_U
-    n_B_C --> n_B_C_ML
     n_B_C_ML --> n_B_C_ML_ID
     n_B_C_ML --> n_B_C_ML_N
-    n_B_C --> n_B_C_O
     n_B_C_O --> n_B_C_O_ID
     n_B_C_O --> n_B_C_O_ST
     n_B_C_O --> n_B_C_O_M
@@ -796,75 +624,51 @@ flowchart LR
     n_B_C_O --> n_B_C_O_D
     n_B_C_O --> n_B_C_O_U
     n_B_C_O --> n_B_C_O_I
-    n_B_C --> n_B_C_OR
     n_B_C_OR --> n_B_C_OR_ID
     n_B_C_OR --> n_B_C_OR_ST
-    n_B_C --> n_B_C_OL
     n_B_C_OL --> n_B_C_OL_ID
     n_B_C_OL --> n_B_C_OL_ST
-    n_B_C --> n_B_C_P
     n_B_C_P --> n_B_C_P_ID
     n_B_C_P --> n_B_C_P_ST
     n_B_C_P --> n_B_C_P_N
-    n_B_C --> n_B_C_CK
     n_B_C_CK --> n_B_C_CK_ID
     n_B_C_CK --> n_B_C_CK_ST
-    n_B_C --> n_B_C_FU
     n_B_C_FU --> n_B_C_FU_ID
     n_B_C_FU --> n_B_C_FU_ST
-    n_B_C --> n_B_C_WL
     n_B_C_WL --> n_B_C_WL_ID
     n_B_C_WL --> n_B_C_WL_ST
-    n_B_C --> n_B_C_SI
     n_B_C_SI --> n_B_C_SI_ID
     n_B_C_SI --> n_B_C_SI_ST
-    n_B_C --> n_B_C_OA
     n_B_C_OA --> n_B_C_OA_ID
     n_B_C_OA --> n_B_C_OA_ST
-    n_B_C --> n_B_C_ME
     n_B_C_ME --> n_B_C_ME_ID
     n_B_C_ME --> n_B_C_ME_ST
-    n_B_C --> n_B_C_CP
     n_B_C_CP --> n_B_C_CP_ID
     n_B_C_CP --> n_B_C_CP_ST
-    n_B_C --> n_B_C_ON
     n_B_C_ON --> n_B_C_ON_ID
     n_B_C_ON --> n_B_C_ON_ST
-    n_B_C --> n_B_C_MB
     n_B_C_MB --> n_B_C_MB_ID
     n_B_C_MB --> n_B_C_MB_ST
-    n_B_C --> n_B_C_SU
     n_B_C_SU --> n_B_C_SU_ID
     n_B_C_SU --> n_B_C_SU_ST
-    n_B_C --> n_B_C_NS
     n_B_C_NS --> n_B_C_NS_ID
     n_B_C_NS --> n_B_C_NS_ST
-    n_B_C --> n_B_C_RC
     n_B_C_RC --> n_B_C_RC_ID
     n_B_C_RC --> n_B_C_RC_ST
-    n_B_C --> n_B_C_RA
     n_B_C_RA --> n_B_C_RA_ID
     n_B_C_RA --> n_B_C_RA_ST
-    n_B_C --> n_B_C_MN
     n_B_C_MN --> n_B_C_MN_ID
     n_B_C_MN --> n_B_C_MN_ST
-    n_B_C --> n_B_C_MT
     n_B_C_MT --> n_B_C_MT_ID
     n_B_C_MT --> n_B_C_MT_ST
-    n_B_C --> n_B_C_PM
     n_B_C_PM --> n_B_C_PM_ID
     n_B_C_PM --> n_B_C_PM_ST
-    n_B_C --> n_B_C_MU
     n_B_C_MU --> n_B_C_MU_ID
     n_B_C_MU --> n_B_C_MU_ST
-    n_B_C --> n_B_C_MR
     n_B_C_MR --> n_B_C_MR_ID
     n_B_C_MR --> n_B_C_MR_ST
-    n_B_C --> n_B_C_OE
     n_B_C_OE --> n_B_C_OE_ID
     n_B_C_OE --> n_B_C_OE_ST
-    n_B --> n_B_PRO
-    n_B --> n_B_SV
     n_B_SV --> n_B_SV_AC
     n_B_SV --> n_B_SV_HR
     n_B_SV --> n_B_SV_MK
@@ -880,10 +684,134 @@ flowchart LR
     n_B_SV --> n_B_SV_ED
     n_B_SV --> n_B_SV_HC
     n_B_SV --> n_B_SV_FD
+    n_B_MP --> n_B_MP_VH
+    n_B_MP --> n_B_MP_WD
+    n_B_MP --> n_B_MP_AS
+    n_B_MP --> n_B_MP_CV
+    n_B_MP --> n_B_MP_DD
+    n_B_MP --> n_B_MP_PM
+    n_B_MP --> n_B_MP_TM
+    n_B_MP --> n_B_MP_CL
+    n_B_MP --> n_B_MP_RW
+    n_B_F --> n_B_F_BA
+    n_B_F --> n_B_F_WA
+    n_B_F --> n_B_F_PI
+    n_B_F --> n_B_F_A
+    n_B_F --> n_B_F_INV
+    n_B_F --> n_B_F_SP
+    n_B_F --> n_B_F_RF
+    n_B_F --> n_B_F_P
+    n_B_F --> n_B_F_LN
+    n_B_F --> n_B_F_PE
+    n_B_F --> n_B_F_CO
+    n_B_F --> n_B_F_PU
+    n_B_F_BA --> n_B_F_BA_H
+    n_B_F_BA --> n_B_F_BA_B
+    n_B_F_BA --> n_B_F_BA_S
+    n_B_F_BA --> n_B_F_BA_ID
+    n_B_F_WA --> n_B_F_WA_N
+    n_B_F_WA --> n_B_F_WA_A
+    n_B_F_PI --> n_B_F_PI_P
+    n_B_F_PI --> n_B_F_PI_R
+    n_B_F_PI --> n_B_F_PI_L4
+    n_B_F_A --> n_B_F_A_V
+    n_B_F_A --> n_B_F_A_P
+    n_B_F_A_V --> n_B_F_A_V_MK
+    n_B_F_A_V --> n_B_F_A_V_MD
+    n_B_F_A_V --> n_B_F_A_V_Y
+    n_B_F_A_V --> n_B_F_A_V_VIN
+    n_B_F_A_V --> n_B_F_A_V_REG
+    n_B_F_A_V --> n_B_F_A_V_USE
+    n_B_F_A_P --> n_B_F_A_P_N
+    n_B_F_A_P --> n_B_F_A_P_AD
+    n_B_F_A_P --> n_B_F_A_P_O
+    n_B_F_A_P --> n_B_F_A_P_Y
+    n_B_F_INV --> n_B_F_INV_ID
+    n_B_F_INV --> n_B_F_INV_ST
+    n_B_F_SP --> n_B_F_SP_ID
+    n_B_F_SP --> n_B_F_SP_ST
+    n_B_F_RF --> n_B_F_RF_ID
+    n_B_F_RF --> n_B_F_RF_ST
+    n_B_F_P --> n_B_F_P_AC
+    n_B_F_P --> n_B_F_P_CR
+    n_B_F_P --> n_B_F_P_IN
+    n_B_F_P --> n_B_F_P_PA
+    n_B_F_P --> n_B_F_P_IS
+    n_B_F_P --> n_B_F_P_RE
+    n_B_F_P --> n_B_F_P_DA
+    n_B_F_P_AC --> n_B_F_P_AC_BA
+    n_B_F_P_AC --> n_B_F_P_AC_BR
+    n_B_F_P_AC --> n_B_F_P_AC_CU
+    n_B_F_P_AC_BA --> n_B_F_P_AC_BA_CU
+    n_B_F_P_AC_BA --> n_B_F_P_AC_BA_SA
+    n_B_F_P_AC_BA --> n_B_F_P_AC_BA_TD
+    n_B_F_P_AC_BA --> n_B_F_P_AC_BA_MM
+    n_B_F_P_CR --> n_B_F_P_CR_CA
+    n_B_F_P_CR --> n_B_F_P_CR_CH
+    n_B_F_P_CR --> n_B_F_P_CR_LN
+    n_B_F_P_CR --> n_B_F_P_CR_LC
+    n_B_F_P_CR --> n_B_F_P_CR_LE
+    n_B_F_P_CR --> n_B_F_P_CR_TF
+    n_B_F_P_CR_LN --> n_B_F_P_CR_LN_MO
+    n_B_F_P_CR_LN --> n_B_F_P_CR_LN_PE
+    n_B_F_P_CR_LN --> n_B_F_P_CR_LN_VE
+    n_B_F_P_CR_LN --> n_B_F_P_CR_LN_ED
+    n_B_F_P_CR_LN --> n_B_F_P_CR_LN_BU
+    n_B_F_P_CR_LN --> n_B_F_P_CR_LN_BN
+    n_B_F_P_IN --> n_B_F_P_IN_EQ
+    n_B_F_P_IN --> n_B_F_P_IN_DE
+    n_B_F_P_IN --> n_B_F_P_IN_FU
+    n_B_F_P_IN --> n_B_F_P_IN_DR
+    n_B_F_P_IN --> n_B_F_P_IN_ST
+    n_B_F_P_IN_EQ --> n_B_F_P_IN_EQ_ST
+    n_B_F_P_IN_EQ --> n_B_F_P_IN_EQ_DR
+    n_B_F_P_IN_EQ_ST --> n_B_F_P_IN_EQ_ST_CO
+    n_B_F_P_IN_EQ_ST --> n_B_F_P_IN_EQ_ST_PR
+    n_B_F_P_IN_DE --> n_B_F_P_IN_DE_BO
+    n_B_F_P_IN_DE --> n_B_F_P_IN_DE_BI
+    n_B_F_P_IN_DE --> n_B_F_P_IN_DE_NO
+    n_B_F_P_IN_DE --> n_B_F_P_IN_DE_CP
+    n_B_F_P_IN_DE --> n_B_F_P_IN_DE_CD
+    n_B_F_P_IN_DE --> n_B_F_P_IN_DE_AB
+    n_B_F_P_IN_FU --> n_B_F_P_IN_FU_MF
+    n_B_F_P_IN_FU --> n_B_F_P_IN_FU_ET
+    n_B_F_P_IN_FU --> n_B_F_P_IN_FU_CE
+    n_B_F_P_IN_FU --> n_B_F_P_IN_FU_PF
+    n_B_F_P_IN_DR --> n_B_F_P_IN_DR_OP
+    n_B_F_P_IN_DR --> n_B_F_P_IN_DR_FU
+    n_B_F_P_IN_DR --> n_B_F_P_IN_DR_FW
+    n_B_F_P_IN_DR --> n_B_F_P_IN_DR_SW
+    n_B_F_P_IN_DR --> n_B_F_P_IN_DR_CF
+    n_B_F_P_IN_DR --> n_B_F_P_IN_DR_WA
+    n_B_F_P_PA --> n_B_F_P_PA_DC
+    n_B_F_P_PA --> n_B_F_P_PA_PC
+    n_B_F_P_PA --> n_B_F_P_PA_EM
+    n_B_F_P_IS --> n_B_F_P_IS_LI
+    n_B_F_P_IS --> n_B_F_P_IS_HE
+    n_B_F_P_IS --> n_B_F_P_IS_DI
+    n_B_F_P_IS --> n_B_F_P_IS_PR
+    n_B_F_P_IS --> n_B_F_P_IS_LA
+    n_B_F_P_IS --> n_B_F_P_IS_MO
+    n_B_F_P_IS --> n_B_F_P_IS_TR
+    n_B_F_P_IS --> n_B_F_P_IS_AN
+    n_B_F_P_RE --> n_B_F_P_RE_PE
+    n_B_F_P_RE --> n_B_F_P_RE_AC
+    n_B_F_P_DA --> n_B_F_P_DA_CR
+    n_B_F_P_DA --> n_B_F_P_DA_ST
+    n_B_F_LN --> n_B_F_LN_SD
+    n_B_F_LN --> n_B_F_LN_AS
+    n_B_F_LN --> n_B_F_LN_AM
+    n_B_F_LN --> n_B_F_LN_TM
+    n_B_F_LN --> n_B_F_LN_RB
+    n_B_F_LN --> n_B_F_LN_RM
+    n_B_F_LN --> n_B_F_LN_RT
+    n_B_F_LN --> n_B_F_LN_CA
+    n_B_F_LN --> n_B_F_LN_CQ
+    n_B_F_LN --> n_B_F_LN_LV
+    n_B_F_LN --> n_B_F_LN_RS
 ```
 
-<details>
-<summary>Source definitions</summary>
+### Source definitions
 
 - [`B` — Business](../Business/index.json)
 - [`B:IN` — Insurance policy](../Business/Insurance/index.json)
@@ -997,8 +925,133 @@ flowchart LR
 - [`B:SV:ED` — Workforce training](../Business/Services/WorkforceTraining/index.json)
 - [`B:SV:HC` — Workplace health services](../Business/Services/WorkplaceHealth/index.json)
 - [`B:SV:FD` — Workplace catering](../Business/Services/WorkplaceCatering/index.json)
-
-</details>
+- [`B:MP` — Motor insurance policy terms](../Business/MotorPolicy/index.json)
+- [`B:MP:VH` — Vehicle commitment](../Business/MotorPolicy/VH.json)
+- [`B:MP:WD` — Policy wording commitment](../Business/MotorPolicy/WD.json)
+- [`B:MP:AS` — Settlement asset](../Business/MotorPolicy/AS.json)
+- [`B:MP:CV` — Coverage limit](../Business/MotorPolicy/CV.json)
+- [`B:MP:DD` — Deductible](../Business/MotorPolicy/DD.json)
+- [`B:MP:PM` — Maximum premium](../Business/MotorPolicy/PM.json)
+- [`B:MP:TM` — Coverage duration](../Business/MotorPolicy/TM.json)
+- [`B:MP:CL` — Auction closing time](../Business/MotorPolicy/CL.json)
+- [`B:MP:RW` — Claim reporting window](../Business/MotorPolicy/RW.json)
+- [`B:F` — Finance](../Business/Finance/index.json)
+- [`B:F:BA` — Bank account](../Business/Finance/BankAccount/index.json)
+- [`B:F:BA:H` — Account holder](../Business/Finance/BankAccount/Holder.json)
+- [`B:F:BA:B` — Bank](../Business/Finance/BankAccount/Bank.json)
+- [`B:F:BA:S` — Identifier scheme](../Business/Finance/BankAccount/Scheme.json)
+- [`B:F:BA:ID` — Account identifier](../Business/Finance/BankAccount/Identifier.json)
+- [`B:F:WA` — Wallet address](../Business/Finance/Wallet/index.json)
+- [`B:F:WA:N` — Network](../Business/Finance/Wallet/Network.json)
+- [`B:F:WA:A` — Address](../Business/Finance/Wallet/Address.json)
+- [`B:F:PI` — Payment instrument reference](../Business/Finance/PaymentInstrument/index.json)
+- [`B:F:PI:P` — Provider](../Business/Finance/PaymentInstrument/Provider.json)
+- [`B:F:PI:R` — Reference](../Business/Finance/PaymentInstrument/Reference.json)
+- [`B:F:PI:L4` — Last four digits](../Business/Finance/PaymentInstrument/LastFour.json)
+- [`B:F:A` — Assets](../Business/Finance/Assets/index.json)
+- [`B:F:A:V` — Vehicle](../Business/Finance/Assets/Vehicle/index.json)
+- [`B:F:A:V:MK` — Make](../Business/Finance/Assets/Vehicle/Make.json)
+- [`B:F:A:V:MD` — Model](../Business/Finance/Assets/Vehicle/Model.json)
+- [`B:F:A:V:Y` — Model year](../Business/Finance/Assets/Vehicle/Year.json)
+- [`B:F:A:V:VIN` — Vehicle identification number](../Business/Finance/Assets/Vehicle/VIN.json)
+- [`B:F:A:V:REG` — Registration plate](../Business/Finance/Assets/Vehicle/Registration.json)
+- [`B:F:A:V:USE` — Usage](../Business/Finance/Assets/Vehicle/Use.json)
+- [`B:F:A:P` — Property](../Business/Finance/Assets/Property/index.json)
+- [`B:F:A:P:N` — Label](../Business/Finance/Assets/Property/Name.json)
+- [`B:F:A:P:AD` — Address](../Business/Finance/Assets/Property/Address.json)
+- [`B:F:A:P:O` — Occupancy](../Business/Finance/Assets/Property/Occupancy.json)
+- [`B:F:A:P:Y` — Year built](../Business/Finance/Assets/Property/YearBuilt.json)
+- [`B:F:INV` — Invoice](../Business/Finance/Invoice/index.json)
+- [`B:F:INV:ID` — Record identifier](../Business/Finance/Invoice/Id.json)
+- [`B:F:INV:ST` — Status](../Business/Finance/Invoice/Status.json)
+- [`B:F:SP` — Settlement proof](../Business/Finance/SettlementProof/index.json)
+- [`B:F:SP:ID` — Record identifier](../Business/Finance/SettlementProof/Id.json)
+- [`B:F:SP:ST` — Status](../Business/Finance/SettlementProof/Status.json)
+- [`B:F:RF` — Refund](../Business/Finance/Refund/index.json)
+- [`B:F:RF:ID` — Record identifier](../Business/Finance/Refund/Id.json)
+- [`B:F:RF:ST` — Status](../Business/Finance/Refund/Status.json)
+- [`B:F:P` — Product](../Business/Finance/Product/index.json)
+- [`B:F:P:AC` — Account](../Business/Finance/Product/Account/index.json)
+- [`B:F:P:AC:BA` — Bank account](../Business/Finance/Product/Account/Bank/index.json)
+- [`B:F:P:AC:BA:CU` — Current account](../Business/Finance/Product/Account/Bank/Current/index.json)
+- [`B:F:P:AC:BA:SA` — Savings account](../Business/Finance/Product/Account/Bank/Savings/index.json)
+- [`B:F:P:AC:BA:TD` — Term deposit](../Business/Finance/Product/Account/Bank/TermDeposit/index.json)
+- [`B:F:P:AC:BA:MM` — Money market deposit account](../Business/Finance/Product/Account/Bank/MoneyMarket/index.json)
+- [`B:F:P:AC:BR` — Brokerage account](../Business/Finance/Product/Account/Brokerage/index.json)
+- [`B:F:P:AC:CU` — Custody account](../Business/Finance/Product/Account/Custody/index.json)
+- [`B:F:P:CR` — Credit](../Business/Finance/Product/Credit/index.json)
+- [`B:F:P:CR:CA` — Credit card](../Business/Finance/Product/Credit/Card/index.json)
+- [`B:F:P:CR:CH` — Charge card](../Business/Finance/Product/Credit/ChargeCard/index.json)
+- [`B:F:P:CR:LN` — Loan](../Business/Finance/Product/Credit/Loan/index.json)
+- [`B:F:P:CR:LN:MO` — Mortgage loan](../Business/Finance/Product/Credit/Loan/Mortgage/index.json)
+- [`B:F:P:CR:LN:PE` — Personal loan](../Business/Finance/Product/Credit/Loan/Personal/index.json)
+- [`B:F:P:CR:LN:VE` — Vehicle loan](../Business/Finance/Product/Credit/Loan/Vehicle/index.json)
+- [`B:F:P:CR:LN:ED` — Education loan](../Business/Finance/Product/Credit/Loan/Education/index.json)
+- [`B:F:P:CR:LN:BU` — Business loan](../Business/Finance/Product/Credit/Loan/Business/index.json)
+- [`B:F:P:CR:LN:BN` — Buy now, pay later](../Business/Finance/Product/Credit/Loan/BuyNowPayLater/index.json)
+- [`B:F:P:CR:LC` — Line of credit](../Business/Finance/Product/Credit/LineOfCredit/index.json)
+- [`B:F:P:CR:LE` — Finance lease](../Business/Finance/Product/Credit/FinanceLease/index.json)
+- [`B:F:P:CR:TF` — Trade and receivables finance](../Business/Finance/Product/Credit/TradeFinance/index.json)
+- [`B:F:P:IN` — Investment](../Business/Finance/Product/Investment/index.json)
+- [`B:F:P:IN:EQ` — Equity](../Business/Finance/Product/Investment/Equity/index.json)
+- [`B:F:P:IN:EQ:ST` — Stock](../Business/Finance/Product/Investment/Equity/Stock/index.json)
+- [`B:F:P:IN:EQ:ST:CO` — Common stock](../Business/Finance/Product/Investment/Equity/Stock/Common/index.json)
+- [`B:F:P:IN:EQ:ST:PR` — Preferred stock](../Business/Finance/Product/Investment/Equity/Stock/Preferred/index.json)
+- [`B:F:P:IN:EQ:DR` — Depositary receipt](../Business/Finance/Product/Investment/Equity/DepositaryReceipt/index.json)
+- [`B:F:P:IN:DE` — Debt security](../Business/Finance/Product/Investment/DebtSecurity/index.json)
+- [`B:F:P:IN:DE:BO` — Bond](../Business/Finance/Product/Investment/DebtSecurity/Bond/index.json)
+- [`B:F:P:IN:DE:BI` — Bill](../Business/Finance/Product/Investment/DebtSecurity/Bill/index.json)
+- [`B:F:P:IN:DE:NO` — Note](../Business/Finance/Product/Investment/DebtSecurity/Note/index.json)
+- [`B:F:P:IN:DE:CP` — Commercial paper](../Business/Finance/Product/Investment/DebtSecurity/CommercialPaper/index.json)
+- [`B:F:P:IN:DE:CD` — Negotiable certificate of deposit](../Business/Finance/Product/Investment/DebtSecurity/NegotiableCertificateOfDeposit/index.json)
+- [`B:F:P:IN:DE:AB` — Asset-backed security](../Business/Finance/Product/Investment/DebtSecurity/AssetBacked/index.json)
+- [`B:F:P:IN:FU` — Fund](../Business/Finance/Product/Investment/Fund/index.json)
+- [`B:F:P:IN:FU:MF` — Mutual fund](../Business/Finance/Product/Investment/Fund/Mutual/index.json)
+- [`B:F:P:IN:FU:ET` — Exchange-traded fund](../Business/Finance/Product/Investment/Fund/ExchangeTraded/index.json)
+- [`B:F:P:IN:FU:CE` — Closed-end fund](../Business/Finance/Product/Investment/Fund/ClosedEnd/index.json)
+- [`B:F:P:IN:FU:PF` — Private fund](../Business/Finance/Product/Investment/Fund/Private/index.json)
+- [`B:F:P:IN:DR` — Derivative](../Business/Finance/Product/Investment/Derivative/index.json)
+- [`B:F:P:IN:DR:OP` — Option](../Business/Finance/Product/Investment/Derivative/Option/index.json)
+- [`B:F:P:IN:DR:FU` — Future](../Business/Finance/Product/Investment/Derivative/Future/index.json)
+- [`B:F:P:IN:DR:FW` — Forward](../Business/Finance/Product/Investment/Derivative/Forward/index.json)
+- [`B:F:P:IN:DR:SW` — Swap](../Business/Finance/Product/Investment/Derivative/Swap/index.json)
+- [`B:F:P:IN:DR:CF` — Contract for difference](../Business/Finance/Product/Investment/Derivative/ContractForDifference/index.json)
+- [`B:F:P:IN:DR:WA` — Warrant](../Business/Finance/Product/Investment/Derivative/Warrant/index.json)
+- [`B:F:P:IN:ST` — Structured investment](../Business/Finance/Product/Investment/Structured/index.json)
+- [`B:F:P:PA` — Payment](../Business/Finance/Product/Payment/index.json)
+- [`B:F:P:PA:DC` — Debit card](../Business/Finance/Product/Payment/DebitCard/index.json)
+- [`B:F:P:PA:PC` — Prepaid card](../Business/Finance/Product/Payment/PrepaidCard/index.json)
+- [`B:F:P:PA:EM` — Electronic money account](../Business/Finance/Product/Payment/ElectronicMoney/index.json)
+- [`B:F:P:IS` — Insurance](../Business/Finance/Product/Insurance/index.json)
+- [`B:F:P:IS:LI` — Life insurance](../Business/Finance/Product/Insurance/Life/index.json)
+- [`B:F:P:IS:HE` — Health insurance](../Business/Finance/Product/Insurance/Health/index.json)
+- [`B:F:P:IS:DI` — Disability and income protection](../Business/Finance/Product/Insurance/Disability/index.json)
+- [`B:F:P:IS:PR` — Property insurance](../Business/Finance/Product/Insurance/Property/index.json)
+- [`B:F:P:IS:LA` — Liability insurance](../Business/Finance/Product/Insurance/Liability/index.json)
+- [`B:F:P:IS:MO` — Motor insurance](../Business/Finance/Product/Insurance/Motor/index.json)
+- [`B:F:P:IS:TR` — Travel insurance](../Business/Finance/Product/Insurance/Travel/index.json)
+- [`B:F:P:IS:AN` — Annuity](../Business/Finance/Product/Insurance/Annuity/index.json)
+- [`B:F:P:RE` — Retirement](../Business/Finance/Product/Retirement/index.json)
+- [`B:F:P:RE:PE` — Pension arrangement](../Business/Finance/Product/Retirement/Pension/index.json)
+- [`B:F:P:RE:AC` — Retirement account](../Business/Finance/Product/Retirement/Account/index.json)
+- [`B:F:P:DA` — Native digital asset](../Business/Finance/Product/DigitalAsset/index.json)
+- [`B:F:P:DA:CR` — Unbacked cryptoasset](../Business/Finance/Product/DigitalAsset/Cryptoasset/index.json)
+- [`B:F:P:DA:ST` — Stablecoin](../Business/Finance/Product/DigitalAsset/Stablecoin/index.json)
+- [`B:F:LN` — Loan](../Business/Finance/Loan/index.json)
+- [`B:F:LN:SD` — Side](../Business/Finance/Loan/SD.json)
+- [`B:F:LN:AS` — Loan asset](../Business/Finance/Loan/AS.json)
+- [`B:F:LN:AM` — Face amount](../Business/Finance/Loan/AM.json)
+- [`B:F:LN:TM` — Term in seconds](../Business/Finance/Loan/TM.json)
+- [`B:F:LN:RB` — Rate basis](../Business/Finance/Loan/RB.json)
+- [`B:F:LN:RM` — Rate instruction](../Business/Finance/Loan/RM.json)
+- [`B:F:LN:RT` — Annual rate percent](../Business/Finance/Loan/RT.json)
+- [`B:F:LN:CA` — Collateral asset](../Business/Finance/Loan/CA.json)
+- [`B:F:LN:CQ` — Collateral quantity](../Business/Finance/Loan/CQ.json)
+- [`B:F:LN:LV` — Maximum loan-to-value percent](../Business/Finance/Loan/LV.json)
+- [`B:F:LN:RS` — Allow resizing](../Business/Finance/Loan/RS.json)
+- [`B:F:PE` — Personal](../Business/Finance/Personal/index.json)
+- [`B:F:CO` — Corporate](../Business/Finance/Corporate/index.json)
+- [`B:F:PU` — Public](../Business/Finance/Public/index.json)
 
 ## Science (`S`)
 
@@ -1050,12 +1103,14 @@ flowchart LR
     n_S_I_D_OP_MSG["S:I:D:OP:MSG · Outbound message"]
     n_S_I_D_OP_MSG_ID["S:I:D:OP:MSG:ID · Record identifier"]
     n_S_I_D_OP_MSG_ST["S:I:D:OP:MSG:ST · Status"]
-    n_S_G["S:G · Geography (delegated to Geo)"]
+    n_S_G["S:G · Geography"]
     n_S --> n_S_T
-    n_S_T --> n_S_T_SV
     n_S --> n_S_I
+    n_S --> n_S_G
+    n_S_T --> n_S_T_SV
     n_S_I --> n_S_I_D
     n_S_I_D --> n_S_I_D_T
+    n_S_I_D --> n_S_I_D_OP
     n_S_I_D_T --> n_S_I_D_T_S
     n_S_I_D_T --> n_S_I_D_T_T
     n_S_I_D_T --> n_S_I_D_T_I
@@ -1066,39 +1121,36 @@ flowchart LR
     n_S_I_D_T --> n_S_I_D_T_PH
     n_S_I_D_T --> n_S_I_D_T_ID
     n_S_I_D_T --> n_S_I_D_T_URL
-    n_S_I_D --> n_S_I_D_OP
     n_S_I_D_OP --> n_S_I_D_OP_CFG
+    n_S_I_D_OP --> n_S_I_D_OP_EV
+    n_S_I_D_OP --> n_S_I_D_OP_AU
+    n_S_I_D_OP --> n_S_I_D_OP_ID
+    n_S_I_D_OP --> n_S_I_D_OP_JOB
+    n_S_I_D_OP --> n_S_I_D_OP_WH
+    n_S_I_D_OP --> n_S_I_D_OP_WD
+    n_S_I_D_OP --> n_S_I_D_OP_CUR
+    n_S_I_D_OP --> n_S_I_D_OP_MSG
     n_S_I_D_OP_CFG --> n_S_I_D_OP_CFG_ID
     n_S_I_D_OP_CFG --> n_S_I_D_OP_CFG_ST
-    n_S_I_D_OP --> n_S_I_D_OP_EV
     n_S_I_D_OP_EV --> n_S_I_D_OP_EV_ID
     n_S_I_D_OP_EV --> n_S_I_D_OP_EV_ST
-    n_S_I_D_OP --> n_S_I_D_OP_AU
     n_S_I_D_OP_AU --> n_S_I_D_OP_AU_ID
     n_S_I_D_OP_AU --> n_S_I_D_OP_AU_ST
-    n_S_I_D_OP --> n_S_I_D_OP_ID
     n_S_I_D_OP_ID --> n_S_I_D_OP_ID_ID
     n_S_I_D_OP_ID --> n_S_I_D_OP_ID_ST
-    n_S_I_D_OP --> n_S_I_D_OP_JOB
     n_S_I_D_OP_JOB --> n_S_I_D_OP_JOB_ID
     n_S_I_D_OP_JOB --> n_S_I_D_OP_JOB_ST
-    n_S_I_D_OP --> n_S_I_D_OP_WH
     n_S_I_D_OP_WH --> n_S_I_D_OP_WH_ID
     n_S_I_D_OP_WH --> n_S_I_D_OP_WH_ST
-    n_S_I_D_OP --> n_S_I_D_OP_WD
     n_S_I_D_OP_WD --> n_S_I_D_OP_WD_ID
     n_S_I_D_OP_WD --> n_S_I_D_OP_WD_ST
-    n_S_I_D_OP --> n_S_I_D_OP_CUR
     n_S_I_D_OP_CUR --> n_S_I_D_OP_CUR_ID
     n_S_I_D_OP_CUR --> n_S_I_D_OP_CUR_ST
-    n_S_I_D_OP --> n_S_I_D_OP_MSG
     n_S_I_D_OP_MSG --> n_S_I_D_OP_MSG_ID
     n_S_I_D_OP_MSG --> n_S_I_D_OP_MSG_ST
-    n_S --> n_S_G
 ```
 
-<details>
-<summary>Source definitions</summary>
+### Source definitions
 
 - [`S` — Science](../Science/index.json)
 - [`S:T` — Technology](../Science/Technology/index.json)
@@ -1146,16 +1198,18 @@ flowchart LR
 - [`S:I:D:OP:MSG:ST` — Status](../Science/Information/Data/Operations/Message/Status.json)
 - [`S:G` — Geography](../Science/Geography/index.json)
 
-</details>
-
 ## Society (`R`)
 
-[Domain guide](../Society/README.md) · 28 local definitions.
+[Domain guide](../Society/README.md) · 33 local definitions.
 
 ```mermaid
 flowchart LR
     n_R["R · Society"]
     n_R_U["R:U · Humanities"]
+    n_R_U_A["R:U:A · Art"]
+    n_R_U_BV["R:U:BV · Beliefs and values"]
+    n_R_U_BV_B["R:U:BV:B · Beliefs"]
+    n_R_U_BV_V["R:U:BV:V · Values"]
     n_R_SV["R:SV · Services"]
     n_R_SV_HC["R:SV:HC · Healthcare"]
     n_R_SV_ED["R:SV:ED · Education"]
@@ -1182,8 +1236,15 @@ flowchart LR
     n_R_EN["R:EN · Endorsement"]
     n_R_EN_T["R:EN:T · Endorsement"]
     n_R_EN_R["R:EN:R · Rating"]
+    n_R_G["R:G · Government"]
     n_R --> n_R_U
     n_R --> n_R_SV
+    n_R --> n_R_EN
+    n_R --> n_R_G
+    n_R_U --> n_R_U_A
+    n_R_U --> n_R_U_BV
+    n_R_U_BV --> n_R_U_BV_B
+    n_R_U_BV --> n_R_U_BV_V
     n_R_SV --> n_R_SV_HC
     n_R_SV --> n_R_SV_ED
     n_R_SV --> n_R_SV_HO
@@ -1206,16 +1267,18 @@ flowchart LR
     n_R_SV --> n_R_SV_PS
     n_R_SV --> n_R_SV_RT
     n_R_SV --> n_R_SV_AC
-    n_R --> n_R_EN
     n_R_EN --> n_R_EN_T
     n_R_EN --> n_R_EN_R
 ```
 
-<details>
-<summary>Source definitions</summary>
+### Source definitions
 
 - [`R` — Society](../Society/index.json)
 - [`R:U` — Humanities](../Society/Humanities/index.json)
+- [`R:U:A` — Art](../Society/Humanities/Art/index.json)
+- [`R:U:BV` — Beliefs and values](../Society/Humanities/BeliefsValues/index.json)
+- [`R:U:BV:B` — Beliefs](../Society/Humanities/BeliefsValues/Beliefs/index.json)
+- [`R:U:BV:V` — Values](../Society/Humanities/BeliefsValues/Values/index.json)
 - [`R:SV` — Services](../Society/Services/index.json)
 - [`R:SV:HC` — Healthcare](../Society/Services/Healthcare/index.json)
 - [`R:SV:ED` — Education](../Society/Services/Education/index.json)
@@ -1242,5 +1305,17 @@ flowchart LR
 - [`R:EN` — Endorsement](../Society/Endorsement/index.json)
 - [`R:EN:T` — Endorsement](../Society/Endorsement/Text.json)
 - [`R:EN:R` — Rating](../Society/Endorsement/Rating.json)
+- [`R:G` — Government](../Society/Government/index.json)
 
-</details>
+## Home (`HOME`)
+
+[Domain guide](../Home/README.md) · 1 local definitions.
+
+```mermaid
+flowchart LR
+    n_HOME["HOME · Home"]
+```
+
+### Source definitions
+
+- [`HOME` — Home](../Home/index.json)

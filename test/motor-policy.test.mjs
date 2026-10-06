@@ -4,7 +4,7 @@ import {loadCatalogue} from '../src/catalogue.mjs';
 test('motor policy terms are distinct from issued policies and preserve exact monetary values',()=>{
  const {nodes,migrations}=loadCatalogue();
  assert.equal(nodes['B:MP'].Composite,true);assert.equal(nodes['B:MP'].Collection,true);
- assert.equal(nodes['B:IN'].Children.N,'B:IN:N');assert.equal(nodes['F:P:IS:MO'].Name,'Motor insurance');
+ assert.equal(nodes['B:IN'].Children.N,'B:IN:N');assert.equal(nodes['B:F:P:IS:MO'].Name,'Motor insurance');
  for(const key of ['CV','DD','PM']){
   const n=nodes[`B:MP:${key}`];assert.equal(n.Type,'S:I:D:T:S');
   const pattern=new RegExp(n.Pattern);assert.ok(pattern.test('10000.000001'));assert.ok(pattern.test('0'));

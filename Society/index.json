@@ -11,6 +11,9 @@
     },
     "EN": {
       "$ref": "./Endorsement/index.json"
+    },
+    "G": {
+      "$ref": "./Government/index.json"
     }
   },
   "Composite": false

@@ -4,7 +4,7 @@ Canonical code: `H:HX`. Definition: [index.json](index.json).
 
 A medical-history record groups a reported condition, diagnosis date if known and notes. The absence of a date does not establish that no diagnosis occurred, and the record is not clinical verification.
 
-Parent: [Health](../README.md).
+Parent: [Food & Health](../README.md).
 
 ## Record scope
 

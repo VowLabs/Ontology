@@ -1,7 +1,7 @@
 {
-  "Name": "Health",
+  "Name": "Food & Health",
   "Collection": false,
-  "Description": "Open for community-maintained extensions.",
+  "Description": "Food preferences and dietary requirements, reported health information, care needs and accessibility accommodations.",
   "Children": {
     "AL": {
       "$ref": "./Allergy/index.json"

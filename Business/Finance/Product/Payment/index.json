@@ -1,0 +1,17 @@
+{
+  "Name": "Payment",
+  "Collection": false,
+  "Description": "Products providing payment access or stored value. Credit and charge cards are classified under Credit. Customer payment references remain at B:F:PI.",
+  "Children": {
+    "DC": {
+      "$ref": "./DebitCard/index.json"
+    },
+    "PC": {
+      "$ref": "./PrepaidCard/index.json"
+    },
+    "EM": {
+      "$ref": "./ElectronicMoney/index.json"
+    }
+  },
+  "Composite": false
+}

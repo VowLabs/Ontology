@@ -2,7 +2,7 @@
 
 Canonical code: `B:IN`. Definition: [index.json](index.json).
 
-Insurance policy records describe an actual policy using type, provider, policy number and expiry date. The policy type choices are the existing broad record vocabulary; the more detailed product taxonomy at F:P:IS does not silently replace them.
+Insurance policy records describe an actual policy using type, provider, policy number and expiry date. The policy type choices are the existing broad record vocabulary; the more detailed product taxonomy at B:F:P:IS does not silently replace them.
 
 Parent: [Business](../README.md).
 

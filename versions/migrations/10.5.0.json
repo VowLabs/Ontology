@@ -1,0 +1,9 @@
+{
+  "To": "11.0.0",
+  "Prefixes": {
+    "F": "B:F"
+  },
+  "SubjectTypes": {},
+  "Legacy": "10.5.0",
+  "Description": "Move Finance under Business, preserving suffixes, record fields and values. Add personal, corporate and public finance, Art, Government, and Beliefs and values. Preserve signed historical statements unchanged. Rename Health to Food & Health without changing H codes. Add the top-level Home classification (HOME)."
+}

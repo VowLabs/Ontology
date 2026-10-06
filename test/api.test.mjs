@@ -110,7 +110,7 @@ test('datasets are discoverable and never returned as active definitions',async(
  assert.equal((await get('/v1/datasets/countries')).data.count,2);
  assert.equal((await get('/v1/professions?q=lawyer')).data[0].id,'LAW');
  assert.equal((await get('/v1/definitions/S:T:SV')).data.Records,undefined);
- for(const code of ['I:CN','I:PR:NN','F:AC','S:I:D:LEX','B:PRO:LAW','G:CO:US'])assert.equal((await fetch(base+'/v1/definitions/'+code)).status,404,code);
+ for(const code of ['I:CN','I:PR:NN','B:F:AC','S:I:D:LEX','B:PRO:LAW','G:CO:US'])assert.equal((await fetch(base+'/v1/definitions/'+code)).status,404,code);
  for(const path of ['/v1/datasets/__proto__','/v1/datasets/services/records/constructor','/v1/datasets/services/extra'])assert.equal((await fetch(base+path)).status,404,path);
 });
 

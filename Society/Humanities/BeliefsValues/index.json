@@ -1,0 +1,14 @@
+{
+  "Name": "Beliefs and values",
+  "Collection": false,
+  "Description": "Worldviews, convictions and principles through which people and communities interpret experience and guide conduct.",
+  "Children": {
+    "B": {
+      "$ref": "./Beliefs/index.json"
+    },
+    "V": {
+      "$ref": "./Values/index.json"
+    }
+  },
+  "Composite": false
+}

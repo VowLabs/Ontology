@@ -1,13 +1,10 @@
 {
   "Name": "VowLabs ontology",
   "Collection": false,
-  "Version": "10.5.0",
+  "Version": "11.0.0",
   "Children": {
     "I": {
       "$ref": "./Identity/index.json"
-    },
-    "F": {
-      "$ref": "./Finance/index.json"
     },
     "H": {
       "$ref": "./Health/index.json"
@@ -20,6 +17,9 @@
     },
     "R": {
       "$ref": "./Society/index.json"
+    },
+    "HOME": {
+      "$ref": "./Home/index.json"
     }
   },
   "Composite": false

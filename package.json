@@ -1,6 +1,6 @@
 {
   "name": "@vowlabs/ontology",
-  "version": "0.1.27",
+  "version": "0.1.29",
   "private": true,
   "type": "module",
   "description": "Canonical VowLabs ontology and read-only HTTP API.",
@@ -10,6 +10,8 @@
   "scripts": {
     "start": "node src/server/main.mjs",
     "test": "node --test test/*.test.mjs",
-    "validate": "node --input-type=module -e \"import { loadCatalogue } from './src/catalogue.mjs'; const c = loadCatalogue(); console.log('Validated', Object.keys(c.nodes).length, 'definitions');\""
+    "validate": "node --input-type=module -e \"import { loadCatalogue } from './src/catalogue.mjs'; const c = loadCatalogue(); console.log('Validated', Object.keys(c.nodes).length, 'definitions');\"",
+    "docs:taxonomy": "node scripts/taxonomy.mjs",
+    "docs:check": "node scripts/taxonomy.mjs --check"
   }
 }
